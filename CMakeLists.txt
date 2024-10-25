@@ -8,7 +8,7 @@ include(cmake/parse_git_tag.cmake)
 set(PARSED_GIT_TAG_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
 
 project(
-    "cmake-cpp-template"
+    "translotator"
     VERSION ${PARSED_GIT_TAG_VERSION}
     LANGUAGES CXX)
 
@@ -26,7 +26,7 @@ string(REPLACE "-" "_" PROJECT_NAME_LOWER ${PROJECT_NAME_LOWER})
 
 # configure version header
 configure_file(cmake/version.hpp.in
-    ${CMAKE_SOURCE_DIR}/include/cmake-cpp-template/version.hpp @ONLY)
+    ${CMAKE_SOURCE_DIR}/include/translotator/version.hpp @ONLY)
 
 # Prevent building in the source directory
 if(PROJECT_SOURCE_DIR STREQUAL PROJECT_BINARY_DIR)
@@ -39,29 +39,14 @@ endif()
 # common compile options
 include(cmake/target_compile_options_common.cmake)
 
-# Normal Library
-add_library(TEST_LIB src/test_lib.cpp)
-add_library(${PROJECT_NAME}::TEST_LIB ALIAS TEST_LIB)
-target_compile_options_common(TEST_LIB PUBLIC)
-target_include_directories(
-    TEST_LIB
-    PUBLIC $<INSTALL_INTERFACE:include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
-
 # Header only Library
-add_library(TEST_HEADER_LIB INTERFACE)
-add_library(${PROJECT_NAME}::TEST_HEADER_LIB ALIAS TEST_HEADER_LIB)
-target_compile_options_common(TEST_HEADER_LIB INTERFACE)
+add_library(translotator INTERFACE)
+add_library(${PROJECT_NAME}::translotator ALIAS translotator)
+target_compile_options_common(translotator INTERFACE)
 target_include_directories(
-    TEST_HEADER_LIB
+    translotator
     INTERFACE $<INSTALL_INTERFACE:include>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
-
-# Executable
-add_executable(TEST_EXEC src/test_src.cpp)
-target_link_libraries(TEST_EXEC TEST_LIB TEST_HEADER_LIB)
-target_compile_options_common(TEST_EXEC PUBLIC)
 
 if(BUILD_TESTING)
     include(CTest)
@@ -75,7 +60,7 @@ endif()
 # Installation
 include(GNUInstallDirs)
 install(
-    TARGETS TEST_EXEC TEST_LIB TEST_HEADER_LIB
+    TARGETS translotator
     EXPORT ${PROJECT_NAME}Targets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}

@@ -29,4 +29,5 @@ function(add_test TARGET_SRC)
 endfunction()
 
 # add test sources here
-add_test(test_example.cpp DEPS TEST_LIB TEST_HEADER_LIB)
+add_test(epsilon.cpp DEPS translotator)
+add_test(Matrix.cpp DEPS translotator)

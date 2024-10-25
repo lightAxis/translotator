@@ -23,17 +23,17 @@ format: ## format CMakelists.txt, *.cmake and C++ files
 config: ## configure the project using kconfig
 	$(call gecho,Configuring cmake-cpp-template)
 	@python3 -m menuconfig
-	@python3 -m genconfig --header-path include/cmake-cpp-template/config.hpp
+	@python3 -m genconfig --header-path include/translotator/config.hpp
 
 initialize: ## initialize the project
 	@echo PROJECT_NAME=$(PROJECT_NAME)
 	$(if $(PROJECT_NAME),,@echo "PROJECT_NAME is empty" && exit 1)
 	@mv cmake/cmake-cpp-templateConfig.cmake.in cmake/$(PROJECT_NAME)Config.cmake.in
 	@mv include/cmake-cpp-template include/$(PROJECT_NAME)
-	@sed -i 's/cmake-cpp-template/$(PROJECT_NAME)/g' CMakeLists.txt
-	@sed -i 's/cmake-cpp-template/$(PROJECT_NAME)/g' mkdocs.yml
-	@sed -i 's/cmake-cpp-template/$(PROJECT_NAME)/g' Kconfig
-	@sed -i 's|cmake-cpp-template/|$(PROJECT_NAME)/|g' Makefile
+	@sed -i 's/translotator/$(PROJECT_NAME)/g' CMakeLists.txt
+	@sed -i 's/translotator/$(PROJECT_NAME)/g' mkdocs.yml
+	@sed -i 's/translotator/$(PROJECT_NAME)/g' Kconfig
+	@sed -i 's|translotator/|$(PROJECT_NAME)/|g' Makefile
 
 define colorecho
 +@echo -e '$(1)$(2) \033[0m'

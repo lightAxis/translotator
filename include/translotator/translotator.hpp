@@ -1,6 +1,6 @@
 #pragma once
 
-namespace test_header_only_lib
+namespace translotator
 {
     int add(int a, int b) { return a + b; }
 }
