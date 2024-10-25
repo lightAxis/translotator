@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+        "jeff-hykin.better-cpp-syntax",
+        "aaron-bond.better-comments",
+        "pkief.material-icon-theme",
+        "yog.yog-plantuml-highlight",
+        "njpwerner.autodocstring",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "josetr.cmake-language-support-vscode",
+        "ms-vscode.cmake-tools",
+        "mhutchie.git-graph",
+        "github.copilot",
+        "github.copilot-chat",
+        "oderwat.indent-rainbow",
+        "ms-vscode.makefile-tools",
+        "davidanson.vscode-markdownlint",
+        "jebbs.plantuml",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "njqdev.vscode-python-typehint",
+        "gruntfuggly.todo-tree"
+    ]
+}

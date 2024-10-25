@@ -1,0 +1,25 @@
+if(NOT EXISTS "${CMAKE_CURRENT_BINARY_DIR}/install_manifest.txt")
+    message(FATAL_ERROR "Install manifest not found. Cannot uninstall.")
+endif()
+
+# Read the installed files and directories from the manifest
+file(READ "${CMAKE_CURRENT_BINARY_DIR}/install_manifest.txt" entries)
+string(REGEX REPLACE "\n" ";" entries "${entries}")
+
+# Attempt to remove all files listed in install_manifest.txt
+foreach(entry ${entries})
+    if(EXISTS "${entry}")
+        if(NOT IS_DIRECTORY "${entry}")
+            file(REMOVE "${entry}")
+
+            # Check if file was successfully removed
+            if(EXISTS "${entry}")
+                message(FATAL_ERROR "Failed to remove file: ${entry} (Permission denied?)")
+            else()
+                message(STATUS "Removed file: ${entry}")
+            endif()
+        endif()
+    else()
+        message(STATUS "File not found: ${entry}")
+    endif()
+endforeach()
