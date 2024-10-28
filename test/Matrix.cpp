@@ -1,7 +1,7 @@
 
 #include "custom_tester.hpp"
 
-#include <translotator/objects/Matrix.hpp>
+#include <translotator/translotator.hpp>
 
 using namespace translotator;
 
@@ -98,5 +98,112 @@ TEST_CASE("Matrix", "[objects]")
         REQUIRE_THAT((m1.block<0, 0, 2, 2>()), EqualsMatrix(Matrixf<2, 2>(block1)));
         REQUIRE_THAT((m1.block<0, 1, 2, 2>()), EqualsMatrix(Matrixf<2, 2>(block2)));
         REQUIRE_THAT((m1.block<1, 0, 1, 2>()), EqualsMatrix(Matrixf<1, 2>(block3)));
+    }
+
+    SECTION("Assignments")
+    {
+        auto m2 = m1;
+        REQUIRE_THAT(m1, EqualsMatrix(m2));
+
+        float block[2][3] = {{11, 22, 33}, {44, 55, 66}};
+        Matrixf<2, 3> blockm(block);
+        m2.setBlock(0, 0, blockm);
+
+        REQUIRE(m2(0, 0) == 11);
+        REQUIRE(m2(0, 1) == 22);
+        REQUIRE(m2(0, 2) == 33);
+        REQUIRE(m2(1, 0) == 44);
+        REQUIRE(m2(1, 1) == 55);
+        REQUIRE(m2(1, 2) == 66);
+
+        float row[1][3] = {{77, 88, 99}};
+        Matrixf<1, 3> rowm(row);
+        m2.setRow(1, rowm);
+
+        REQUIRE(m2(1, 0) == 77);
+        REQUIRE(m2(1, 1) == 88);
+        REQUIRE(m2(1, 2) == 99);
+        float col[3][1] = {{111}, {222}, {333}};
+        Matrixf<3, 1> colm(col);
+        m2.setCol(2, colm);
+
+        REQUIRE(m2(0, 2) == 111);
+        REQUIRE(m2(1, 2) == 222);
+        REQUIRE(m2(2, 2) == 333);
+    }
+
+    SECTION("Operators")
+    {
+        // ops with scalar
+        auto m2 = m1 * 2.f;
+        float data2[3][3] = {{2, 4, 6}, {8, 10, 12}, {14, 16, 18}};
+        Matrixf<3, 3> m2_(data2);
+        REQUIRE_THAT(m2, EqualsMatrix(m2_));
+        auto m22 = m1;
+        m22 *= 2.f;
+        REQUIRE_THAT(m22, EqualsMatrix(m2_));
+
+        auto m3 = m1 / 2;
+        float data3[3][3] = {{0.5, 1, 1.5}, {2, 2.5, 3}, {3.5, 4, 4.5}};
+        Matrixf<3, 3> m3_(data3);
+        REQUIRE_THAT(m3, EqualsMatrix(m3_));
+        auto m33 = m1;
+        m33 /= 2;
+        REQUIRE_THAT(m33, EqualsMatrix(m3_));
+
+        auto m4 = 2.f * m1;
+        REQUIRE_THAT(m4, EqualsMatrix(m2_));
+
+        // ops with matrix
+        auto m5 = m1 + m2;
+        float data5[3][3] = {{3, 6, 9}, {12, 15, 18}, {21, 24, 27}};
+        Matrixf<3, 3> m5_(data5);
+        REQUIRE_THAT(m5, EqualsMatrix(m5_));
+        auto m55 = m1;
+        m55 += m2;
+        REQUIRE_THAT(m55, EqualsMatrix(m5_));
+
+        auto m6 = m1 - m2;
+        float data6[3][3] = {{-1, -2, -3}, {-4, -5, -6}, {-7, -8, -9}};
+        Matrixf<3, 3> m6_(data6);
+        REQUIRE_THAT(m6, EqualsMatrix(m6_));
+        auto m66 = m1;
+        m66 -= m2;
+        REQUIRE_THAT(m66, EqualsMatrix(m6_));
+
+        auto m7 = m1 * m1;
+        float data7[3][3] = {{30, 36, 42}, {66, 81, 96}, {102, 126, 150}};
+        Matrixf<3, 3> m7_(data7);
+        REQUIRE_THAT(m7, EqualsMatrix(m7_));
+        auto m77 = m1;
+        m77 *= m1;
+        REQUIRE_THAT(m77, EqualsMatrix(m7_));
+
+        float data8[2][3] = {{1, 2, 3}, {4, 5, 6}};
+        Matrixf<2, 3> m8(data8);
+        auto m9 = m8 * m1;
+        float data9[2][3] = {{30, 36, 42}, {66, 81, 96}};
+        Matrixf<2, 3> m9_(data9);
+        REQUIRE_THAT(m9, EqualsMatrix(m9_));
+
+        // matrix muliply dimension match
+        Matrixf<2, 4> m24;
+        Matrixf<4, 3> m43;
+        REQUIRE(is_same_v<decltype(m24 * m43), Matrixf<2, 3>> == true);
+    }
+
+    SECTION("Utils")
+    {
+        // transpose
+        auto m2 = m1.T();
+        float data2[3][3] = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
+        Matrixf<3, 3> m2_(data2);
+        REQUIRE_THAT(m2, EqualsMatrix(m2_));
+
+        // fill
+        m1.fill(100.f);
+        float data1_[3][3] = {{100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}};
+        Matrixf<3, 3> m1_(data1_);
+        REQUIRE_THAT(m1, EqualsMatrix(m1_));
     }
 }

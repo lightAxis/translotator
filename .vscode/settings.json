@@ -3,6 +3,12 @@
     "files.associations": {
         "complex": "cpp",
         "cmath": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "type_traits": "cpp",
+        "string": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp"
     }
 }

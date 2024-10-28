@@ -31,3 +31,6 @@ endfunction()
 # add test sources here
 add_test(epsilon.cpp DEPS translotator)
 add_test(Matrix.cpp DEPS translotator)
+add_test(Vector.cpp DEPS translotator)
+
+# add_test(test.cpp DEPS translotator)

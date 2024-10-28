@@ -1,0 +1,16 @@
+#pragma once
+
+#include <stddef.h>
+
+namespace translotator
+{
+    template <size_t N, size_t M, typename Type>
+    class Matrix;
+
+    template <size_t N, typename Type>
+    class Vector;
+
+    template <size_t N, size_t M, typename Type, typename Derived>
+    class MatrixBase;
+
+}
