@@ -323,6 +323,9 @@ namespace translotator
         template <typename NewType>
         inline auto cast() const
         {
+            static_assert(!is_same_v<Type, NewType>, "NewType must be different from current type");
+            static_assert(is_float_v<NewType>, "NewType must be a floating point type");
+
             typename MatrixBaseInternal::operator_cast_typemapper<Derived, NewType>::type result;
             for (size_t i = 0; i < N; i++)
                 for (size_t j = 0; j < M; j++)

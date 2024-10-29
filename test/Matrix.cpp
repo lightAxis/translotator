@@ -206,4 +206,22 @@ TEST_CASE("Matrix", "[objects]")
         Matrixf<3, 3> m1_(data1_);
         REQUIRE_THAT(m1, EqualsMatrix(m1_));
     }
+
+    SECTION("Casting")
+    {
+        // to double
+        auto md = m1.cast<double>();
+        REQUIRE(is_same_v<decltype(md)::DATATYPE, double> == true);
+
+        // to long double
+        auto mld = m1.cast<long double>();
+        REQUIRE(is_same_v<decltype(mld)::DATATYPE, long double> == true);
+
+        // to vector
+        float data[3] = {1, 2, 3};
+        Matrixf<3, 1> m2(data);
+        auto v = m2.castContainer<Vector<3, float>>();
+        Vector<3, float> v_(data);
+        REQUIRE_THAT(v, EqualsMatrix(v_));
+    }
 }
