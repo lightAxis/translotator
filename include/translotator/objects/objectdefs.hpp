@@ -12,5 +12,4 @@ namespace translotator
 
     template <size_t N, size_t M, typename Type, typename Derived>
     class MatrixBase;
-
 }

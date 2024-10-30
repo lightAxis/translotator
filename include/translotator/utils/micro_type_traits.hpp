@@ -54,6 +54,25 @@ namespace translotator
     template <typename T, typename U>
     inline constexpr bool is_same_v = is_same<T, U>::value;
 
+    // 모든 타입이 동일한지 확인하는 all_same 메타 함수
+    template <typename T, typename... Args>
+    struct all_same;
+
+    template <typename T>
+    struct all_same<T>
+    {
+        static constexpr bool value = true;
+    };
+
+    template <typename T, typename First, typename... Rest>
+    struct all_same<T, First, Rest...>
+    {
+        static constexpr bool value = is_same_v<T, First> && all_same<T, Rest...>::value;
+    };
+
+    template <typename T, typename... Args>
+    inline constexpr bool all_same_v = all_same<T, Args...>::value;
+
     // is_float
     template <typename T>
     struct is_float : false_type

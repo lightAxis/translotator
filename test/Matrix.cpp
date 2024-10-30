@@ -16,6 +16,9 @@ TEST_CASE("Matrix", "[objects]")
         Matrixf<3, 3> m2(data2);
         Matrixf<3, 3> m3 = m1;
         Matrixf<3, 3> m4(m2);
+        Matrixf<3, 3> m5({1.f, 2.f, 3.f,
+                          4.f, 5.f, 6.f,
+                          7.f, 8.f, 9.f});
 
         REQUIRE(m1(0, 0) == 1);
         REQUIRE(m1(0, 1) == 2);
@@ -39,8 +42,8 @@ TEST_CASE("Matrix", "[objects]")
 
         REQUIRE_THAT(m1, EqualsMatrix(m3));
         REQUIRE_THAT(m2, EqualsMatrix(m4));
+        REQUIRE_THAT(m1, EqualsMatrix(m5));
     }
-
     SECTION("constants")
     {
         auto eye = Matrixf<3, 3>::eye();

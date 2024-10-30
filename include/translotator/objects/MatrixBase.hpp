@@ -28,27 +28,33 @@ namespace translotator
          * Constructors and destructor
          */
         MatrixBase() = default;
-        MatrixBase(const MatrixBase &other) = default;
-        MatrixBase(const Type data[N * M])
+        explicit MatrixBase(const MatrixBase &other) = default;
+        explicit MatrixBase(const Type data[N * M])
         {
             memcpy(data_, data, N * M * sizeof(Type));
         }
-        MatrixBase(const Type data[N][M])
+        explicit MatrixBase(const Type data[N][M])
         {
             for (size_t i = 0; i < N; i++)
                 for (size_t j = 0; j < M; j++)
                     data_[i * M + j] = data[i][j];
+        }
+        explicit MatrixBase(const initializer_list<N * M, Type> &list)
+        {
+            memcpy(data_, list.data, N * M * sizeof(Type));
         }
 
         /**
          * Constant Matrices
          */
 
-        static Derived eye()
+        static Derived
+        eye()
         {
             Derived result;
             result.fill(static_cast<Type>(0));
-            for (size_t i = 0; i < N; i++)
+            const size_t smaller = N < M ? N : M;
+            for (size_t i = 0; i < smaller; i++)
                 result(i, i) = 1;
             return result;
         }
@@ -132,9 +138,12 @@ namespace translotator
             return static_cast<Derived &>(*this);
         }
 
-        template <size_t P, size_t Q>
-        inline Derived &setBlock(size_t i, size_t j, const Matrix<P, Q, Type> &block)
+        template <typename OtherDerived>
+        inline Derived &setBlock(size_t i, size_t j, const OtherDerived &block)
         {
+            constexpr size_t P = OtherDerived::ROWS;
+            constexpr size_t Q = OtherDerived::COLS;
+            static_assert(is_same_v<typename OtherDerived::DATATYPE, Type>, "Matrix data types must be the same");
             static_assert(P <= N, "Block out of bounds, Row");
             static_assert(Q <= M, "Block out of bounds, Col");
             assert(i + P <= N);
@@ -145,39 +154,48 @@ namespace translotator
             return static_cast<Derived &>(*this);
         }
 
-        inline Derived &setRow(size_t i, const Matrix<1, M, Type> &row)
+        template <typename OtherDerived>
+        inline Derived &setRow(size_t i, const OtherDerived &row)
         {
             assert(i < N);
+            static_assert(is_same_v<typename Derived::DATATYPE, Type>, "Matrix data types must be the same");
+            static_assert(row.COLS == M, "Matrix Col dimension must be the same");
+            static_assert(row.ROWS == 1, "Matrix Row dimension must be 1");
             for (size_t j = 0; j < M; j++)
                 data_[i * M + j] = row(0, j);
             return static_cast<Derived &>(*this);
         }
 
-        inline Derived &setCol(size_t j, const Matrix<N, 1, Type> &col)
+        template <typename OtherDerived>
+        inline Derived &setCol(size_t j, const OtherDerived &col)
         {
             assert(j < M);
+            static_assert(is_same_v<typename OtherDerived::DATATYPE, Type>, "Matrix data types must be the same");
+            static_assert(OtherDerived::ROWS == N, "Matrix Row dimension must be same");
+            static_assert(OtherDerived::COLS == 1, "Matrix Col dimension must be 1");
             for (size_t i = 0; i < N; i++)
                 data_[i * M + j] = col(i, 0);
             return static_cast<Derived &>(*this);
         }
 
-        template <size_t i, size_t j, size_t P, size_t Q>
-        inline Derived &setBlock(const Matrix<P, Q, Type> &block)
+        template <size_t i, size_t j, typename OtherDerived>
+        inline Derived &setBlock(const OtherDerived &block)
         {
-            static_assert(i + P <= N, "Block out of bounds, Row");
-            static_assert(j + Q <= M, "Block out of bounds, Col");
+            static_assert(is_same_v<typename Derived::DATATYPE, Type>, "Matrix data types must be the same");
+            static_assert(i + OtherDerived::ROWS <= N, "Block out of bounds, Row");
+            static_assert(j + OtherDerived::COLS <= M, "Block out of bounds, Col");
             return setBlock(i, j, block);
         }
 
-        template <size_t i>
-        inline Derived &setRow(const Matrix<1, M, Type> &row)
+        template <size_t i, typename OtherDerived>
+        inline Derived &setRow(const OtherDerived &row)
         {
             static_assert(i < N, "Row out of bounds");
             return setRow(i, row);
         }
 
-        template <size_t j>
-        inline Derived &setCol(const Matrix<N, 1, Type> &col)
+        template <size_t j, typename OtherDerived>
+        inline Derived &setCol(const OtherDerived &col)
         {
             static_assert(j < M, "Col out of bounds");
             return setCol(j, col);

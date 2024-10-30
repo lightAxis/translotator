@@ -8,6 +8,7 @@
 #include "utils/epsilon.hpp"
 
 #include "objects/objectdefs.hpp"
+#include "objects/initializer_list.hpp"
 #include "objects/MatrixBaseInternal.hpp"
 #include "objects/MatrixBase.hpp"
 #include "objects/Matrix.hpp"
