@@ -88,10 +88,102 @@ TEST_CASE("Vector", "[objects]")
 
     SECTION("Vector Specialized Accessors")
     {
-        Vectorf<3> v1{{1.f, 2.f, 3.f}};
-        REQUIRE(v1[0] == 1.f);
-        REQUIRE(v1[1] == 2.f);
-        REQUIRE(v1[2] == 3.f);
+        Vectorf<1> v1{{4.f}};
+        REQUIRE_THAT(v1[0], Catch::Matchers::WithinRel(4.f, 0.0001f));
+        REQUIRE_THAT(v1.x(), Catch::Matchers::WithinRel(4.f, 0.0001f));
+        v1.x() = 100.f;
+        REQUIRE_THAT(v1[0], Catch::Matchers::WithinRel(100.f, 0.0001f));
+        REQUIRE_THAT(v1.x(), Catch::Matchers::WithinRel(100.f, 0.0001f));
+
+        Vectorf<2> v2{{1.f, 2.f}};
+        REQUIRE(v2[0] == 1.f);
+        REQUIRE(v2[1] == 2.f);
+        REQUIRE_THAT(v2.x(), Catch::Matchers::WithinRel(1.f, 0.0001f));
+        REQUIRE_THAT(v2.y(), Catch::Matchers::WithinRel(2.f, 0.0001f));
+        v2.y() = 200.f;
+        REQUIRE(v2[1] == 200.f);
+        REQUIRE_THAT(v2.y(), Catch::Matchers::WithinRel(200.f, 0.0001f));
+
+        Vectorf<3> v3{{1.f, 2.f, 3.f}};
+        REQUIRE(v3[0] == 1.f);
+        REQUIRE(v3[1] == 2.f);
+        REQUIRE(v3[2] == 3.f);
+        REQUIRE_THAT(v3.x(), Catch::Matchers::WithinRel(1.f, 0.0001f));
+        REQUIRE_THAT(v3.y(), Catch::Matchers::WithinRel(2.f, 0.0001f));
+        REQUIRE_THAT(v3.z(), Catch::Matchers::WithinRel(3.f, 0.0001f));
+        v3.z() = 300.f;
+        REQUIRE(v3[2] == 300.f);
+        REQUIRE_THAT(v3.z(), Catch::Matchers::WithinRel(300.f, 0.0001f));
+
+        Vectorf<4> v4{{1.f, 2.f, 3.f, 4.f}};
+        REQUIRE(v4[0] == 1.f);
+        REQUIRE(v4[1] == 2.f);
+        REQUIRE(v4[2] == 3.f);
+        REQUIRE(v4[3] == 4.f);
+        // REQUIRE_THAT(v4.x(), Catch::Matchers::WithinRel(1.f, 0.0001f));
+        // REQUIRE_THAT(v4.y(), Catch::Matchers::WithinRel(2.f, 0.0001f));
+        // REQUIRE_THAT(v4.z(), Catch::Matchers::WithinRel(3.f, 0.0001f));
+    }
+
+    SECTION("Vector specialized operatotions")
+    {
+        Vectorf<4> v1{{1.f, 2.f, 3.f, 4.f}};
+        Vectorf<4> v2{{5.f, 6.f, 7.f, 8.f}};
+
+        Vectorf<4> v3 = v1 + v2;
+        Vectorf<4> v3_{{6.f, 8.f, 10.f, 12.f}};
+        REQUIRE_THAT(v3, EqualsMatrix(v3_));
+
+        Vectorf<4> v4 = v1 - v2;
+        Vectorf<4> v4_{{-4.f, -4.f, -4.f, -4.f}};
+        REQUIRE_THAT(v4, EqualsMatrix(v4_));
+
+        Vectorf<1> v5 = v1.T() * v2;
+        Vectorf<1> v5_{{70.f}};
+        REQUIRE_THAT(v5, EqualsMatrix(v5_));
+
+        float v55_f = v1.dot(v2);
+        float v55f2 = v2.dot(v1);
+        REQUIRE_THAT(v55_f, Catch::Matchers::WithinRel(70.f, 0.0001f));
+        Vectorf<1> v55{{v1.dot(v2)}};
+        Vectorf<1> v55_{{v2.dot(v1)}};
+        REQUIRE_THAT(v55, EqualsMatrix(v55_));
+
+        Vectorf<3> v6{{1.f, 2.f, 3.f}};
+        Vectorf<3> v7{{4.f, 5.f, 6.f}};
+
+        Vectorf<3> v67 = v6.cross(v7);
+        Vectorf<3> v67_{{-3.f, 6.f, -3.f}};
+        REQUIRE_THAT(v67, EqualsMatrix(v67_));
+
+        Vectorf<3> v76 = v7.cross(v6);
+        Vectorf<3> v76_ = -v67_;
+        REQUIRE_THAT(v76, EqualsMatrix(v76_));
+
+        SquareMatrixf<3> m1 = v6.toCrossMatrix();
+        SquareMatrixf<3> m1_{{0.f, -3.f, 2.f,
+                              3.f, 0.f, -1.f,
+                              -2.f, 1.f, 0.f}};
+        REQUIRE_THAT(m1, EqualsMatrix(m1_));
+        Vectorf<3> v67__ = m1 * v7;
+        REQUIRE_THAT(v67__, EqualsMatrix(v67_));
+
+        SquareMatrixf<3> m2 = v7.toDiagMatrix();
+        SquareMatrixf<3> m2_{{4.f, 0.f, 0.f,
+                              0.f, 5.f, 0.f,
+                              0.f, 0.f, 6.f}};
+        REQUIRE_THAT(m2, EqualsMatrix(m2_));
+    }
+
+    SECTION("vector static function")
+    {
+        auto vx = Vectorf<3>::xAxis();
+        auto vy = Vectorf<2>::yAxis();
+        auto vz = Vectorf<3>::zAxis();
+
+        REQUIRE_THAT(vx, EqualsMatrix(Vectorf<3>{{1.f, 0.f, 0.f}}));
+        REQUIRE_THAT(vy, EqualsMatrix(Vectorf<2>{{0.f, 1.f}}));
+        REQUIRE_THAT(vz, EqualsMatrix(Vectorf<3>{{0.f, 0.f, 1.f}}));
     }
 
     SECTION("Casting")

@@ -204,10 +204,28 @@ TEST_CASE("Matrix", "[objects]")
         REQUIRE_THAT(m2, EqualsMatrix(m2_));
 
         // fill
-        m1.fill(100.f);
-        float data1_[3][3] = {{100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}};
-        Matrixf<3, 3> m1_(data1_);
-        REQUIRE_THAT(m1, EqualsMatrix(m1_));
+        m2.fill(100.f);
+        float data2_[3][3] = {{100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}};
+        Matrixf<3, 3> m22_(data2_);
+        REQUIRE_THAT(m2, EqualsMatrix(m22_));
+
+        // swap rows
+        auto m3 = m1;
+        m3.swapRows(0, 2);
+        float data3[3][3] = {{7, 8, 9}, {4, 5, 6}, {1, 2, 3}};
+        Matrixf<3, 3> m3_(data3);
+        REQUIRE_THAT(m3, EqualsMatrix(m3_));
+
+        // swap cols
+        auto m4 = m1;
+        m4.swapCols(0, 2);
+        float data4[3][3] = {{3, 2, 1}, {6, 5, 4}, {9, 8, 7}};
+        Matrixf<3, 3> m4_(data4);
+        REQUIRE_THAT(m4, EqualsMatrix(m4_));
+
+        // frobenius norm
+        REQUIRE(close_enough(m4.frobeniusNormSquared(), 285.f));
+        REQUIRE(close_enough(m4.frobeniusNorm(), translotator::sqrt(285.f)));
     }
 
     SECTION("Casting")
@@ -226,5 +244,53 @@ TEST_CASE("Matrix", "[objects]")
         auto v = m2.castContainer<Vector<3, float>>();
         Vector<3, float> v_(data);
         REQUIRE_THAT(v, EqualsMatrix(v_));
+    }
+
+    SECTION("Type Casting Vector")
+    {
+        Matrixf<3, 1> m2{{1.f, 2.f, 3.f}};
+        Vectorf<3> v_{{1.f, 2.f, 3.f}};
+
+        // to vector Ref
+        Vector<3, float> v2 = m2.toVectorRef();
+        Vector<3, float> &v2_ref = m2.toVectorRef();
+        const Vector<3, float> &v2_ref_const = m2.toVectorRef();
+
+        REQUIRE_THAT(v2, EqualsMatrix(v_));
+        REQUIRE_THAT(v2_ref, EqualsMatrix(v_));
+
+        v2[0] = 100.f;
+        REQUIRE(v2(0, 0) == 100.f);
+        REQUIRE(m2(0, 0) == 1.f);
+
+        v2_ref[0] = 200.f;
+        REQUIRE(v2_ref(0, 0) == 200.f);
+        REQUIRE(m2(0, 0) == 200.f);
+
+        REQUIRE(v2_ref_const(0, 0) == 200.f);
+
+        Matrixf<1, 3> m3{{1.f, 2.f, 3.f}};
+        REQUIRE(decltype(m3)::COLS == 3);
+        REQUIRE(decltype(m3)::ROWS == 1);
+        const auto &vv = m3.T().toVectorRef();
+        REQUIRE(vv.ROWS == 3);
+        REQUIRE(vv.COLS == 1);
+
+        Matrixf<3, 3> m33{{1.f, 2.f, 3.f,
+                           4.f, 5.f, 6.f,
+                           7.f, 8.f, 9.f}};
+        const auto &v3 = (m33 * m3.T()).toVectorRef();
+        REQUIRE(is_same_v<decltype(v3), const Vector<3, float> &> == true);
+
+        Matrixf<3, 3> m4{{1.f, 2.f, 3.f,
+                          4.f, 5.f, 6.f,
+                          7.f, 8.f, 9.f}};
+        float data4[3 * 3];
+        m4.copyTo(data4);
+        Matrixf<3, 3> m44{{data4}};
+        Matrixf<3, 3> m44_{{1.f, 2.f, 3.f,
+                            4.f, 5.f, 6.f,
+                            7.f, 8.f, 9.f}};
+        REQUIRE_THAT(m44, EqualsMatrix(m44_));
     }
 }

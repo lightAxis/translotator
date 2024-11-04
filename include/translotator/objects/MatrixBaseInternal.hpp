@@ -17,6 +17,12 @@ namespace translotator::MatrixBaseInternal
         using type = Vector<N, Type>;
     };
 
+    template <size_t N, typename Type>
+    struct operator_mul_typemapper<SquareMatrix<N, Type>, Vector<N, Type>>
+    {
+        using type = Vector<N, Type>;
+    };
+
     template <typename Derived, typename NewType>
     struct operator_cast_typemapper
     {

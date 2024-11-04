@@ -24,6 +24,9 @@ namespace translotator
         constexpr static size_t COLS = M;
         using DATATYPE = Type;
 
+        constexpr static size_t rowSize() { return N; }
+        constexpr static size_t colSize() { return M; }
+
         /**
          * Constructors and destructor
          */
@@ -128,6 +131,9 @@ namespace translotator
             static_assert(j + Q <= M, "Block out of bounds, Col");
             return block<P, Q>(i, j);
         }
+
+        inline Type *getData() const { return data_; }
+        inline void copyTo(Type *data) const { memcpy(data, data_, N * M * sizeof(Type)); }
 
         /**
          * Assignments
@@ -294,6 +300,16 @@ namespace translotator
         {
             *this = *this * other;
         }
+        inline Derived operator-() const
+        {
+            static_assert(Derived::ROWS > 0 && Derived::COLS > 0, "Matrix dimensions must be exist");
+            static_assert(is_same_v<typename Derived::DATATYPE, Type>, "Matrix data types must be the same");
+            Derived result;
+            for (size_t i = 0; i < N; i++)
+                for (size_t j = 0; j < M; j++)
+                    result(i, j) = -data_[i * M + j];
+            return result;
+        }
 
         /**
          * Utils
@@ -308,14 +324,6 @@ namespace translotator
             return result;
         }
 
-        inline Vector<M, Type> T_toVec() const
-        {
-            Vector<M, Type> result;
-            for (size_t i = 0; i < M; i++)
-                result(i) = data_[i];
-            return result;
-        }
-
         inline void fill(const Type &v)
         {
             for (size_t i = 0; i < N; i++)
@@ -323,7 +331,7 @@ namespace translotator
                     data_[i * M + j] = v;
         }
 
-        inline void print()
+        inline void print() const
         {
             for (size_t i = 0; i < N; i++)
             {
@@ -334,6 +342,36 @@ namespace translotator
                 printf("\n");
             }
         }
+
+        inline void swapRows(size_t i1, size_t i2)
+        {
+            for (size_t j = 0; j < M; j++)
+            {
+                Type temp = data_[i1 * M + j];
+                data_[i1 * M + j] = data_[i2 * M + j];
+                data_[i2 * M + j] = temp;
+            }
+        }
+
+        inline void swapCols(size_t j1, size_t j2)
+        {
+            for (size_t i = 0; i < N; i++)
+            {
+                Type temp = data_[i * M + j1];
+                data_[i * M + j1] = data_[i * M + j2];
+                data_[i * M + j2] = temp;
+            }
+        }
+
+        inline Type frobeniusNormSquared() const
+        {
+            Type result = static_cast<Type>(0);
+            for (size_t i = 0; i < N; i++)
+                for (size_t j = 0; j < M; j++)
+                    result += data_[i * M + j] * data_[i * M + j];
+            return result;
+        }
+        inline Type frobeniusNorm() const { return translotator::sqrt(frobeniusNormSquared()); }
 
         /**
          * Type Casting
@@ -351,8 +389,27 @@ namespace translotator
             return result;
         }
 
+        /**
+         * @brief Casts the matrix to a scalar if it is a 1x1 matrix
+         */
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 1 && M_ == 1, true_type>>
+        inline Type toScalar() const { return data_[0]; }
+
         template <typename NewContainer>
         inline NewContainer castContainer() const;
+        inline Matrix<N, M, Type> toMatrix() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == N_, true_type>>
+        inline SquareMatrix<N, Type> toSquareMatrix() const;
+        template <size_t Dim = M, typename = enable_if_t<Dim == 1, true_type>>
+        inline Vector<N, Type> toVector() const;
+
+        template <typename NewContainer>
+        inline NewContainer &castContainerRef();
+        inline Matrix<N, M, Type> &toMatrixRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == N_, true_type>>
+        inline SquareMatrix<N, Type> &toSquareMatrixRef();
+        template <size_t Dim = M, typename = enable_if_t<Dim == 1, true_type>>
+        inline Vector<N, Type> &toVectorRef();
 
     private:
     };
