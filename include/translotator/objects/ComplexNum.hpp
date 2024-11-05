@@ -14,7 +14,6 @@ namespace translotator
         // [Re, Im]
         inline ComplexNum() : MatrixBase<2, 1, Type, ComplexNum<Type>>({static_cast<Type>(0), static_cast<Type>(0)}) {}
         explicit inline ComplexNum(Type real, Type imag) : MatrixBase<2, 1, Type, ComplexNum<Type>>({real, imag}) {}
-        explicit inline ComplexNum(const Vector<2, Type> &v) : MatrixBase<2, 1, Type, ComplexNum<Type>>({v[0], v[1]}) {}
 
         /**
          * accessors
@@ -30,10 +29,6 @@ namespace translotator
         /**
          * operators
          */
-        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator*;
-        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator/;
-        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator*=;
-        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator/=;
 
         inline ComplexNum<Type> operator*(const ComplexNum<Type> &c) const
         {
@@ -48,6 +43,16 @@ namespace translotator
         }
         inline void operator*=(const ComplexNum<Type> &c) { *this = *this * c; }
         inline void operator/=(const ComplexNum<Type> &c) { *this = *this / c; }
+        inline ComplexNum<Type> complexNumMul(const ComplexNum<Type> &c) const { return *this * c; } // alias for operator* for readability
+        inline void complexNumMulEq(const ComplexNum<Type> &c) { *this *= c; }                       // alias for operator*= for readability
+        inline ComplexNum<Type> complexNumDiv(const ComplexNum<Type> &c) const { return *this / c; } // alias for operator/ for readability
+        inline void complexNumDivEq(const ComplexNum<Type> &c) { *this /= c; }                       // alias for operator/= for readability
+
+        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator*;
+        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator/;
+        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator*=;
+        using MatrixBase<2, 1, Type, ComplexNum<Type>>::operator/=;
+
         /**
          * utils
          */
@@ -59,11 +64,6 @@ namespace translotator
         inline void conjugate() { *this = conjugated(); }
         inline ComplexNum<Type> inversed() const { return conjugated() / normSquared(); }
         inline void inverse() { *this = inversed(); }
-        inline Vector<2, Type> rotateVector2D(const Vector<2, Type> &v) const
-        {
-            return Vector<2, Type>{{Re() * v.x() - Im() * v.y(),
-                                    Im() * v.x() + Re() * v.y()}};
-        }
 
         /**
          * casting
@@ -73,10 +73,10 @@ namespace translotator
             return SquareMatrix<2, Type>{{Re(), -Im(),
                                           Im(), Re()}};
         }
-        inline SquareMatrix<2, Type> toRotMatrix2D() const { return toMulMatrix(); }
     };
 
     using ComplexNumf = ComplexNum<float>;
     using ComplexNumd = ComplexNum<double>;
     using ComplexNumld = ComplexNum<long double>;
+
 }

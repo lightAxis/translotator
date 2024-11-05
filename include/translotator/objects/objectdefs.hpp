@@ -20,6 +20,9 @@ namespace translotator
     class ComplexNum;
 
     template <typename Type>
+    class UnitComplexNum;
+
+    template <typename Type>
     class Quaternion;
 
     template <typename Type>

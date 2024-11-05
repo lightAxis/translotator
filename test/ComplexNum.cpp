@@ -24,11 +24,6 @@ TEST_CASE("ComplexNum", "[objects]")
         ComplexNumf c6{11.0f, 22.0f};
         ComplexNumf c6_{{11.0f, 22.0f}};
         REQUIRE_THAT(c6, EqualsMatrix(c6_));
-
-        Vectorf<2> v{{1.0f, 2.0f}};
-        ComplexNumf c7{v};
-        ComplexNumf c7_{1.0f, 2.0f};
-        REQUIRE_THAT(c7, EqualsMatrix(c7_));
     }
 
     SECTION("accessor")
@@ -62,15 +57,30 @@ TEST_CASE("ComplexNum", "[objects]")
         ComplexNumf c32 = c3 * c2;
         REQUIRE_THAT(c23, EqualsMatrix(ComplexNumf{-5.0f, 10.0f}));
         REQUIRE_THAT(c23, EqualsMatrix(c32));
+        ComplexNumf c23_alias = c2.complexNumMul(c3);
+        REQUIRE_THAT(c23_alias, EqualsMatrix(c23));
 
         ComplexNumf c23__ = c2;
         c23__ *= c3;
         REQUIRE_THAT(c23__, EqualsMatrix(c23));
+        ComplexNumf c23__alias = c2;
+        c23__alias.complexNumMulEq(c3);
+        REQUIRE_THAT(c23__alias, EqualsMatrix(c23));
 
         ComplexNumf c2_3 = c2 / c3;
         REQUIRE_THAT(c2_3, EqualsMatrix(ComplexNumf{0.44f, 0.08f}));
+        ComplexNumf c2_3_alias = c2.complexNumDiv(c3);
+        REQUIRE_THAT(c2_3_alias, EqualsMatrix(c2_3));
         c2_3 *= c3;
         REQUIRE_THAT(c2_3, EqualsMatrix(c2));
+
+        ComplexNumf c2_3__ = c2;
+        c2_3__ /= c3;
+        c2_3 = c2 / c3;
+        REQUIRE_THAT(c2_3__, EqualsMatrix(c2_3));
+        ComplexNumf c2_3__alias = c2;
+        c2_3__alias.complexNumDivEq(c3);
+        REQUIRE_THAT(c2_3__alias, EqualsMatrix(c2_3__));
 
         ComplexNumf c4 = c2 + c3;
         REQUIRE_THAT(c4, EqualsMatrix(ComplexNumf{4.0f, 6.0f}));
@@ -116,13 +126,6 @@ TEST_CASE("ComplexNum", "[objects]")
         ComplexNumf c6 = c1;
         c6.inverse();
         REQUIRE_THAT(c6, EqualsMatrix(c5));
-
-        Vectorf<2> v{{1.0f, 2.0f}};
-        ComplexNumf c7 = c1.normalized();
-        ComplexNumf c7_inv = c7.inversed();
-        Vectorf<2> v_rot = c7.rotateVector2D(v);
-        Vectorf<2> v_rot_inv = c7_inv.rotateVector2D(v_rot);
-        REQUIRE_THAT(v_rot_inv, EqualsMatrix(v));
     }
 
     SECTION("casting")
@@ -134,13 +137,5 @@ TEST_CASE("ComplexNum", "[objects]")
         const float s = 0.89442719099991587856366946749252f;
         REQUIRE_THAT(m, EqualsMatrix(SquareMatrix<2, float>{{c, -s,
                                                              s, c}}));
-
-        Vectorf<2> vec{{1.0f, 2.0f}};
-        Vectorf<2> vec_rot = c2.rotateVector2D(vec);
-        Vectorf<2> vec_rot_ = m * vec;
-        REQUIRE_THAT(vec_rot, EqualsMatrix(vec_rot_));
-
-        SquareMatrix<2, float> m2 = c2.toRotMatrix2D();
-        REQUIRE_THAT(m2, EqualsMatrix(m));
     }
 }

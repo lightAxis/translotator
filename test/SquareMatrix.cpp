@@ -5,6 +5,11 @@
 
 using namespace translotator;
 
+void asdf(const SquareMatrixf<2> &m)
+{
+    m.print();
+}
+
 TEST_CASE("SquareMatrix", "[objects]")
 {
     SquareMatrixf<2> m1{{1.f, 2.f,
@@ -71,16 +76,18 @@ TEST_CASE("SquareMatrix", "[objects]")
         REQUIRE(result);
 
         auto m1m1inv = m1 * m1_inv;
-        const SquareMatrixf<2> &m1m1inv_ref = m1m1inv.toSquareMatrixRef();
-        const SquareMatrixf<2> &m1m1inv_ref2 = (m1 * m1_inv).toSquareMatrix();
+        const SquareMatrixf<2> &m1m1inv_ref = m1m1inv.toSquareMatrix();
+        const auto &m1m1inv_ref2 = (m1 * m1_inv).toSquareMatrix();
+        m1m1inv_ref2.print();
         REQUIRE_THAT(m1m1inv_ref.toMatrix(), EqualsMatrix(Matrixf<2, 2>::eye()));
+        asdf(m1m1inv_ref2);
         REQUIRE_THAT(m1m1inv_ref2.toMatrix(), EqualsMatrix(Matrixf<2, 2>::eye()));
 
         SquareMatrixf<3> m2_inv = m2.inversed(result);
         REQUIRE(result);
 
         auto m2m2inv = m2 * m2_inv;
-        const SquareMatrixf<3> &m2m2inv_ref = m2m2inv.toSquareMatrixRef();
+        const SquareMatrixf<3> &m2m2inv_ref = m2m2inv.toSquareMatrix();
         const SquareMatrixf<3> &m2m2inv_ref2 = (m2 * m2_inv).toSquareMatrix();
         REQUIRE_THAT(m2m2inv_ref.toMatrix(), EqualsMatrix(Matrixf<3, 3>::eye()));
         REQUIRE_THAT(m2m2inv_ref2.toMatrix(), EqualsMatrix(Matrixf<3, 3>::eye()));
@@ -89,7 +96,7 @@ TEST_CASE("SquareMatrix", "[objects]")
         REQUIRE(result);
 
         auto m3m3inv = m3 * m3_inv;
-        const SquareMatrixf<4> &m3m3inv_ref = m3m3inv.toSquareMatrixRef();
+        const SquareMatrixf<4> &m3m3inv_ref = m3m3inv.toSquareMatrix();
         const SquareMatrixf<4> &m3m3inv_ref2 = (m3 * m3_inv).toSquareMatrix();
         REQUIRE_THAT(m3m3inv_ref.toMatrix(), EqualsMatrix(Matrixf<4, 4>::eye()));
         REQUIRE_THAT(m3m3inv_ref2.toMatrix(), EqualsMatrix(Matrixf<4, 4>::eye()));

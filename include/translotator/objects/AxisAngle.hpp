@@ -65,16 +65,20 @@ namespace translotator
         /**
          * Casting
          */
-        Quaternion<Type> toQuaternion() const
+        inline Quaternion<Type> toQuaternion() const // TODO change to UnitQuaternion
         {
             const Type half_angle = angle_ / static_cast<Type>(2);
             return Quaternion<Type>(cos(half_angle), sin(half_angle) * axis_);
         }
-        SquareMatrix<3, Type> toRotMatrix3D() const
+        inline UnitComplexNum<Type> toUnitComplexNum() const
+        {
+            return UnitComplexNum{translotator::cos(angle_), translotator::sin(angle_)};
+        }
+        inline SquareMatrix<3, Type> toRotMatrix3D() const
         {
             return (*this).toQuaternion().toRotMatrix3D();
         }
-        SquareMatrix<2, Type> toRotMatrix2D() const
+        inline SquareMatrix<2, Type> toRotMatrix2D() const
         {
             const Type c = translotator::cos(angle_);
             const Type s = translotator::sin(angle_);

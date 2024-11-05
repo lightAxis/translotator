@@ -66,6 +66,12 @@ bool close_enough(const translotator::Quaternion<Type> &lhs, const translotator:
 }
 
 template <typename Type>
+bool close_enough(const translotator::UnitComplexNum<Type> &lhs, const translotator::UnitComplexNum<Type> &rhs)
+{
+    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+}
+
+template <typename Type>
 bool close_enough(const translotator::AxisAngle<Type> &lhs, const translotator::AxisAngle<Type> &rhs)
 {
     return close_enough(lhs.getAngle(), rhs.getAngle()) && close_enough(lhs.getAxis(), rhs.getAxis());
@@ -89,7 +95,7 @@ struct EqualsMatrixMatcher : Catch::Matchers::MatcherGenericBase
     }
 
 private:
-    T const &val;
+    T val;
 };
 
 template <typename T>

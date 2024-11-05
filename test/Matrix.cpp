@@ -252,7 +252,7 @@ TEST_CASE("Matrix", "[objects]")
         Vectorf<3> v_{{1.f, 2.f, 3.f}};
 
         // to vector Ref
-        Vector<3, float> v2 = m2.toVectorRef();
+        Vector<3, float> v2 = m2.toVector();
         Vector<3, float> &v2_ref = m2.toVectorRef();
         const Vector<3, float> &v2_ref_const = m2.toVectorRef();
 
@@ -272,14 +272,14 @@ TEST_CASE("Matrix", "[objects]")
         Matrixf<1, 3> m3{{1.f, 2.f, 3.f}};
         REQUIRE(decltype(m3)::COLS == 3);
         REQUIRE(decltype(m3)::ROWS == 1);
-        const auto &vv = m3.T().toVectorRef();
+        const auto &vv = m3.T().toVector();
         REQUIRE(vv.ROWS == 3);
         REQUIRE(vv.COLS == 1);
 
         Matrixf<3, 3> m33{{1.f, 2.f, 3.f,
                            4.f, 5.f, 6.f,
                            7.f, 8.f, 9.f}};
-        const auto &v3 = (m33 * m3.T()).toVectorRef();
+        const auto &v3 = (m33 * m3.T()).toVector();
         REQUIRE(is_same_v<decltype(v3), const Vector<3, float> &> == true);
 
         Matrixf<3, 3> m4{{1.f, 2.f, 3.f,

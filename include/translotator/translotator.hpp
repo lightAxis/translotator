@@ -22,7 +22,8 @@
 #include "objects/ComplexNum.hpp"
 #include "objects/Quaternion.hpp"
 
-// rotation objects
+// rotation objects, SO(2), SO(3)
+#include "objects/UnitComplexNum.hpp"
 #include "objects/AxisAngle.hpp"
 
 #include "objects/tail.hpp"

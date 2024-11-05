@@ -398,20 +398,29 @@ namespace translotator
         template <typename NewContainer>
         inline NewContainer castContainer() const;
         inline Matrix<N, M, Type> toMatrix() const;
-        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == N_, true_type>>
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == M_, true_type>>
         inline SquareMatrix<N, Type> toSquareMatrix() const;
-        template <size_t Dim = M, typename = enable_if_t<Dim == 1, true_type>>
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == 1, true_type>>
         inline Vector<N, Type> toVector() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
+        inline ComplexNum<Type> toComplexNum() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
+        inline UnitComplexNum<Type> toUnitComplexNum() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
         inline Matrix<N, M, Type> &toMatrixRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == N_, true_type>>
         inline SquareMatrix<N, Type> &toSquareMatrixRef();
-        template <size_t Dim = M, typename = enable_if_t<Dim == 1, true_type>>
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == 1, true_type>>
         inline Vector<N, Type> &toVectorRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
+        inline ComplexNum<Type> &toComplexNumRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
+        inline UnitComplexNum<Type> &toUnitComplexNumRef();
 
-    private:
+    protected:
+        private:
     };
 
 }
