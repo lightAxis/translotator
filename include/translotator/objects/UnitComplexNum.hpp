@@ -51,6 +51,7 @@ namespace translotator
             }
         }
 
+        // TODO change to auto template function
         inline UnitComplexNum<Type> operator*(const UnitComplexNum<Type> &other) const
         {
             const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
@@ -95,6 +96,7 @@ namespace translotator
             lhs *= rhs.toComplexNumRef();
         }
 
+        // TODO change to auto template function
         inline UnitComplexNum<Type> operator/(const UnitComplexNum<Type> &other) const
         {
             const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();

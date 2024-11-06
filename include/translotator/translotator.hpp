@@ -24,6 +24,7 @@
 
 // rotation objects, SO(2), SO(3)
 #include "objects/UnitComplexNum.hpp"
+#include "objects/UnitQuaternion.hpp"
 #include "objects/AxisAngle.hpp"
 
 #include "objects/tail.hpp"

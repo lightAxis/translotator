@@ -23,6 +23,7 @@ namespace translotator
         constexpr static size_t ROWS = N;
         constexpr static size_t COLS = M;
         using DATATYPE = Type;
+        constexpr static bool MATRIX_BASE = true;
 
         constexpr static size_t rowSize() { return N; }
         constexpr static size_t colSize() { return M; }
@@ -406,6 +407,10 @@ namespace translotator
         inline ComplexNum<Type> toComplexNum() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
         inline UnitComplexNum<Type> toUnitComplexNum() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
+        inline Quaternion<Type> toQuaternion() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
+        inline UnitQuaternion<Type> toUnitQuaternion() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
@@ -418,9 +423,13 @@ namespace translotator
         inline ComplexNum<Type> &toComplexNumRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
         inline UnitComplexNum<Type> &toUnitComplexNumRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
+        inline Quaternion<Type> &toQuaternionRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
+        inline UnitQuaternion<Type> &toUnitQuaternionRef();
 
     protected:
-        private:
+    private:
     };
 
 }

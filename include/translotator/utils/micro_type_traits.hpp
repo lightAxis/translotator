@@ -14,13 +14,13 @@ namespace translotator
     struct enable_if
     {
     };
-
     template <typename T>
     struct enable_if<true, T>
     {
         using type = T;
     };
 
+    // enable_if_t
     template <bool B, typename T = void>
     using enable_if_t = typename enable_if<B, T>::type;
 
@@ -44,7 +44,6 @@ namespace translotator
     struct is_same : false_type
     {
     };
-
     template <typename T>
     struct is_same<T, T> : true_type
     {
@@ -54,22 +53,21 @@ namespace translotator
     template <typename T, typename U>
     inline constexpr bool is_same_v = is_same<T, U>::value;
 
-    // 모든 타입이 동일한지 확인하는 all_same 메타 함수
+    // all_same
     template <typename T, typename... Args>
     struct all_same;
-
     template <typename T>
     struct all_same<T>
     {
         static constexpr bool value = true;
     };
-
     template <typename T, typename First, typename... Rest>
     struct all_same<T, First, Rest...>
     {
         static constexpr bool value = is_same_v<T, First> && all_same<T, Rest...>::value;
     };
 
+    // all_same_v
     template <typename T, typename... Args>
     inline constexpr bool all_same_v = all_same<T, Args...>::value;
 
@@ -78,17 +76,14 @@ namespace translotator
     struct is_float : false_type
     {
     };
-
     template <>
     struct is_float<float> : true_type
     {
     };
-
     template <>
     struct is_float<double> : true_type
     {
     };
-
     template <>
     struct is_float<long double> : true_type
     {
@@ -97,4 +92,19 @@ namespace translotator
     // is_float_v
     template <typename T>
     inline constexpr bool is_float_v = is_float<T>::value;
+
+    // is_matrix_base
+
+    template <typename T, typename = void>
+    struct is_matrix_base : false_type
+    {
+    };
+    template <typename T>
+    struct is_matrix_base<T, typename enable_if<T::MATRIX_BASE>::type> : true_type
+    {
+    };
+
+    // is_matrix_base_v
+    template <typename T>
+    inline constexpr bool is_matrix_base_v = is_matrix_base<T>::value;
 }

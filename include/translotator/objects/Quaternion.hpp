@@ -44,39 +44,6 @@ namespace translotator
                                           y(), z(), w(), -x(),
                                           z(), -y(), x(), w()}};
         }
-        inline SquareMatrix<3, float> toRotMatrix3D() const
-        {
-            const Type xx = x() * x();
-            const Type xy = x() * y();
-            const Type xz = x() * z();
-            const Type xw = x() * w();
-            const Type yy = y() * y();
-            const Type yz = y() * z();
-            const Type yw = y() * w();
-            const Type zz = z() * z();
-            const Type zw = z() * w();
-            return SquareMatrix<3, Type>{{1 - 2 * (yy + zz), 2 * (xy - zw), 2 * (xz + yw),
-                                          2 * (xy + zw), 1 - 2 * (xx + zz), 2 * (yz - xw),
-                                          2 * (xz - yw), 2 * (yz + xw), 1 - 2 * (xx + yy)}};
-        }
-        inline SquareMatrix<2, Type> toRotMatrix2D() const
-        {
-            const Type angle = static_cast<Type>(2) * translotator::acos(w());
-            const Type c = translotator::cos(angle);
-            const Type s = translotator::sin(angle);
-            return SquareMatrix<2, Type>{{+c, -s,
-                                          +s, +c}};
-        }
-        inline AxisAngle<Type> toAxisAngle() const
-        {
-            const Type angle = static_cast<Type>(2) * translotator::acos(w());
-            if (translotator::abs(angle) < translotator::epsilon<Type>())
-            {
-                return AxisAngle<Type>::identity();
-            }
-
-            return AxisAngle<Type>{angle, Im() / translotator::sin(angle / static_cast<Type>(2))};
-        }
 
         /**
          * operators
@@ -95,6 +62,10 @@ namespace translotator
         inline Quaternion<Type> operator/(const Quaternion<Type> &q) const { return *this * q.inversed(); }
         inline void operator*=(const Quaternion<Type> &q) { *this = *this * q; }
         inline void operator/=(const Quaternion<Type> &q) { *this = *this / q; }
+        inline Quaternion<Type> quatNumMul(const Quaternion<Type> &q) const { return *this * q; } // alias for operator* for readability
+        inline void quatNumMulEq(const Quaternion<Type> &q) { *this *= q; }                       // alias for operator*= for readability
+        inline Quaternion<Type> quatNumDiv(const Quaternion<Type> &q) const { return *this / q; } // alias for operator/ for readability
+        inline void quatNumDivEq(const Quaternion<Type> &q) { *this /= q; }                       // alias for operator/= for readability
 
         /**
          * utils
@@ -118,20 +89,6 @@ namespace translotator
         inline void conjugate() { *this = conjugated(); }
         inline Quaternion<Type> inversed() const { return conjugated() / normSquared(); }
         inline void inverse() { *this = inversed(); }
-
-        inline const Vector<3, Type> &rotateVector3D(const Vector<3, Type> &v) const
-        {
-            const Quaternion<Type> qv{static_cast<Type>(0), v};
-            return ((*this * qv) * inversed()).Im();
-        }
-        inline const Vector<2, Type> &rotateVector2D(const Vector<2, Type> &v) const
-        {
-            const Type angle = static_cast<Type>(2) * translotator::acos(w());
-            const Type c = translotator::cos(angle);
-            const Type s = translotator::sin(angle);
-            return Vector<2, Type>{{c * v.x() - s * v.y(),
-                                    s * v.x() + c * v.y()}};
-        }
     };
 
     using Quaternionf = Quaternion<float>;

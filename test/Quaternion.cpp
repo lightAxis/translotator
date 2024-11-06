@@ -141,24 +141,4 @@ TEST_CASE("Quaternion", "[objects]")
         Quaternionf q7_{1.0f, -2.0f, -3.0f, -4.0f};
         REQUIRE_THAT(q7, EqualsMatrix(q7_));
     }
-
-    SECTION("rotation")
-    {
-        Vectorf<3> v{{1.0f, 2.0f, 3.0f}};
-        v.normalize();
-        const float angle = 1.0f;
-        Quaternionf q2{translotator::cos(angle / 2.0f), translotator::sin(angle / 2.0f) * v};
-
-        AxisAnglef ag2 = q2.toAxisAngle();
-        REQUIRE(close_enough(ag2.getAngle(), angle));
-        REQUIRE_THAT(ag2.getAxis(), EqualsMatrix(v));
-
-        Vectorf<3> vec{{1.0f, 2.0f, 3.0f}};
-        Vectorf<3> vec_rot = q2.rotateVector3D(vec);
-
-        SquareMatrixf<3> rot_mat = q2.toRotMatrix3D();
-        Vectorf<3> vec_rot_mat = rot_mat * vec;
-
-        REQUIRE_THAT(vec_rot, EqualsMatrix(vec_rot_mat));
-    }
 }

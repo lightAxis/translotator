@@ -6,15 +6,19 @@ Requires C++17 or Later. No dependencies with other libraries and stl.
 ## Features
 
 - Translation, Rotation, Homogeneous Transformation
-- Matrix N x M, SquareMatrix N x N, Vector N, Complex number, AxisAngle, Quaternion
+- Matrix based objects : Matrix N x M, SquareMatrix N x N, Vector N
+- Number objects : Complex number, Quaternion
+- Rotation objects : Unit Complex Number, Unit Quaternion, Axis Angle
 - Supports variaous types of data (float, double, long double)
-- Supports reinterpret_cast for zero-copy data type conversion between same size of matrix data
+- Supports various operator overloadings for easy calculation
+- Supports reinterpret_cast for zero-copy data type conversion between MatrixContainer
 
-**TODO**
+## TODOs
 
-- Lie Group & Algebra SO(2), SO(3), SE(2), SE(3), Lie Group, Lie Algebra,
-- Vector Lerp
-- Dual number, Dual Quaternion, ScLerp interpolation
+- add Rotation object : Euler Angle, SO(2), SO(3)
+- add Number objects : Dual number, Dual Quaternion
+- add Lie Group & Algebra : SO(2), SO(3), SE(2), SE(3)
+- add Interpolation : Lerp, Slerp, ScLerp
 
 ## License
 

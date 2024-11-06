@@ -26,5 +26,8 @@ namespace translotator
     class Quaternion;
 
     template <typename Type>
+    class UnitQuaternion;
+
+    template <typename Type>
     class AxisAngle;
 }

@@ -14,7 +14,7 @@ namespace translotator
          * Constructors
          */
         inline AxisAngle(const Type &angle, const Type &x, const Type &y, const Type &z) : angle_(angle), axis_({x, y, z}) {}
-        explicit inline AxisAngle(const Type &angle, const Vector<3, Type> &axis) : angle_(angle), axis_(axis) {}
+        explicit inline AxisAngle(const Type &angle, const Vector<3, Type> &axis) : angle_(angle), axis_(axis.normalized()) {}
         explicit inline AxisAngle(const Type &angle) : angle_(angle), axis_(Vector<3, Type>::zAxis()) {} // for 2d rotation
 
         /**
@@ -23,14 +23,7 @@ namespace translotator
         static inline AxisAngle<Type> identity() { return AxisAngle<Type>(static_cast<Type>(0), static_cast<Type>(1), static_cast<Type>(0), static_cast<Type>(0)); }
 
         /**
-         * Getters
-         */
-        inline Type getAngle() const { return angle_; }
-        inline const Vector<3, Type> &getAxis() const { return axis_; }
-        inline Vector<3, Type> getAxis() { return axis_; }
-
-        /**
-         * Setters
+         * accessors
          */
         inline Type angle() const { return angle_; }
         inline Type &angle() { return angle_; }
@@ -52,7 +45,7 @@ namespace translotator
         inline AxisAngle inversed() const { return AxisAngle<Type>(-angle_, axis_); }
         inline Vector<3, Type> rotateVector3D(const Vector<3, Type> &v) const
         {
-            return (*this).toQuaternion().rotateVector3D(v);
+            return (*this).toUnitQuaternion().rotateVector3D(v);
         }
         inline Vector<2, Type> rotateVector2D(const Vector<2, Type> &v) const
         {
@@ -65,10 +58,12 @@ namespace translotator
         /**
          * Casting
          */
-        inline Quaternion<Type> toQuaternion() const // TODO change to UnitQuaternion
+        inline UnitQuaternion<Type> toUnitQuaternion() const
         {
             const Type half_angle = angle_ / static_cast<Type>(2);
-            return Quaternion<Type>(cos(half_angle), sin(half_angle) * axis_);
+            const Vector<3, Type> axis_normalized = axis_.normalized();
+            return UnitQuaternion<Type>(translotator::cos(half_angle),
+                                        translotator::sin(half_angle) * axis_normalized);
         }
         inline UnitComplexNum<Type> toUnitComplexNum() const
         {
@@ -76,7 +71,7 @@ namespace translotator
         }
         inline SquareMatrix<3, Type> toRotMatrix3D() const
         {
-            return (*this).toQuaternion().toRotMatrix3D();
+            return (*this).toUnitQuaternion().toRotMatrix3D();
         }
         inline SquareMatrix<2, Type> toRotMatrix2D() const
         {

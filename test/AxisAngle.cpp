@@ -24,8 +24,9 @@ TEST_CASE("AxisAngle", "[objects]")
 
         const float angle = 1.0f;
         const Vectorf<3> axis{{2.0f, 3.0f, 4.0f}};
+        const Vectorf<3> axis_normed = axis.normalized();
         AxisAnglef a5(angle, axis);
-        REQUIRE_THAT(a5, EqualsMatrix(a));
+        REQUIRE_THAT(a5, EqualsMatrix(AxisAnglef(angle, axis_normed.x(), axis_normed.y(), axis_normed.z())));
     }
 
     SECTION("getter setter")
@@ -60,20 +61,21 @@ TEST_CASE("AxisAngle", "[objects]")
         REQUIRE_THAT(a_normed.axis(), EqualsMatrix(v));
 
         AxisAnglef a_inv = a.inversed();
-        REQUIRE_THAT(a_inv, EqualsMatrix(AxisAnglef(-1.0f, 2.0f, 3.0f, 4.0f)));
+        Vectorf<3> v_inv = Vectorf<3>{{2.f, 3.f, 4.f}}.normalized();
+        REQUIRE_THAT(a_inv, EqualsMatrix(AxisAnglef(-1.0f, v_inv.x(), v_inv.y(), v_inv.z())));
 
         AxisAnglef a2 = a;
         a2.axisNormalize();
         AxisAnglef a2_inv = a2.inversed();
-        Quaternionf q = a2.toQuaternion();
-        Quaternionf q_inv = a2_inv.toQuaternion();
-        q.canonicalize();
-        q_inv.canonicalize();
-        REQUIRE_THAT(q, EqualsMatrix(Quaternionf{0.8775826f, 0.1780542f, 0.2670813f, 0.3561084f}));
+        UnitQuaternionf uq = a2.toUnitQuaternion();
+        UnitQuaternionf uq_inv = a2_inv.toUnitQuaternion();
+        uq.canonicalize();
+        uq_inv.canonicalize();
+        REQUIRE_THAT(uq, EqualsMatrix(UnitQuaternionf{0.8775826f, 0.1780542f, 0.2670813f, 0.3561084f}));
 
         Vectorf<3> vec{{1.f, 2.f, 3.f}};
-        Vectorf<3> vec_rot = q.rotateVector3D(vec);
-        Vectorf<3> vec_rot_inv = q_inv.rotateVector3D(vec_rot);
+        Vectorf<3> vec_rot = uq.rotateVector3D(vec);
+        Vectorf<3> vec_rot_inv = uq_inv.rotateVector3D(vec_rot);
         REQUIRE_THAT(vec_rot_inv, EqualsMatrix(vec));
 
         Vectorf<3> vecrot2 = a2.rotateVector3D(vec);

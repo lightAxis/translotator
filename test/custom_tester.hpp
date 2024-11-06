@@ -72,9 +72,15 @@ bool close_enough(const translotator::UnitComplexNum<Type> &lhs, const translota
 }
 
 template <typename Type>
+bool close_enough(const translotator::UnitQuaternion<Type> &lhs, const translotator::UnitQuaternion<Type> &rhs)
+{
+    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+}
+
+template <typename Type>
 bool close_enough(const translotator::AxisAngle<Type> &lhs, const translotator::AxisAngle<Type> &rhs)
 {
-    return close_enough(lhs.getAngle(), rhs.getAngle()) && close_enough(lhs.getAxis(), rhs.getAxis());
+    return close_enough(lhs.angle(), rhs.angle()) && close_enough(lhs.axis(), rhs.axis());
 }
 
 template <typename T>
