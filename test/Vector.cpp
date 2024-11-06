@@ -188,10 +188,10 @@ TEST_CASE("Vector", "[objects]")
 
     SECTION("Casting")
     {
-        auto vd = v.cast<double>();
+        auto vd = v.castDatatype<double>();
         REQUIRE(is_same_v<decltype(vd)::DATATYPE, double>);
 
-        auto vld = v.cast<long double>();
+        auto vld = v.castDatatype<long double>();
         REQUIRE(is_same_v<decltype(vld)::DATATYPE, long double>);
 
         auto m2 = v.castContainer<Matrix<3, 1, float>>();

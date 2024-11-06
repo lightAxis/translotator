@@ -26,5 +26,6 @@
 #include "objects/UnitComplexNum.hpp"
 #include "objects/UnitQuaternion.hpp"
 #include "objects/AxisAngle.hpp"
+#include "objects/SOGroup.hpp"
 
 #include "objects/tail.hpp"

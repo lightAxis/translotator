@@ -8,7 +8,7 @@
             "name": "debug test",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/test/test_UnitComplexNum",
+            "program": "${workspaceRoot}/build/test/test_UnitQuaternion",
             "args": [],
             "cwd": "${workspaceRoot}/build",
             "miDebuggerPath": "/usr/bin/gdb",

@@ -30,6 +30,14 @@ namespace translotator
             return 0;
         }
 
+        inline Type trace() const
+        {
+            Type result = 0;
+            for (size_t i = 0; i < N; i++)
+                result += Data_(i, i);
+            return result;
+        }
+
         /**
          * 1x1 ~ 3x3 closed form solution
          * 4x4 ~ LU factorization with partial pivotting
@@ -205,6 +213,8 @@ namespace translotator
             result = true;
             return P;
         }
+
+        inline void inverse() { *this = inversed(); }
     };
 
     template <size_t N>

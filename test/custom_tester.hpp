@@ -44,37 +44,37 @@ bool close_enough(const translotator::Matrix<N, M, Type> &lhs, const translotato
 template <size_t N, typename Type>
 bool close_enough(const translotator::SquareMatrix<N, Type> &lhs, const translotator::SquareMatrix<N, Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <size_t N, typename Type>
 bool close_enough(const translotator::Vector<N, Type> &lhs, const translotator::Vector<N, Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <typename Type>
 bool close_enough(const translotator::ComplexNum<Type> &lhs, const translotator::ComplexNum<Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <typename Type>
 bool close_enough(const translotator::Quaternion<Type> &lhs, const translotator::Quaternion<Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <typename Type>
 bool close_enough(const translotator::UnitComplexNum<Type> &lhs, const translotator::UnitComplexNum<Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <typename Type>
 bool close_enough(const translotator::UnitQuaternion<Type> &lhs, const translotator::UnitQuaternion<Type> &rhs)
 {
-    return close_enough(lhs.toMatrix(), rhs.toMatrix());
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
 template <typename Type>

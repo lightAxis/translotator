@@ -5,6 +5,9 @@ namespace translotator
     template <typename Type = TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE>
     class UnitComplexNum : public ComplexNum<Type>
     {
+    private:
+        explicit UnitComplexNum(const ComplexNum<Type> &cplx) : ComplexNum<Type>(cplx) {}
+
     public:
         using ComplexNum<Type>::ComplexNum;
         /**
@@ -22,106 +25,104 @@ namespace translotator
          * operators
          */
         template <typename OtherContainer>
-        inline auto operator+(const OtherContainer &other) const
+        inline ComplexNum<Type> operator+(const OtherContainer &other) const
         {
-            if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>> ||
-                          is_same_v<OtherContainer, ComplexNum<Type>>)
-            {
-                const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-                return me + other;
-            }
-            else
-            {
-                return other + (*this);
-            }
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator+. Must have matrix base");
+            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
+            return me + other;
         }
 
         template <typename OtherContainer>
         inline auto operator-(const OtherContainer &other) const
         {
-            if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>> ||
-                          is_same_v<OtherContainer, ComplexNum<Type>>)
-            {
-                const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-                return me - other;
-            }
-            else
-            {
-                return other - (*this);
-            }
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
+            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
+            return me - other;
         }
 
-        // TODO change to auto template function
-        inline UnitComplexNum<Type> operator*(const UnitComplexNum<Type> &other) const
-        {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            const ComplexNum<Type> &other_ = const_cast<UnitComplexNum<Type> *>(&other)->toComplexNumRef();
-            return (me * other_).toUnitComplexNum();
-        }
-        inline ComplexNum<Type> operator*(const ComplexNum<Type> &other) const
-        {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me * other;
-        }
         template <typename OtherContainer>
         inline auto operator*(const OtherContainer &other) const
         {
-            const Matrix<2, 1, Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toMatrixRef();
-            return me * other;
+            const Matrix<2, 1, Type> &me_mat = const_cast<UnitComplexNum<Type> *>(this)->cast2MatrixRef();
+            if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>>)
+            {
+                const ComplexNum<Type> &other_ = const_cast<UnitComplexNum<Type> *>(&other)->cast2ComplexNumRef();
+                return UnitComplexNum<Type>{ComplexNum<Type>::operator*(other_)};
+            }
+            else if constexpr (is_same_v<OtherContainer, ComplexNum<Type>>)
+            {
+                return ComplexNum<Type>::operator*(other);
+            }
+            else if constexpr (is_same_v<OtherContainer, Type>)
+            {
+                return ComplexNum<Type>::operator*(other);
+            }
+            else
+            {
+                return me_mat * other;
+            }
         }
-        inline ComplexNum<Type> operator*(const Type &v) const
+        inline friend ComplexNum<Type> operator*(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me * v;
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            return lhs * rhs_;
+        }
+        inline friend ComplexNum<Type> operator*(const Type &lhs, const UnitComplexNum<Type> &rhs)
+        {
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            return lhs * rhs_;
         }
         inline void operator*=(const UnitComplexNum<Type> &other)
         {
             *this = *this * other;
         }
-        inline friend ComplexNum<Type> operator*(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
+        inline friend void operator*=(ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->toComplexNumRef();
-            return lhs * rhs_;
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            lhs = lhs * rhs_;
         }
         inline UnitComplexNum<Type> complexNumMul(const UnitComplexNum<Type> &other) const { return *this * other; } // alias for operator* for readability
         inline ComplexNum<Type> complexNumMul(const ComplexNum<Type> &other) const { return *this * other; }
         inline friend ComplexNum<Type> complexNumMul(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->toComplexNumRef();
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
             return lhs * rhs_;
         }
         inline void complexNumMulEq(const UnitComplexNum<Type> &other) { *this *= other; } // alias for operator*= for readability
         inline friend void complexNumMulEq(ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            lhs *= rhs.toComplexNumRef();
+            lhs *= rhs.cast2ComplexNumRef();
         }
 
-        // TODO change to auto template function
-        inline UnitComplexNum<Type> operator/(const UnitComplexNum<Type> &other) const
+        template <typename OtherContainer>
+        inline auto operator/(const OtherContainer &other) const
         {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            const ComplexNum<Type> &other_ = const_cast<UnitComplexNum<Type> *>(&other)->toComplexNumRef();
-            return (me * other_.conjugated()).toUnitComplexNum();
-        }
-        inline ComplexNum<Type> operator/(const ComplexNum<Type> &other) const
-        {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me / other;
-        }
-        inline ComplexNum<Type> operator/(const Type &v) const
-        {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me / v;
+            const ComplexNum<Type> &me_cplx = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
+            if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>>)
+            {
+                return (*this) * other.conjugated();
+            }
+            else if constexpr (is_same_v<OtherContainer, ComplexNum<Type>>)
+            {
+                return ComplexNum<Type>::operator/(other);
+            }
+            else if constexpr (is_same_v<OtherContainer, Type>)
+            {
+                return ComplexNum<Type>::operator/(other);
+            }
+            else
+            {
+                static_assert(is_same_v<OtherContainer, UnitComplexNum<Type>> ||
+                                  is_same_v<OtherContainer, ComplexNum<Type>> ||
+                                  is_same_v<OtherContainer, Type>,
+                              "Invalid type for operator/ must be UnitComplexNum, ComplexNum or Type");
+                return Matrix<2, 1, Type>();
+            }
         }
         inline friend ComplexNum<Type> operator/(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->toComplexNumRef();
-            return lhs / rhs_;
-        }
-        inline friend ComplexNum<Type> operator/(const Type &lhs, const UnitComplexNum<Type> &rhs)
-        {
-            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->toComplexNumRef();
-            return lhs / rhs_;
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            return lhs * rhs_.conjugated();
         }
         inline void operator/=(const UnitComplexNum<Type> &other)
         {
@@ -129,29 +130,31 @@ namespace translotator
         }
         inline friend void operator/=(ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
         {
-            lhs /= rhs.toComplexNumRef();
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            lhs *= rhs_.conjugated();
         }
         inline UnitComplexNum<Type> complexNumDiv(const UnitComplexNum<Type> &other) const { return *this / other; } // alias for operator/ for readability
         inline ComplexNum<Type> complexNumDiv(const ComplexNum<Type> &other) const { return *this / other; }
         inline void complexNumDivEq(const UnitComplexNum<Type> &other) { *this /= other; } // alias for operator/= for readability
-
+        inline friend void complexNumDivEq(ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
+        {
+            const ComplexNum<Type> &rhs_ = const_cast<UnitComplexNum<Type> *>(&rhs)->cast2ComplexNumRef();
+            lhs *= rhs_.conjugated();
+        }
         /**
          * utils
          */
         inline UnitComplexNum<Type> normalized() const
         {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me.normalized().toUnitComplexNum();
+            return UnitComplexNum<Type>{ComplexNum<Type>::normalized()};
         }
         inline UnitComplexNum<Type> conjugated() const
         {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me.conjugated().toUnitComplexNum();
+            return UnitComplexNum<Type>{ComplexNum<Type>::conjugated()};
         }
         inline UnitComplexNum<Type> inversed() const
         {
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->toComplexNumRef();
-            return me.inversed().toUnitComplexNum();
+            return conjugated();
         }
         inline void inverse() { *this = inversed(); }
         inline Vector<2, Type> rotateVector2D(const Vector<2, Type> &v) const
@@ -179,6 +182,7 @@ namespace translotator
     using UnitComplexNumf = UnitComplexNum<float>;
     using UnitComplexNumd = UnitComplexNum<double>;
     using UnitComplexNumld = UnitComplexNum<long double>;
+
     using S1f = UnitComplexNumf;
     using S1d = UnitComplexNumd;
     using S1ld = UnitComplexNumld;

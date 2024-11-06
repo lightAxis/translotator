@@ -5,6 +5,9 @@ namespace translotator
     template <typename Type = TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE>
     class UnitQuaternion : public Quaternion<Type>
     {
+    private:
+        explicit UnitQuaternion(const Quaternion<Type> &quat) : Quaternion<Type>(quat) {}
+
     public:
         using Quaternion<Type>::Quaternion;
 
@@ -30,107 +33,90 @@ namespace translotator
          * operators
          */
         template <typename OtherContainer>
-        inline auto operator+(const OtherContainer &other) const
+        inline Quaternion<Type> operator+(const OtherContainer &other) const
         {
-            if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>> ||
-                          is_same_v<OtherContainer, Quaternion<Type>>)
-            {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return me + other;
-            }
-            else
-            {
-                const Matrix<4, 1, Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toMatrixRef();
-                return me + other;
-            }
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator+. Must have matrix base");
+            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
+            return me + other;
         }
 
         template <typename OtherContainer>
-        inline auto operator-(const OtherContainer &other) const
+        inline Quaternion<Type> operator-(const OtherContainer &other) const
         {
-            if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>> ||
-                          is_same_v<OtherContainer, Quaternion<Type>>)
-            {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return me - other;
-            }
-            else
-            {
-                const Matrix<4, 1, Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toMatrixRef();
-                return me - other;
-            }
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
+            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
+            return me - other;
         }
 
         template <typename OtherContainer>
         inline auto operator*(const OtherContainer &other) const
         {
+            const Matrix<4, 1, Type> &me_mat = const_cast<UnitQuaternion<Type> *>(this)->cast2MatrixRef();
             if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                const Quaternion<Type> &other_ = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return (me * other_).toUnitQuaternion();
+                const Quaternion<Type> &other_ = const_cast<UnitQuaternion<Type> *>(&other)->cast2QuaternionRef();
+                return UnitQuaternion<Type>{Quaternion<Type>::operator*(other_)};
             }
             else if constexpr (is_same_v<OtherContainer, Quaternion<Type>>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return (me * other);
+                return Quaternion<Type>::operator*(other);
             }
             else if constexpr (is_same_v<OtherContainer, Type>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return me * other;
+                return Quaternion<Type>::operator*(other);
             }
             else
             {
-                const Matrix<4, 1, Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toMatrixRef();
-                return me * other;
+                return me_mat * other;
             }
         }
         inline friend Quaternion<Type> operator*(const Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
         {
-            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->toQuaternionRef();
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
             return lhs * rhs_;
         }
         inline friend Quaternion<Type> operator*(const Type &lhs, const UnitQuaternion<Type> &rhs)
         {
-            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->toQuaternionRef();
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
             return lhs * rhs_;
         }
         inline void operator*=(const UnitQuaternion<Type> &other)
         {
             *this = *this * other;
         }
+        inline friend void operator*=(Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
+        {
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
+            lhs *= rhs_;
+        }
         inline UnitQuaternion<Type> quatNumMul(const UnitQuaternion<Type> &other) const { return (*this) * other; } // alias for operator* for readability
         inline Quaternion<Type> quatNumMul(const Quaternion<Type> &other) const { return (*this) * other; }
         inline friend Quaternion<Type> quatNumMul(const Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
         {
-            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->toQuaternionRef();
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
             return lhs * rhs_;
         }
         inline void quatNumMulEq(const UnitQuaternion<Type> &other) { *this *= other; } // alias for operator*= for readability
-        inline void quatNumMulEq(Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
+        inline friend void quatNumMulEq(Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
         {
-            lhs *= rhs.toQuaternionRef();
+            lhs *= rhs.cast2QuaternionRef();
         }
 
         template <typename OtherContainer>
         inline auto operator/(const OtherContainer &other) const
         {
+            const Quaternion<Type> &me_quat = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
             if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                const Quaternion<Type> &other_ = const_cast<UnitQuaternion<Type> *>(&other)->toQuaternionRef();
-                return (me * other.conjugated()).toUnitQuaternion();
+                return (*this) * other.conjugated();
             }
             else if constexpr (is_same_v<OtherContainer, Quaternion<Type>>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return (me / other);
+                return Quaternion<Type>::operator/(other);
             }
             else if constexpr (is_same_v<OtherContainer, Type>)
             {
-                const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-                return (me / other);
+                return Quaternion<Type>::operator/(other);
             }
             else
             {
@@ -143,13 +129,8 @@ namespace translotator
         }
         inline friend Quaternion<Type> operator/(const Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
         {
-            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->toQuaternionRef();
-            return lhs / rhs_;
-        }
-        inline friend Quaternion<Type> operator/(const Type &lhs, const UnitQuaternion<Type> &rhs)
-        {
-            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->toQuaternionRef();
-            return lhs / rhs_;
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
+            return lhs * rhs_.conjugated();
         }
         inline void operator/=(const UnitQuaternion<Type> &other)
         {
@@ -157,29 +138,32 @@ namespace translotator
         }
         inline friend void operator/=(Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
         {
-            lhs /= rhs.toQuaternionRef();
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
+            lhs *= rhs_.conjugated();
         }
         inline UnitQuaternion<Type> quatNumDiv(const UnitQuaternion<Type> &other) const { return (*this) / other; } // alias for operator/ for readability
         inline Quaternion<Type> quatNumDiv(const Quaternion<Type> &other) const { return (*this) / other; }
         inline void quatNumDivEq(const UnitQuaternion<Type> &other) { *this /= other; } // alias for operator/= for readability
+        inline friend void quatNumDivEq(Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
+        {
+            const Quaternion<Type> &rhs_ = const_cast<UnitQuaternion<Type> *>(&rhs)->cast2QuaternionRef();
+            lhs *= rhs_.conjugated();
+        }
 
         /**
          * utils
          */
         inline UnitQuaternion<Type> normalized() const
         {
-            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-            return me.normalized().toUnitQuaternion();
+            return UnitQuaternion<Type>(Quaternion<Type>::normalized());
         }
         inline UnitQuaternion<Type> conjugated() const
         {
-            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-            return me.conjugated().toUnitQuaternion();
+            return UnitQuaternion<Type>(Quaternion<Type>::conjugated());
         }
         inline UnitQuaternion<Type> inversed() const
         {
-            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->toQuaternionRef();
-            return me.inversed().toUnitQuaternion();
+            return conjugated();
         }
         inline Vector<3, Type> rotateVector3D(const Vector<3, Type> &v) const
         {
@@ -245,4 +229,7 @@ namespace translotator
     using UnitQuaterniond = UnitQuaternion<double>;
     using UnitQuaternionld = UnitQuaternion<long double>;
 
+    using S3f = UnitQuaternionf;
+    using S3d = UnitQuaterniond;
+    using S3ld = UnitQuaternionld;
 }

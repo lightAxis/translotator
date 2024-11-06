@@ -15,7 +15,21 @@ namespace translotator
          */
         inline AxisAngle(const Type &angle, const Type &x, const Type &y, const Type &z) : angle_(angle), axis_({x, y, z}) {}
         explicit inline AxisAngle(const Type &angle, const Vector<3, Type> &axis) : angle_(angle), axis_(axis.normalized()) {}
-        explicit inline AxisAngle(const Type &angle) : angle_(angle), axis_(Vector<3, Type>::zAxis()) {} // for 2d rotation
+        explicit inline AxisAngle(const Type &angle) : angle_(angle), axis_(Vector<3, Type>::zAxis()) {}                              // for 2d rotation
+        explicit inline AxisAngle(const Vector<3, Type> &angleVector) : angle_(static_cast<Type>(0)), axis_(Vector<3, Type>::zeros()) //
+        {
+            const Type normsq = angleVector.normSquared();
+            if (normsq <= translotator::epsilon<Type>())
+            {
+                angle_ = static_cast<Type>(0);
+                axis_ = Vector<3, Type>::xAxis();
+            }
+            else
+            {
+                angle_ = translotator::sqrt(normsq);
+                axis_ = angleVector.normalized();
+            }
+        }
 
         /**
          * static functions
@@ -79,6 +93,10 @@ namespace translotator
             const Type s = translotator::sin(angle_);
             return SquareMatrix<2, Type>{{+c, -s,
                                           +s, +c}};
+        }
+        inline Vector<3, Type> toAngleVector() const
+        {
+            return axis_ * angle_;
         }
 
     private:

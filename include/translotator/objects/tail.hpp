@@ -16,31 +16,31 @@ namespace translotator
         return *reinterpret_cast<const NewContainer *>(this);
     };
     template <size_t N, size_t M, typename Type, typename Derived>
-    inline Matrix<N, M, Type> MatrixBase<N, M, Type, Derived>::toMatrix() const
+    inline Matrix<N, M, Type> MatrixBase<N, M, Type, Derived>::cast2Matrix() const
     {
         return castContainer<Matrix<N, M, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline SquareMatrix<N, Type> MatrixBase<N, M, Type, Derived>::toSquareMatrix() const
+    inline SquareMatrix<N, Type> MatrixBase<N, M, Type, Derived>::cast2SquareMatrix() const
     {
         return castContainer<SquareMatrix<N, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline Vector<N, Type> MatrixBase<N, M, Type, Derived>::toVector() const
+    inline Vector<N, Type> MatrixBase<N, M, Type, Derived>::cast2Vector() const
     {
         return castContainer<Vector<N, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline ComplexNum<Type> MatrixBase<N, M, Type, Derived>::toComplexNum() const
+    inline ComplexNum<Type> MatrixBase<N, M, Type, Derived>::cast2ComplexNum() const
     {
         return castContainer<ComplexNum<Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline UnitComplexNum<Type> MatrixBase<N, M, Type, Derived>::toUnitComplexNum() const
+    inline UnitComplexNum<Type> MatrixBase<N, M, Type, Derived>::cast2UnitComplexNum() const
     {
         UnitComplexNum<Type> c = castContainer<UnitComplexNum<Type>>();
         c.normalize();
@@ -48,13 +48,13 @@ namespace translotator
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline Quaternion<Type> MatrixBase<N, M, Type, Derived>::toQuaternion() const
+    inline Quaternion<Type> MatrixBase<N, M, Type, Derived>::cast2Quaternion() const
     {
         return castContainer<Quaternion<Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline UnitQuaternion<Type> MatrixBase<N, M, Type, Derived>::toUnitQuaternion() const
+    inline UnitQuaternion<Type> MatrixBase<N, M, Type, Derived>::cast2UnitQuaternion() const
     {
         UnitQuaternion<Type> q = castContainer<UnitQuaternion<Type>>();
         q.normalize();
@@ -76,31 +76,31 @@ namespace translotator
         return *reinterpret_cast<NewDerived *>(this);
     };
     template <size_t N, size_t M, typename Type, typename Derived>
-    inline Matrix<N, M, Type> &MatrixBase<N, M, Type, Derived>::toMatrixRef()
+    inline Matrix<N, M, Type> &MatrixBase<N, M, Type, Derived>::cast2MatrixRef()
     {
         return castContainerRef<Matrix<N, M, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline SquareMatrix<N, Type> &MatrixBase<N, M, Type, Derived>::toSquareMatrixRef()
+    inline SquareMatrix<N, Type> &MatrixBase<N, M, Type, Derived>::cast2SquareMatrixRef()
     {
         return castContainerRef<SquareMatrix<N, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline Vector<N, Type> &MatrixBase<N, M, Type, Derived>::toVectorRef()
+    inline Vector<N, Type> &MatrixBase<N, M, Type, Derived>::cast2VectorRef()
     {
         return castContainerRef<Vector<N, Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline ComplexNum<Type> &MatrixBase<N, M, Type, Derived>::toComplexNumRef()
+    inline ComplexNum<Type> &MatrixBase<N, M, Type, Derived>::cast2ComplexNumRef()
     {
         return castContainerRef<ComplexNum<Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline UnitComplexNum<Type> &MatrixBase<N, M, Type, Derived>::toUnitComplexNumRef()
+    inline UnitComplexNum<Type> &MatrixBase<N, M, Type, Derived>::cast2UnitComplexNumRef()
     {
         auto &c = castContainerRef<UnitComplexNum<Type>>();
         c.normalize();
@@ -108,13 +108,13 @@ namespace translotator
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline Quaternion<Type> &MatrixBase<N, M, Type, Derived>::toQuaternionRef()
+    inline Quaternion<Type> &MatrixBase<N, M, Type, Derived>::cast2QuaternionRef()
     {
         return castContainerRef<Quaternion<Type>>();
     }
     template <size_t N, size_t M, typename Type, typename Derived>
     template <size_t N_, size_t M_, typename>
-    inline UnitQuaternion<Type> &MatrixBase<N, M, Type, Derived>::toUnitQuaternionRef()
+    inline UnitQuaternion<Type> &MatrixBase<N, M, Type, Derived>::cast2UnitQuaternionRef()
     {
         auto &q = castContainerRef<UnitQuaternion<Type>>();
         q.normalize();

@@ -231,11 +231,11 @@ TEST_CASE("Matrix", "[objects]")
     SECTION("Casting")
     {
         // to double
-        auto md = m1.cast<double>();
+        auto md = m1.castDatatype<double>();
         REQUIRE(is_same_v<decltype(md)::DATATYPE, double> == true);
 
         // to long double
-        auto mld = m1.cast<long double>();
+        auto mld = m1.castDatatype<long double>();
         REQUIRE(is_same_v<decltype(mld)::DATATYPE, long double> == true);
 
         // to vector
@@ -252,9 +252,9 @@ TEST_CASE("Matrix", "[objects]")
         Vectorf<3> v_{{1.f, 2.f, 3.f}};
 
         // to vector Ref
-        Vector<3, float> v2 = m2.toVector();
-        Vector<3, float> &v2_ref = m2.toVectorRef();
-        const Vector<3, float> &v2_ref_const = m2.toVectorRef();
+        Vector<3, float> v2 = m2.cast2Vector();
+        Vector<3, float> &v2_ref = m2.cast2VectorRef();
+        const Vector<3, float> &v2_ref_const = m2.cast2VectorRef();
 
         REQUIRE_THAT(v2, EqualsMatrix(v_));
         REQUIRE_THAT(v2_ref, EqualsMatrix(v_));
@@ -272,14 +272,14 @@ TEST_CASE("Matrix", "[objects]")
         Matrixf<1, 3> m3{{1.f, 2.f, 3.f}};
         REQUIRE(decltype(m3)::COLS == 3);
         REQUIRE(decltype(m3)::ROWS == 1);
-        const auto &vv = m3.T().toVector();
+        const auto &vv = m3.T().cast2Vector();
         REQUIRE(vv.ROWS == 3);
         REQUIRE(vv.COLS == 1);
 
         Matrixf<3, 3> m33{{1.f, 2.f, 3.f,
                            4.f, 5.f, 6.f,
                            7.f, 8.f, 9.f}};
-        const auto &v3 = (m33 * m3.T()).toVector();
+        const auto &v3 = (m33 * m3.T()).cast2Vector();
         REQUIRE(is_same_v<decltype(v3), const Vector<3, float> &> == true);
 
         Matrixf<3, 3> m4{{1.f, 2.f, 3.f,

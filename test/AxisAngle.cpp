@@ -27,6 +27,13 @@ TEST_CASE("AxisAngle", "[objects]")
         const Vectorf<3> axis_normed = axis.normalized();
         AxisAnglef a5(angle, axis);
         REQUIRE_THAT(a5, EqualsMatrix(AxisAnglef(angle, axis_normed.x(), axis_normed.y(), axis_normed.z())));
+
+        Vectorf<3> angleVector = axis_normed * angle;
+        AxisAnglef a6(angleVector);
+        REQUIRE(close_enough(a6.angle(), angle));
+        REQUIRE_THAT(a6.axis(), EqualsMatrix(axis_normed));
+        Vectorf<3> angleVectorget = a6.toAngleVector();
+        REQUIRE_THAT(angleVectorget, EqualsMatrix(angleVector));
     }
 
     SECTION("getter setter")

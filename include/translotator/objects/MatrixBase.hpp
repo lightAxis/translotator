@@ -378,7 +378,7 @@ namespace translotator
          * Type Casting
          */
         template <typename NewType>
-        inline auto cast() const
+        inline auto castDatatype() const
         {
             static_assert(!is_same_v<Type, NewType>, "NewType must be different from current type");
             static_assert(is_float_v<NewType>, "NewType must be a floating point type");
@@ -398,35 +398,35 @@ namespace translotator
 
         template <typename NewContainer>
         inline NewContainer castContainer() const;
-        inline Matrix<N, M, Type> toMatrix() const;
+        inline Matrix<N, M, Type> cast2Matrix() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == M_, true_type>>
-        inline SquareMatrix<N, Type> toSquareMatrix() const;
+        inline SquareMatrix<N, Type> cast2SquareMatrix() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == 1, true_type>>
-        inline Vector<N, Type> toVector() const;
+        inline Vector<N, Type> cast2Vector() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
-        inline ComplexNum<Type> toComplexNum() const;
+        inline ComplexNum<Type> cast2ComplexNum() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
-        inline UnitComplexNum<Type> toUnitComplexNum() const;
+        inline UnitComplexNum<Type> cast2UnitComplexNum() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
-        inline Quaternion<Type> toQuaternion() const;
+        inline Quaternion<Type> cast2Quaternion() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
-        inline UnitQuaternion<Type> toUnitQuaternion() const;
+        inline UnitQuaternion<Type> cast2UnitQuaternion() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
-        inline Matrix<N, M, Type> &toMatrixRef();
+        inline Matrix<N, M, Type> &cast2MatrixRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == N_, true_type>>
-        inline SquareMatrix<N, Type> &toSquareMatrixRef();
+        inline SquareMatrix<N, Type> &cast2SquareMatrixRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<M_ == 1, true_type>>
-        inline Vector<N, Type> &toVectorRef();
+        inline Vector<N, Type> &cast2VectorRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
-        inline ComplexNum<Type> &toComplexNumRef();
+        inline ComplexNum<Type> &cast2ComplexNumRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
-        inline UnitComplexNum<Type> &toUnitComplexNumRef();
+        inline UnitComplexNum<Type> &cast2UnitComplexNumRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
-        inline Quaternion<Type> &toQuaternionRef();
+        inline Quaternion<Type> &cast2QuaternionRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
-        inline UnitQuaternion<Type> &toUnitQuaternionRef();
+        inline UnitQuaternion<Type> &cast2UnitQuaternionRef();
 
     protected:
     private:
