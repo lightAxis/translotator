@@ -51,7 +51,6 @@ namespace translotator
         template <typename OtherContainer>
         inline auto operator*(const OtherContainer &other) const
         {
-            const Matrix<4, 1, Type> &me_mat = const_cast<UnitQuaternion<Type> *>(this)->cast2MatrixRef();
             if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>>)
             {
                 const Quaternion<Type> &other_ = const_cast<UnitQuaternion<Type> *>(&other)->cast2QuaternionRef();
@@ -67,7 +66,7 @@ namespace translotator
             }
             else
             {
-                return me_mat * other;
+                return Matrix<4, 1, Type>::operator*(other);
             }
         }
         inline friend Quaternion<Type> operator*(const Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
@@ -105,7 +104,6 @@ namespace translotator
         template <typename OtherContainer>
         inline auto operator/(const OtherContainer &other) const
         {
-            const Quaternion<Type> &me_quat = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
             if constexpr (is_same_v<OtherContainer, UnitQuaternion<Type>>)
             {
                 return (*this) * other.conjugated();
@@ -188,15 +186,15 @@ namespace translotator
          * casting
          */
 
-        inline SquareMatrix<2, Type> toRotMatrix2D() const
+        inline SOGroup<2, Type> toRotMatrix2D() const
         {
             const Type angle = static_cast<Type>(2) * translotator::acos(w());
             const Type c = translotator::cos(angle);
             const Type s = translotator::sin(angle);
-            return SquareMatrix<2, Type>{{+c, -s,
-                                          +s, +c}};
+            return SOGroup<2, Type>{{+c, -s,
+                                     +s, +c}};
         }
-        inline SquareMatrix<3, float> toRotMatrix3D() const
+        inline SOGroup<3, Type> toRotMatrix3D() const
         {
             const Type xx = x() * x();
             const Type xy = x() * y();
@@ -207,9 +205,9 @@ namespace translotator
             const Type yw = y() * w();
             const Type zz = z() * z();
             const Type zw = z() * w();
-            return SquareMatrix<3, Type>{{1 - 2 * (yy + zz), 2 * (xy - zw), 2 * (xz + yw),
-                                          2 * (xy + zw), 1 - 2 * (xx + zz), 2 * (yz - xw),
-                                          2 * (xz - yw), 2 * (yz + xw), 1 - 2 * (xx + yy)}};
+            return SOGroup<3, Type>{{1 - 2 * (yy + zz), 2 * (xy - zw), 2 * (xz + yw),
+                                     2 * (xy + zw), 1 - 2 * (xx + zz), 2 * (yz - xw),
+                                     2 * (xz - yw), 2 * (yz + xw), 1 - 2 * (xx + yy)}};
         }
         inline AxisAngle<Type> toAxisAngle() const
         {

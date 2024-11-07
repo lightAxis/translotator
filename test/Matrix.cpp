@@ -174,13 +174,13 @@ TEST_CASE("Matrix", "[objects]")
         m66 -= m2;
         REQUIRE_THAT(m66, EqualsMatrix(m6_));
 
-        auto m7 = m1 * m1;
+        SquareMatrixf<3> m7 = m1 * m1;
         float data7[3][3] = {{30, 36, 42}, {66, 81, 96}, {102, 126, 150}};
         Matrixf<3, 3> m7_(data7);
-        REQUIRE_THAT(m7, EqualsMatrix(m7_));
-        auto m77 = m1;
+        REQUIRE_THAT(m7.cast2Matrix(), EqualsMatrix(m7_));
+        auto m77 = m1.cast2SquareMatrix();
         m77 *= m1;
-        REQUIRE_THAT(m77, EqualsMatrix(m7_));
+        REQUIRE_THAT(m77, EqualsMatrix(m7_.cast2SquareMatrix()));
 
         float data8[2][3] = {{1, 2, 3}, {4, 5, 6}};
         Matrixf<2, 3> m8(data8);
@@ -193,6 +193,41 @@ TEST_CASE("Matrix", "[objects]")
         Matrixf<2, 4> m24;
         Matrixf<4, 3> m43;
         REQUIRE(is_same_v<decltype(m24 * m43), Matrixf<2, 3>> == true);
+
+        // automatic type casting for matrix multiply, mat, squaremat
+        Matrixf<2, 3> m23{{1.f, 2.f, 3.f,
+                           4.f, 5.f, 6.f}};
+        Matrixf<3, 2> m32{{1.f, 2.f,
+                           3.f, 4.f,
+                           5.f, 6.f}};
+        Matrixf<3, 4> m34{{1.f, 2.f, 3.f, 4.f,
+                           5.f, 6.f, 7.f, 8.f,
+                           9.f, 10.f, 11.f, 12.f}};
+        Matrixf<3, 1> m31{{1.f,
+                           2.f,
+                           3.f}};
+
+        auto m23m32 = m23 * m32; // NxP * PxN = NxN , square matrix
+        REQUIRE(is_same_v<decltype(m23m32), SquareMatrixf<2>>);
+        REQUIRE_THAT(m23m32, EqualsMatrix(SquareMatrixf<2>{{22.f, 28.f,
+                                                            49.f, 64.f}}));
+
+        auto m23m34 = m23 * m34; // NxP * PxM = NxM, matrix
+        REQUIRE(is_same_v<decltype(m23m34), Matrixf<2, 4>>);
+        REQUIRE_THAT(m23m34, EqualsMatrix(Matrixf<2, 4>{{38.f, 44.f, 50.f, 56.f,
+                                                         83.f, 98.f, 113.f, 128.f}}));
+
+        auto m23m31 = m23 * m31; // NxP * Px1 = Nx1, vector
+        REQUIRE(is_same_v<decltype(m23m31), Vectorf<2>>);
+        REQUIRE_THAT(m23m31, EqualsMatrix(Vectorf<2>{{14.f, 32.f}}));
+
+        auto m13m31 = m31.T() * m31; // 1xP * Px1 = 1x1, scalar
+        REQUIRE(is_same_v<decltype(m13m31), float>);
+        REQUIRE(close_enough(m13m31, 14.f));
+
+        auto mmixed = m32 * m23 * (m31.T() * m31) * m31; // (3x2) (2x3) {(1x3) (3x1)} (1x3) = (3x3) (3x1) = (3x1), vector
+        REQUIRE(is_same_v<decltype(mmixed), Vectorf<3>>);
+        REQUIRE_THAT(mmixed, EqualsMatrix(Vectorf<3>{{1092.f, 2380.f, 3668.f}}));
     }
 
     SECTION("Utils")
@@ -201,13 +236,13 @@ TEST_CASE("Matrix", "[objects]")
         auto m2 = m1.T();
         float data2[3][3] = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
         Matrixf<3, 3> m2_(data2);
-        REQUIRE_THAT(m2, EqualsMatrix(m2_));
+        REQUIRE_THAT(m2.cast2MatrixRef(), EqualsMatrix(m2_));
 
         // fill
         m2.fill(100.f);
         float data2_[3][3] = {{100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}, {100.f, 100.f, 100.f}};
         Matrixf<3, 3> m22_(data2_);
-        REQUIRE_THAT(m2, EqualsMatrix(m22_));
+        REQUIRE_THAT(m2.cast2MatrixRef(), EqualsMatrix(m22_));
 
         // swap rows
         auto m3 = m1;

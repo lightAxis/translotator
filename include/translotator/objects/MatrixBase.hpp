@@ -261,12 +261,30 @@ namespace translotator
             static_assert(is_same_v<typename Derived::DATATYPE, typename OtherDerived::DATATYPE>, "Matrix data types must be the same");
 
             typename MatrixBaseInternal::operator_mul_typemapper<Derived, OtherDerived>::type result;
-            result.fill(static_cast<Type>(0));
-            for (size_t i = 0; i < N; i++)
-                for (size_t j = 0; j < OtherDerived::COLS; j++)
-                    for (size_t k = 0; k < M; k++)
-                        result(i, j) += (*this)(i, k) * other(k, j);
-            return result;
+            if constexpr (is_matrix_base_v<decltype(result)>)
+            {
+                result.fill(static_cast<Type>(0));
+                for (size_t i = 0; i < N; i++)
+                    for (size_t j = 0; j < OtherDerived::COLS; j++)
+                        for (size_t k = 0; k < M; k++)
+                            result(i, j) += (*this)(i, k) * other(k, j);
+                return result;
+            }
+            else if constexpr (is_same_v<decltype(result), Type>)
+            {
+                result = static_cast<Type>(0);
+                for (size_t i = 0; i < N; i++)
+                    for (size_t j = 0; j < OtherDerived::COLS; j++)
+                        for (size_t k = 0; k < M; k++)
+                            result += (*this)(i, k) * other(k, j);
+                return result;
+            }
+            else
+            {
+                static_assert(is_matrix_base_v<decltype(result)> || is_same_v<decltype(result), Type>,
+                              "Invalid type for operator*");
+                return static_cast<Type>(0);
+            }
         }
         inline Derived operator*(const Type &v) const
         {
@@ -301,6 +319,7 @@ namespace translotator
         {
             *this = *this * other;
         }
+
         inline Derived operator-() const
         {
             static_assert(Derived::ROWS > 0 && Derived::COLS > 0, "Matrix dimensions must be exist");
@@ -316,13 +335,31 @@ namespace translotator
          * Utils
          */
 
-        inline Matrix<M, N, Type> T() const
+        inline auto T() const
         {
-            Matrix<M, N, Type> result;
-            for (size_t i = 0; i < N; i++)
-                for (size_t j = 0; j < M; j++)
-                    result(j, i) = data_[i * M + j];
-            return result;
+            if constexpr (N == 1)
+            {
+                Vector<M, Type> result;
+                for (size_t i = 0; i < M; i++)
+                    result(i, 0) = data_[i];
+                return result;
+            }
+            else if constexpr (N == M)
+            {
+                SquareMatrix<M, Type> result;
+                for (size_t i = 0; i < N; i++)
+                    for (size_t j = 0; j < N; j++)
+                        result(j, i) = data_[i * M + j];
+                return result;
+            }
+            else
+            {
+                Matrix<M, N, Type> result;
+                for (size_t i = 0; i < N; i++)
+                    for (size_t j = 0; j < M; j++)
+                        result(j, i) = data_[i * M + j];
+                return result;
+            }
         }
 
         inline void fill(const Type &v)
@@ -411,6 +448,8 @@ namespace translotator
         inline Quaternion<Type> cast2Quaternion() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
         inline UnitQuaternion<Type> cast2UnitQuaternion() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<(N_ == 2 && M_ == 2) || (N_ == 3 && M_ == 3), true_type>>
+        inline SOGroup<N, Type> cast2SOGroup() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
@@ -427,6 +466,8 @@ namespace translotator
         inline Quaternion<Type> &cast2QuaternionRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 4 && M_ == 1, true_type>>
         inline UnitQuaternion<Type> &cast2UnitQuaternionRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<(N_ == 2 && M_ == 2) || (N_ == 3 && M_ == 3), true_type>>
+        inline SOGroup<N, Type> &cast2SOGroupRef();
 
     protected:
     private:

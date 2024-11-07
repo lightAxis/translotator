@@ -83,6 +83,12 @@ bool close_enough(const translotator::AxisAngle<Type> &lhs, const translotator::
     return close_enough(lhs.angle(), rhs.angle()) && close_enough(lhs.axis(), rhs.axis());
 }
 
+template <size_t N, typename Type>
+bool close_enough(const translotator::SOGroup<N, Type> &lhs, const translotator::SOGroup<N, Type> &rhs)
+{
+    return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
+}
+
 template <typename T>
 struct EqualsMatrixMatcher : Catch::Matchers::MatcherGenericBase
 {

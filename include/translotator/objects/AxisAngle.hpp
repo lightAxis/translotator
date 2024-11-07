@@ -83,16 +83,16 @@ namespace translotator
         {
             return UnitComplexNum{translotator::cos(angle_), translotator::sin(angle_)};
         }
-        inline SquareMatrix<3, Type> toRotMatrix3D() const
+        inline SOGroup<3, Type> toRotMatrix3D() const
         {
             return (*this).toUnitQuaternion().toRotMatrix3D();
         }
-        inline SquareMatrix<2, Type> toRotMatrix2D() const
+        inline SOGroup<2, Type> toRotMatrix2D() const
         {
             const Type c = translotator::cos(angle_);
             const Type s = translotator::sin(angle_);
-            return SquareMatrix<2, Type>{{+c, -s,
-                                          +s, +c}};
+            return SOGroup<2, Type>{{+c, -s,
+                                     +s, +c}};
         }
         inline Vector<3, Type> toAngleVector() const
         {

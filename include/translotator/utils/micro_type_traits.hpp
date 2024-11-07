@@ -24,6 +24,22 @@ namespace translotator
     template <bool B, typename T = void>
     using enable_if_t = typename enable_if<B, T>::type;
 
+    // conditional_if
+    template <bool B, typename T, typename F>
+    struct conditional_if
+    {
+        using type = T;
+    };
+    template <typename T, typename F>
+    struct conditional_if<false, T, F>
+    {
+        using type = F;
+    };
+
+    // conditional_if_t
+    template <bool B, typename T, typename F>
+    using conditional_if_t = typename conditional_if<B, T, F>::type;
+
     // integral constant
     template <typename T, T v>
     struct integral_constant

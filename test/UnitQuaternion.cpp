@@ -122,10 +122,10 @@ TEST_CASE("UnitQuaternion", "[objects]")
             REQUIRE(is_same_v<decltype(res3), Quaternionf>);
             REQUIRE_THAT(res3.cast2Vector(), EqualsMatrix(operator_mul_res));
 
-            auto res4 = uq1.cast2Vector().T() * uq2; // other * unit = other
-            Vectorf<1> operator_mul_res2 = uq1.cast2Vector().T() * uq2.cast2Vector();
-            REQUIRE(is_same_v<decltype(res4), Matrixf<1, 1>>);
-            REQUIRE_THAT(res4.cast2Vector(), EqualsMatrix(operator_mul_res2));
+            auto res4 = uq1.cast2Vector().T() * uq2; // other * unit = other (1x1 is scalar in this case)
+            auto operator_mul_res2 = uq1.cast2Vector().T() * uq2.cast2Vector();
+            REQUIRE(is_same_v<decltype(res4), float>);
+            REQUIRE_THAT(res4, EqualsMatrix(operator_mul_res2));
 
             auto res5 = uq1 * 2.f; // unit * scalar = non-unit
             REQUIRE(is_same_v<decltype(res5), Quaternionf>);

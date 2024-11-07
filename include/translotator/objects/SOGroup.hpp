@@ -11,30 +11,33 @@ namespace translotator
         inline Type &Data_(size_t i, size_t j) { return SquareMatrix<N, Type>::operator()(i, j); }
         inline const Type &Data_(size_t i, size_t j) const { return SquareMatrix<N, Type>::operator()(i, j); }
 
+        explicit SOGroup(const SquareMatrix<N, Type> &mat) : SquareMatrix<N, Type>(mat) {}
+
     public:
         using SquareMatrix<N, Type>::SquareMatrix;
 
         /**
          * constructors
          */
-        template <typename = enable_if_t<N == 2, true_type>, bool col = true>
-        SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2)
+        template <size_t N_ = N, typename = enable_if_t<N_ == 2, true_type>>
+        SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2, bool col = true)
         {
-            if constexpr (col)
+            if (col)
             {
                 this->setCol(0, vec1);
                 this->setCol(1, vec2);
             }
             else
             {
-                this->setRow(0, vec1);
-                this->setRow(1, vec2);
+                this->setRow(0, vec1.T());
+                this->setRow(1, vec2.T());
             }
         }
-        template <typename = enable_if_t<N == 3, true_type>, bool col = true>
-        SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2, const Vector<N, Type> &vec3)
+        template <size_t N_ = N, typename = enable_if_t<N_ == 3, true_type>>
+        SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2, const Vector<N, Type> &vec3,
+                bool col = true)
         {
-            if constexpr (col)
+            if (col)
             {
                 this->setCol(0, vec1);
                 this->setCol(1, vec2);
@@ -42,13 +45,13 @@ namespace translotator
             }
             else
             {
-                this->setRow(0, vec1);
-                this->setRow(1, vec2);
-                this->setRow(2, vec3);
+                this->setRow(0, vec1.T());
+                this->setRow(1, vec2.T());
+                this->setRow(2, vec3.T());
             }
         }
 
-        template <typename = enable_if_t<N == 2, true_type>>
+        template <size_t N_ = N, typename = enable_if_t<N_ == 2, true_type>>
         explicit SOGroup(const Type &theta)
         {
             Data_(0, 0) = cos(theta);
@@ -56,12 +59,12 @@ namespace translotator
             Data_(1, 0) = sin(theta);
             Data_(1, 1) = cos(theta);
         }
-        template <typename = enable_if_t<N == 3, true_type>>
+        template <size_t N_ = N, typename = enable_if_t<N_ == 3, true_type>>
         explicit SOGroup(const Vector<N, Type> &angleVector)
         {
             if (angleVector.normSquared() <= translotator::epsilon<Type>())
             {
-                (*this) = SquareMatrix<N, Type>::eye();
+                (*this) = SOGroup<N, Type>{SquareMatrix<N, Type>::eye()};
             }
             else
             {
@@ -72,12 +75,62 @@ namespace translotator
         /**
          * operators
          */
-        // TODO operator implementation
         template <typename OtherContainer>
-        inline SquareMatrix<N, Type> operator+(const SOGroup &other) const
+        inline SquareMatrix<N, Type> operator+(const OtherContainer &other) const
         {
-            const SquareMatrix<N, Type> &me = const_cast<SOGroup<N, Type>>(this)->cast2SquareMatrixRef();
-            return me + other;
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator+. Must have matrix base");
+            return SquareMatrix<N, Type>::operator+(other);
+        }
+
+        template <typename OtherContainer>
+        inline SquareMatrix<N, Type> operator-(const OtherContainer &other) const
+        {
+            static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
+            return SquareMatrix<N, Type>::operator-(other);
+        }
+
+        template <typename OtherContainer>
+        inline auto operator*(const OtherContainer &other) const
+        {
+            if constexpr (is_same_v<OtherContainer, SOGroup<N, Type>>)
+            {
+                const SquareMatrix<N, Type> &other_ = const_cast<SOGroup<N, Type> *>(&other)->cast2SquareMatrixRef();
+                return SOGroup<N, Type>{SquareMatrix<N, Type>::operator*(other_)};
+            }
+            else if constexpr (is_same_v<OtherContainer, SquareMatrix<N, Type>>)
+            {
+                return SquareMatrix<N, Type>::operator*(other);
+            }
+            else if constexpr (is_same_v<OtherContainer, Type>)
+            {
+                return SquareMatrix<N, Type>::operator*(other);
+            }
+            else
+            {
+                return SquareMatrix<N, Type>::operator*(other);
+            }
+        }
+        inline void operator*=(const SOGroup<N, Type> &other)
+        {
+            *this = *this * other;
+        }
+        inline friend SquareMatrix<N, Type> operator*(const Type &lhs, const SOGroup &rhs)
+        {
+            SquareMatrix<N, Type> &rhs_ = const_cast<SOGroup *>(&rhs)->cast2SquareMatrixRef();
+            return rhs_ * lhs;
+        }
+
+        template <typename OtherContainer>
+        inline auto operator/(const OtherContainer &other) const
+        {
+            if constexpr (is_same_v<OtherContainer, SOGroup<N, Type>>)
+            {
+                return (*this) * other.inversed();
+            }
+            else
+            {
+                return SquareMatrix<N, Type>::operator/(other);
+            }
         }
 
         /**
@@ -105,8 +158,7 @@ namespace translotator
         }
         inline SOGroup<N, Type> inversed() const
         {
-            const SquareMatrix<N, Type> &me = const_cast<SOGroup<N, Type> *>(this)->cast2SquareMatrixRef();
-            return me.T().cast2SOGroup();
+            return SOGroup<N, Type>{SquareMatrix<N, Type>::T()};
         }
         inline void inverse()
         {
@@ -114,14 +166,23 @@ namespace translotator
         }
 
         /**
+         * static functions
+         */
+        static inline SOGroup<N, Type> identity()
+        {
+            static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
+            return SOGroup<N, Type>::eye();
+        }
+
+        /**
          * casts
          */
-        template <typename = enable_if_t<N == 2, true_type>>
+        template <size_t N_ = N, typename = enable_if_t<N_ == 2, true_type>>
         inline UnitComplexNum<Type> toUnitComplexNum() const
         {
             return UnitComplexNum<Type>{Data_(0, 0), Data_(1, 0)};
         }
-        template <typename = enable_if_t<N == 2 || N == 3, true_type>>
+        template <size_t N_ = N, typename = enable_if_t<N_ == 2 || N_ == 3, true_type>>
         inline UnitQuaternion<Type> toUnitQuaternion() const
         {
             if constexpr (N == 2)
@@ -173,7 +234,7 @@ namespace translotator
             else
                 static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
         }
-        template <typename = enable_if_t<N == 2 || N == 3, true_type>>
+        template <size_t N_ = N, typename = enable_if_t<N_ == 2 || N_ == 3, true_type>>
         inline AxisAngle<Type> toAxisAngle() const
         {
             if constexpr (N == 2)

@@ -43,7 +43,6 @@ namespace translotator
         template <typename OtherContainer>
         inline auto operator*(const OtherContainer &other) const
         {
-            const Matrix<2, 1, Type> &me_mat = const_cast<UnitComplexNum<Type> *>(this)->cast2MatrixRef();
             if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>>)
             {
                 const ComplexNum<Type> &other_ = const_cast<UnitComplexNum<Type> *>(&other)->cast2ComplexNumRef();
@@ -59,7 +58,7 @@ namespace translotator
             }
             else
             {
-                return me_mat * other;
+                return Matrix<2, 1, Type>::operator*(other);
             }
         }
         inline friend ComplexNum<Type> operator*(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
@@ -97,7 +96,6 @@ namespace translotator
         template <typename OtherContainer>
         inline auto operator/(const OtherContainer &other) const
         {
-            const ComplexNum<Type> &me_cplx = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
             if constexpr (is_same_v<OtherContainer, UnitComplexNum<Type>>)
             {
                 return (*this) * other.conjugated();
@@ -171,7 +169,11 @@ namespace translotator
         /**
          * casting
          */
-        inline SquareMatrix<2, Type> toRotMatrix2D() const { return ComplexNum<Type>::toMulMatrix(); }
+        inline SOGroup<2, Type> toRotMatrix2D() const
+        {
+            return SOGroup<2, Type>{{Re(), -Im(),
+                                     Im(), Re()}};
+        }
         inline AxisAngle<Type> toAxisAngle() const
         {
             const Type angle = translotator::acos(Re());

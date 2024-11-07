@@ -9,6 +9,19 @@
         "initializer_list": "cpp",
         "iosfwd": "cpp",
         "new": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "numeric": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp",
+        "variant": "cpp",
+        "memory": "cpp",
+        "ranges": "cpp",
+        "*.txx": "cpp"
     }
 }

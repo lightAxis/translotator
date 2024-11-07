@@ -60,6 +60,14 @@ namespace translotator
         q.normalize();
         return q;
     }
+    template <size_t N, size_t M, typename Type, typename Derived>
+    template <size_t N_, size_t M_, typename>
+    inline SOGroup<N, Type> MatrixBase<N, M, Type, Derived>::cast2SOGroup() const
+    {
+        SOGroup<N, Type> so = castContainer<SOGroup<N, Type>>();
+        so.normalize();
+        return so;
+    }
 
     // ###################################
     // ### MatrixBase castContainerRef ###
@@ -119,6 +127,14 @@ namespace translotator
         auto &q = castContainerRef<UnitQuaternion<Type>>();
         q.normalize();
         return q;
+    }
+    template <size_t N, size_t M, typename Type, typename Derived>
+    template <size_t N_, size_t M_, typename>
+    inline SOGroup<N, Type> &MatrixBase<N, M, Type, Derived>::cast2SOGroupRef()
+    {
+        auto &so = castContainerRef<SOGroup<N, Type>>();
+        so.normalize();
+        return so;
     }
 
 }

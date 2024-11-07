@@ -138,8 +138,8 @@ TEST_CASE("Vector", "[objects]")
         Vectorf<4> v4_{{-4.f, -4.f, -4.f, -4.f}};
         REQUIRE_THAT(v4, EqualsMatrix(v4_));
 
-        Vectorf<1> v5 = v1.T() * v2;
-        Vectorf<1> v5_{{70.f}};
+        float v5 = v1.T() * v2;
+        float v5_{70.f};
         REQUIRE_THAT(v5, EqualsMatrix(v5_));
 
         float v55_f = v1.dot(v2);

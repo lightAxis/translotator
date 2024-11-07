@@ -125,9 +125,9 @@ TEST_CASE("UnitComplexNum", "[objects]")
             REQUIRE_THAT(res3.cast2Vector(), EqualsMatrix(operator_mul_res));
 
             auto res4 = uc1.cast2Vector().T() * uc2; // other * unit = other
-            Vectorf<1> operator_mul_res2 = uc1.cast2Vector().T() * uc2.cast2Vector();
-            REQUIRE(is_same_v<decltype(res4), Matrixf<1, 1>>);
-            REQUIRE_THAT(res4.cast2Vector(), EqualsMatrix(operator_mul_res2));
+            auto operator_mul_res2 = uc1.cast2Vector().T() * uc2.cast2Vector();
+            REQUIRE(is_same_v<decltype(res4), float>);
+            REQUIRE_THAT(res4, EqualsMatrix(operator_mul_res2));
 
             UnitComplexNumf uc3 = uc1; // only unit *= unit allowed
             uc3 *= uc2;
@@ -226,13 +226,13 @@ TEST_CASE("UnitComplexNum", "[objects]")
     {
         UnitComplexNumf uc1 = c1.cast2UnitComplexNum();
         auto m = uc1.toRotMatrix2D();
-        REQUIRE(is_same_v<decltype(m), SquareMatrixf<2>>);
+        REQUIRE(is_same_v<decltype(m), SOGroupf<2>>);
         Vectorf<2> vec{{1.0f, 2.0f}};
         Vectorf<2> vec_rot = uc1.rotateVector2D(vec);
         Vectorf<2> vec_rot_ = m * vec;
         REQUIRE_THAT(vec_rot, EqualsMatrix(vec_rot_));
 
         SquareMatrixf<2> m2 = uc1.toMulMatrix();
-        REQUIRE_THAT(m2, EqualsMatrix(m));
+        REQUIRE_THAT(m2.cast2Matrix(), EqualsMatrix(m.cast2Matrix()));
     }
 }
