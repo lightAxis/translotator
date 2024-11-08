@@ -169,15 +169,34 @@ TEST_CASE("SOGroup", "[objects]")
     {
         SquareMatrixf<3> so3_errored = so3_.cast2SquareMatrixRef() + 0.01f * Matrixf<3, 3>::eye();
         auto so3_errored_sq = so3_errored * so3_errored.T();
+        REQUIRE_THAT(so3_errored_sq, !EqualsMatrix(SOGroupf<3>::eye()));
 
         SOGroupf<3> so3_casted = so3_errored.cast2SOGroup(); // during cast, this will be normalized
         auto so3_casted_sq = so3_casted * so3_casted.T();
-
         REQUIRE_THAT(so3_casted_sq, EqualsMatrix(SOGroupf<3>::eye()));
+
+        SOGroupf<3> &so3_casted_ref = so3_errored.cast2SOGroupRef(); // during cast this will be normalized
+        auto so3_casted_sq_ref = so3_casted_ref * so3_casted_ref.T();
+        REQUIRE_THAT(so3_casted_sq_ref, EqualsMatrix(SOGroupf<3>::eye()));
+        auto so3_errored_sq2 = so3_errored * so3_errored.T();
+        REQUIRE_THAT(so3_errored_sq2, EqualsMatrix(SOGroupf<3>::eye()));
+
+        so3_casted_ref(0, 0) = 100.f;
+        REQUIRE(close_enough(so3_casted_ref(0, 0), 100.f));
+        REQUIRE(close_enough(so3_errored(0, 0), 100.f));
     }
 
     SECTION("static functions")
     {
+        SOGroupf<3> so3_inv = so3_.inversed();
+        SOGroupf<3> so3_inv2 = so3_.T();
+
+        REQUIRE_THAT(so3_inv, EqualsMatrix(so3_inv2));
+
+        SOGroupf<3> so3id = so3_inv * so3_;
+        SOGroupf<3> so3id2 = so3_inv2 * so3_;
+        REQUIRE_THAT(so3id, EqualsMatrix(SOGroupf<3>::identity()));
+        REQUIRE_THAT(so3id2, EqualsMatrix(SOGroupf<3>::identity()));
     }
 
     SECTION("casts")

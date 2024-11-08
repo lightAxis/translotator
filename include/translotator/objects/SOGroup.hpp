@@ -164,6 +164,10 @@ namespace translotator
         {
             (*this) = this->inversed();
         }
+        inline SOGroup<N, Type> T() const
+        {
+            return SOGroup<N, Type>{SquareMatrix<N, Type>::T()};
+        }
 
         /**
          * static functions
@@ -171,7 +175,7 @@ namespace translotator
         static inline SOGroup<N, Type> identity()
         {
             static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
-            return SOGroup<N, Type>::eye();
+            return SOGroup<N, Type>{SquareMatrix<N, Type>::eye()};
         }
 
         /**
