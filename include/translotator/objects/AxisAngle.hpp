@@ -68,6 +68,18 @@ namespace translotator
             return SquareMatrix<2, Type>{{c * v.x() - s * v.y(),
                                           s * v.x() + c * v.y()}};
         }
+        template <AXIS Axis>
+        inline AxisAngle<Type> axisRotation(const Type &angle)
+        { // TODO add test code for thiss
+            if constexpr (Axis == AXIS::X)
+                return AxisAngle<Type>(angle, Vector<3, Type>::xAxis());
+            else if constexpr (Axis == AXIS::Y)
+                return AxisAngle<Type>(angle, Vector<3, Type>::yAxis());
+            else if constexpr (Axis == AXIS::Z)
+                return AxisAngle<Type>(angle, Vector<3, Type>::zAxis());
+            else
+                static_assert(Axis == AXIS::X || Axis == AXIS::Y || Axis == AXIS::Z, "Invalid Axis");
+        }
 
         /**
          * Casting
@@ -85,7 +97,7 @@ namespace translotator
         }
         inline SOGroup<3, Type> toRotMatrix3D() const
         {
-            return (*this).toUnitQuaternion().toRotMatrix3D();
+            return toUnitQuaternion().toRotMatrix3D();
         }
         inline SOGroup<2, Type> toRotMatrix2D() const
         {
@@ -97,6 +109,16 @@ namespace translotator
         inline Vector<3, Type> toAngleVector() const
         {
             return axis_ * angle_;
+        }
+        template <EULER_ORDER AxisOrder>
+        inline EulerAngle<Type, AxisOrder> toEulerAngle2D() const
+        {
+            return toRotMatrix2D().template toEulerAngle<AxisOrder>();
+        }
+        template <EULER_ORDER AxisOrder>
+        inline EulerAngle<Type, AxisOrder> toEulerAngle3D() const
+        {
+            return toRotMatrix3D().template toEulerAngle<AxisOrder>();
         }
 
     private:

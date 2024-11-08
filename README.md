@@ -8,7 +8,7 @@ Requires C++17 or Later. No dependencies with other libraries and stl.
 - Translation, Rotation, Homogeneous Transformation
 - Matrix based objects : Matrix N x M, SquareMatrix N x N, Vector N
 - Number objects : Complex number, Quaternion
-- Rotation objects : Unit Complex Number, Unit Quaternion, Axis Angle
+- Rotation objects : Unit Complex Number, Unit Quaternion, Axis Angle, Euler Angle
 - Supports variaous types of data (float, double, long double)
 - Many operator overloadings for object actions & data type conversion
 - Supports reinterpret_cast for zero-copy data type conversion between Matrix-based objects.(using this feature to convert temporary object is not recommended)
@@ -116,7 +116,6 @@ The operator/ are defined only between some mathmatical inverse operation object
 
 ## TODOs
 
-- add Rotation object : Euler Angle, SO(2), SO(3)
 - add Number objects : Dual number, Dual Quaternion
 - add Lie Group & Algebra : SO(2), SO(3), SE(2), SE(3)
 - add Interpolation : Lerp, Slerp, ScLerp

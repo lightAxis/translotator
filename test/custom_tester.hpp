@@ -89,6 +89,12 @@ bool close_enough(const translotator::SOGroup<N, Type> &lhs, const translotator:
     return close_enough(lhs.cast2Matrix(), rhs.cast2Matrix());
 }
 
+template <typename Type, translotator::EULER_ORDER AxisOrder>
+bool close_enough(const translotator::EulerAngle<Type, AxisOrder> &lhs, const translotator::EulerAngle<Type, AxisOrder> &rhs)
+{
+    return close_enough(lhs.toVector(), rhs.toVector());
+}
+
 template <typename T>
 struct EqualsMatrixMatcher : Catch::Matchers::MatcherGenericBase
 {

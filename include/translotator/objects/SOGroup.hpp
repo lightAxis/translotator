@@ -177,16 +177,47 @@ namespace translotator
             static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
             return SOGroup<N, Type>{SquareMatrix<N, Type>::eye()};
         }
+        template <AXIS Axis>
+        static SOGroup<N, Type> axisRotation(const Type &angle)
+        {
+            // TODO add testcode for this
+            static_assert(N == 3, "Supports only SO(3) Groups");
+            const Type c = translotator::cos(angle);
+            const Type s = translotator::sin(angle);
+            const Type o = static_cast<Type>(0);
+            const Type l = static_cast<Type>(1);
+            if constexpr (Axis == AXIS::X)
+            {
+                return SOGroup<N, Type>{{l, o, o,
+                                         o, c, -s,
+                                         o, s, c}};
+            }
+            else if constexpr (Axis == AXIS::Y)
+            {
+                return SOGroup<N, Type>{{c, o, s,
+                                         o, l, o,
+                                         -s, o, c}};
+            }
+            else if constexpr (Axis == AXIS::Z)
+            {
+                return SOGroup<N, Type>{{c, -s, o,
+                                         s, c, o,
+                                         o, o, l}};
+            }
+            else
+            {
+                static_assert(Axis == AXIS::X || Axis == AXIS::Y || Axis == AXIS::Z, "Invalid Axis");
+            }
+        }
 
         /**
          * casts
          */
-        template <size_t N_ = N, typename = enable_if_t<N_ == 2, true_type>>
         inline UnitComplexNum<Type> toUnitComplexNum() const
         {
+            static_assert(N == 2, "Supports only SO(2) Groups");
             return UnitComplexNum<Type>{Data_(0, 0), Data_(1, 0)};
         }
-        template <size_t N_ = N, typename = enable_if_t<N_ == 2 || N_ == 3, true_type>>
         inline UnitQuaternion<Type> toUnitQuaternion() const
         {
             if constexpr (N == 2)
@@ -238,7 +269,6 @@ namespace translotator
             else
                 static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
         }
-        template <size_t N_ = N, typename = enable_if_t<N_ == 2 || N_ == 3, true_type>>
         inline AxisAngle<Type> toAxisAngle() const
         {
             if constexpr (N == 2)
@@ -253,6 +283,47 @@ namespace translotator
             else
                 static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
         }
+        template <EULER_ORDER NewOrder>
+        EulerAngle<Type, NewOrder> toEulerAngle() const
+        {
+            if constexpr (N == 2)
+            {
+                const Type angle = translotator::acos(Data_(0, 0));
+                return EulerAngle<Type, NewOrder>{static_cast<Type>(0), static_cast<Type>(0), angle};
+            }
+            else if constexpr (N == 3)
+            {
+                EulerAngle<Type, NewOrder> euler;
+                constexpr size_t AXIS_FIRST = EULER_CONSTEXPR::AXIS_IDX_AT<0, NewOrder>();
+                constexpr size_t AXIS_SECOND = EULER_CONSTEXPR::AXIS_IDX_AT<1, NewOrder>();
+                constexpr size_t AXIS_THIRD = EULER_CONSTEXPR::AXIS_IDX_AT<2, NewOrder>();
+                constexpr Type SIGN = (((AXIS_SECOND - AXIS_FIRST) == 1) || ((AXIS_SECOND - AXIS_FIRST) == -2)) ? Type(1) : Type(-1);
+
+                // Tait-Bryan angles
+                euler.x() = translotator::atan2(-SIGN * Data_(AXIS_SECOND, AXIS_THIRD), Data_(AXIS_THIRD, AXIS_THIRD));
+                euler.y() = SIGN * translotator::asin(Data_(AXIS_FIRST, AXIS_THIRD));
+                euler.z() = translotator::atan2(-SIGN * Data_(AXIS_FIRST, AXIS_SECOND), Data_(AXIS_FIRST, AXIS_FIRST));
+
+                /**
+                 * In case of gimbal lock.
+                 */
+                // Tait-Bryan angles
+                if (translotator::abs(euler.y() - Type(M_PI_2)) < epsilon<Type>())
+                {
+                    euler.x() = Type(0);
+                    euler.z() = translotator::atan2(Data_(AXIS_THIRD, AXIS_SECOND), -SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
+                }
+                else if (translotator::abs(euler.y() + Type(M_PI_2)) < epsilon<Type>())
+                {
+                    euler.x() = Type(0);
+                    euler.z() = translotator::atan2(-Data_(AXIS_THIRD, AXIS_SECOND), SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
+                }
+
+                return euler;
+            }
+            else
+                static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
+        }
     };
 
     template <size_t N>
@@ -262,10 +333,36 @@ namespace translotator
     template <size_t N>
     using SOGroupld = SOGroup<N, long double>;
 
+    template <typename Type>
+    using SO2Group = SOGroup<2, Type>;
+    template <typename Type>
+    using SO3Group = SOGroup<3, Type>;
+
+    using SO3Groupf = SO3Group<float>;
+    using SO3Groupd = SO3Group<double>;
+    using SO3Groupld = SO3Group<long double>;
+
+    using SO2Groupf = SO2Group<float>;
+    using SO2Groupd = SO2Group<double>;
+    using SO2Groupld = SO2Group<long double>;
+
     template <size_t N>
     using RotationMatrixf = SOGroupf<N>;
     template <size_t N>
     using RotationMatrixd = SOGroupd<N>;
     template <size_t N>
     using RotationMatrixld = SOGroupld<N>;
+
+    template <typename Type>
+    using RotationMatrix2D = SO2Group<Type>;
+    template <typename Type>
+    using RotationMatrix3D = SO3Group<Type>;
+
+    using RotationMatrix2Df = SO2Groupf;
+    using RotationMatrix2Dd = SO2Groupd;
+    using RotationMatrix2Dld = SO2Groupld;
+
+    using RotationMatrix3Df = SO3Groupf;
+    using RotationMatrix3Dd = SO3Groupd;
+    using RotationMatrix3Dld = SO3Groupld;
 }

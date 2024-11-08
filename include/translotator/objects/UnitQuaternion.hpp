@@ -66,7 +66,7 @@ namespace translotator
             }
             else
             {
-                return Matrix<4, 1, Type>::operator*(other);
+                return Quaternion<Type>::operator*(other);
             }
         }
         inline friend Quaternion<Type> operator*(const Quaternion<Type> &lhs, const UnitQuaternion<Type> &rhs)
@@ -166,7 +166,8 @@ namespace translotator
         inline Vector<3, Type> rotateVector3D(const Vector<3, Type> &v) const
         {
             const Quaternion<Type> qv{static_cast<Type>(0), v};
-            return ((*this * qv) * conjugated()).Im();
+            const Quaternionf q_res = ((*this) * qv * conjugated());
+            return q_res.Im();
         }
         inline Vector<2, Type> rotateVector2D(const Vector<2, Type> &v) const
         {
@@ -181,6 +182,21 @@ namespace translotator
          * static functions
          */
         static inline UnitQuaternion<Type> identity() { return UnitQuaternion<Type>(static_cast<Type>(1), static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0)); }
+        template <AXIS Axis>
+        static inline UnitQuaternion<Type> axisRotation(const Type &angle)
+        { // TODO add test code for this
+            const Type half_angle = angle / static_cast<Type>(2);
+            const Type c = translotator::cos(half_angle);
+            const Type s = translotator::sin(half_angle);
+            if constexpr (Axis == AXIS::X)
+                return UnitQuaternion<Type>{c, s, static_cast<Type>(0), static_cast<Type>(0)};
+            else if constexpr (Axis == AXIS::Y)
+                return UnitQuaternion<Type>{c, static_cast<Type>(0), s, static_cast<Type>(0)};
+            else if constexpr (Axis == AXIS::Z)
+                return UnitQuaternion<Type>{c, static_cast<Type>(0), static_cast<Type>(0), s};
+            else
+                static_assert(Axis == AXIS::X || Axis == AXIS::Y || Axis == AXIS::Z, "Invalid Axis");
+        }
 
         /**
          * casting
@@ -218,6 +234,16 @@ namespace translotator
             }
 
             return AxisAngle<Type>{angle, Im() / translotator::sin(angle / static_cast<Type>(2))};
+        }
+        template <EULER_ORDER AxisOrder>
+        inline EulerAngle<Type, AxisOrder> toEulerAngle2D() const
+        {
+            return toRotMatrix2D().template toEulerAngle<AxisOrder>();
+        }
+        template <EULER_ORDER NewOrder>
+        inline EulerAngle<Type, NewOrder> toEulerAngle3D() const
+        {
+            return toRotMatrix3D().template toEulerAngle<NewOrder>();
         }
 
     private:

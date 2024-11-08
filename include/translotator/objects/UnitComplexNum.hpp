@@ -14,6 +14,7 @@ namespace translotator
          * constructors
          */
         inline UnitComplexNum() : ComplexNum<Type>(static_cast<Type>(1), static_cast<Type>(0)) {}
+        explicit UnitComplexNum(const Type &angle) : ComplexNum<Type>(translotator::cos(angle), translotator::sin(angle)) {}
 
         /**
          * accessors
@@ -58,7 +59,7 @@ namespace translotator
             }
             else
             {
-                return Matrix<2, 1, Type>::operator*(other);
+                return ComplexNum<Type>::operator*(other);
             }
         }
         inline friend ComplexNum<Type> operator*(const ComplexNum<Type> &lhs, const UnitComplexNum<Type> &rhs)
@@ -178,6 +179,12 @@ namespace translotator
         {
             const Type angle = translotator::acos(Re());
             return AxisAngle<Type>{angle};
+        }
+        template <EULER_ORDER AxisOrder>
+        inline EulerAngle<Type, AxisOrder> toEulerAngle2D() const
+        {
+            const Type angle = translotator::acos(Re());
+            return EulerAngle<Type, AxisOrder>{angle};
         }
     };
 

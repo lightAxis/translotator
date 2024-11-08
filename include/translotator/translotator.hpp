@@ -27,5 +27,6 @@
 #include "objects/UnitQuaternion.hpp"
 #include "objects/SOGroup.hpp"
 #include "objects/AxisAngle.hpp"
+#include "objects/EulerAngle.hpp"
 
 #include "objects/tail.hpp"
