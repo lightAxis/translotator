@@ -120,11 +120,17 @@ namespace translotator
         {
             return toRotMatrix3D().template toEulerAngle<AxisOrder>();
         }
+        template <typename NewType>
+        inline AxisAngle<NewType> castDataType() const
+        {
+            static_assert(is_float_v<NewType>, "NewType must be float, double or long double type");
+            return AxisAngle<NewType>(static_cast<NewType>(angle_), axis_.template castDataType<NewType>());
+        }
 
     private:
     };
 
     using AxisAnglef = AxisAngle<float>;
     using AxisAngled = AxisAngle<double>;
-    using AxisAnglei = AxisAngle<int>;
+    using AxisAngleld = AxisAngle<long double>;
 }

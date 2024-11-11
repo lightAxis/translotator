@@ -80,10 +80,14 @@ namespace translotator
     template <typename Type, EULER_ORDER AxisOrder>
     class EulerAngle;
 
+    template <size_t N, typename Type>
+    class SOGroup;
+
     // ########################################
     // ## homogeneous transformation objects ##
     // ########################################
 
     template <size_t N, typename Type>
-    class SOGroup;
+    class SEGroup;
+
 }

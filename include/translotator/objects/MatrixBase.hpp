@@ -161,6 +161,16 @@ namespace translotator
             return static_cast<Derived &>(*this);
         }
 
+        template <size_t i, size_t j, typename OtherDerived>
+        inline Derived &setBlockStatic(const OtherDerived &block)
+        {
+            constexpr size_t P = OtherDerived::ROWS;
+            constexpr size_t Q = OtherDerived::COLS;
+            static_assert(i + P <= N);
+            static_assert(j + Q <= M);
+            return setBlock(i, j, block);
+        }
+
         template <typename OtherDerived>
         inline Derived &setRow(size_t i, const OtherDerived &row)
         {
@@ -415,7 +425,7 @@ namespace translotator
          * Type Casting
          */
         template <typename NewType>
-        inline auto castDatatype() const
+        inline auto castDataType() const
         {
             static_assert(!is_same_v<Type, NewType>, "NewType must be different from current type");
             static_assert(is_float_v<NewType>, "NewType must be a floating point type");

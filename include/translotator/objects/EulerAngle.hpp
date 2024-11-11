@@ -122,6 +122,26 @@ namespace translotator
             return Vector<3, Type>{{x(), y(), z()}};
         }
 
+        template <typename NewType>
+        inline EulerAngle<NewType, AxisOrder> castDataType() const
+        {
+            static_assert(is_float_v<NewType>, "NewType must be float, double or long double");
+            return EulerAngle<NewType, AxisOrder>{static_cast<NewType>(x()), static_cast<NewType>(y()), static_cast<NewType>(z())};
+        }
+
+        template <EULER_ORDER NewAxisOrder>
+        inline EulerAngle<Type, NewAxisOrder> castAxisOrder() const
+        {
+            if constexpr (NewAxisOrder == AxisOrder)
+            {
+                return *this;
+            }
+            else
+            {
+                return toUnitQuaternion().template toEulerAngle3D<NewAxisOrder>();
+            }
+        }
+
     private:
     };
 

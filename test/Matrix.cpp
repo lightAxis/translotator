@@ -266,11 +266,11 @@ TEST_CASE("Matrix", "[objects]")
     SECTION("Casting")
     {
         // to double
-        auto md = m1.castDatatype<double>();
+        auto md = m1.castDataType<double>();
         REQUIRE(is_same_v<decltype(md)::DATATYPE, double> == true);
 
         // to long double
-        auto mld = m1.castDatatype<long double>();
+        auto mld = m1.castDataType<long double>();
         REQUIRE(is_same_v<decltype(mld)::DATATYPE, long double> == true);
 
         // to vector

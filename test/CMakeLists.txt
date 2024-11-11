@@ -40,5 +40,4 @@ add_test(UnitComplexNum.cpp DEPS translotator)
 add_test(AxisAngle.cpp DEPS translotator)
 add_test(SOGroup.cpp DEPS translotator)
 add_test(EulerAngle.cpp DEPS translotator)
-
-# add_test(test.cpp DEPS translotator)
+add_test(SEGroup.cpp DEPS translotator)

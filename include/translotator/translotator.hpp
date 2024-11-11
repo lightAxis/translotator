@@ -29,4 +29,7 @@
 #include "objects/AxisAngle.hpp"
 #include "objects/EulerAngle.hpp"
 
+// homogeneous transformation objects
+#include "objects/SEGroup.hpp"
+
 #include "objects/tail.hpp"

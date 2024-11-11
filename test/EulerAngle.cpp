@@ -211,5 +211,27 @@ TEST_CASE("EulerAngle", "[objects]")
             REQUIRE_THAT(cplx2_reversed, EqualsMatrix(euler2d));
             REQUIRE_THAT(quat2_reversed, EqualsMatrix(euler2d));
         }
+
+        { // type & axis order conversion /// https://www.andre-gaschler.com/rotationconverter/
+            EulerAngleXYZf e1 = euler1;
+            EulerAngleXYZd e1d = e1.castDataType<double>();
+
+            Vectorf<3> e1_vec = e1.toVector();
+            Vectord<3> e1d_vec = e1d.toVector();
+            REQUIRE_THAT(e1_vec.castDataType<double>(), EqualsMatrix(e1d_vec));
+
+            // XYZ
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::XYZ>(), EqualsMatrix(EulerAnglef<EULER_ORDER::XYZ>{0.1f, 0.2f, 0.3f}));
+            // XZY
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::XZY>(), EqualsMatrix(EulerAnglef<EULER_ORDER::XZY>{0.1613783f, 0.2090858f, 0.2938397f}));
+            // YXZ
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::YXZ>(), EqualsMatrix(EulerAnglef<EULER_ORDER::YXZ>{0.0980001f, 0.2009773f, 0.3199307f}));
+            // YZX
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::YZX>(), EqualsMatrix(EulerAnglef<EULER_ORDER::YZX>{0.1032025f, 0.1685719f, 0.3183415f}));
+            // ZXY
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::ZXY>(), EqualsMatrix(EulerAnglef<EULER_ORDER::ZXY>{0.1544047f, 0.1619708f, 0.297485f}));
+            // ZYX
+            REQUIRE_THAT(e1.castAxisOrder<EULER_ORDER::ZYX>(), EqualsMatrix(EulerAnglef<EULER_ORDER::ZYX>{0.1564194f, 0.1600271f, 0.3226097f}));
+        }
     }
 }

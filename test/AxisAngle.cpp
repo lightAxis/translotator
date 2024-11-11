@@ -94,4 +94,14 @@ TEST_CASE("AxisAngle", "[objects]")
         Vectorf<3> vec_rot_true{{1.33062533f, 1.7191888111f, 3.0452957267f}};
         REQUIRE_THAT(vec_rot, EqualsMatrix(vec_rot_true));
     }
+
+    SECTION("casting")
+    {
+        AxisAnglef a2 = a;
+        AxisAngled a2d = a2.castDataType<double>();
+        a2.axisNormalize();
+
+        REQUIRE(close_enough(static_cast<double>(a2.angle()), a2d.angle()));
+        REQUIRE_THAT(a2.axis().castDataType<double>(), EqualsMatrix(a2d.axis()));
+    }
 }

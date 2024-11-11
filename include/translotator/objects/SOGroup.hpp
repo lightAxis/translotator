@@ -133,6 +133,11 @@ namespace translotator
             }
         }
 
+        inline SOGroup<N, Type> operator-() const
+        {
+            return SOGroup<N, Type>{SquareMatrix<N, Type>::operator-()};
+        }
+
         /**
          * utils
          */
@@ -297,12 +302,15 @@ namespace translotator
                 constexpr size_t AXIS_FIRST = EULER_CONSTEXPR::AXIS_IDX_AT<0, NewOrder>();
                 constexpr size_t AXIS_SECOND = EULER_CONSTEXPR::AXIS_IDX_AT<1, NewOrder>();
                 constexpr size_t AXIS_THIRD = EULER_CONSTEXPR::AXIS_IDX_AT<2, NewOrder>();
-                constexpr Type SIGN = (((AXIS_SECOND - AXIS_FIRST) == 1) || ((AXIS_SECOND - AXIS_FIRST) == -2)) ? Type(1) : Type(-1);
+                constexpr Type SIGN = (((AXIS_SECOND - AXIS_FIRST) == 1) ||
+                                       ((static_cast<int>(AXIS_SECOND) - static_cast<int>(AXIS_FIRST)) == -2))
+                                          ? Type(1)
+                                          : Type(-1);
 
                 // Tait-Bryan angles
-                euler.x() = translotator::atan2(-SIGN * Data_(AXIS_SECOND, AXIS_THIRD), Data_(AXIS_THIRD, AXIS_THIRD));
-                euler.y() = SIGN * translotator::asin(Data_(AXIS_FIRST, AXIS_THIRD));
-                euler.z() = translotator::atan2(-SIGN * Data_(AXIS_FIRST, AXIS_SECOND), Data_(AXIS_FIRST, AXIS_FIRST));
+                euler.template getAngleInOrder<0>() = translotator::atan2(-SIGN * Data_(AXIS_SECOND, AXIS_THIRD), Data_(AXIS_THIRD, AXIS_THIRD));
+                euler.template getAngleInOrder<1>() = SIGN * translotator::asin(Data_(AXIS_FIRST, AXIS_THIRD));
+                euler.template getAngleInOrder<2>() = translotator::atan2(-SIGN * Data_(AXIS_FIRST, AXIS_SECOND), Data_(AXIS_FIRST, AXIS_FIRST));
 
                 /**
                  * In case of gimbal lock.
@@ -310,13 +318,13 @@ namespace translotator
                 // Tait-Bryan angles
                 if (translotator::abs(euler.y() - Type(M_PI_2)) < epsilon<Type>())
                 {
-                    euler.x() = Type(0);
-                    euler.z() = translotator::atan2(Data_(AXIS_THIRD, AXIS_SECOND), -SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
+                    euler.template getAngleInOrder<0>() = Type(0);
+                    euler.template getAngleInOrder<2>() = translotator::atan2(Data_(AXIS_THIRD, AXIS_SECOND), -SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
                 }
                 else if (translotator::abs(euler.y() + Type(M_PI_2)) < epsilon<Type>())
                 {
-                    euler.x() = Type(0);
-                    euler.z() = translotator::atan2(-Data_(AXIS_THIRD, AXIS_SECOND), SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
+                    euler.template getAngleInOrder<0>() = Type(0);
+                    euler.template getAngleInOrder<2>() = translotator::atan2(-Data_(AXIS_THIRD, AXIS_SECOND), SIGN * Data_(AXIS_THIRD, AXIS_FIRST));
                 }
 
                 return euler;
