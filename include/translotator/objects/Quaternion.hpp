@@ -14,6 +14,7 @@ namespace translotator
         inline Quaternion() : MatrixBase<4, 1, Type, Quaternion<Type>>({static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0)}) {}
         explicit inline Quaternion(Type w, Type x, Type y, Type z) : MatrixBase<4, 1, Type, Quaternion<Type>>({w, x, y, z}) {}
         explicit inline Quaternion(Type w, const Vector<3, Type> &v) : MatrixBase<4, 1, Type, Quaternion<Type>>({w, v[0], v[1], v[2]}) {}
+        explicit inline Quaternion(const Vector<4, Type> &w_v) : MatrixBase<4, 1, Type, Quaternion<Type>>({w_v[0], w_v[1], w_v[2], w_v[3]}) {}
 
         /**
          * accessors
@@ -43,6 +44,13 @@ namespace translotator
                                           x(), w(), -z(), y(),
                                           y(), z(), w(), -x(),
                                           z(), -y(), x(), w()}};
+        }
+        inline SquareMatrix<4, Type> toRightMulMatrix() const
+        {
+            return SquareMatrix<4, Type>{{w(), -x(), -y(), -z(),
+                                          x(), w(), z(), -y(),
+                                          y(), -z(), w(), x(),
+                                          z(), y(), -x(), w()}};
         }
 
         /**

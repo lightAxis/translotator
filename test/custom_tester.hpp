@@ -101,6 +101,12 @@ bool close_enough(const translotator::SEGroup<N, Type> &lhs, const translotator:
     return close_enough(lhs.rotation(), rhs.rotation()) && close_enough(lhs.translation(), rhs.translation());
 }
 
+template <typename Type>
+bool close_enough(const translotator::DualQuaternion<Type> &lhs, const translotator::DualQuaternion<Type> &rhs)
+{
+    return close_enough(lhs.real(), rhs.real()) && close_enough(lhs.dual(), rhs.dual());
+}
+
 template <typename T>
 struct EqualsMatrixMatcher : Catch::Matchers::MatcherGenericBase
 {

@@ -21,6 +21,7 @@
 // number systems
 #include "objects/ComplexNum.hpp"
 #include "objects/Quaternion.hpp"
+#include "objects/DualQuaternion.hpp"
 
 // rotation objects, SO(2), SO(3)
 #include "objects/UnitComplexNum.hpp"

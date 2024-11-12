@@ -90,4 +90,7 @@ namespace translotator
     template <size_t N, typename Type>
     class SEGroup;
 
+    template <typename Type>
+    class DualQuaternion;
+
 }

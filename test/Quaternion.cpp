@@ -65,6 +65,14 @@ TEST_CASE("Quaternion", "[objects]")
                                      3.0f, 4.0f, 1.0f, -2.0f,
                                      4.0f, -3.0f, 2.0f, 1.0f}};
         REQUIRE_THAT(q1_mulmat, EqualsMatrix(q1_mulmat_));
+
+        Quaternionf q2{11.f, 22.f, 33.f, 44.f};
+        Quaternionf q1q2{q1_mulmat * q2.cast2Vector()};
+        Quaternionf q1q2_ans = q1 * q2;
+        REQUIRE_THAT(q1q2, EqualsMatrix(q1q2_ans));
+
+        Quaternionf q1q2__2{q2.toRightMulMatrix() * q1.cast2Vector()};
+        REQUIRE_THAT(q1q2__2, EqualsMatrix(q1q2_ans));
     }
 
     SECTION("operators")
