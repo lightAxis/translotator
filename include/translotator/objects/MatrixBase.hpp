@@ -462,6 +462,8 @@ namespace translotator
         inline SOGroup<N, Type> cast2SOGroup() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
         inline DualNumber<Type> cast2DualNumber() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
+        inline DualQuaternion<Type> cast2DualQuaternion() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
@@ -482,6 +484,8 @@ namespace translotator
         inline SOGroup<N, Type> &cast2SOGroupRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 2 && M_ == 1, true_type>>
         inline DualNumber<Type> &cast2DualNumberRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
+        inline DualQuaternion<Type> &cast2DualQuaternionRef();
 
     protected:
     private:

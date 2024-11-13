@@ -160,6 +160,14 @@ TEST_CASE("DualNumber", "[objects]")
         }
     }
 
+    SECTION("static functions")
+    {
+        DualNumberf d2 = d1;
+        DualNumberf d2_root = DualNumberf::sqrt(d2);
+        DualNumberf d2_root2 = d2_root * d2_root;
+        REQUIRE_THAT(d2, EqualsMatrix(d2_root2));
+    }
+
     SECTION("utils")
     {
         const float norm = d1.norm();

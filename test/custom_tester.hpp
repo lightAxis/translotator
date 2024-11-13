@@ -110,7 +110,7 @@ bool close_enough(const translotator::DualNumber<Type> &lhs, const translotator:
 template <typename Type>
 bool close_enough(const translotator::DualQuaternion<Type> &lhs, const translotator::DualQuaternion<Type> &rhs)
 {
-    return close_enough(lhs.real(), rhs.real()) && close_enough(lhs.dual(), rhs.dual());
+    return close_enough(lhs.cast2Vector(), rhs.cast2Vector());
 }
 
 template <typename T>

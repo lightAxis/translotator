@@ -23,17 +23,18 @@ namespace translotator
             : MatrixBase<8, 1, Type, DualQuaternion<Type>>({rw, rx, ry, rz, dw, dx, dy, dz}) {}
         DualQuaternion(const Quaternion<Type> &r, const Quaternion<Type> &d)
             : MatrixBase<8, 1, Type, DualQuaternion<Type>>{{r.w(), r.x(), r.y(), r.z(), d.w(), d.x(), d.y(), d.z()}} {}
-        DualQuaternion(const Vector<8, Type> &vec)
-            : MatrixBase<8, 1, Type, DualQuaternion<Type>>{{vec[0], vec[1], vec[2], vec[3], vec[4], vec[5], vec[6], vec[7]}} {}
+        DualQuaternion(const DualNumber<Type> &dn)
+            : MatrixBase<8, 1, Type, DualQuaternion<Type>>{{dn[0], static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0),
+                                                            dn[1], static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0)}} {}
         ~DualQuaternion() = default;
 
         /**
          * accessors
          */
-        inline const Quaternion<Type> &real() const { return reinterpret_cast<const Quaternion<Type> &>(data_[0]); }
-        inline const Quaternion<Type> &dual() const { return reinterpret_cast<const Quaternion<Type> &>(data_[4]); }
-        inline Quaternion<Type> &real() { return reinterpret_cast<Quaternion<Type> &>(data_[0]); }
-        inline Quaternion<Type> &dual() { return reinterpret_cast<Quaternion<Type> &>(data_[4]); }
+        inline const Quaternion<Type> &Re() const { return reinterpret_cast<const Quaternion<Type> &>(data_[0]); }
+        inline const Quaternion<Type> &Du() const { return reinterpret_cast<const Quaternion<Type> &>(data_[4]); }
+        inline Quaternion<Type> &Re() { return reinterpret_cast<Quaternion<Type> &>(data_[0]); }
+        inline Quaternion<Type> &Du() { return reinterpret_cast<Quaternion<Type> &>(data_[4]); }
         inline const Type &rw() const { return data_[0]; }
         inline const Type &rx() const { return data_[1]; }
         inline const Type &ry() const { return data_[2]; }
@@ -56,98 +57,110 @@ namespace translotator
         /**
          * operators
          */
-        // inline DualQuaternion<Type> operator+(const DualQuaternion<Type> &other) const
-        // {
-        //     return DualQuaternion<Type>(r_ + other.r_, d_ + other.d_);
-        // }
-        // inline DualQuaternion<Type> operator-(const DualQuaternion<Type> &other) const
-        // {
-        //     return DualQuaternion<Type>(r_ - other.r_, d_ - other.d_);
-        // }
-        // inline DualQuaternion<Type> operator*(const DualQuaternion<Type> &other) const
-        // {
-        //     return DualQuaternion<Type>(r_ * other.r_, r_ * other.d_ + d_ * other.r_);
-        // }
-        // inline void operator+=(const DualQuaternion<Type> &other) { *this = *this + other; }
-        // inline void operator-=(const DualQuaternion<Type> &other) { *this = *this - other; }
-        // inline void operator*=(const DualQuaternion<Type> &other) { *this = *this * other; }
+        using MatrixBase<8, 1, Type, DualQuaternion<Type>>::operator*;
+        using MatrixBase<8, 1, Type, DualQuaternion<Type>>::operator/;
+        using MatrixBase<8, 1, Type, DualQuaternion<Type>>::operator*=;
+        using MatrixBase<8, 1, Type, DualQuaternion<Type>>::operator/=;
+        inline DualQuaternion<Type> operator*(const DualQuaternion<Type> &other) const
+        {
+            return DualQuaternion<Type>(Re() * other.Re(), Re() * other.Du() + Du() * other.Re());
+        }
+        inline DualQuaternion<Type> operator/(const DualQuaternion<Type> &other) const { return *this * other.inversed(); }
+        inline void operator*=(const DualQuaternion<Type> &q) { *this = *this * q; }
+        inline void operator/=(const DualQuaternion<Type> &q) { *this = *this / q; }
+        inline DualQuaternion<Type> dualQuatMul(const DualQuaternion<Type> &dq) const { return *this * dq; }
+        inline void dualQuatMulEq(const DualQuaternion<Type> &dq) { *this *= dq; }
+        inline DualQuaternion<Type> dualQuatDiv(const DualQuaternion<Type> &dq) const { return *this / dq; }
+        inline void dualQuatDivEq(const DualQuaternion<Type> &dq) { *this /= dq; }
 
         // /**
         //  * utils
         //  */
-        // inline DualQuaternion<Type> conjugatedPrimary() const
-        // {
-        //     return DualQuaternion<Type>{r_.conjugated(), d_.conjugated()};
-        // }
-        // inline DualQuaternion<Type> conjugatedDual() const
-        // {
-        //     return DualQuaternion<Type>{r_, -d_};
-        // }
-        // inline DualQuaternion<Type> conjugatedFull() const
-        // {
-        //     return DualQuaternion<Type>{r_.conjugated(), -d_.conjugated()};
-        // }
-        // inline void conjugatePrimary() { *this = conjugatedPrimary(); }
-        // inline void conjugateDual() { *this = conjugatedDual(); }
-        // inline void conjugateFull() { *this = conjugatedFull(); }
+        inline DualQuaternion<Type> conjugatedPrimary() const
+        {
+            return DualQuaternion<Type>{Re().conjugated(), Du().conjugated()};
+        }
+        inline void conjugatePrimary() { *this = conjugatedPrimary(); }
+        inline DualQuaternion<Type> conjugatedDual() const
+        {
+            return DualQuaternion<Type>{Re(), -Du()};
+        }
+        inline void conjugateDual() { *this = conjugatedDual(); }
+        inline DualQuaternion<Type> conjugatedFull() const
+        { // conjugatedFull = conjugatedPrimary & conjugatedDual
+            return DualQuaternion<Type>{Re().conjugated(), Quaternion<Type>{-Du().w(), Du().x(), Du().y(), Du().z()}};
+        }
+        inline void conjugateFull() { *this = conjugatedFull(); }
+        inline DualNumber<Type> normDualNum() const // original dual quaternion norm with primary conjugate
+        {
+            const Type re_norm = Re().norm();
+            const Type du_dot = Re().w() * Du().w() + Re().x() * Du().x() + Re().y() * Du().y() + Re().z() * Du().z();
+            DualNumber<Type>{re_norm, du_dot / re_norm};
+        }
+        inline DualNumber<Type> normDualNumSquared() const
+        {
+            const Type du_dot = Re().w() * Du().w() + Re().x() * Du().x() + Re().y() * Du().y() + Re().z() * Du().z();
+            return DualNumber<Type>{Re().normSquared(), 2 * du_dot};
+        }
+        inline Type normScalar() const // dual quaternion norm, dual number norm again
+        {
+            return Re().norm();
+        }
+        inline Type normScalarSquared() const
+        {
+            return Re().normSquared();
+        }
+        inline DualQuaternion<Type> inversed() const
+        {
+            const Type re_normsq = Re().normSquared();
+            const Type du_dot = Re().w() * Du().w() + Re().x() * Du().x() + Re().y() * Du().y() + Re().z() * Du().z();
+            return DualQuaternion<Type>{Re().conjugated() / re_normsq,
+                                        Du().conjugated() / re_normsq - Re().conjugated() * (2 * du_dot / (re_normsq * re_normsq))};
+        }
+        inline DualQuaternion<Type> normalized() const
+        {
+            const Quaternion<Type> re_normed = Re().normalized();
+            const Type du_dot = re_normed.w() * Du().w() + re_normed.x() * Du().x() + re_normed.y() * Du().y() + re_normed.z() * Du().z();
+            const Quaternion<Type> du_normed = Du() - du_dot * re_normed;
+            return DualQuaternion<Type>{re_normed, du_normed};
+        }
 
-        // // TODO norm's return is dual number
-        // // inline Type norm();
+        /**
+         * static functions
+         */
+        static DualQuaternion<Type> zeros() { return DualQuaternion<Type>(Quaternion<Type>::zeros(), Quaternion<Type>::zeros()); }
 
-        // inline DualQuaternion<Type> normalized() const // norm 1 can only available in conjugated primary
-        // {
-        //     return DualQuaternion<Type>{r_.normalized(),
-        //                                 Quaternion<Type>{static_cast<Type>(0), (d_ * r_.conjugated()).Im()} * r_};
-        // }
-        // inline void normalize() { *this = normalized(); }
-        // inline void print() const
-        // {
-        //     r_.print();
-        //     d_.print();
-        // }
-
-        // /**
-        //  * static functions
-        //  */
-        // static DualQuaternion<Type> zeros() { return DualQuaternion<Type>(Quaternion<Type>::zeros(), Quaternion<Type>::zeros()); }
-
-        // /**
-        //  * casts
-        //  */
-        // inline Vector<8, Type> toVector() const
-        // {
-        //     return Vector<8, Type>{{r_.w(), r_.x(), r_.y(), r_.z(),
-        //                             d_.w(), d_.x(), d_.y(), d_.z()}};
-        // }
-
-        // inline SquareMatrix<8, Type> toMulMatrix() const
-        // {
-        //     // | [r]_x    0  |
-        //     // | [d]_x [r]_x |
-        //     const Type zero___ = static_cast<Type>(0);
-        //     return SquareMatrix<8, Type>{{r_.w(), -r_.x(), -r_.y(), -r_.z(), zero___, zero___, zero___, zero___,
-        //                                   r_.x(), +r_.w(), -r_.z(), +r_.y(), zero___, zero___, zero___, zero___,
-        //                                   r_.y(), +r_.z(), +r_.w(), -r_.x(), zero___, zero___, zero___, zero___,
-        //                                   r_.z(), -r_.y(), +r_.x(), +r_.w(), zero___, zero___, zero___, zero___,
-        //                                   d_.w(), -d_.x(), -d_.y(), -d_.z(), +r_.w(), -r_.x(), -r_.y(), -r_.z(),
-        //                                   d_.x(), +d_.w(), -d_.z(), +d_.y(), +r_.x(), +r_.w(), -r_.z(), +r_.y(),
-        //                                   d_.y(), +d_.z(), +d_.w(), -d_.x(), +r_.y(), +r_.z(), +r_.w(), -r_.x(),
-        //                                   d_.z(), -d_.y(), +d_.x(), +d_.w(), +r_.z(), -r_.y(), +r_.x(), +r_.w()}};
-        // }
-        // inline SquareMatrix<8, Type> toRightMulMatrix() const
-        // {
-        //     // | [r]_xr    0   |
-        //     // | [d]_xr [r]_xr |
-        //     const Type zero___ = static_cast<Type>(0);
-        //     return SquareMatrix<8, Type>{{r_.w(), -r_.x(), -r_.y(), -r_.z(), zero___, zero___, zero___, zero___,
-        //                                   r_.x(), +r_.w(), +r_.z(), -r_.y(), zero___, zero___, zero___, zero___,
-        //                                   r_.y(), -r_.z(), +r_.w(), +r_.x(), zero___, zero___, zero___, zero___,
-        //                                   r_.z(), +r_.y(), -r_.x(), +r_.w(), zero___, zero___, zero___, zero___,
-        //                                   d_.w(), -d_.x(), -d_.y(), -d_.z(), +r_.w(), +r_.x(), +r_.y(), -r_.z(),
-        //                                   d_.x(), +d_.w(), +d_.z(), -d_.y(), -r_.x(), +r_.w(), +r_.z(), +r_.y(),
-        //                                   d_.y(), -d_.z(), +d_.w(), +d_.x(), -r_.y(), +r_.z(), +r_.w(), +r_.x(),
-        //                                   d_.z(), +d_.y(), -d_.x(), +d_.w(), -r_.z(), -r_.y(), -r_.x(), +r_.w()}};
-        // }
+        /**
+         * casts
+         */
+        inline SquareMatrix<8, Type> toMulMatrix() const
+        {
+            // | [r]_x    0  |
+            // | [d]_x [r]_x |
+            const Type zero_ = static_cast<Type>(0);
+            return SquareMatrix<8, Type>{{rw(), -rx(), -ry(), -rz(), zero_, zero_, zero_, zero_,
+                                          rx(), +rw(), -rz(), +ry(), zero_, zero_, zero_, zero_,
+                                          ry(), +rz(), +rw(), -rx(), zero_, zero_, zero_, zero_,
+                                          rz(), -ry(), +rx(), +rw(), zero_, zero_, zero_, zero_,
+                                          dw(), -dx(), -dy(), -dz(), +rw(), -rx(), -ry(), -rz(),
+                                          dx(), +dw(), -dz(), +dy(), +rx(), +rw(), -rz(), +ry(),
+                                          dy(), +dz(), +dw(), -dx(), +ry(), +rz(), +rw(), -rx(),
+                                          dz(), -dy(), +dx(), +dw(), +rz(), -ry(), +rx(), +rw()}};
+        }
+        inline SquareMatrix<8, Type> toRightMulMatrix() const
+        {
+            // | [r]_xr    0   |
+            // | [d]_xr [r]_xr |
+            const Type zero_ = static_cast<Type>(0);
+            return SquareMatrix<8, Type>{{rw(), -rx(), -ry(), -rz(), zero_, zero_, zero_, zero_,
+                                          rx(), +rw(), +rz(), -ry(), zero_, zero_, zero_, zero_,
+                                          ry(), -rz(), +rw(), +rx(), zero_, zero_, zero_, zero_,
+                                          rz(), +ry(), -rx(), +rw(), zero_, zero_, zero_, zero_,
+                                          dw(), -dx(), -dy(), -dz(), +rw(), -rx(), -ry(), -rz(),
+                                          dx(), +dw(), +dz(), -dy(), +rx(), +rw(), +rz(), -ry(),
+                                          dy(), -dz(), +dw(), +dx(), +ry(), -rz(), +rw(), +rx(),
+                                          dz(), +dy(), -dx(), +dw(), +rz(), +ry(), -rx(), +rw()}};
+        }
     };
 
     using DualQuaternionf = DualQuaternion<float>;

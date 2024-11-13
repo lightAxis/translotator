@@ -59,7 +59,11 @@ namespace translotator
         /**
          * static functions
          */
-
+        static inline DualNumber<Type> sqrt(const DualNumber<Type> &dn)
+        {
+            const Type root = translotator::sqrt(dn.Re());
+            return DualNumber<Type>{root, dn.Du() / (static_cast<Type>(2) * root)};
+        }
         /**
          * utils
          */
