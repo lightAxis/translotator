@@ -78,8 +78,6 @@ namespace translotator
         /**
          * utils
          */
-
-        inline Quaternion<Type> identity() const { return Quaternion<Type>(static_cast<Type>(1), static_cast<Type>(0), static_cast<Type>(0), static_cast<Type>(0)); }
         inline Type normSquared() const { return this->frobeniusNormSquared(); }
         inline Type norm() const { return this->frobeniusNorm(); }
         inline Quaternion<Type> normalized() const { return *this / norm(); }

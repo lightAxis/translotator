@@ -64,6 +64,12 @@ namespace translotator
     template <typename Type>
     class Quaternion;
 
+    template <typename Type>
+    class DualNumber;
+
+    template <typename Type>
+    class DualQuaternion;
+
     // ######################
     // ## rotation objects ##
     // ######################
@@ -89,8 +95,5 @@ namespace translotator
 
     template <size_t N, typename Type>
     class SEGroup;
-
-    template <typename Type>
-    class DualQuaternion;
 
 }
