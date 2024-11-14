@@ -464,6 +464,8 @@ namespace translotator
         inline DualNumber<Type> cast2DualNumber() const;
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
         inline DualQuaternion<Type> cast2DualQuaternion() const;
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
+        inline UnitDualQuaternion<Type> cast2UnitDualQuaternion() const;
 
         template <typename NewContainer>
         inline NewContainer &castContainerRef();
@@ -486,6 +488,8 @@ namespace translotator
         inline DualNumber<Type> &cast2DualNumberRef();
         template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
         inline DualQuaternion<Type> &cast2DualQuaternionRef();
+        template <size_t N_ = N, size_t M_ = M, typename = enable_if_t<N_ == 8 && M_ == 1, true_type>>
+        inline UnitDualQuaternion<Type> &cast2UnitDualQuaternionRef();
 
     protected:
     private:

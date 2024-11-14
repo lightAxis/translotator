@@ -36,16 +36,14 @@ namespace translotator
         inline Quaternion<Type> operator+(const OtherContainer &other) const
         {
             static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator+. Must have matrix base");
-            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
-            return me + other;
+            return Quaternion<Type>::operator+(other);
         }
 
         template <typename OtherContainer>
         inline Quaternion<Type> operator-(const OtherContainer &other) const
         {
             static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
-            const Quaternion<Type> &me = const_cast<UnitQuaternion<Type> *>(this)->cast2QuaternionRef();
-            return me - other;
+            return Quaternion<Type>::operator-(other);
         }
 
         template <typename OtherContainer>
@@ -163,6 +161,7 @@ namespace translotator
         {
             return conjugated();
         }
+        inline void inverse() { *this = inversed(); }
         inline Vector<3, Type> rotateVector3D(const Vector<3, Type> &v) const
         {
             const Quaternion<Type> qv{static_cast<Type>(0), v};

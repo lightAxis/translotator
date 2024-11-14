@@ -8,8 +8,6 @@ namespace translotator
     class DualQuaternion : public MatrixBase<8, 1, Type, DualQuaternion<Type>>
     {
     private:
-        // Quaternion<Type> r_;
-        // Quaternion<Type> d_;
         using MatrixBase<8, 1, Type, DualQuaternion<Type>>::data_;
 
     public:
@@ -51,8 +49,8 @@ namespace translotator
         inline Type &dx() { return data_[5]; }
         inline Type &dy() { return data_[6]; }
         inline Type &dz() { return data_[7]; }
-        inline const Type &operator[](const int &idx) const { return data_[idx]; }
-        inline Type &operator[](const int &idx) { return data_[idx]; }
+        inline const Type &operator[](const size_t &idx) const { return data_[idx]; }
+        inline Type &operator[](const size_t &idx) { return data_[idx]; }
 
         /**
          * operators
@@ -124,6 +122,7 @@ namespace translotator
             const Quaternion<Type> du_normed = Du() - du_dot * re_normed;
             return DualQuaternion<Type>{re_normed, du_normed};
         }
+        inline void normalize() const { *this = normalized(); }
 
         /**
          * static functions

@@ -113,6 +113,12 @@ bool close_enough(const translotator::DualQuaternion<Type> &lhs, const translota
     return close_enough(lhs.cast2Vector(), rhs.cast2Vector());
 }
 
+template <typename Type>
+bool close_enough(const translotator::UnitDualQuaternion<Type> &lhs, const translotator::UnitDualQuaternion<Type> &rhs)
+{
+    return close_enough(lhs.cast2Vector(), rhs.cast2Vector());
+}
+
 template <typename T>
 struct EqualsMatrixMatcher : Catch::Matchers::MatcherGenericBase
 {

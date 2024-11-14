@@ -29,16 +29,14 @@ namespace translotator
         inline ComplexNum<Type> operator+(const OtherContainer &other) const
         {
             static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator+. Must have matrix base");
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
-            return me + other;
+            return ComplexNum<Type>::operator+(other);
         }
 
         template <typename OtherContainer>
         inline auto operator-(const OtherContainer &other) const
         {
             static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
-            const ComplexNum<Type> &me = const_cast<UnitComplexNum<Type> *>(this)->cast2ComplexNumRef();
-            return me - other;
+            return ComplexNum<Type>::operator-(other);
         }
 
         template <typename OtherContainer>

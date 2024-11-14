@@ -80,6 +80,14 @@ namespace translotator
     {
         return castContainer<DualQuaternion<Type>>();
     }
+    template <size_t N, size_t M, typename Type, typename Derived>
+    template <size_t N_, size_t M_, typename>
+    inline UnitDualQuaternion<Type> MatrixBase<N, M, Type, Derived>::cast2UnitDualQuaternion() const
+    {
+        UnitDualQuaternion<Type> udq = castContainer<UnitDualQuaternion<Type>>();
+        udq.normalize();
+        return udq;
+    }
 
     // ###################################
     // ### MatrixBase castContainerRef ###
@@ -159,6 +167,14 @@ namespace translotator
     inline DualQuaternion<Type> &MatrixBase<N, M, Type, Derived>::cast2DualQuaternionRef()
     {
         return castContainerRef<DualQuaternion<Type>>();
+    }
+    template <size_t N, size_t M, typename Type, typename Derived>
+    template <size_t N_, size_t M_, typename>
+    inline UnitDualQuaternion<Type> &MatrixBase<N, M, Type, Derived>::cast2UnitDualQuaternionRef()
+    {
+        auto &udq = castContainerRef<UnitDualQuaternion<Type>>();
+        udq.normalize();
+        return udq;
     }
 
 }

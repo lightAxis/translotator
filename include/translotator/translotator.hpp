@@ -33,5 +33,6 @@
 
 // homogeneous transformation objects
 #include "objects/SEGroup.hpp"
+#include "objects/UnitDualQuaternion.hpp"
 
 #include "objects/tail.hpp"
