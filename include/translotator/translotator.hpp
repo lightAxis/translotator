@@ -35,4 +35,9 @@
 #include "objects/SEGroup.hpp"
 #include "objects/UnitDualQuaternion.hpp"
 
+// interpolators
+#include "interpolators/Lerp.hpp"
+#include "interpolators/Slerp.hpp"
+#include "interpolators/ScLerp.hpp"
+
 #include "objects/tail.hpp"

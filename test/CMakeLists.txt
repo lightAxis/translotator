@@ -30,17 +30,23 @@ endfunction()
 
 # add test sources here
 add_test(epsilon.cpp DEPS translotator)
+
 add_test(Matrix.cpp DEPS translotator)
 add_test(SquareMatrix.cpp DEPS translotator)
 add_test(Vector.cpp DEPS translotator)
-add_test(Quaternion.cpp DEPS translotator)
-add_test(UnitQuaternion.cpp DEPS translotator)
+
 add_test(ComplexNum.cpp DEPS translotator)
+add_test(Quaternion.cpp DEPS translotator)
+add_test(DualNumber.cpp DEPS translotator)
+add_test(DualQuaternion.cpp DEPS translotator)
+
+add_test(UnitQuaternion.cpp DEPS translotator)
 add_test(UnitComplexNum.cpp DEPS translotator)
 add_test(AxisAngle.cpp DEPS translotator)
 add_test(EulerAngle.cpp DEPS translotator)
 add_test(SOGroup.cpp DEPS translotator)
+
 add_test(SEGroup.cpp DEPS translotator)
-add_test(DualNumber.cpp DEPS translotator)
-add_test(DualQuaternion.cpp DEPS translotator)
 add_test(UnitDualQuaternion.cpp DEPS translotator)
+
+add_test(Lerp.cpp DEPS translotator)
