@@ -13,6 +13,7 @@ namespace translotator
         Vector<N, Type> t_;  // translation
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::SE_GROUP;
         /**
          * constructor
          */

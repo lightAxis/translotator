@@ -4,6 +4,23 @@
 
 namespace translotator
 {
+    enum class ObjectType
+    {
+        MATRIX,
+        VECTOR,
+        SQUARE_MATRIX,
+        COMPLEX_NUM,
+        QUATERNION,
+        DUAL_NUMBER,
+        DUAL_QUATERNION,
+        UNIT_COMPLEX_NUM,
+        UNIT_QUATERNION,
+        AXIS_ANGLE,
+        EULER_ANGLE,
+        SO_GROUP,
+        SE_GROUP,
+        UNIT_DUAL_QUATERNION,
+    };
     enum class AXIS
     {
         X = 0x1,

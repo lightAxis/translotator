@@ -10,6 +10,7 @@ namespace translotator
             : DualQuaternion<Type>(dq) {}
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::UNIT_DUAL_QUATERNION;
         using DualQuaternion<Type>::DualQuaternion;
 
         /**

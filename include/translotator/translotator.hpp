@@ -35,6 +35,9 @@
 #include "objects/SEGroup.hpp"
 #include "objects/UnitDualQuaternion.hpp"
 
+// lie group operations
+#include "lie/LieOperator.hpp"
+
 // interpolators
 #include "interpolators/Lerp.hpp"
 #include "interpolators/Slerp.hpp"

@@ -11,6 +11,7 @@ namespace translotator
         inline Type Data_(size_t i, size_t j) const { return (*this)(i, j); }
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::SQUARE_MATRIX;
         using MatrixBase<N, N, Type, SquareMatrix<N, Type>>::MatrixBase;
 
         inline Type determinant() const

@@ -9,6 +9,7 @@ namespace translotator
         explicit UnitQuaternion(const Quaternion<Type> &quat) : Quaternion<Type>(quat) {}
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::UNIT_QUATERNION;
         using Quaternion<Type>::Quaternion;
 
         /**
@@ -18,6 +19,7 @@ namespace translotator
                                                    static_cast<Type>(0),
                                                    static_cast<Type>(0),
                                                    static_cast<Type>(0)) {}
+        inline UnitQuaternion(const Vector<3, Type> &angleVec) : Quaternion<Type>(AxisAngle<Type>{angleVec}.toUnitQuaternion()) {}
 
         /**
          * accessors
@@ -176,6 +178,11 @@ namespace translotator
             return Vector<2, Type>{{c * v.x() - s * v.y(),
                                     s * v.x() + c * v.y()}};
         }
+        inline UnitQuaternion<Type> canonicalized() const
+        {
+            return UnitQuaternion<Type>(Quaternion<Type>::canonicalized());
+        }
+        inline void canonicalize() { *this = canonicalized(); }
 
         /**
          * static functions

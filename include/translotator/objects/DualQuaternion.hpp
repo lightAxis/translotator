@@ -11,6 +11,7 @@ namespace translotator
         using MatrixBase<8, 1, Type, DualQuaternion<Type>>::data_;
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::DUAL_QUATERNION;
         /**
          * constructor
          */

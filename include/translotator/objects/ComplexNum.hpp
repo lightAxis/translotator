@@ -6,6 +6,7 @@ namespace translotator
     class ComplexNum : public MatrixBase<2, 1, Type, ComplexNum<Type>>
     {
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::COMPLEX_NUM;
         using MatrixBase<2, 1, Type, ComplexNum<Type>>::MatrixBase;
 
         /**

@@ -10,6 +10,7 @@ namespace translotator
         Vector<3, Type> axis_;
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::AXIS_ANGLE;
         /**
          * Constructors
          */
@@ -89,7 +90,8 @@ namespace translotator
             const Type half_angle = angle_ / static_cast<Type>(2);
             const Vector<3, Type> axis_normalized = axis_.normalized();
             return UnitQuaternion<Type>(translotator::cos(half_angle),
-                                        translotator::sin(half_angle) * axis_normalized);
+                                        translotator::sin(half_angle) * axis_normalized)
+                .canonicalized();
         }
         inline UnitComplexNum<Type> toUnitComplexNum() const
         {

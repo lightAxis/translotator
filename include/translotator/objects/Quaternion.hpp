@@ -6,6 +6,7 @@ namespace translotator
     class Quaternion : public MatrixBase<4, 1, Type, Quaternion<Type>>
     {
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::QUATERNION;
         using MatrixBase<4, 1, Type, Quaternion<Type>>::MatrixBase;
 
         /**

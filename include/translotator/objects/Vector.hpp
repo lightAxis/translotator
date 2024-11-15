@@ -8,6 +8,7 @@ namespace translotator
     class Vector : public MatrixBase<N, 1, Type, Vector<N, Type>>
     {
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::VECTOR;
         using MatrixBase<N, 1, Type, Vector<N, Type>>::MatrixBase;
 
         inline Type norm() const { return this->frobeniusNorm(); }

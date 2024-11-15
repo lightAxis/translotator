@@ -10,6 +10,7 @@ namespace translotator
         Type angles_[3];
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::EULER_ANGLE;
         /**
          * constructor
          */
@@ -99,7 +100,7 @@ namespace translotator
             const UnitQuaternion<Type> q2 = UnitQuaternion<Type>::template axisRotation<AXIS2>(angle2);
             const UnitQuaternion<Type> q3 = UnitQuaternion<Type>::template axisRotation<AXIS3>(angle3);
 
-            return q1 * q2 * q3;
+            return (q1 * q2 * q3).canonicalized();
         }
         inline UnitComplexNum<Type> toUnitComplexNum() const
         {

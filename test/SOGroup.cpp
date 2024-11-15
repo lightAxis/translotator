@@ -20,7 +20,7 @@ TEST_CASE("SOGroup", "[objects]")
     SOGroupf<3> so3_{{+0.4119822f, +0.0587266f, +0.9092974f,
                       -0.6812427f, -0.6428728f, +0.3501755f,
                       +0.6051273f, -0.7637183f, -0.2248451f}};
-    UnitQuaternionf so3_q{-0.3688714f, Vectorf<3>{{0.7549338f, -0.2061492f, 0.5015091f}}};
+    UnitQuaternionf so3_q{0.3688714f, Vectorf<3>{{-0.7549338f, 0.2061492f, -0.5015091f}}};
     Vectorf<3> vec3_rot = so3_q.rotateVector3D(vec3);
 
     // test3 // [ 0.2672612, 0.5345225, 0.8017837 ], 1 angle and vector

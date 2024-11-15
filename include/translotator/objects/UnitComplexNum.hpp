@@ -9,6 +9,7 @@ namespace translotator
         explicit UnitComplexNum(const ComplexNum<Type> &cplx) : ComplexNum<Type>(cplx) {}
 
     public:
+        constexpr static ObjectType objType = ObjectType::UNIT_COMPLEX_NUM;
         using ComplexNum<Type>::ComplexNum;
         /**
          * constructors

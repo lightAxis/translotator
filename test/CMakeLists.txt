@@ -49,4 +49,6 @@ add_test(SOGroup.cpp DEPS translotator)
 add_test(SEGroup.cpp DEPS translotator)
 add_test(UnitDualQuaternion.cpp DEPS translotator)
 
+add_test(LieOperator.cpp DEPS translotator)
+
 add_test(Lerp.cpp DEPS translotator)

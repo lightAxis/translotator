@@ -8,6 +8,7 @@ namespace translotator
     class Matrix : public MatrixBase<N, M, Type, Matrix<N, M, Type>>
     {
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::MATRIX;
         using MatrixBase<N, M, Type, Matrix<N, M, Type>>::MatrixBase;
     };
 

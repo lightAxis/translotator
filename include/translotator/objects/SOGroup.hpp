@@ -14,6 +14,7 @@ namespace translotator
         explicit SOGroup(const SquareMatrix<N, Type> &mat) : SquareMatrix<N, Type>(mat) {}
 
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::SO_GROUP;
         using SquareMatrix<N, Type>::SquareMatrix;
 
         /**
@@ -230,7 +231,7 @@ namespace translotator
                 Type cos_theta = Data_(0, 0) < static_cast<Type>(-1) ? static_cast<Type>(-1) : Data_(0, 0);
                 cos_theta = cos_theta > static_cast<Type>(1) ? static_cast<Type>(1) : cos_theta;
                 const Type angle = translotator::acos(cos_theta);
-                return UnitQuaternion<Type>{translotator::cos(angle / 2), 0, 0, translotator::sin(angle / 2)};
+                return UnitQuaternion<Type>{translotator::cos(angle / 2), 0, 0, translotator::sin(angle / 2)}.canonicalized();
             }
             else if constexpr (N == 3)
             {
@@ -269,6 +270,7 @@ namespace translotator
                     q.z() = static_cast<Type>(0.25) * S;
                 }
                 q.normalize();
+                q.canonicalize();
                 return q;
             }
             else

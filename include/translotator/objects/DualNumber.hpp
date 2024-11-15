@@ -6,6 +6,7 @@ namespace translotator
     class DualNumber : public MatrixBase<2, 1, Type, DualNumber<Type>>
     {
     public:
+        constexpr static ObjectType OBJECT_TYPE = ObjectType::DUAL_NUMBER;
         /**
          * constructor
          */
