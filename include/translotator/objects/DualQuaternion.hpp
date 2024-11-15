@@ -93,7 +93,7 @@ namespace translotator
         {
             const Type re_norm = Re().norm();
             const Type du_dot = Re().w() * Du().w() + Re().x() * Du().x() + Re().y() * Du().y() + Re().z() * Du().z();
-            DualNumber<Type>{re_norm, du_dot / re_norm};
+            return DualNumber<Type>{re_norm, du_dot / re_norm};
         }
         inline DualNumber<Type> normDualNumSquared() const
         {

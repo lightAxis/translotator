@@ -179,8 +179,7 @@ namespace translotator
         inline void inverse() { *this = inversed(); }
         inline Vector<2, Type> actOnVector2D(const Vector<2, Type> &v) const
         {
-            return Re().rotateVector2D(v) +
-                   Vector<2, Type>{2 * (rw() * dx() - rz() * dy()), 2 * (rz * dx() + rw() * dy())};
+            return Re().rotateVector2D(v) + toTranslationVec2D();
         }
         inline Vector<3, Type> actOnVector3D(const Vector<3, Type> &v) const
         {
@@ -191,7 +190,7 @@ namespace translotator
             // DualQuaternion<Type> q_res = (*this) * qv * conjugatedFull();
             // return q_res.Du().Im();
 
-            return Re().rotateVector3D(v) + (Du() * Re().inversed()).Im() * static_cast<Type>(2);
+            return Re().rotateVector3D(v) + toTranslationVec3D();
         }
 
         /**
@@ -204,14 +203,22 @@ namespace translotator
          */
         inline SEGroup<2, Type> toSE2Group() const
         {
-            const Vector<2, Type> t{2 * (rw() * dx() - rz() * dy()), 2 * (rz * dx() + rw() * dy())};
-            return SEGroup<2, Type>{Re().toRotMatrix2D(), t};
+            return SEGroup<2, Type>{Re().toRotMatrix2D(), toTranslationVec2D()};
         }
 
         inline SEGroup<3, Type> toSE3Group() const
         {
-            const Vector<3, Type> t = 2 * (Du() * Re().inversed()).Im();
-            return SEGroup<3, Type>{Re().toRotMatrix3D(), t};
+            return SEGroup<3, Type>{Re().toRotMatrix3D(), toTranslationVec3D()};
+        }
+
+        inline Vector<2, Type> toTranslationVec2D() const
+        {
+            return Vector<2, Type>{{2 * (rw() * dx() - rz() * dy()), 2 * (rz() * dx() + rw() * dy())}};
+        }
+
+        inline Vector<3, Type> toTranslationVec3D() const
+        {
+            return 2 * (Du() * Re().inversed()).Im();
         }
     };
 

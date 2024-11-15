@@ -188,5 +188,105 @@ TEST_CASE("UnitDualQuaternion", "[objects]")
 
     SECTION("translation")
     {
+        UnitDualQuaternionf udq1{qre_ans, t_ans}; // rotation & translation
+        Vectorf<3> vec{{11.f, 12.f, 13.f}};
+
+        Vectorf<3> res1 = udq1.actOnVector3D(vec);
+        Vectorf<3> res1_ans = R_ans * vec + t_ans;
+        REQUIRE_THAT(res1, EqualsMatrix(res1_ans));
+
+        Vectorf<3> vec2 = udq1.toTranslationVec3D();
+        REQUIRE_THAT(vec2, EqualsMatrix(t_ans));
+
+        { // 2D version
+            UnitQuaternionf uq2d{0.9887711f, 0.f, 0.f, 0.1494381f};
+            SO2Groupf so2d{{0.9553365f, -0.2955202f,
+                            0.2955202f, 0.9553365f}};
+            Vectorf<2> t2d{{11.f, 12.f}};
+            Vectorf<3> t3d{{11.f, 12.f, 0.f}};
+
+            UnitDualQuaternionf udq2{uq2d, t3d};
+
+            Vectorf<2> vec2d_before{{111.f, 112.f}};
+
+            Vectorf<2> vec2d_after = udq2.actOnVector2D(vec2d_before);
+            Vectorf<2> vec2d_after_ans = so2d * vec2d_before + t2d;
+            REQUIRE_THAT(vec2d_after, EqualsMatrix(vec2d_after_ans));
+        }
+    }
+
+    SECTION("composition")
+    {
+        SO3Groupf R1 = R_ans;
+        SO3Groupf R2{{0.9553365f, -0.2955202f, 0.f,
+                      0.2955202f, 0.9553365f, 0.f,
+                      0.f, 0.f, 1.f}};
+
+        Vectorf<3> t1 = t_ans;
+        Vectorf<3> t2{{11.f, 12.f, 13.f}};
+
+        UnitDualQuaternionf udq1 = udq;
+        UnitDualQuaternionf udq2{UnitQuaternionf{0.9887711f, 0.f, 0.f, 0.1494381f}, t2};
+
+        Vectorf<3> testvec{{-11.f, -12.f, -13.f}};
+        { // check 1
+            Vectorf<3> testvec1 = udq1.actOnVector3D(testvec);
+            Vectorf<3> testvec1_ans = R1 * testvec + t1;
+            REQUIRE_THAT(testvec1, EqualsMatrix(testvec1_ans));
+        }
+
+        { // check 2
+            Vectorf<3> testvec2 = udq2.actOnVector3D(testvec);
+            Vectorf<3> testvec2_ans = R2 * testvec + t2;
+            REQUIRE_THAT(testvec2, EqualsMatrix(testvec2_ans));
+        }
+
+        { // check 3
+            UnitDualQuaternion udq12 = udq1 * udq2;
+            SO3Groupf R12 = R1 * R2;
+            Vectorf<3> t12 = R1 * t2 + t1;
+            Vectorf<3> testvec3 = udq12.actOnVector3D(testvec);
+            Vectorf<3> testvec3_ans = R12 * testvec + t12;
+            REQUIRE_THAT(testvec3, EqualsMatrix(testvec3_ans));
+        }
+    }
+
+    SECTION("casting")
+    {
+        UnitDualQuaternionf udq1 = udq;
+        auto se3 = udq1.toSE3Group();
+        REQUIRE(is_same_v<decltype(se3), SE3Groupf>);
+        REQUIRE_THAT(se3, EqualsMatrix(se3_ans));
+
+        UnitDualQuaternion udq2{UnitQuaternionf{0.9887711f, 0.f, 0.f, 0.1494381f}, Vectorf<3>{{11.f, 12.f, 13.f}}};
+
+        SO2Groupf R2{{0.9553365f, -0.2955202f,
+                      0.2955202f, 0.9553365f}};
+        Vectorf<3> t2{{11.f, 12.f, 13.f}};
+        SE2Groupf se2_ans{R2, Vectorf<2>{{11.f, 12.f}}};
+
+        auto se2 = udq2.toSE2Group();
+        REQUIRE(is_same_v<decltype(se2), SE2Groupf>);
+        REQUIRE_THAT(se2, EqualsMatrix(se2_ans));
+
+        // DualQuaternionf dq1_ = udq1.cast2DualQuaternion();
+        // dq1_.Re().w() += 0.1f;
+        // dq1_.normDualNum().print();
+        // (2 * (dq1_.Du() * dq1_.Re().inversed()).Im()).print();
+
+        // UnitDualQuaternionf udq1__ = dq1_.cast2UnitDualQuaternion();
+        // udq1__.normDualNum().print();
+        // (2 * (udq1__.Du() * udq1__.Re().inversed()).Im()).print();
+
+        (2 * (udq1.Du() * udq1.Re().inversed()).Im()).print();
+
+        DualQuaternionf dq2 = udq1.cast2DualQuaternion();
+        dq2.Du().w() += 0.1f;
+        dq2.normDualNum().print();
+        (2 * (dq2.Du() * dq2.Re().inversed()).Im()).print();
+
+        UnitDualQuaternionf udq2_ = dq2.cast2UnitDualQuaternion();
+        udq2_.normDualNum().print();
+        (2 * (udq2_.Du() * udq2_.Re().inversed()).Im()).print();
     }
 }
