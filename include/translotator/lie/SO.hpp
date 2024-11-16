@@ -14,8 +14,9 @@ namespace translotator
 
         static LieAlgebraType<2> Vector2LieAlgebra(const VectorType<2> &isomorphicVec)
         {
-            return LieAlgebraType<2>{{0.f, -isomorphicVec.x(),
-                                      isomorphicVec.x(), 0.f}};
+            constexpr Type O = static_cast<Type>(0);
+            return LieAlgebraType<2>{{O, -isomorphicVec.x(),
+                                      isomorphicVec.x(), O}};
         }
         static LieAlgebraType<3> Vector2LieAlgebra(const VectorType<3> &isomorphicVec)
         {
@@ -24,7 +25,7 @@ namespace translotator
 
         static VectorType<2> LieAlgebra2Vector(const LieAlgebraType<2> &lieAlgebra)
         {
-            return VectorType<2>{{lieAlgebra(1, 2)}};
+            return VectorType<2>{{lieAlgebra(1, 0)}};
         }
         static VectorType<3> LieAlgebra2Vector(const LieAlgebraType<3> &lieAlgebra)
         {

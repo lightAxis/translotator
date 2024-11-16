@@ -59,6 +59,11 @@ namespace translotator
         {
             return R_ * vec + t_;
         }
+        inline void print() const
+        {
+            R_.print();
+            t_.print();
+        }
 
         /**
          * static functions

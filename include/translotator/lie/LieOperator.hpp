@@ -19,3 +19,4 @@ namespace translotator
 #include "S1.hpp"
 #include "S3.hpp"
 #include "SO.hpp"
+#include "SE.hpp"
