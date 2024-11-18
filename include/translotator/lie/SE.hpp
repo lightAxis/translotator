@@ -14,8 +14,8 @@ namespace translotator
 
         static VectorType<2> LieAlgebra2Vector(const LieAlgebraType<2> &lieAlgebra)
         {
-            return VectorType<2>{{lieAlgebra(1, 2),
-                                  lieAlgebra(2, 0), lieAlgebra(0, 1)}};
+            return VectorType<2>{{lieAlgebra(1, 0),
+                                  lieAlgebra(0, 2), lieAlgebra(1, 2)}};
         }
         static VectorType<3> LieAlgebra2Vector(const LieAlgebraType<3> &lieAlgebra)
         {

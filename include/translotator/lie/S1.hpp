@@ -36,7 +36,7 @@ namespace translotator
             return Exp(LieAlgebra2Vector(lieAlgebra));
         }
 
-        static VectorType log(const LieGroupType &lieGroup)
+        static LieAlgebraType log(const LieGroupType &lieGroup)
         {
             return Vector2LieAlgebra(Log(lieGroup));
         }

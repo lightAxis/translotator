@@ -28,7 +28,7 @@ namespace translotator
         static VectorType Log(const LieGroupType &lieGroup)
         {
             const Type w = lieGroup.Re();
-            if ((translotator::abs(w) - static_cast<Type>(1)) < epsilon<Type>())
+            if (translotator::abs(translotator::abs(w) - static_cast<Type>(1)) < epsilon<Type>())
             {
                 return VectorType::zeros();
             }
