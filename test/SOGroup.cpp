@@ -184,6 +184,12 @@ TEST_CASE("SOGroup", "[objects]")
         so3_casted_ref(0, 0) = 100.f;
         REQUIRE(close_enough(so3_casted_ref(0, 0), 100.f));
         REQUIRE(close_enough(so3_errored(0, 0), 100.f));
+
+        SOGroupf<3> so3_2 = so3_casted.pow(0.5f);
+        SOGroupf<3> so3_22 = so3_2.pow(2.f);
+        SOGroupf<3> so3_22_ = so3_2 * so3_2;
+        REQUIRE_THAT(so3_22, EqualsMatrix(so3_22_));
+        REQUIRE_THAT(so3_casted, EqualsMatrix(so3_22));
     }
 
     SECTION("static functions")

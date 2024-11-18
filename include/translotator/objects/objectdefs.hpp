@@ -21,6 +21,8 @@ namespace translotator
         SE_GROUP,
         UNIT_DUAL_QUATERNION,
     };
+    template <ObjectType oType, typename dataType>
+    struct LieOperator;
     enum class AXIS
     {
         X = 0x1,

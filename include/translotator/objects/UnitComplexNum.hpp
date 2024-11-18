@@ -160,6 +160,11 @@ namespace translotator
             return Vector<2, Type>{{Re() * v.x() - Im() * v.y(),
                                     Im() * v.x() + Re() * v.y()}};
         }
+        inline UnitComplexNum<Type> pow(const Type t) const
+        {
+            using LieOp = LieOperator<ObjectType::UNIT_COMPLEX_NUM, Type>;
+            return LieOp::Exp(LieOp::Log(*this) * t);
+        }
 
         /**
          * static functions

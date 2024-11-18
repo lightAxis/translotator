@@ -64,6 +64,11 @@ namespace translotator
             R_.print();
             t_.print();
         }
+        inline SEGroup<N, Type> pow(const Type &t) const
+        {
+            using LieOp = LieOperator<ObjectType::SE_GROUP, Type>;
+            return LieOp::Exp(LieOp::Log(*this) * t);
+        }
 
         /**
          * static functions

@@ -213,5 +213,11 @@ TEST_CASE("UnitQuaternion", "[objects]")
         Vectorf<3> vec_rot_mat = rot_mat * vec;
 
         REQUIRE_THAT(vec_rot, EqualsMatrix(vec_rot_mat));
+
+        UnitQuaternionf uq2 = uq1.pow(0.5f);
+        UnitQuaternionf uq22 = uq2.pow(2.f);
+        UnitQuaternionf uq22_ = uq2 * uq2;
+        REQUIRE_THAT(uq22, EqualsMatrix(uq22_));
+        REQUIRE_THAT(uq1, EqualsMatrix(uq22));
     }
 }

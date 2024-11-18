@@ -213,6 +213,12 @@ TEST_CASE("UnitComplexNum", "[objects]")
         Vectorf<2> v_rot_inv2 = uc1_inv2.rotateVector2D(v_rot);
         REQUIRE_THAT(v_rot_inv, EqualsMatrix(v));
         REQUIRE_THAT(v_rot_inv2, EqualsMatrix(v));
+
+        UnitComplexNumf uc2 = uc1.pow(0.5f);
+        UnitComplexNumf uc22 = uc2 * uc2;
+        UnitComplexNumf uc222 = uc2.pow(2.f);
+        REQUIRE_THAT(uc22, EqualsMatrix(uc222));
+        REQUIRE_THAT(uc22, EqualsMatrix(uc1));
     }
 
     SECTION("static functions")

@@ -174,6 +174,11 @@ namespace translotator
         {
             return SOGroup<N, Type>{SquareMatrix<N, Type>::T()};
         }
+        inline SOGroup<N, Type> pow(const Type &t) const
+        {
+            using LieOp = LieOperator<ObjectType::SO_GROUP, Type>;
+            return LieOp::Exp(LieOp::Log(*this) * t);
+        }
 
         /**
          * static functions

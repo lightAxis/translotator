@@ -84,6 +84,12 @@ TEST_CASE("SEGroup", "[objects]")
         Vectorf<3> vec_acted = se3.actOnVector(t3);
         Vectorf<3> vec_acted_ans = so3 * t3 + t3;
         REQUIRE_THAT(vec_acted, EqualsMatrix(vec_acted_ans));
+
+        SEGroupf<3> se3_2 = se3.pow(0.5f);
+        SEGroupf<3> se3_22 = se3_2.pow(2.f);
+        SEGroupf<3> se3_22_ = se3_2 * se3_2;
+        REQUIRE_THAT(se3_22, EqualsMatrix(se3_22_));
+        REQUIRE_THAT(se3, EqualsMatrix(se3_22));
     }
 
     SECTION("static functions")
