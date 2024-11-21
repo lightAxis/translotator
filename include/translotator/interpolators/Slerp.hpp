@@ -24,6 +24,11 @@
 
 namespace translotator::interpolators
 {
+    /***
+     * @brief Slerp for rotation component interpolation
+     * @tparam Container Matrix base type
+     * @return Slerp difference between start and end
+     */
     template <typename Container>
     auto SlerpDiff(const Container &start, const Container &end)
     {
@@ -37,6 +42,11 @@ namespace translotator::interpolators
         return start.inversed() * end;
     }
 
+    /**
+     * @brief Slerp for rotation component interpolation
+     * @tparam Container Matrix base type
+     * @return Slerp linear interpolation between start and end
+     */
     template <typename Container, typename Type>
     auto Slerping(const Container &start, const Container &end, Type t)
     {
@@ -45,15 +55,39 @@ namespace translotator::interpolators
                           is_same_v<Container, SOGroup<2, Type>> ||
                           is_same_v<Container, SOGroup<3, Type>>,
                       "Invalid type for Slerp. Must one of UnitComplexNum, UnitQuaternion, SO2, SO3");
-        const Container diff = SlerpDiff(start, end);
 
         if constexpr (is_same_v<Container, UnitComplexNum<Type>>)
         {
-            return start * lie::LieOperator_S1<Type>::Exp(lie::LieOperator_S1<Type>::Log(diff) * t);
+            return start * SlerpDiff(start, end).pow(t);
         }
-        return start * SlerpDiff(start, end).pow(t);
+        else if constexpr (is_same_v<Container, UnitQuaternion<Type>>)
+        {
+            const Type dot_product = start.w() * end.w() + start.x() * end.x() + start.y() * end.y() + start.z() * end.z();
+            const Type theta = translotator::acos(dot_product);
+            if (translotator::abs(theta) < translotator::epsilon<Type>())
+            {
+                return start;
+            }
+            const Type shortest_path = dot_product < static_cast<Type>(0) ? static_cast<Type>(-1) : static_cast<Type>(1);
+            const Type a = translotator::sin((1 - t) * theta) / translotator::sin(theta);
+            const Type b = translotator::sin(t * theta) * shortest_path / translotator::sin(theta);
+            return UnitQuaternion<Type>{a * start.w() + b * end.w(),
+                                        a * start.x() + b * end.x(),
+                                        a * start.y() + b * end.y(),
+                                        a * start.z() + b * end.z()};
+        }
+        else if constexpr (is_same_v<Container, SOGroup<2, Type>> ||
+                           is_same_v<Container, SOGroup<3, Type>>)
+        {
+            return start * SlerpDiff(start, end).pow(t);
+        }
     }
 
+    /**
+     * @brief Slerp for rotation component interpolation class
+     * @tparam Container Matrix base type
+     * @note Implemented using Exp & Log Lie Group opearation
+     */
     template <typename Container>
     class Slerper
     {
@@ -77,15 +111,15 @@ namespace translotator::interpolators
         Slerper(const Container &start, const Container &end) : start_(start), end_(end), diff_(SlerpDiff(start, end)) {}
         ~Slerper() = default;
 
-        inline Container operator()(Type t) const
+        inline Container operator()(Type t) const /// Slerp operation for Slerper
         {
             return start_ * diff_.pow(t);
         }
-        inline Container interpolate(Type t) const
+        inline Container interpolate(Type t) const /// Slerp operation for Slerper
         {
             return start_ * diff_.pow(t);
         }
-        inline void updateDiff() { diff_ = SlerpDiff(start_, end_); }
+        inline void updateDiff() { diff_ = SlerpDiff(start_, end_); } /// Update difference between start and end
 
         /**
          * getter & setter
@@ -98,5 +132,84 @@ namespace translotator::interpolators
         inline void setStart(const Container &start) { start_ = start; }
         inline void setEnd(const Container &end) { end_ = end; }
         inline void setDiff(const Container &diff) { diff_ = diff; }
+    };
+
+    /**
+     * @brief Slerp for rotation component interpolation class. Faster than Slerper for S1, S3 group
+     * @tparam Container Matrix base type
+     * @note Implemented using Exp & Log Lie Group opearation
+     */
+    template <typename Container>
+    class SlerperFast
+    {
+        using Type = typename Container::DATATYPE;
+        static_assert(is_same_v<Container, UnitComplexNum<Type>> ||
+                          is_same_v<Container, UnitQuaternion<Type>>,
+                      "Invalid type for SlerperFast. Must one of UnitComplexNum, UnitQuaternion");
+
+    private:
+        Container start_;
+        Container end_;
+        Type theta_;
+        Type shortest_path_;
+
+    public:
+        /**
+         * constructor
+         */
+
+        SlerperFast() = default;
+        SlerperFast(const Container &start, const Container &end) : start_(start), end_(end)
+        {
+            update_theta();
+        }
+        ~SlerperFast() = default;
+
+        inline Container operator()(Type t) const /// Slerp operation for SlerperFast
+        {
+            const Type a = translotator::sin((1 - t) * theta_) / translotator::sin(theta_);
+            const Type b = translotator::sin(t * theta_) / translotator::sin(theta_) * shortest_path_;
+            if constexpr (is_same_v<Container, UnitComplexNum<Type>>)
+            {
+                return Container{a * start_.Re() + b * end_.Re(),
+                                 a * start_.Im() + b * end_.Im()};
+            }
+            else if constexpr (is_same_v<Container, UnitQuaternion<Type>>)
+            {
+                return Container{a * start_.w() + b * end_.w(),
+                                 a * start_.x() + b * end_.x(),
+                                 a * start_.y() + b * end_.y(),
+                                 a * start_.z() + b * end_.z()};
+            }
+        }
+        inline Container interpolate(Type t) const /// Slerp operation for SlerperFast
+        {
+            return operator()(t);
+        }
+
+        inline const Container &getStart() const { return start_; }
+        inline const Container &getEnd() const { return end_; }
+
+        inline void setStart(const Container &start) { start_ = start; }
+        inline void setEnd(const Container &end) { end_ = end; }
+
+        /**
+         * @brief Update theta and shortest_path
+         * @note Call this function after changing start or end
+         */
+        inline void update_theta()
+        {
+            Type dot;
+            if constexpr (is_same_v<Container, UnitComplexNum<Type>>)
+            {
+                dot = start_.Re() * end_.Re() + start_.Im() * end_.Im();
+            }
+            else if constexpr (is_same_v<Container, UnitQuaternion<Type>>)
+            {
+                dot = start_.w() * end_.w() + start_.x() * end_.x() + start_.y() * end_.y() + start_.z() * end_.z();
+            }
+            shortest_path_ = dot < static_cast<Type>(0) ? static_cast<Type>(-1) : static_cast<Type>(1);
+            theta_ = translotator::acos(dot);
+        }
     };
 }

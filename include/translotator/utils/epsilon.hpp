@@ -28,6 +28,9 @@
 
 namespace translotator
 {
+    /**
+     * @brief epsilon for floating point
+     */
     template <typename T, size_t N>
     constexpr T exponent_epsilon()
     {
@@ -74,6 +77,11 @@ namespace translotator
             return static_cast<T>(1e-20L);
     }
 
+    /**
+     * @brief epsilon for floating point
+     * @tparam T floating point type
+     * @details epsilon is a small value that is used to compare floating point numbers.
+     */
     template <typename T>
     constexpr T epsilon()
     {

@@ -24,6 +24,11 @@
 
 namespace translotator::interpolators
 {
+    /**
+     * @brief Screw linear interpolation
+     * @tparam Container Matrix base type
+     * @return Screw linear difference between start and end
+     */
     template <typename Container>
     auto ScLerpDiff(const Container &start, const Container &end)
     {
@@ -35,6 +40,11 @@ namespace translotator::interpolators
         return start.inversed() * end;
     }
 
+    /***
+     * @brief Screw linear interpolation
+     * @tparam Container Matrix base type
+     * @return Screw linear interpolation between start and end
+     */
     template <typename Container, typename Type>
     auto ScLerping(const Container &start, const Container &end, Type t)
     {
@@ -46,6 +56,10 @@ namespace translotator::interpolators
         return start * diff.pow(t);
     }
 
+    /**
+     * @brief Screw linear interpolation class
+     * @tparam Container Matrix base type
+     */
     template <typename Container>
     class ScLerper
     {
@@ -67,15 +81,15 @@ namespace translotator::interpolators
         ScLerper(const Container &start, const Container &end) : start_(start), end_(end), diff_(ScLerpDiff(start, end)) {}
         ~ScLerper() = default;
 
-        inline Container operator()(Type t) const
+        inline Container operator()(Type t) const ///  ScLerp operation for ScLerper
         {
             return start_ * diff_.pow(t);
         }
-        inline Container interpolate(Type t) const
+        inline Container interpolate(Type t) /// ScLerp operation for ScLerper
         {
             return start_ * diff_.pow(t);
         }
-        inline void updateDiff() { diff_ = ScLerpDiff(start_, end_); }
+        inline void updateDiff() { diff_ = ScLerpDiff(start_, end_); } /// Update difference between start and end
 
         /**
          * getter and setter

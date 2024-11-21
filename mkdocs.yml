@@ -22,4 +22,36 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Home: index.md # first page should be 
+  - Home: README.md
+  - translotator MkDoxy:
+      - "Links": "translotator/links.md"
+      - "Classes":
+          - "Class List": "translotator/annotated.md"
+          - "Class Index": "translotator/classes.md"
+          - "Class Hierarchy": "translotator/hierarchy.md"
+          - "Class Members": "translotator/class_members.md"
+          - "Class Member Functions": "translotator/class_member_functions.md"
+          - "Class Member Variables": "translotator/class_member_variables.md"
+          - "Class Member Typedefs": "translotator/class_member_typedefs.md"
+          - "Class Member Enumerations": "translotator/class_member_enums.md"
+      - "Namespaces":
+          - "Namespace List": "translotator/namespaces.md"
+          - "Namespace Members": "translotator/namespace_members.md"
+          - "Namespace Member Functions": "translotator/namespace_member_functions.md"
+          - "Namespace Member Variables": "translotator/namespace_member_variables.md"
+          - "Namespace Member Typedefs": "translotator/namespace_member_typedefs.md"
+          - "Namespace Member Enumerations": "translotator/namespace_member_enums.md"
+      - "Functions": "translotator/functions.md"
+      - "Variables": "translotator/variables.md"
+      - "Macros": "translotator/macros.md"
+      - "Files": "translotator/files.md"
+
+plugins:
+  - search
+  - mkdoxy:
+      projects:
+        translotator:
+          src-dirs: include/translotator
+          full-doc: True
+          doxy-cfg: # standard doxygen configuration (key: value)
+            RECURSIVE: True # recursive search in source directories

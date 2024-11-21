@@ -1,0 +1,38 @@
+@startuml object_hierarchy
+
+hide members
+skinparam groupInheritance 2
+
+abstract class MatrixBase
+class Matrix
+class SquareMatrix
+class Vector
+class ComplexNum
+class Quaternion
+class DualNum
+class DualQuaternion
+class UnitComplexNum
+class UnitQuaternion
+class SOGroup
+class UnitDualQuaternion
+class SEGroup
+class EulerAngle
+class AxisAngle
+
+
+MatrixBase <|-- Matrix
+MatrixBase <|-- SquareMatrix
+MatrixBase <|-- Vector
+MatrixBase <|-- ComplexNum
+MatrixBase <|-- Quaternion
+MatrixBase <|-- DualNum
+MatrixBase <|-- DualQuaternion
+
+SquareMatrix <|-- SOGroup
+ComplexNum <|-- UnitComplexNum
+Quaternion <|-- UnitQuaternion
+DualQuaternion <|-- UnitDualQuaternion
+
+SOGroup *-- SEGroup
+Vector *-- SEGroup
+@enduml

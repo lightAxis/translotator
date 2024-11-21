@@ -26,6 +26,11 @@
 
 namespace translotator
 {
+
+    /**
+     * @brief Enum class for object types
+     * @details This enum class is used to identify the type of the object
+     */
     enum class ObjectType
     {
         MATRIX,
@@ -43,12 +48,25 @@ namespace translotator
         SE_GROUP,
         UNIT_DUAL_QUATERNION,
     };
+
+    /**
+     * @brief Enum class for axis
+     * @details This enum class is used to identify the axis
+     */
     enum class AXIS
     {
         X = 0x1,
         Y = 0x2,
         Z = 0x3,
     };
+
+    /**
+     * @brief Enum class for euler angle order
+     * @details This enum class is used to identify the euler angle order
+     * @note The order is represented as 3 digits, where each digit represents the axis
+     * @note All intrinsic orders, Tait-Bryan angles
+     * @note For example, XYZ order means the rotation is applied in the order of intrinsic X, Y, Z axis
+     */
     enum class EULER_ORDER
     {
         XYZ = 0x123,
@@ -58,23 +76,49 @@ namespace translotator
         ZXY = 0x312,
         ZYX = 0x321,
     };
+
+    /**
+     * @brief Namespace for Euler Order constexpr functions
+     */
     namespace EULER_CONSTEXPR
     {
+        /**
+         * @brief Get the axis at Nth index in the euler order
+         * @tparam N Nth index
+         * @tparam Order Euler order
+         * @return Axis at Nth index
+         */
         template <size_t N, EULER_ORDER Order>
         constexpr AXIS AXIS_AT() noexcept
         {
             static_assert(N < 3, "N must be less than 3");
             return static_cast<AXIS>((static_cast<uint32_t>(Order) >> (4 * (2 - N))) & 0xF);
         }
+
+        /**
+         * @brief Get the index of the axis in the euler order
+         * @tparam Axis Axis
+         * @tparam Order Euler order
+         * @return Index of the axis
+         */
         template <AXIS Axis>
         constexpr size_t AXIS_TO_IDX() noexcept { return static_cast<size_t>(Axis) - 1; }
 
+        /**
+         * @brief Get the index of the axis at Nth index in the euler order
+         * @tparam N Nth index
+         * @tparam Order Euler order
+         * @return Index of the axis
+         */
         template <size_t N, EULER_ORDER Order>
         constexpr size_t AXIS_IDX_AT() noexcept
         {
             return AXIS_TO_IDX<AXIS_AT<N, Order>()>();
         }
     }
+    /**
+     * @brief Namespace for Lie Group and Algebra Operations
+     */
     namespace lie
     {
         template <ObjectType oType, typename dataType>

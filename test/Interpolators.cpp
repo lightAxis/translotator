@@ -149,9 +149,16 @@ TEST_CASE("Slerp", "[interpolators]")
         Slerper<UnitComplexNumf> slerper(uc_start, uc_end);
         UnitComplexNumf uc_mid = slerper.interpolate(0.5f);
 
+        UnitComplexNumf uc_mid2 = Slerping(uc_start, uc_end, 0.5f);
+
+        SlerperFast<UnitComplexNumf> slerperFast{uc_start, uc_end};
+        UnitComplexNumf uc_mid3 = slerperFast.interpolate(0.5f);
+
         Vectorf<1> vec_1mid = LieOperator_S1f::Log(uc_mid);
         Vectorf<1> vec_1mid_ans = (vec_1s + vec_1e) / 2.f;
         REQUIRE_THAT(vec_1mid, EqualsMatrix(vec_1mid_ans));
+        REQUIRE_THAT(uc_mid, EqualsMatrix(uc_mid2));
+        REQUIRE_THAT(uc_mid, EqualsMatrix(uc_mid3));
     }
 
     SECTION("unit quaternion")
@@ -161,6 +168,17 @@ TEST_CASE("Slerp", "[interpolators]")
 
         Slerper<UnitQuaternionf> slerper(uq_start, uq_end);
         UnitQuaternionf uq_mid = slerper.interpolate(0.5f);
+
+        UnitQuaternionf uq_mid2 = Slerping(uq_start, uq_end, 0.5f);
+
+        SlerperFast<UnitQuaternionf> slerperFast{uq_start, uq_end};
+        UnitQuaternionf uq_mid3 = slerperFast.interpolate(0.5f);
+
+        REQUIRE_THAT(uq_start, EqualsMatrix(UnitQuaternionf{0.982551f, 0.049709f, 0.099418f, 0.149127f}));
+        REQUIRE_THAT(uq_end, EqualsMatrix(UnitQuaternionf{0.905284f, 0.193645f, 0.242056f, 0.290467f}));
+        REQUIRE_THAT(uq_mid, EqualsMatrix(UnitQuaternionf{0.951925f, 0.122709f, 0.172185f, 0.221661f}));
+        REQUIRE_THAT(uq_mid, EqualsMatrix(uq_mid2));
+        REQUIRE_THAT(uq_mid, EqualsMatrix(uq_mid3));
     }
 
     SECTION("SO2 group")
@@ -170,6 +188,10 @@ TEST_CASE("Slerp", "[interpolators]")
 
         Slerper<SOGroupf<2>> slerper(so2_start, so2_end);
         SOGroupf<2> so2_mid = slerper.interpolate(0.5f);
+
+        SOGroupf<2> so2_mid2 = Slerping(so2_start, so2_end, 0.5f);
+
+        REQUIRE_THAT(so2_mid2, EqualsMatrix(so2_mid));
     }
 
     SECTION("SO3 group")
@@ -180,6 +202,10 @@ TEST_CASE("Slerp", "[interpolators]")
 
         Slerper<SOGroupf<3>> slerper(so3_start, so3_end);
         SOGroupf<3> so3_mid = slerper.interpolate(0.5f);
+
+        SOGroupf<3> so3_mid2 = Slerping(so3_start, so3_end, 0.5f);
+
+        REQUIRE_THAT(so3_mid2, EqualsMatrix(so3_mid));
     }
 }
 
@@ -197,6 +223,10 @@ TEST_CASE("ScLerp", "[interpolators]")
 
         ScLerper<SEGroupf<2>> sclerper(se2_start, se2_end);
         SEGroupf<2> se2_mid = sclerper.interpolate(0.5f);
+
+        SEGroupf<2> se2_mid2 = ScLerping(se2_start, se2_end, 0.5f);
+
+        REQUIRE_THAT(se2_mid2, EqualsMatrix(se2_mid));
     }
 
     SECTION("SE3 Group")
@@ -206,6 +236,10 @@ TEST_CASE("ScLerp", "[interpolators]")
 
         ScLerper<SEGroupf<3>> sclerper(se3_start, se3_end);
         SEGroupf<3> se3_mid = sclerper.interpolate(0.5f);
+
+        SEGroupf<3> se3_mid2 = ScLerping(se3_start, se3_end, 0.5f);
+
+        REQUIRE_THAT(se3_mid2, EqualsMatrix(se3_mid));
     }
 }
 

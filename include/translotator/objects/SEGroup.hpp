@@ -26,6 +26,12 @@ namespace translotator
 {
     /**
      * @brief Special Euclidean Group
+     * @tparam N dimension
+     * @tparam Type data type
+     * @details Special Euclidean Group is a group of rigid body transformation in N dimension.
+     * It is a combination of rotation and translation. Subgroup of SEGroup is SOGroup and Translation.
+     * Also SEGroup is a Lie Group, which means it has a group structure and a smooth manifold structure. Exponential and Logarithm map can be defined.
+     * @note Not a Matrix based implementation. Just a composition of SOGroup and Translation each.
      */
     template <size_t N, typename Type>
     class SEGroup
@@ -38,6 +44,7 @@ namespace translotator
     public:
         constexpr static ObjectType OBJECT_TYPE = ObjectType::SE_GROUP;
         using DATATYPE = Type;
+
         /**
          * constructor
          */
@@ -52,6 +59,7 @@ namespace translotator
         /**
          * accessors
          */
+
         inline SOGroup<N, Type> rotation() const { return R_; }
         inline Vector<N, Type> translation() const { return t_; }
         inline SOGroup<N, Type> &rotation() { return R_; }
@@ -60,12 +68,13 @@ namespace translotator
         /**
          * operator
          */
-        inline SEGroup<N, Type> operator*(const SEGroup<N, Type> &other) const
+
+        inline SEGroup<N, Type> operator*(const SEGroup<N, Type> &other) const /// SEGroup * SEGroup
         {
             return SEGroup<N, Type>(R_ * other.R_, R_ * other.t_ + t_);
         }
 
-        inline SEGroup<N, Type> operator/(const SEGroup<N, Type> &other) const
+        inline SEGroup<N, Type> operator/(const SEGroup<N, Type> &other) const /// SEGroup / SEGroup
         {
             const SOGroup<N, Type> other_r_inv = other.R_.inversed();
             return SEGroup<N, Type>(R_ * other_r_inv, -R_ * other_r_inv * other.t_ + t_);
@@ -74,21 +83,22 @@ namespace translotator
         /**
          * utils
          */
-        inline SEGroup<N, Type> inversed() const
+
+        inline SEGroup<N, Type> inversed() const /// inverse
         {
             const SOGroup<N, Type> R_inv = R_.inversed();
             return SEGroup<N, Type>{R_inv, -R_inv * t_};
         }
-        inline Vector<N, Type> actOnVector(const Vector<N, Type> &vec) const
+        inline Vector<N, Type> actOnVector(const Vector<N, Type> &vec) const /// act on vector
         {
             return R_ * vec + t_;
         }
-        inline void print() const
+        inline void print() const /// print
         {
             R_.print();
             t_.print();
         }
-        inline SEGroup<N, Type> pow(const Type &t) const
+        inline SEGroup<N, Type> pow(const Type &t) const /// power
         {
             using LieOp = lie::LieOperator<ObjectType::SE_GROUP, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
@@ -97,7 +107,8 @@ namespace translotator
         /**
          * static functions
          */
-        static inline SEGroup<N, Type> identity()
+
+        static inline SEGroup<N, Type> identity() /// identity
         {
             return SEGroup<N, Type>{SOGroup<N, Type>::identity(), Vector<N, Type>::zeros()};
         }
@@ -105,7 +116,8 @@ namespace translotator
         /**
          * casting
          */
-        inline SquareMatrix<N + 1, Type> toSquareMatrix() const
+
+        inline SquareMatrix<N + 1, Type> toSquareMatrix() const /// to square matrix
         {
             SquareMatrix<N + 1, Type> mat = SquareMatrix<N + 1, Type>::zeros();
             mat.template setBlockStatic<0, 0>(R_);

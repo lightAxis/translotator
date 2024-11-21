@@ -24,6 +24,11 @@
 
 namespace translotator::lie
 {
+    /**
+     * @brief Lie Operator for S3
+     * @tparam Type Data type
+     * @details S3 is a unit quaternion
+     */
     template <typename Type>
     struct LieOperator<ObjectType::UNIT_QUATERNION, Type>
     {
@@ -32,21 +37,41 @@ namespace translotator::lie
         using LieAlgebraType = Quaternion<Type>;
         using VectorType = Vector<3, Type>;
 
+        /**
+         * @brief Convert Vector to Lie Algebra
+         * @param isomorphicVec Vector [3x1], [x, y, z]
+         * @return Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number
+         */
         static LieAlgebraType Vector2LieAlgebra(const VectorType &isomorphicVec)
         {
             return LieAlgebraType{static_cast<Type>(0), isomorphicVec};
         }
 
+        /**
+         * @brief Convert Lie Algebra to Vector
+         * @param lieAlgebra Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number
+         * @return Vector [3x1], [x, y, z]
+         */
         static VectorType LieAlgebra2Vector(const LieAlgebraType &lieAlgebra)
         {
             return lieAlgebra.Im();
         }
 
+        /**
+         * @brief Exponential map
+         * @param isomorphicVec Vector [3x1], [x, y, z]
+         * @return Lie Group [4x1] Unit Quaternion
+         */
         static LieGroupType Exp(const VectorType &isomorphicVec)
         {
             return LieGroupType{2 * isomorphicVec};
         }
 
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group [4x1] Unit Quaternion
+         * @return Vector [3x1], [x, y, z]
+         */
         static VectorType Log(const LieGroupType &lieGroup)
         {
             const Type w = lieGroup.Re();
@@ -65,11 +90,21 @@ namespace translotator::lie
             return v.normalized() * translotator::acos(w);
         }
 
+        /**
+         * @brief Exponential map
+         * @param lieAlgebra Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number
+         * @return Lie Group [4x1] Unit Quaternion
+         */
         static LieGroupType exp(const LieAlgebraType &lieAlgebra)
         {
             return Exp(LieAlgebra2Vector(lieAlgebra));
         }
 
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group [4x1] Unit Quaternion
+         * @return Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number
+         */
         static LieAlgebraType log(const LieGroupType &lieGroup)
         {
             return Vector2LieAlgebra(Log(lieGroup));

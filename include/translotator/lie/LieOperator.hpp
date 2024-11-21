@@ -24,6 +24,11 @@
 
 namespace translotator::lie
 {
+    /**
+     * @brief Lie Operator for Lie Group and Lie Algebra
+     * @tparam oType Object type
+     * @tparam dataType Data type
+     */
     template <ObjectType oType, typename dataType>
     struct LieOperator
     {

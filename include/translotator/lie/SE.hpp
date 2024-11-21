@@ -24,6 +24,11 @@
 
 namespace translotator::lie
 {
+    /**
+     * @brief Lie Operator for SE
+     * @tparam Type Data type
+     * @details SE is a Special Euclidean Group
+     */
     template <typename Type>
     struct LieOperator<ObjectType::SE_GROUP, Type>
     {
@@ -34,17 +39,33 @@ namespace translotator::lie
         template <size_t N>
         using VectorType = Vector<N == 2 ? 3 : 6, Type>;
 
+        /**
+         * @brief Convert SE(2) Lie Algebra to Vector
+         * @param lieAlgebra Lie Algebra [theta Vt; 0 0]
+         * @return Vector [3x1], [theta, x, y]
+         */
         static VectorType<2> LieAlgebra2Vector(const LieAlgebraType<2> &lieAlgebra)
         {
             return VectorType<2>{{lieAlgebra(1, 0),
                                   lieAlgebra(0, 2), lieAlgebra(1, 2)}};
         }
+
+        /**
+         * @brief Convert SE(3) Lie Algebra to Vector
+         * @param lieAlgebra Lie Algebra [theta Vt; 0 0]
+         * @return Vector [6x1], [theta_x, theta_y, theta_z, x, y, z]
+         */
         static VectorType<3> LieAlgebra2Vector(const LieAlgebraType<3> &lieAlgebra)
         {
             return VectorType<3>{{lieAlgebra(2, 1), lieAlgebra(0, 2), lieAlgebra(1, 0),
                                   lieAlgebra(0, 3), lieAlgebra(1, 3), lieAlgebra(2, 3)}};
         }
 
+        /**
+         * @brief Convert Vector to SE(2) Lie Algebra
+         * @param isomorphicVec Vector [3x1], [theta, x, y]
+         * @return Lie Algebra [3x3] [theta Vt; 0 0]
+         */
         static LieAlgebraType<2> Vector2LieAlgebra(const VectorType<2> &isomorphicVec) // [theta, x, y]
         {
             constexpr Type O = static_cast<Type>(0);
@@ -52,6 +73,12 @@ namespace translotator::lie
                                       isomorphicVec[0], O, isomorphicVec[2],
                                       O, O, O}};
         }
+
+        /**
+         * @brief Convert Vector to SE(3) Lie Algebra
+         * @param isomorphicVec Vector [6x1], [theta_x, theta_y, theta_z, x, y, z]
+         * @return Lie Algebra [4x4] [theta Vt; 0 0]
+         */
         static LieAlgebraType<3> Vector2LieAlgebra(const VectorType<3> &isomorphicVec) // [theta_x, theta_y, theta_z, x, y, z]
         {
             constexpr Type O = static_cast<Type>(0);
@@ -61,6 +88,11 @@ namespace translotator::lie
                                       O, O, O, O}};
         }
 
+        /**
+         * @brief Exponential map
+         * @param isomorphicVec Vector [3x1], [theta, x, y]
+         * @return Lie Group SE(2)
+         */
         static LieGroupType<2> Exp(const VectorType<2> &isomorphicVec)
         {
             constexpr Type O = static_cast<Type>(0);
@@ -77,6 +109,12 @@ namespace translotator::lie
                                            c_, s_}};
             return LieGroupType<2>{SO2Group<Type>{isomorphicVec[0]}, J * Vector<2, Type>{{isomorphicVec[1], isomorphicVec[2]}}};
         }
+
+        /**
+         * @brief Exponential map
+         * @param isomorphicVec Vector [6x1], [theta_x, theta_y, theta_z, x, y, z]
+         * @return Lie Group SE(3)
+         */
         static LieGroupType<3> Exp(const VectorType<3> &isomorphicVec)
         {
             // TODO optimize this with sympy cse
@@ -100,6 +138,11 @@ namespace translotator::lie
                                    tVec + c_ * omega_cross_tVec + s_ * omega_2cross_tVec};
         }
 
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group SE(2)
+         * @return Vector [3x1], [theta, x, y]
+         */
         static VectorType<2> Log(const LieGroupType<2> &lieGroup)
         {
             const Type theta = translotator::atan2(lieGroup.rotation()(1, 0), lieGroup.rotation()(0, 0));
@@ -116,6 +159,12 @@ namespace translotator::lie
 
             return VectorType<2>{{theta, tVec[0], tVec[1]}};
         }
+
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group SE(3)
+         * @return Vector [6x1], [theta_x, theta_y, theta_z, x, y, z]
+         */
         static VectorType<3> Log(const LieGroupType<3> &lieGroup)
         {
             const Vector<3, Type> thetaVec = LieOperator_SO<Type>::Log(lieGroup.rotation());
@@ -135,19 +184,41 @@ namespace translotator::lie
                                   tVec[0], tVec[1], tVec[2]}};
         }
 
+        /**
+         * @brief Exponential map
+         * @param lieAlgebra Lie Algebra [3x3] [theta Vt; 0 0]
+         * @return Lie Group SE(2)
+         */
         static LieGroupType<2> exp(const LieAlgebraType<2> &lieAlgebra)
         {
             return Exp(LieAlgebra2Vector(lieAlgebra));
         }
+
+        /**
+         * @brief Exponential map
+         * @param lieAlgebra Lie Algebra [4x4] [theta Vt; 0 0]
+         * @return Lie Group SE(3)
+         */
         static LieGroupType<3> exp(const LieAlgebraType<3> &lieAlgebra)
         {
             return Exp(LieAlgebra2Vector(lieAlgebra));
         }
 
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group SE(2)
+         * @return Lie Algebra [3x3] [theta Vt; 0 0]
+         */
         static LieAlgebraType<2> log(const LieGroupType<2> &lieGroup)
         {
             return Vector2LieAlgebra(Log(lieGroup));
         }
+
+        /**
+         * @brief Logarithm map
+         * @param lieGroup Lie Group SE(3)
+         * @return Lie Algebra [4x4] [theta Vt; 0 0]
+         */
         static LieAlgebraType<3> log(const LieGroupType<3> &lieGroup)
         {
             return Vector2LieAlgebra(Log(lieGroup));

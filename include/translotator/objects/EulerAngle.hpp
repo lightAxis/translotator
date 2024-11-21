@@ -25,6 +25,15 @@
 namespace translotator
 {
 
+    /**
+     * @brief Represents Euler angle 3D rotation
+     * @tparam Type data type
+     * @tparam AxisOrder Euler angle order
+     * @details Euler angle class with 3 angles. The order of angles is determined by AxisOrder. The default order is ZYX.
+     * Intrinsic, tait-brayan angles are used. ex, XYZ means that the rotation is first around X axis, then Y axis, and finally Z axis intrinsically.
+     * Euler angle is a representation of orientation in 3D space. It is a set of three angles that specify the orientation of a rigid body in 3D space.
+     * Angles are typically in the range of [-pi, pi]. The order of angles is important because the rotation matrix is not commutative.
+     */
     template <typename Type, EULER_ORDER AxisOrder = EULER_ORDER::ZYX>
     class EulerAngle
     {
@@ -36,6 +45,7 @@ namespace translotator
         /**
          * constructor
          */
+
         EulerAngle() : angles_{0, 0, 0} {}
         explicit EulerAngle(const Type &angle) : angles_{0, 0, angle} {}
         EulerAngle(const Type &x, const Type &y, const Type &z) : angles_{x, y, z} {};
@@ -44,6 +54,7 @@ namespace translotator
         /**
          * accessor
          */
+
         inline Type x() const { return angles_[0]; }
         inline Type y() const { return angles_[1]; }
         inline Type z() const { return angles_[2]; }
@@ -61,22 +72,36 @@ namespace translotator
         inline Type &pitch() { return y(); }
         inline Type &yaw() { return z(); }
 
+        /**
+         * @brief get angle in axis order (AXIS1, AXIS2, AXIS3)
+         * @tparam N index of angle
+         */
         template <size_t N>
         inline Type getAngleInOrder() const { return angles_[EULER_CONSTEXPR::AXIS_IDX_AT<N, AxisOrder>()]; }
+
+        /**
+         * @brief get angle in axis order (AXIS1, AXIS2, AXIS3)
+         * @tparam N index of angle
+         */
         template <size_t N>
         inline Type &getAngleInOrder() { return angles_[EULER_CONSTEXPR::AXIS_IDX_AT<N, AxisOrder>()]; }
+
+        /**
+         * @brief get axis enum in axis order (AXIS1, AXIS2, AXIS3)
+         * @tparam N index of axis
+         */
         template <size_t N>
         constexpr inline AXIS getAxisInOrder() const { return EULER_CONSTEXPR::AXIS_AT<N, AxisOrder>(); }
 
         /**
          * utils
          */
-        // TODO utils
-        inline Vector<2, Type> rotateVec2D(const Vector<2, Type> &vec) const
+
+        inline Vector<2, Type> rotateVec2D(const Vector<2, Type> &vec) const /// 2D rotation. Using only z angle.
         {
             return toUnitComplexNum().rotateVector2D(vec);
         }
-        inline Vector<3, Type> rotateVec3D(const Vector<3, Type> &vec) const
+        inline Vector<3, Type> rotateVec3D(const Vector<3, Type> &vec) const /// 3D rotation
         {
             return toUnitQuaternion().rotateVector3D(vec);
         }
@@ -84,8 +109,9 @@ namespace translotator
         /**
          * static functions
          */
+
         template <AXIS Axis>
-        inline static EulerAngle<Type, AxisOrder> axisRotation(const Type &angle)
+        inline static EulerAngle<Type, AxisOrder> axisRotation(const Type &angle) /// axis rotation with angle
         {
             if constexpr (Axis == AXIS::X)
             {
@@ -108,7 +134,8 @@ namespace translotator
         /**
          * casts
          */
-        inline UnitQuaternion<Type> toUnitQuaternion() const
+
+        inline UnitQuaternion<Type> toUnitQuaternion() const /// convert to unit quaternion
         {
             constexpr AXIS AXIS1 = EULER_CONSTEXPR::AXIS_AT<0, AxisOrder>();
             constexpr AXIS AXIS2 = EULER_CONSTEXPR::AXIS_AT<1, AxisOrder>();
@@ -124,27 +151,31 @@ namespace translotator
 
             return (q1 * q2 * q3).canonicalized();
         }
-        inline UnitComplexNum<Type> toUnitComplexNum() const
+        inline UnitComplexNum<Type> toUnitComplexNum() const /// convert to unit complex number. Using only z angle.
         {
             return UnitComplexNum<Type>{z()};
         }
-        inline AxisAngle<Type> toAxisAngle() const
+        inline AxisAngle<Type> toAxisAngle() const /// convert to axis angle
         {
             return toUnitQuaternion().toAxisAngle();
         }
-        inline SOGroup<3, Type> toSO3Group() const
+        inline SOGroup<3, Type> toSO3Group() const /// convert to SO3 group
         {
             return toUnitQuaternion().toRotMatrix3D();
         }
-        inline SOGroup<2, Type> toSO2Group() const
+        inline SOGroup<2, Type> toSO2Group() const /// convert to SO2 group. Using only z angle.
         {
             return SOGroup<2, Type>{z()};
         }
-        inline Vector<3, Type> toVector() const
+        inline Vector<3, Type> toVector() const /// convert to vector (x, y, z)
         {
             return Vector<3, Type>{{x(), y(), z()}};
         }
 
+        /**
+         * @brief convert to EulerAngle with new axis order
+         * @tparam NewAxisOrder new axis order
+         */
         template <typename NewType>
         inline EulerAngle<NewType, AxisOrder> castDataType() const
         {
@@ -152,8 +183,12 @@ namespace translotator
             return EulerAngle<NewType, AxisOrder>{static_cast<NewType>(x()), static_cast<NewType>(y()), static_cast<NewType>(z())};
         }
 
+        /**
+         * @brief convert to EulerAngle with new axis order
+         * @tparam NewAxisOrder new axis order
+         */
         template <EULER_ORDER NewAxisOrder>
-        inline EulerAngle<Type, NewAxisOrder> castAxisOrder() const
+        inline EulerAngle<Type, NewAxisOrder> castAxisOrder() const /// cast to new axis order
         {
             if constexpr (NewAxisOrder == AxisOrder)
             {

@@ -24,6 +24,14 @@
 
 namespace translotator
 {
+    /**
+     * @brief Special Orthogonal Group
+     * @tparam N dimension
+     * @tparam Type data type
+     * @details Special Orthogonal Group is a group of rotation in N dimension.
+     * It is a group of orthogonal matrices with determinant 1. Subgroup of SOGroup is SO(2) and SO(3).
+     * Also SOGroup is a Lie Group. Exponential and Logarithm map can be defined.
+     */
     template <size_t N, typename Type = TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE>
     class SOGroup : public SquareMatrix<N, Type>
     {
@@ -42,6 +50,7 @@ namespace translotator
         /**
          * constructors
          */
+
         template <size_t N_ = N, typename = enable_if_t<N_ == 2, true_type>>
         SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2, bool col = true)
         {
@@ -56,6 +65,7 @@ namespace translotator
                 this->setRow(1, vec2.T());
             }
         }
+
         template <size_t N_ = N, typename = enable_if_t<N_ == 3, true_type>>
         SOGroup(const Vector<N, Type> &vec1, const Vector<N, Type> &vec2, const Vector<N, Type> &vec3,
                 bool col = true)
@@ -82,6 +92,7 @@ namespace translotator
             Data_(1, 0) = sin(theta);
             Data_(1, 1) = cos(theta);
         }
+
         template <size_t N_ = N, typename = enable_if_t<N_ == 3, true_type>>
         explicit SOGroup(const Vector<N, Type> &angleVector)
         {
@@ -98,6 +109,11 @@ namespace translotator
         /**
          * operators
          */
+
+        /**
+         * @brief SOGroup + SOGroup => SquareMatrix
+         * @tparam OtherContainer Matrix based object with same dimension
+         */
         template <typename OtherContainer>
         inline SquareMatrix<N, Type> operator+(const OtherContainer &other) const
         {
@@ -105,15 +121,23 @@ namespace translotator
             return SquareMatrix<N, Type>::operator+(other);
         }
 
+        /**
+         * @brief SOGroup - SOGroup => SquareMatrix
+         * @tparam OtherContainer Matrix based object with same dimension
+         */
         template <typename OtherContainer>
-        inline SquareMatrix<N, Type> operator-(const OtherContainer &other) const
+        inline SquareMatrix<N, Type> operator-(const OtherContainer &other) const /// SOGroup - SOGroup => SquareMatrix
         {
             static_assert(is_matrix_base_v<OtherContainer>, "Invalid type for operator-. Must have matrix base");
             return SquareMatrix<N, Type>::operator-(other);
         }
 
+        /**
+         * @brief SOGroup * SOGroup => SOGroup
+         * @tparam OtherContainer Matrix based object with same dimension
+         */
         template <typename OtherContainer>
-        inline auto operator*(const OtherContainer &other) const
+        inline auto operator*(const OtherContainer &other) const /// SOGroup * SOGroup => SOGroup
         {
             if constexpr (is_same_v<OtherContainer, SOGroup<N, Type>>)
             {
@@ -133,16 +157,20 @@ namespace translotator
                 return SquareMatrix<N, Type>::operator*(other);
             }
         }
-        inline void operator*=(const SOGroup<N, Type> &other)
+        inline void operator*=(const SOGroup<N, Type> &other) /// SOGroup *= SOGroup
         {
             *this = *this * other;
         }
-        inline friend SquareMatrix<N, Type> operator*(const Type &lhs, const SOGroup &rhs)
+        inline friend SquareMatrix<N, Type> operator*(const Type &lhs, const SOGroup &rhs) /// Type * SOGroup
         {
             SquareMatrix<N, Type> &rhs_ = const_cast<SOGroup *>(&rhs)->cast2SquareMatrixRef();
             return rhs_ * lhs;
         }
 
+        /**
+         * @brief SOGroup / SOGroup => SOGroup
+         * @tparam OtherContainer Matrix based object with same dimension
+         */
         template <typename OtherContainer>
         inline auto operator/(const OtherContainer &other) const
         {
@@ -156,13 +184,19 @@ namespace translotator
             }
         }
 
-        inline SOGroup<N, Type> operator-() const
+        inline SOGroup<N, Type> operator-() const /// -SOGroup
         {
             return SOGroup<N, Type>{SquareMatrix<N, Type>::operator-()};
         }
 
         /**
          * utils
+         */
+
+        /**
+         * @brief Get the orthogonalized matrix
+         * @return SOGroup<N, Type>
+         * @note This function uses UnitComplexNum & UnitQuternion internally. Not a mathmatically correct way, but it works.
          */
         inline SOGroup<N, Type> normalized() const
         {
@@ -180,23 +214,28 @@ namespace translotator
                 return SOGroup<N, Type>();
             }
         }
-        inline void normalize()
+
+        inline void normalize() /// normalize this matrix
         {
             (*this) = this->normalized();
         }
-        inline SOGroup<N, Type> inversed() const
+
+        inline SOGroup<N, Type> inversed() const /// inverse is same as transpose in SOGroup
         {
             return SOGroup<N, Type>{SquareMatrix<N, Type>::T()};
         }
-        inline void inverse()
+
+        inline void inverse() /// inverse this matrix
         {
             (*this) = this->inversed();
         }
-        inline SOGroup<N, Type> T() const
+
+        inline SOGroup<N, Type> T() const /// transpose
         {
             return SOGroup<N, Type>{SquareMatrix<N, Type>::T()};
         }
-        inline SOGroup<N, Type> pow(const Type &t) const
+
+        inline SOGroup<N, Type> pow(const Type &t) const /// power of SOGroup. Using Exponential & Logarithm Map of Lie Group
         {
             using LieOp = lie::LieOperator<ObjectType::SO_GROUP, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
@@ -205,11 +244,18 @@ namespace translotator
         /**
          * static functions
          */
-        static inline SOGroup<N, Type> identity()
+
+        static inline SOGroup<N, Type> identity() /// identity rotation element, which is identity matrix
         {
             static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
             return SOGroup<N, Type>{SquareMatrix<N, Type>::eye()};
         }
+
+        /**
+         * @brief Create a rotation matrix around the axis
+         * @tparam Axis Axis to rotate
+         * @param angle angle in radian
+         */
         template <AXIS Axis>
         static SOGroup<N, Type> axisRotation(const Type &angle)
         {
@@ -246,12 +292,14 @@ namespace translotator
         /**
          * casts
          */
-        inline UnitComplexNum<Type> toUnitComplexNum() const
+
+        inline UnitComplexNum<Type> toUnitComplexNum() const /// convert to UnitComplexNum. Using only z-axis
         {
             static_assert(N == 2, "Supports only SO(2) Groups");
             return UnitComplexNum<Type>{Data_(0, 0), Data_(1, 0)};
         }
-        inline UnitQuaternion<Type> toUnitQuaternion() const
+
+        inline UnitQuaternion<Type> toUnitQuaternion() const /// convert to UnitQuaternion
         {
             if constexpr (N == 2)
             {
@@ -303,7 +351,8 @@ namespace translotator
             else
                 static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
         }
-        inline AxisAngle<Type> toAxisAngle() const
+
+        inline AxisAngle<Type> toAxisAngle() const /// convert to AxisAngle
         {
             if constexpr (N == 2)
             {
@@ -317,6 +366,11 @@ namespace translotator
             else
                 static_assert(N == 2 || N == 3, "Supports only SO(2) & SO(3) Groups");
         }
+
+        /**
+         * @brief Convert to Euler Angle
+         * @tparam NewOrder New Euler Order
+         */
         template <EULER_ORDER NewOrder>
         EulerAngle<Type, NewOrder> toEulerAngle() const
         {

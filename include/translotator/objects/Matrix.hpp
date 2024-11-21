@@ -26,6 +26,14 @@
 
 namespace translotator
 {
+    /**
+     * @brief Matrix class
+     * @tparam N Number of rows
+     * @tparam M Number of columns
+     * @tparam Type Data type of the matrix
+     * @details This class is a matrix class that inherits the MatrixBase class.
+     * @note Data Structure : [data], (N x M)
+     */
     template <size_t N, size_t M, typename Type = TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE>
     class Matrix : public MatrixBase<N, M, Type, Matrix<N, M, Type>>
     {

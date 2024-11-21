@@ -22,6 +22,10 @@
 
 #pragma once
 
+/**
+ * @brief Internal namespace for MatrixBase implementation
+ * @warning This namespace is for internal use only. Do not use this namespace directly.
+ */
 namespace translotator::MatrixBaseInternal
 {
     template <typename Derived, typename OtherDerived, typename Enable = void>

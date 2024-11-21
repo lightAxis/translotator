@@ -24,6 +24,12 @@
 
 namespace translotator
 {
+    /**
+     * @brief Vector class
+     * @tparam N vector size
+     * @tparam Type floating point type
+     * @details Vector class is a class that represents a vector.
+     */
     template <size_t N, typename Type = TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE>
     class Vector : public MatrixBase<N, 1, Type, Vector<N, Type>>
     {
@@ -31,9 +37,11 @@ namespace translotator
         constexpr static ObjectType OBJECT_TYPE = ObjectType::VECTOR;
         using MatrixBase<N, 1, Type, Vector<N, Type>>::MatrixBase;
 
-        inline Type norm() const { return this->frobeniusNorm(); }
-        inline Type normSquared() const { return this->frobeniusNormSquared(); }
-        inline Vector<N, Type> normalized() const
+        inline Type norm() const { return this->frobeniusNorm(); } /// return norm of vector
+
+        inline Type normSquared() const { return this->frobeniusNormSquared(); } /// return squared norm of vector
+
+        inline Vector<N, Type> normalized() const /// return normalized vector
         {
             Vector<N, Type> result;
             Type norm = this->norm();
@@ -41,18 +49,24 @@ namespace translotator
                 result[i] = this->data_[i] / norm;
             return result;
         }
-        inline void normalize() { *this = normalized(); }
+        inline void normalize() { *this = normalized(); } /// in-place normalize
 
         /**
          * Vector utils
          */
-        inline Type dot(const Vector<N, Type> &other) const
+
+        inline Type dot(const Vector<N, Type> &other) const /// dot product
         {
             Type result = 0;
             for (size_t i = 0; i < N; i++)
                 result += this->data_[i] * other[i];
             return result;
         }
+
+        /**
+         * @brief cross product operation
+         * @note only for 3D vector
+         */
         template <size_t Dim = N, typename = enable_if_t<Dim == 3, true_type>>
         inline Vector<3, Type> cross(const Vector<3, Type> &other) const
         {
@@ -62,6 +76,11 @@ namespace translotator
             result[2] = x() * other.y() - y() * other.x();
             return result;
         }
+
+        /**
+         * @brief convert to cross matrix
+         * @note only for 3D vector
+         */
         template <size_t Dim = N, typename = enable_if_t<Dim == 3, true_type>>
         inline SquareMatrix<3, Type> toCrossMatrix() const
         {
@@ -69,7 +88,7 @@ namespace translotator
                                           z(), static_cast<Type>(0), -x(),
                                           -y(), x(), static_cast<Type>(0)}};
         }
-        inline SquareMatrix<N, Type> toDiagMatrix() const
+        inline SquareMatrix<N, Type> toDiagMatrix() const /// convert to diagonal matrix
         {
             SquareMatrix<N, Type> result{SquareMatrix<N, Type>::zeros()};
             for (size_t i = 0; i < N; i++)
@@ -80,8 +99,10 @@ namespace translotator
         /**
          * Vector Specialized Accessors
          */
+
         inline Type &operator[](size_t i) { return this->data_[i]; }
         inline const Type &operator[](size_t i) const { return this->data_[i]; }
+
         template <size_t Dim = N, typename = enable_if_t<1 <= Dim && Dim <= 3, true_type>>
         inline Type x() const { return this->data_[0]; }
         template <size_t Dim = N, typename = enable_if_t<2 <= Dim && Dim <= 3, true_type>>
@@ -98,6 +119,11 @@ namespace translotator
         /**
          * Vector static functions
          */
+
+        /**
+         * @brief element axis vector
+         * @note only for 1D~3D vector
+         */
         template <size_t Dim = N, typename = enable_if_t<1 <= Dim && Dim <= 3, true_type>>
         static inline Vector<N, Type> xAxis()
         {
@@ -105,6 +131,11 @@ namespace translotator
             v.x() = static_cast<Type>(1);
             return v;
         }
+
+        /**
+         * @brief element axis vector
+         * @note only for 2D~3D vector
+         */
         template <size_t Dim = N, typename = enable_if_t<2 <= Dim && Dim <= 3, true_type>>
         static inline Vector<N, Type> yAxis()
         {
@@ -112,6 +143,11 @@ namespace translotator
             v.y() = static_cast<Type>(1);
             return v;
         }
+
+        /**
+         * @brief element axis vector
+         * @note only for 3D vector
+         */
         template <size_t Dim = N, typename = enable_if_t<3 <= Dim && Dim <= 3, true_type>>
         static inline Vector<N, Type> zAxis()
         {

@@ -24,6 +24,13 @@
 
 namespace translotator
 {
+    /**
+     * @brief initializer_list struct
+     * @tparam N size of the list
+     * @tparam Type type of the list
+     * @details This struct is used to initialize the list with the same type and size.
+     * Usaully used for matrix-based object's initialization.
+     */
     template <size_t N, typename Type>
     struct initializer_list
     {

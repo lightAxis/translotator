@@ -36,7 +36,7 @@ namespace translotator
         constexpr static ObjectType OBJECT_TYPE = ObjectType::SQUARE_MATRIX;
         using MatrixBase<N, N, Type, SquareMatrix<N, Type>>::MatrixBase;
 
-        inline Type determinant() const
+        inline Type determinant() const /// determinant of a square matrix. Only 2x2, 3x3 matrices are supported
         {
             static_assert(N == 2 || N == 3, "Only 2x2, 3x3 matrices are supported");
             if constexpr (N == 2)
@@ -53,7 +53,7 @@ namespace translotator
             return 0;
         }
 
-        inline Type trace() const
+        inline Type trace() const /// trace of a square matrix
         {
             Type result = 0;
             for (size_t i = 0; i < N; i++)
@@ -62,7 +62,7 @@ namespace translotator
         }
 
         /**
-         * 1x1 ~ 3x3 closed form solution
+         * @brief 1x1 ~ 3x3 closed form solution
          * 4x4 ~ LU factorization with partial pivotting
          * from PX4-Matrix Library
          */
@@ -237,7 +237,7 @@ namespace translotator
             return P;
         }
 
-        inline void inverse() { *this = inversed(); }
+        inline void inverse() { *this = inversed(); } /// in-place inverse
     };
 
     template <size_t N>

@@ -127,7 +127,7 @@ The operator/ are defined only between some mathmatical inverse operation object
 
 ## Hierachy of All objects
 
-![object_hieararchy](/docs/uml/object_hierarchy.png)
+![object_hieararchy](/uml/object_hierarchy.png)
 
 ## License
 

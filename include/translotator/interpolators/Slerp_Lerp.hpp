@@ -24,6 +24,11 @@
 
 namespace translotator::interpolators
 {
+    /**
+     * @brief Slerp for rotation component, lerp for translation component between start and end
+     * @tparam Container Matrix base type
+     * @return difference between start and end
+     */
     template <typename Container>
     auto SlerpLerpDiff(const Container &start, const Container &end)
     {
@@ -38,6 +43,11 @@ namespace translotator::interpolators
         }
     }
 
+    /**
+     * @brief Slerp for rotation component, lerp for translation component interpolation
+     * @tparam Container Matrix base type
+     * @return Slerp linear interpolation between start and end
+     */
     template <typename Container, typename Type>
     auto SlerpLerping(const Container &start, const Container &end, Type t)
     {
@@ -51,6 +61,11 @@ namespace translotator::interpolators
             return Container{start.rotation() * diff.rotation().pow(t), start.translation() + diff.translation() * t};
         }
     }
+
+    /**
+     * @brief Slerp for rotation component, lerp for translation component class
+     * @tparam Container Matrix base type
+     */
     template <typename Container>
     class SlerpLerper
     {
@@ -72,16 +87,16 @@ namespace translotator::interpolators
         SlerpLerper(const Container &start, const Container &end) : start_(start), end_(end), diff_(SlerpLerpDiff(start, end)) {}
         ~SlerpLerper() = default;
 
-        inline Container operator()(Type t) const
+        inline Container operator()(Type t) const /// SlerpLerp operation for SlerpLerper
         {
             return interpolate(t);
         }
-        inline Container interpolate(Type t) const
+        inline Container interpolate(Type t) const /// SlerpLerp operation for SlerpLerper
         {
             return Container{start_.rotation() * diff_.rotation().pow(t), start_.translation() + diff_.translation() * t};
         }
 
-        inline void updateDiff() { diff_ = SlerpLerpDiff(start_, end_); }
+        inline void updateDiff() { diff_ = SlerpLerpDiff(start_, end_); } /// Update difference between start and end
 
         /**
          * getter & setter

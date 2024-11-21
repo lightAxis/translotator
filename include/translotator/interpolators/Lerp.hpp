@@ -24,12 +24,23 @@
 
 namespace translotator::interpolators
 {
+    /**
+     * @brief Linear interpolation
+     * @tparam Container Matrix base type
+     * @return Linear difference between start and end
+     */
     template <typename Container>
     Container LerpDiff(const Container &start, const Container &end)
     {
         static_assert(is_matrix_base_v<Container>, "Invalid type for Lerp. Must have matrix base");
         return end - start;
     }
+
+    /**
+     * @brief Linear interpolation
+     * @tparam Container Matrix base type
+     * @return Linear interpolation between start and end
+     */
     template <typename Container>
     Container Lerping(const Container &start, const Container &end, typename Container::DATATYPE t)
     {
@@ -37,6 +48,10 @@ namespace translotator::interpolators
         return start + LerpDiff(start, end) * t;
     }
 
+    /**
+     * @brief Linear interpolation class
+     * @tparam Container Matrix base type
+     */
     template <typename Container>
     class Lerper
     {
@@ -57,15 +72,15 @@ namespace translotator::interpolators
         Lerper(const Container &start, const Container &end) : start_(start), end_(end), diff_(LerpDiff(start, end)) {}
         ~Lerper() = default;
 
-        inline Container operator()(ScalarType t) const
+        inline Container operator()(ScalarType t) const /// Lerp operation for Lerper
         {
             return start_ + diff_ * t;
         }
-        inline Container interpolate(ScalarType t) const
+        inline Container interpolate(ScalarType t) const /// Lerp operation for Lerper
         {
             return start_ + diff_ * t;
         }
-        inline void updateDiff() { diff_ = LerpDiff(start_, end_); }
+        inline void updateDiff() { diff_ = LerpDiff(start_, end_); } /// Update difference between start and end
 
         /**
          * getter & setter
