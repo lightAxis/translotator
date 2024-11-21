@@ -159,19 +159,22 @@ namespace translotator
             return DualQuaternion<Type>{Re().conjugated() / re_normsq,
                                         Du().conjugated() / re_normsq - Re().conjugated() * (2 * du_dot / (re_normsq * re_normsq))};
         }
+        inline void inverse() { *this = inversed(); } /// dual quaternion inverse in place
 
         /**
          * @brief Dual Quaternion Normalization.
          * @details Using primary conjugate for norm.
+         * Dual quaternion normalization can be derived from division by norm
          * Determine the real part for ordinary quaternion normlization.
-         * Determine the dual part in closed-form optimization solution, which is 4dim projection
+         * Determine the dual part in closed-form solution,
+         * ,which is 4 dimensional projection with scaled real part.
          * @return normalized dual quaternion
          */
         inline DualQuaternion<Type> normalized() const
         {
             const Quaternion<Type> re_normed = Re().normalized();
             const Type du_dot = re_normed.w() * Du().w() + re_normed.x() * Du().x() + re_normed.y() * Du().y() + re_normed.z() * Du().z();
-            const Quaternion<Type> du_normed = Du() - du_dot * re_normed;
+            const Quaternion<Type> du_normed = Re().norm() * (Du() - du_dot * re_normed);
             return DualQuaternion<Type>{re_normed, du_normed};
         }
         inline void normalize() const { *this = normalized(); } /// dual quaternion normalization

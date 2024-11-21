@@ -207,22 +207,6 @@ namespace translotator
         }
 
         /**
-         * @brief Sets the element at (i, j)
-         * @tparam i Row index
-         * @tparam j Column index
-         * @tparam OtherDerived Matrix Derived class to set the element from
-         */
-        template <size_t i, size_t j, typename OtherDerived>
-        inline Derived &setBlockStatic(const OtherDerived &block)
-        {
-            constexpr size_t P = OtherDerived::ROWS;
-            constexpr size_t Q = OtherDerived::COLS;
-            static_assert(i + P <= N);
-            static_assert(j + Q <= M);
-            return setBlock(i, j, block);
-        }
-
-        /**
          * @brief Sets the i-th row
          * @param i Row index
          * @tparam OtherDerived Matrix Derived class to set the row from

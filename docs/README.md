@@ -1,5 +1,9 @@
 # translotator
 
+<p align="center">
+  <img src="img/logo_resized2.png"/>
+</p>
+
 Lightweight C++ header-only template library for translation, rotation and homogeneous transformation.  
 Requires C++17 or Later. No dependencies with other libraries and stl.
 
@@ -127,7 +131,7 @@ The operator/ are defined only between some mathmatical inverse operation object
 
 ## Hierachy of All objects
 
-![object_hieararchy](/uml/object_hierarchy.png)
+![object_hieararchy](uml/object_hierarchy.png)
 
 ## License
 

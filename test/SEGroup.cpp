@@ -25,9 +25,9 @@ TEST_CASE("SEGroup", "[objects]")
         REQUIRE_THAT(se3.translation(), EqualsMatrix(t3));
 
         SquareMatrixf<4> mat44;
-        mat44.setBlockStatic<0, 0>(so3);
-        mat44.setBlockStatic<0, 3>(t3);
-        mat44.setBlockStatic<3, 0>(Matrix<1, 3>::zeros());
+        mat44.setBlock<0, 0>(so3);
+        mat44.setBlock<0, 3>(t3);
+        mat44.setBlock<3, 0>(Matrix<1, 3>::zeros());
         mat44(3, 3) = 1.f;
         SEGroupf<3> se3__{mat44};
         REQUIRE_THAT(se3, EqualsMatrix(se3__));

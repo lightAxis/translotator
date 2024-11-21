@@ -1,5 +1,9 @@
 # translotator
 
+<p align="center">
+  <img src="docs/img/logo_resized2.png"/>
+</p>
+
 Lightweight C++ header-only template library for translation, rotation and homogeneous transformation.  
 Requires C++17 or Later. No dependencies with other libraries and stl.
 

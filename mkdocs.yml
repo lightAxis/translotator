@@ -4,7 +4,7 @@ theme:
   # logo: path_to_logo.png
   features:
     - navigation.tabs
-    - navigation.instant
+    # - navigation.instant
 
 markdown_extensions:
   - admonition
@@ -17,13 +17,30 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js
-  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - js/mathjax_config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Home: README.md
-  - translotator MkDoxy:
+  - Main: 
+      - "README.md"
+      - "Matrix based Object": "matrix_based_objects.md"
+      - "Matrix & Vector" : "matrix_vector.md"
+      - "Number Systems" : 
+          - "Complex Number" : "complex_number.md"
+          - "Quaternion" : "quaternion.md"
+          - "Dual Number" : "dual_number.md"
+          - "Dual Quaternion" : "dual_quaternion.md"
+      - "Rotation Groups" : 
+          - "Unit Complex Number" : "unit_complex_number.md"
+          - "Unit Quaternion" : "unit_quaternion.md"
+          - "SO Group" : "so_group.md"
+      - "Rotation Representation Tools" : 
+          - "Euler Angle" : "euler_angle.md"
+          - "Axis Angle" : "axis_angle.md"
+  - Specifications(MkDoxy):
       - "Links": "translotator/links.md"
       - "Classes":
           - "Class List": "translotator/annotated.md"

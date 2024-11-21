@@ -120,8 +120,8 @@ namespace translotator
         inline SquareMatrix<N + 1, Type> toSquareMatrix() const /// to square matrix
         {
             SquareMatrix<N + 1, Type> mat = SquareMatrix<N + 1, Type>::zeros();
-            mat.template setBlockStatic<0, 0>(R_);
-            mat.template setBlockStatic<0, N>(t_);
+            mat.template setBlock<0, 0>(R_);
+            mat.template setBlock<0, N>(t_);
             mat(N, N) = static_cast<Type>(1);
             return mat;
         }
