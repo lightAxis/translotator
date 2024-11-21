@@ -3,6 +3,8 @@
 #include <translotator/translotator.hpp>
 
 using namespace translotator;
+using namespace translotator::interpolators;
+using namespace translotator::lie;
 
 TEST_CASE("Lerp", "[interpolators]")
 {
@@ -127,5 +129,108 @@ TEST_CASE("Lerp", "[interpolators]")
         auto lerped = LerpMat(0.5f);
         auto lerped2 = interpolators::Lerping(startMat, endMat, 0.5f);
         REQUIRE_THAT(lerped, EqualsMatrix(lerped2));
+    }
+}
+
+TEST_CASE("Slerp", "[interpolators]")
+{
+    Vectorf<1> vec_1s{{0.1f}};
+    Vectorf<1> vec_1e{{0.5f}};
+    Vectorf<3> vec_3s{{0.1f, 0.2f, 0.3f}};
+    Vectorf<3> vec_3e{{0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6s{{0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6e{{0.7f, 0.8f, 0.9f, 1.0f, 1.1f, 1.2f}};
+
+    SECTION("unit complex num")
+    {
+        UnitComplexNumf uc_start = LieOperator_S1f::Exp(vec_1s);
+        UnitComplexNumf uc_end = LieOperator_S1f::Exp(vec_1e);
+
+        Slerper<UnitComplexNumf> slerper(uc_start, uc_end);
+        UnitComplexNumf uc_mid = slerper.interpolate(0.5f);
+
+        Vectorf<1> vec_1mid = LieOperator_S1f::Log(uc_mid);
+        Vectorf<1> vec_1mid_ans = (vec_1s + vec_1e) / 2.f;
+        REQUIRE_THAT(vec_1mid, EqualsMatrix(vec_1mid_ans));
+    }
+
+    SECTION("unit quaternion")
+    {
+        UnitQuaternionf uq_start{vec_3s};
+        UnitQuaternionf uq_end{vec_3e};
+
+        Slerper<UnitQuaternionf> slerper(uq_start, uq_end);
+        UnitQuaternionf uq_mid = slerper.interpolate(0.5f);
+    }
+
+    SECTION("SO2 group")
+    {
+        SOGroupf<2> so2_start = LieOperator_SOf::Exp(vec_1s);
+        SOGroupf<2> so2_end = LieOperator_SOf::Exp(vec_1e);
+
+        Slerper<SOGroupf<2>> slerper(so2_start, so2_end);
+        SOGroupf<2> so2_mid = slerper.interpolate(0.5f);
+    }
+
+    SECTION("SO3 group")
+    {
+
+        SOGroupf<3> so3_start = LieOperator_SOf::Exp(vec_3s);
+        SOGroupf<3> so3_end = LieOperator_SOf::Exp(vec_3e);
+
+        Slerper<SOGroupf<3>> slerper(so3_start, so3_end);
+        SOGroupf<3> so3_mid = slerper.interpolate(0.5f);
+    }
+}
+
+TEST_CASE("ScLerp", "[interpolators]")
+{
+    Vectorf<3> vec_3s{{0.1f, 0.2f, 0.3f}};
+    Vectorf<3> vec_3e{{0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6s{{0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6e{{0.7f, 0.8f, 0.9f, 1.0f, 1.1f, 1.2f}};
+
+    SECTION("SE2 Group")
+    {
+        SEGroupf<2> se2_start = LieOperator_SEf::Exp(vec_3s);
+        SEGroupf<2> se2_end = LieOperator_SEf::Exp(vec_3s);
+
+        ScLerper<SEGroupf<2>> sclerper(se2_start, se2_end);
+        SEGroupf<2> se2_mid = sclerper.interpolate(0.5f);
+    }
+
+    SECTION("SE3 Group")
+    {
+        SEGroupf<3> se3_start = LieOperator_SEf::Exp(vec_6s);
+        SEGroupf<3> se3_end = LieOperator_SEf::Exp(vec_6e);
+
+        ScLerper<SEGroupf<3>> sclerper(se3_start, se3_end);
+        SEGroupf<3> se3_mid = sclerper.interpolate(0.5f);
+    }
+}
+
+TEST_CASE("Slerp x Lerp", "[interpolators]")
+{
+    Vectorf<3> vec_3s{{0.1f, 0.2f, 0.3f}};
+    Vectorf<3> vec_3e{{0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6s{{0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f}};
+    Vectorf<6> vec_6e{{0.7f, 0.8f, 0.9f, 1.0f, 1.1f, 1.2f}};
+
+    SECTION("SE2 Group")
+    {
+        SEGroupf<2> se2_start{LieOperator_SOf::Exp(Vectorf<1>{{vec_3s[0]}}), Vectorf<2>{{vec_3s[1], vec_3s[2]}}};
+        SEGroupf<2> se2_end{LieOperator_SOf::Exp(Vectorf<1>{{vec_3e[0]}}), Vectorf<2>{{vec_3e[1], vec_3e[2]}}};
+
+        SlerpLerper<SEGroupf<2>> slerplerper(se2_start, se2_end);
+        SEGroupf<2> se2_mid = slerplerper.interpolate(0.5f);
+    }
+
+    SECTION("SE3 Group")
+    {
+        SEGroupf<3> se3_start{LieOperator_SOf::Exp(Vectorf<3>{{vec_6s[0], vec_6s[1], vec_6s[2]}}), Vectorf<3>{{vec_6s[3], vec_6s[4], vec_6s[5]}}};
+        SEGroupf<3> se3_end{LieOperator_SOf::Exp(Vectorf<3>{{vec_6e[0], vec_6e[1], vec_6e[2]}}), Vectorf<3>{{vec_6e[3], vec_6e[4], vec_6e[5]}}};
+
+        SlerpLerper<SEGroupf<3>> slerplerper(se3_start, se3_end);
+        SEGroupf<3> se3_mid = slerplerper.interpolate(0.5f);
     }
 }

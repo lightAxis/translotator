@@ -8,12 +8,14 @@ namespace translotator
     template <size_t N, typename Type>
     class SEGroup
     {
+
     private:
         SOGroup<N, Type> R_; // rotation
         Vector<N, Type> t_;  // translation
 
     public:
         constexpr static ObjectType OBJECT_TYPE = ObjectType::SE_GROUP;
+        using DATATYPE = Type;
         /**
          * constructor
          */
@@ -66,7 +68,7 @@ namespace translotator
         }
         inline SEGroup<N, Type> pow(const Type &t) const
         {
-            using LieOp = LieOperator<ObjectType::SE_GROUP, Type>;
+            using LieOp = lie::LieOperator<ObjectType::SE_GROUP, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
         }
 

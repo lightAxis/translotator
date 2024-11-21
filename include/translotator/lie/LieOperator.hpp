@@ -1,6 +1,6 @@
 #pragma once
 
-namespace translotator
+namespace translotator::lie
 {
     template <ObjectType oType, typename dataType>
     struct LieOperator

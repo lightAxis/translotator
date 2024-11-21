@@ -51,4 +51,4 @@ add_test(UnitDualQuaternion.cpp DEPS translotator)
 
 add_test(LieOperator.cpp DEPS translotator)
 
-add_test(Lerp.cpp DEPS translotator)
+add_test(Interpolators.cpp DEPS translotator)

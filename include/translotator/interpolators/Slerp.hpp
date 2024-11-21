@@ -1,10 +1,11 @@
 #pragma once
 
-namespace translotator
+namespace translotator::interpolators
 {
-    template <typename Container, typename Type>
+    template <typename Container>
     auto SlerpDiff(const Container &start, const Container &end)
     {
+        using Type = typename Container::DATATYPE;
         static_assert(is_same_v<Container, UnitComplexNum<Type>> ||
                           is_same_v<Container, UnitQuaternion<Type>> ||
                           is_same_v<Container, SOGroup<2, Type>> ||
@@ -26,14 +27,15 @@ namespace translotator
 
         if constexpr (is_same_v<Container, UnitComplexNum<Type>>)
         {
-            return start * LieOperator_S1<Type>::Exp(LieOperator_S1<Type>::Log(diff) * t);
+            return start * lie::LieOperator_S1<Type>::Exp(lie::LieOperator_S1<Type>::Log(diff) * t);
         }
         return start * SlerpDiff(start, end).pow(t);
     }
 
-    template <typename Container, typename Type>
+    template <typename Container>
     class Slerper
     {
+        using Type = typename Container::DATATYPE;
         static_assert(is_same_v<Container, UnitComplexNum<Type>> ||
                           is_same_v<Container, UnitQuaternion<Type>> ||
                           is_same_v<Container, SOGroup<2, Type>> ||
@@ -54,6 +56,10 @@ namespace translotator
         ~Slerper() = default;
 
         inline Container operator()(Type t) const
+        {
+            return start_ * diff_.pow(t);
+        }
+        inline Container interpolate(Type t) const
         {
             return start_ * diff_.pow(t);
         }

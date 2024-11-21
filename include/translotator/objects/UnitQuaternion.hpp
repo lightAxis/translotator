@@ -185,7 +185,7 @@ namespace translotator
         inline void canonicalize() { *this = canonicalized(); }
         inline UnitQuaternion<Type> pow(const Type &t) const
         {
-            using LieOp = LieOperator<ObjectType::UNIT_QUATERNION, Type>;
+            using LieOp = lie::LieOperator<ObjectType::UNIT_QUATERNION, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
         }
 

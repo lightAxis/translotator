@@ -176,7 +176,7 @@ namespace translotator
         }
         inline SOGroup<N, Type> pow(const Type &t) const
         {
-            using LieOp = LieOperator<ObjectType::SO_GROUP, Type>;
+            using LieOp = lie::LieOperator<ObjectType::SO_GROUP, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
         }
 

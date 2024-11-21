@@ -4,6 +4,7 @@
 #include <translotator/translotator.hpp>
 
 using namespace translotator;
+using namespace translotator::lie;
 
 TEST_CASE("Lie Operator", "[lie group operations]")
 {

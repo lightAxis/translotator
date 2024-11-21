@@ -162,7 +162,7 @@ namespace translotator
         }
         inline UnitComplexNum<Type> pow(const Type t) const
         {
-            using LieOp = LieOperator<ObjectType::UNIT_COMPLEX_NUM, Type>;
+            using LieOp = lie::LieOperator<ObjectType::UNIT_COMPLEX_NUM, Type>;
             return LieOp::Exp(LieOp::Log(*this) * t);
         }
 

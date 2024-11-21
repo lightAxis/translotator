@@ -42,5 +42,6 @@
 #include "interpolators/Lerp.hpp"
 #include "interpolators/Slerp.hpp"
 #include "interpolators/ScLerp.hpp"
+#include "interpolators/Slerp_Lerp.hpp"
 
 #include "objects/tail.hpp"

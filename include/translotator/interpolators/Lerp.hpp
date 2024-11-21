@@ -39,6 +39,10 @@ namespace translotator::interpolators
         {
             return start_ + diff_ * t;
         }
+        inline Container interpolate(ScalarType t) const
+        {
+            return start_ + diff_ * t;
+        }
         inline void updateDiff() { diff_ = LerpDiff(start_, end_); }
 
         /**
