@@ -198,6 +198,6 @@ so2.toUnitComplexNum();
 so3.toUnitComplexNum() // use 2x2 only
 so3.toUnitQuaternion();
 so3.toAxisAngle();
-so3.toEulerAngle<EULER_ORDER::ZYX>();
+so3.toEulerAngle<EULER_ORDER::ZYX>(); // changing euler angle order
 
 ```
