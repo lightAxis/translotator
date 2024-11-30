@@ -42,6 +42,8 @@ nav:
       - "Rotation Representation Tools" : 
           - "Euler Angle" : "euler_angle.md"
           - "Axis Angle" : "axis_angle.md"
+      - "Homogeneous Transformation" : 
+          - "SE Group" : se_group.md
   - Specifications(MkDoxy):
       - "Links": "translotator/links.md"
       - "Classes":
