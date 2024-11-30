@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d5306d4012edd8106bd4452d9b4e4e98" kind="dir">
+    <compoundname>include/translotator/objects</compoundname>
+    <innerfile refid="AxisAngle_8hpp">AxisAngle.hpp</innerfile>
+    <innerfile refid="ComplexNum_8hpp">ComplexNum.hpp</innerfile>
+    <innerfile refid="DualNumber_8hpp">DualNumber.hpp</innerfile>
+    <innerfile refid="DualQuaternion_8hpp">DualQuaternion.hpp</innerfile>
+    <innerfile refid="EulerAngle_8hpp">EulerAngle.hpp</innerfile>
+    <innerfile refid="initializer__list_8hpp">initializer_list.hpp</innerfile>
+    <innerfile refid="Matrix_8hpp">Matrix.hpp</innerfile>
+    <innerfile refid="MatrixBase_8hpp">MatrixBase.hpp</innerfile>
+    <innerfile refid="MatrixBaseInternal_8hpp">MatrixBaseInternal.hpp</innerfile>
+    <innerfile refid="objectdefs_8hpp">objectdefs.hpp</innerfile>
+    <innerfile refid="Quaternion_8hpp">Quaternion.hpp</innerfile>
+    <innerfile refid="SEGroup_8hpp">SEGroup.hpp</innerfile>
+    <innerfile refid="SOGroup_8hpp">SOGroup.hpp</innerfile>
+    <innerfile refid="SquareMatrix_8hpp">SquareMatrix.hpp</innerfile>
+    <innerfile refid="tail_8hpp">tail.hpp</innerfile>
+    <innerfile refid="UnitComplexNum_8hpp">UnitComplexNum.hpp</innerfile>
+    <innerfile refid="UnitDualQuaternion_8hpp">UnitDualQuaternion.hpp</innerfile>
+    <innerfile refid="UnitQuaternion_8hpp">UnitQuaternion.hpp</innerfile>
+    <innerfile refid="Vector_8hpp">Vector.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/objects/"/>
+  </compounddef>
+</doxygen>

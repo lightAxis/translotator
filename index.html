@@ -1,0 +1,1702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="matrix_based_objects/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>translotator - translotator</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#translotator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="translotator" class="md-header__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            translotator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              translotator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="." class="md-tabs__link">
+          
+  
+  Main
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="translotator/links/" class="md-tabs__link">
+          
+  
+  Specifications(MkDoxy)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="translotator" class="md-nav__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    translotator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    translotator
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    translotator
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-based-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix-based objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix-based objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-zero-copy-data-type-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Copy &amp; Zero-copy data type conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-operator-and-operator-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. operator+ and operator-
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operator-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. operator*, operator/*=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-operator-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. operator\/, operator\/=
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierachy-of-all-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierachy of All objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="matrix_based_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix based Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="matrix_vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix & Vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Number Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dual_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dual_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Groups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit_complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="so_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SO Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Representation Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Representation Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="euler_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Euler Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="axis_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axis Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Homogeneous Transformation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Homogeneous Transformation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="se_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SE Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Specifications(MkDoxy)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications(MkDoxy)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Namespaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Namespaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translotator/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-based-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix-based objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix-based objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-zero-copy-data-type-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Copy &amp; Zero-copy data type conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-operator-and-operator-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. operator+ and operator-
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operator-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. operator*, operator/*=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-operator-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. operator\/, operator\/=
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierachy-of-all-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierachy of All objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="translotator">translotator<a class="headerlink" href="#translotator" title="Permanent link">&para;</a></h1>
+<p align="center">
+  <img src="img/logo_resized2.png"/>
+</p>
+
+<p>Lightweight C++ header-only template library for translation, rotation and homogeneous transformation.<br />
+Requires C++17 or Later. No dependencies with other libraries and stl.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Translation, Rotation, Homogeneous Transformation</li>
+<li>Matrix based objects : Matrix N x M, SquareMatrix N x N, Vector N</li>
+<li>Number objects : Complex number, Quaternion, Dual number, Dual Quaternion</li>
+<li>Rotation objects : Unit Complex Number, Unit Quaternion, Axis Angle, Euler Angle, SO(2), SO(3)</li>
+<li>Transformation objects : SE(2), SE(3), UnitDualQuaternion</li>
+<li>Supports variaous types of data (float, double, long double)</li>
+<li>Many operator overloadings for object actions &amp; data type conversion</li>
+<li>Supports reinterpret_cast for zero-copy data type conversion between Matrix-based objects.(using this feature to convert temporary object is not recommended)</li>
+<li>Complile-time dimension check for matrix-based objects</li>
+<li>Basic Lie algebra &amp; operation supported : S1, S3, SO(2), SO(3), SE(2), SE(3). Exponential map, Logarithm map.</li>
+<li>Interpolation : Lerp, Slerp, ScLerp. Also Slerp x Lerp for SE(2), SE(3)</li>
+</ul>
+<h2 id="matrix-based-objects">Matrix-based objects<a class="headerlink" href="#matrix-based-objects" title="Permanent link">&para;</a></h2>
+<p>These objects are based on Matrix form.</p>
+<ul>
+<li>Matrix (N x M)</li>
+<li>SquareMatrix (N x N)</li>
+<li>Vector (N x 1)</li>
+<li>ComplexNum(2 x 1)</li>
+<li>Quaternion(4 x 1)</li>
+<li>DualNumber(2 x 1)</li>
+<li>DualQuaternion(8 x 1)</li>
+<li>UnitComplexNum (2 x 1)</li>
+<li>UnitQuaternion (4 x 1)</li>
+<li>UnitDualQuaternion (8 x 1)</li>
+<li>Special Orthogonal Group SO(2), SO(3)</li>
+</ul>
+<p>Except SE(2), SE(3), EulerAngle, AxisAngle, all objects are based on Matrix form.</p>
+<p>Matrix-based objects has many operator overloadings between them.</p>
+<h3 id="1-copy-zero-copy-data-type-conversion">1. Copy &amp; Zero-copy data type conversion<a class="headerlink" href="#1-copy-zero-copy-data-type-conversion" title="Permanent link">&para;</a></h3>
+<p>All matrix-based objects can be converted to each other by using cast function. There are two type of cast function, castContainer() and castContainerRef(). These functions are used for copy and zero-copy data type conversion respectively. Also only allowes the conversion between objects with same matrix-based dimension.</p>
+<p>castContainer() Returns new object with memory copy. Usually used for converting temporary object. Or when you want to keep the original object memory. Some cast functions perform extra steps like normalize, transpose, etc.</p>
+<p>All matrix dimension checks are performed at complile time. If the dimension is not matched, it will cause compile error.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Matrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mat33</span><span class="p">;</span>
+<span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sqmat33_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat33</span><span class="p">.</span><span class="n">castContainer</span><span class="o">&lt;</span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<span class="n">SquareMAtrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sqmat33_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat33</span><span class="p">.</span><span class="n">cast2SquareMatrix</span><span class="p">();</span><span class="w"> </span><span class="c1">// alias</span>
+<span class="n">Matrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mat31</span><span class="p">;</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v31_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat31</span><span class="p">.</span><span class="n">castContainer</span><span class="o">&lt;</span><span class="n">Vector</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v31_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat31</span><span class="p">.</span><span class="n">cast2Vector</span><span class="p">();</span><span class="w"> </span><span class="c1">// alias </span>
+</code></pre></div>
+<p>some alias functions do extra steps</p>
+<div class="highlight"><pre><span></span><code><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">quat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">1.f</span><span class="p">,</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{{</span><span class="mf">2.f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.f</span><span class="p">,</span><span class="w"> </span><span class="mf">4.f</span><span class="p">}}};</span>
+
+<span class="c1">// cast the object type and normalize</span>
+<span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uquat_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quat</span><span class="p">.</span><span class="n">cast2UnitQuaternion</span><span class="p">();</span><span class="w"> </span>
+
+<span class="c1">// just cast the object type without normalization. </span>
+<span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="n">uquat_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quat</span><span class="p">.</span><span class="n">castContainer</span><span class="o">&lt;</span><span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="p">();</span><span class="w"> </span>
+
+<span class="c1">// usually cast2UnitQuaternion() is recommended.</span>
+</code></pre></div>
+<p>castContainerRef() returns reinterpret_casted object. It is used for zero-copy data type conversion. This is recommended to use when you want to convert the object type without memory copy. Take extra care for temporary objects, can cause undefined behavior, the dangling reference.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Matrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mat33</span><span class="p">{{</span><span class="mf">1.f</span><span class="p">,</span><span class="w"> </span><span class="mf">2.f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.f</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                        </span><span class="mf">3.f</span><span class="w"> </span><span class="p">,</span><span class="mf">4.f</span><span class="p">,</span><span class="w"> </span><span class="mf">5.f</span><span class="p">,</span>
+<span class="w">                        </span><span class="mf">5.f</span><span class="p">,</span><span class="w"> </span><span class="mf">6.f</span><span class="p">,</span><span class="w"> </span><span class="mf">7.f</span><span class="p">}};</span>
+<span class="c1">// zero-copy type conversion</span>
+<span class="k">const</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">sqmat33_ref_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat33</span><span class="p">.</span><span class="n">castContainerRef</span><span class="o">&lt;</span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<span class="c1">// alias</span>
+<span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">sqmat33_ref_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat33</span><span class="p">.</span><span class="n">cast2SquareMatrixRef</span><span class="p">();</span>
+
+<span class="c1">// can only read from mat33(0,0), will be 1.f</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">val00</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqmat33_ref_a</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
+<span class="c1">// mat33(0,0) also changed to 0.f</span>
+<span class="n">sqmat33_ref_b</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.f</span><span class="p">;</span>
+
+<span class="c1">// reference of temporary object can lead to undefined behavior. </span>
+<span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">sqmat33_doomed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">mat33</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mat33</span><span class="p">).</span><span class="n">cast2SquareMatrixRef</span><span class="p">();</span>
+<span class="n">sqmat33_doomed</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.f</span><span class="p">;</span><span class="w"> </span><span class="c1">// undefined behavior</span>
+</code></pre></div>
+<p>Some alias functions do extra steps, changing the data inside original object.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">quat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">1.f</span><span class="p">,</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{{</span><span class="mf">2.f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.f</span><span class="p">,</span><span class="w"> </span><span class="mf">4.f</span><span class="p">}}};</span>
+
+<span class="c1">// cast the object type and normalize</span>
+<span class="k">const</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">uquat_ref_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quat</span><span class="p">.</span><span class="n">cast2UnitQuaternionRef</span><span class="p">();</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">norm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uquat_ref_a</span><span class="p">.</span><span class="n">norm</span><span class="p">();</span><span class="w"> </span><span class="c1">// 1.f</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">norm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quat</span><span class="p">.</span><span class="n">norm</span><span class="p">();</span><span class="w"> </span><span class="c1">// 1.f , original object is also normalized</span>
+</code></pre></div>
+<h3 id="2-operator-and-operator-">2. operator+ and operator-<a class="headerlink" href="#2-operator-and-operator-" title="Permanent link">&para;</a></h3>
+<p>The operator+, operator- are defined only between same dimension objects.
+Return type of operator+ and operator- usually follows the left operand type.
+If operation result violates the property of left operand object, it will be converted to the superset object.<br />
+(e.g. UnitComplexNum + ComplexNum -&gt; ComplexNum)<br />
+(e.g. SO(3) + GL(3) =GL(3) )</p>
+<h3 id="3-operator-operator">3. operator*, operator/*=<a class="headerlink" href="#3-operator-operator" title="Permanent link">&para;</a></h3>
+<p>The operator* are basically defined only between proper matrix dimension objects.
+Return type of operator*follows the rules of matrix multiplication.
+If operation result has specific form, it will be converted to the subset object.<br />
+(e.g. (2x4)*(4x3) = Matrix(2x3) )<br />
+(e.g. (2x3)*(3x2) = SquareMatrix(2x2) )<br />
+(e.g. (2x5)*(5x1) = Vector(2x1) )<br />
+(e.g. SO(3)* Scalar = SquareMatrix(3x3) )</p>
+<h3 id="4-operator-operator">4. operator\/, operator\/=<a class="headerlink" href="#4-operator-operator" title="Permanent link">&para;</a></h3>
+<p>The operator/ are defined only between some mathmatical inverse operation objects.<br />
+(e.g. ComplexNum/ComplexNum = ComplexNum * ComplexNum.inverse() )<br />
+(e.g. SO(3) / SO(3) = SO(3) * SO(3)^T )<br />
+(e.g. SO(3) / Scalar = SquareMatrix(3x3) )</p>
+<h2 id="hierachy-of-all-objects">Hierachy of All objects<a class="headerlink" href="#hierachy-of-all-objects" title="Permanent link">&para;</a></h2>
+<p><img alt="object_hieararchy" src="uml/object_hierarchy.png" /></p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details</p>
+<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h2>
+<p>lightAxis - <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#105;&#115;&#117;&#107;&#53;&#48;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#105;&#115;&#117;&#107;&#53;&#48;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="js/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/always-no-cache.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1interpolators_1_1SlerperFast" kind="class" language="C++" prot="public">
+    <compoundname>translotator::interpolators::SlerperFast</compoundname>
+    <includes refid="Slerp_8hpp" local="no">Slerp.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Container</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a1039ce49924adbbe45f85dd722c0b052" prot="private" static="no">
+        <type>typename Container::DATATYPE</type>
+        <definition>using translotator::interpolators::SlerperFast&lt; Container &gt;::Type =  typename Container::DATATYPE</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="145" column="9" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a3a08dbd94b0f8924219e165fb044df94" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerperFast&lt; Container &gt;::start_</definition>
+        <argsstring></argsstring>
+        <name>start_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="151" column="19" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a88337240b65227f0f1b65d1814d8fe5f" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerperFast&lt; Container &gt;::end_</definition>
+        <argsstring></argsstring>
+        <name>end_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="152" column="19" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a27eba84ab914b7cc3fe55c9fc06717b3" prot="private" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type translotator::interpolators::SlerperFast&lt; Container &gt;::theta_</definition>
+        <argsstring></argsstring>
+        <name>theta_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="153" column="14" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a0bf53df3eac4bc61e2438d5dd39162aa" prot="private" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type translotator::interpolators::SlerperFast&lt; Container &gt;::shortest_path_</definition>
+        <argsstring></argsstring>
+        <name>shortest_path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="154" column="14" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a35ee0a2ab2bb7c1d28a19cb52010825f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerperFast&lt; Container &gt;::SlerperFast</definition>
+        <argsstring>()=default</argsstring>
+        <name>SlerperFast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="161" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a6dc52a7f8b6b08f3789de598fa257980" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerperFast&lt; Container &gt;::SlerperFast</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>SlerperFast</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="162" column="9" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a18a5ceb80fdfd04989c4753098d11370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerperFast&lt; Container &gt;::~SlerperFast</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SlerperFast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="166" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a01a587026f9bfeb5e16485697a1c92bb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerperFast&lt; Container &gt;::operator()</definition>
+        <argsstring>(Type t) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Slerp operation for <ref refid="classtranslotator_1_1interpolators_1_1SlerperFast" kindref="compound">SlerperFast</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="168" column="26" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="168" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a0c46d21736c6d3977f135c4ce6ae6132" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerperFast&lt; Container &gt;::interpolate</definition>
+        <argsstring>(Type t) const</argsstring>
+        <name>interpolate</name>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Slerp operation for <ref refid="classtranslotator_1_1interpolators_1_1SlerperFast" kindref="compound">SlerperFast</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="185" column="26" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a5aab3e0356fcd4a4f125247340d362a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Container &amp;</type>
+        <definition>const Container&amp; translotator::interpolators::SlerperFast&lt; Container &gt;::getStart</definition>
+        <argsstring>() const</argsstring>
+        <name>getStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="190" column="32" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="190" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1ac3a304ab97375e7c979f9368b4a877c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Container &amp;</type>
+        <definition>const Container&amp; translotator::interpolators::SlerperFast&lt; Container &gt;::getEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>getEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="191" column="32" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1acbbffe1c072c898d665cabf54204d921" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerperFast&lt; Container &gt;::setStart</definition>
+        <argsstring>(const Container &amp;start)</argsstring>
+        <name>setStart</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="193" column="21" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a0e4e8c362014c6c999d11585d5724574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerperFast&lt; Container &gt;::setEnd</definition>
+        <argsstring>(const Container &amp;end)</argsstring>
+        <name>setEnd</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="194" column="21" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="194" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerperFast_1a1ea04f642f97420d243bd813f44b2baf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerperFast&lt; Container &gt;::update_theta</definition>
+        <argsstring>()</argsstring>
+        <name>update_theta</name>
+        <briefdescription>
+<para>Update theta and shortest_path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Call this function after changing start or end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="200" column="21" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="200" bodyend="213"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Slerp for rotation component interpolation class. Faster than <ref refid="classtranslotator_1_1interpolators_1_1Slerper" kindref="compound">Slerper</ref> for S1, S3 group. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Implemented using Exp &amp; Log Lie Group opearation </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/translotator/interpolators/Slerp.hpp" line="143" column="5" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="144" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a88337240b65227f0f1b65d1814d8fe5f" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>end_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1ac3a304ab97375e7c979f9368b4a877c8" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>getEnd</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a5aab3e0356fcd4a4f125247340d362a7" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>getStart</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0c46d21736c6d3977f135c4ce6ae6132" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>interpolate</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a01a587026f9bfeb5e16485697a1c92bb" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0e4e8c362014c6c999d11585d5724574" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>setEnd</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1acbbffe1c072c898d665cabf54204d921" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>setStart</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0bf53df3eac4bc61e2438d5dd39162aa" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>shortest_path_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a35ee0a2ab2bb7c1d28a19cb52010825f" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>SlerperFast</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a6dc52a7f8b6b08f3789de598fa257980" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>SlerperFast</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a3a08dbd94b0f8924219e165fb044df94" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>start_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a27eba84ab914b7cc3fe55c9fc06717b3" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>theta_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a1039ce49924adbbe45f85dd722c0b052" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>Type</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a1ea04f642f97420d243bd813f44b2baf" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>update_theta</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a18a5ceb80fdfd04989c4753098d11370" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerperFast</scope><name>~SlerperFast</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

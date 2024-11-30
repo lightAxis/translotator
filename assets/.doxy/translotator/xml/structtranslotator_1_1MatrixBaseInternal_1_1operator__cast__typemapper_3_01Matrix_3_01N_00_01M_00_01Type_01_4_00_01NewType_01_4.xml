@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename NewType</type>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>M</declname>
+        <defname>M</defname>
+      </param>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4_1a19fbe63b6224b396695350fdce0dbb66" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, NewType &gt;</type>
+        <definition>using translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;::type =  Matrix&lt;N, M, NewType&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="82" column="9" bodyfile="include/translotator/objects/MatrixBaseInternal.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="80" column="5" bodyfile="include/translotator/objects/MatrixBaseInternal.hpp" bodystart="81" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4_1a19fbe63b6224b396695350fdce0dbb66" prot="public" virt="non-virtual"><scope>translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

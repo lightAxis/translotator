@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacetranslotator_1_1interpolators" kind="namespace" language="C++">
+    <compoundname>translotator::interpolators</compoundname>
+    <innerclass refid="classtranslotator_1_1interpolators_1_1Lerper" prot="public">translotator::interpolators::Lerper</innerclass>
+    <innerclass refid="classtranslotator_1_1interpolators_1_1ScLerper" prot="public">translotator::interpolators::ScLerper</innerclass>
+    <innerclass refid="classtranslotator_1_1interpolators_1_1Slerper" prot="public">translotator::interpolators::Slerper</innerclass>
+    <innerclass refid="classtranslotator_1_1interpolators_1_1SlerperFast" prot="public">translotator::interpolators::SlerperFast</innerclass>
+    <innerclass refid="classtranslotator_1_1interpolators_1_1SlerpLerper" prot="public">translotator::interpolators::SlerpLerper</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Lerp_8hpp_1a1d88b9e4816c3df6fc5fcf21393f81d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>Container</type>
+        <definition>Container translotator::interpolators::LerpDiff</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>LerpDiff</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Linear interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Linear difference between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Lerp.hpp" line="33" column="15" bodyfile="include/translotator/interpolators/Lerp.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="Lerp_8hpp_1abe5c4fe41f77cd66901392d3f9351a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>Container</type>
+        <definition>Container translotator::interpolators::Lerping</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end, typename Container::DATATYPE t)</argsstring>
+        <name>Lerping</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>typename Container::DATATYPE</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Linear interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Linear interpolation between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Lerp.hpp" line="45" column="15" bodyfile="include/translotator/interpolators/Lerp.hpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="ScLerp_8hpp_1a070782a6ffaf28147adc8c3df359d9a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::ScLerpDiff</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>ScLerpDiff</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Screw linear interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Screw linear difference between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/ScLerp.hpp" line="33" column="10" bodyfile="include/translotator/interpolators/ScLerp.hpp" bodystart="33" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="ScLerp_8hpp_1ad1676f1ac9fff9e2f9a49900e466d646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::ScLerping</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end, Type t)</argsstring>
+        <name>ScLerping</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/ScLerp.hpp" line="49" column="10" bodyfile="include/translotator/interpolators/ScLerp.hpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="Slerp_8hpp_1ae2290d61349f2928720788269838fd7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::SlerpDiff</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>SlerpDiff</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="33" column="10" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="Slerp_8hpp_1a31c210bf74980b7837780f728085c134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::Slerping</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end, Type t)</argsstring>
+        <name>Slerping</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Slerp for rotation component interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Slerp linear interpolation between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp.hpp" line="51" column="10" bodyfile="include/translotator/interpolators/Slerp.hpp" bodystart="51" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="Slerp__Lerp_8hpp_1a20d0847d4ee85bb8be7f9948ad06a9c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::SlerpLerpDiff</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>SlerpLerpDiff</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Slerp for rotation component, lerp for translation component between start and end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>difference between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="33" column="10" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="33" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="Slerp__Lerp_8hpp_1a1c3ee23a9eee609c9c228bac5beef76f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::interpolators::SlerpLerping</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end, Type t)</argsstring>
+        <name>SlerpLerping</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Slerp for rotation component, lerp for translation component interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Slerp linear interpolation between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="52" column="10" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="52" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/interpolators/Lerp.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

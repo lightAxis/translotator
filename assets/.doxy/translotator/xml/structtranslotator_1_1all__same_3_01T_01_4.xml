@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1all__same_3_01T_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::all_same&lt; T &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structtranslotator_1_1all__same_3_01T_01_4_1ad8e0c4ec404b89e5d1e68cf1db4fced6" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::all_same&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="93" column="31" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/utils/micro_type_traits.hpp" line="91" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="92" bodyend="94"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1all__same_3_01T_01_4_1ad8e0c4ec404b89e5d1e68cf1db4fced6" prot="public" virt="non-virtual"><scope>translotator::all_same&lt; T &gt;</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

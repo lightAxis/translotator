@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="objectdefs_8hpp" kind="file" language="C++">
+    <compoundname>objectdefs.hpp</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includedby refid="translotator_8hpp" local="yes">include/translotator/translotator.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stddef.h</label>
+      </node>
+      <node id="1">
+        <label>include/translotator/objects/objectdefs.hpp</label>
+        <link refid="objectdefs_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/translotator/translotator.hpp</label>
+        <link refid="translotator_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/translotator/objects/objectdefs.hpp</label>
+        <link refid="objectdefs_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacetranslotator">translotator</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1EULER__CONSTEXPR">translotator::EULER_CONSTEXPR</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1lie">translotator::lie</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>The<sp/>MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>Jiseok<sp/>Lee</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Created<sp/>on<sp/>Tue<sp/>Nov<sp/>19<sp/>2024</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>@file<sp/>:<sp/>objectdefs.hpp</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">translotator</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>ObjectType</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MATRIX,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VECTOR,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SQUARE_MATRIX,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPLEX_NUM,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QUATERNION,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DUAL_NUMBER,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DUAL_QUATERNION,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNIT_COMPLEX_NUM,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNIT_QUATERNION,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AXIS_ANGLE,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EULER_ANGLE,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SO_GROUP,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SE_GROUP,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNIT_DUAL_QUATERNION,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>AXIS</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X<sp/>=<sp/>0x1,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Y<sp/>=<sp/>0x2,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Z<sp/>=<sp/>0x3,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>EULER_ORDER</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XYZ<sp/>=<sp/>0x123,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XZY<sp/>=<sp/>0x132,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>YXZ<sp/>=<sp/>0x213,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>YZX<sp/>=<sp/>0x231,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZXY<sp/>=<sp/>0x312,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZYX<sp/>=<sp/>0x321,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="namespacetranslotator_1_1EULER__CONSTEXPR" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EULER_CONSTEXPR</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/>EULER_ORDER<sp/>Order&gt;</highlight></codeline>
+<codeline lineno="92" refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a9aad8350552ae5f4fb691294848d0e4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/>AXIS<sp/><ref refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a9aad8350552ae5f4fb691294848d0e4f" kindref="member">AXIS_AT</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(N<sp/>&lt;<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;N<sp/>must<sp/>be<sp/>less<sp/>than<sp/>3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">AXIS</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">((</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(Order)<sp/>&gt;&gt;<sp/>(4<sp/>*<sp/>(2<sp/>-<sp/>N)))<sp/>&amp;<sp/>0xF);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;AXIS<sp/>Axis&gt;</highlight></codeline>
+<codeline lineno="105" refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a5d7afee94dfcee805c58963393631c8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a5d7afee94dfcee805c58963393631c8f" kindref="member">AXIS_TO_IDX</ref>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(Axis)<sp/>-<sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/>EULER_ORDER<sp/>Order&gt;</highlight></codeline>
+<codeline lineno="114" refid="namespacetranslotator_1_1EULER__CONSTEXPR_1ae457bf7275f1f5b47b250918979a08d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacetranslotator_1_1EULER__CONSTEXPR_1ae457bf7275f1f5b47b250918979a08d9" kindref="member">AXIS_IDX_AT</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>AXIS_TO_IDX&lt;AXIS_AT&lt;N,<sp/>Order&gt;()&gt;();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lie</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ObjectType<sp/>oType,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>dataType&gt;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">LieOperator;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>##<sp/>matrix<sp/>objects<sp/>##</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MatrixBase;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Matrix;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SquareMatrix;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Vector;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>###################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>##<sp/>number<sp/>system<sp/>##</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>###################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ComplexNum;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Quaternion;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DualNumber;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DualQuaternion;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>######################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>##<sp/>rotation<sp/>objects<sp/>##</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>######################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UnitComplexNum;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UnitQuaternion;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AxisAngle;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type,<sp/>EULER_ORDER<sp/>AxisOrder&gt;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">EulerAngle;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SOGroup;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>########################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>##<sp/>homogeneous<sp/>transformation<sp/>objects<sp/>##</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>########################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SEGroup;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UnitDualQuaternion;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/objects/objectdefs.hpp"/>
+  </compounddef>
+</doxygen>

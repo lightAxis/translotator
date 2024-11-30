@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="config_8hpp" kind="file" language="C++">
+    <compoundname>config.hpp</compoundname>
+    <includedby refid="default__type_8hpp" local="yes">include/translotator/utils/default_type.hpp</includedby>
+    <includedby refid="epsilon_8hpp" local="yes">include/translotator/utils/epsilon.hpp</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/translotator/translotator.hpp</label>
+        <link refid="translotator_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>include/translotator/utils/epsilon.hpp</label>
+        <link refid="epsilon_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/translotator/utils/default_type.hpp</label>
+        <link refid="default__type_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/translotator/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config_8hpp_1a1d9f57a42c1add21e59f68107e7e707f" prot="public" static="no">
+        <name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/config.hpp" line="1" column="9" bodyfile="include/translotator/config.hpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8hpp_1a00071fe1ae596fdb16f007b3ee04357c" prot="public" static="no">
+        <name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32_EPSILON</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/config.hpp" line="2" column="9" bodyfile="include/translotator/config.hpp" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8hpp_1aa12a552f907a3783c064efedc59415d0" prot="public" static="no">
+        <name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_64_EPSILON</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/config.hpp" line="3" column="9" bodyfile="include/translotator/config.hpp" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8hpp_1a5098aa0d4e5912fd59d02d3b49b21146" prot="public" static="no">
+        <name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_128_EPSILON</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/config.hpp" line="4" column="9" bodyfile="include/translotator/config.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32_EPSILON<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_64_EPSILON<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_128_EPSILON<sp/>16</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/config.hpp"/>
+  </compounddef>
+</doxygen>

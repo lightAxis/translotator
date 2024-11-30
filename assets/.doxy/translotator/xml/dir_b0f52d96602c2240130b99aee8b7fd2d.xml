@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b0f52d96602c2240130b99aee8b7fd2d" kind="dir">
+    <compoundname>include/translotator/interpolators</compoundname>
+    <innerfile refid="Lerp_8hpp">Lerp.hpp</innerfile>
+    <innerfile refid="ScLerp_8hpp">ScLerp.hpp</innerfile>
+    <innerfile refid="Slerp_8hpp">Slerp.hpp</innerfile>
+    <innerfile refid="Slerp__Lerp_8hpp">Slerp_Lerp.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/interpolators/"/>
+  </compounddef>
+</doxygen>

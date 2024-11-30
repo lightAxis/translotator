@@ -1,0 +1,769 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1Quaternion" kind="class" language="C++" prot="public">
+    <compoundname>translotator::Quaternion</compoundname>
+    <basecompoundref refid="classtranslotator_1_1MatrixBase" prot="public" virt="non-virtual">translotator::MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</basecompoundref>
+    <includes refid="Quaternion_8hpp" local="no">Quaternion.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+        <defval>TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1Quaternion_1ab50a56aba566ae8f95244bdd429e41ab" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static ObjectType</type>
+        <definition>constexpr static ObjectType translotator::Quaternion&lt; Type &gt;::OBJECT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>OBJECT_TYPE</name>
+        <initializer>= ObjectType::QUATERNION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="39" column="37" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a7022d0351f15d7d03318f3aa9beae0f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::Quaternion&lt; Type &gt;::Quaternion</definition>
+        <argsstring>()</argsstring>
+        <name>Quaternion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="46" column="16" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ad59d8715414c25d6557231449928cd1a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::Quaternion&lt; Type &gt;::Quaternion</definition>
+        <argsstring>(Type w, Type x, Type y, Type z)</argsstring>
+        <name>Quaternion</name>
+        <param>
+          <type>Type</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="47" column="25" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a1d342fd57b4d6d13dfa5e6b4e28f6efc" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::Quaternion&lt; Type &gt;::Quaternion</definition>
+        <argsstring>(Type w, const Vector&lt; 3, Type &gt; &amp;v)</argsstring>
+        <name>Quaternion</name>
+        <param>
+          <type>Type</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="48" column="25" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1aeaa337692b923ccb07ef02ab3b19f0ec" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::Quaternion&lt; Type &gt;::Quaternion</definition>
+        <argsstring>(const ComplexNum&lt; Type &gt; &amp;cplx)</argsstring>
+        <name>Quaternion</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; Type &gt; &amp;</type>
+          <declname>cplx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="49" column="25" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a326b000833cd521f5e29200d6c055b83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::w</definition>
+        <argsstring>() const</argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accessors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="55" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a783056bcfdb24ca5407c67313c07af74" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="56" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1adbf7922706956ec1c40c1c99b1f88088" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="57" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a6bb6b65e7e495c508a14bb525b70cd2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::z</definition>
+        <argsstring>() const</argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="58" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a989abc6c4c8a48e99bf350015799b0f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Type</type>
+        <definition>const Type translotator::Quaternion&lt; Type &gt;::Re</definition>
+        <argsstring>() const</argsstring>
+        <name>Re</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="59" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a1e8f2dec06a95b2630cc1999fd4019ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt;</type>
+        <definition>const Vector&lt;3, Type&gt; translotator::Quaternion&lt; Type &gt;::Im</definition>
+        <argsstring>() const</argsstring>
+        <name>Im</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="60" column="29" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a602c9cfe2c8d748949485ab9db49c043" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::w</definition>
+        <argsstring>()</argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="61" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a8f7ad760b25390156a8c646ea14ee43f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="62" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a98ecb685b7b599a1cb0eb5b306fa3151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="63" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1aa8ee506030ace03a697f6726308f136e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::z</definition>
+        <argsstring>()</argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="64" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ae8b89c0e9200a053c3f13643fb571fe3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::Re</definition>
+        <argsstring>()</argsstring>
+        <name>Re</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="65" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a3ba561c11f11c125d397b35c28200b3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt; &amp;</type>
+        <definition>Vector&lt;3, Type&gt;&amp; translotator::Quaternion&lt; Type &gt;::Im</definition>
+        <argsstring>()</argsstring>
+        <name>Im</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="66" column="23" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a32456f67d54893a7223158de6377e887" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="68" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1aeb023fb794b6929e3f672a5f0bf185a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::Quaternion&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="69" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ae95376840e5c36a1e9947474e6d84e80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; 4, Type &gt;</type>
+        <definition>SquareMatrix&lt;4, Type&gt; translotator::Quaternion&lt; Type &gt;::toMulMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>toMulMatrix</name>
+        <briefdescription>
+<para>get the matrix that represents the quaternion multiplication </para>
+        </briefdescription>
+        <detaileddescription>
+<para>casting </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="75" column="29" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="75" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a5d9692f952a2742ac82bebd78c043e54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; 4, Type &gt;</type>
+        <definition>SquareMatrix&lt;4, Type&gt; translotator::Quaternion&lt; Type &gt;::toRightMulMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>toRightMulMatrix</name>
+        <briefdescription>
+<para>get the matrix that represents the quaternion multiplication from the right </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="82" column="29" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ab2087cbb2373a2273bc0c7fdc142cf2d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::operator*</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>quaternion multiplication </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="99" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a556990069f62dd5598c86429e0da43ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::operator/</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="106" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1aba3fe1020cfca1775c9c90a11eb3b2e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::operator*=</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>quaternion division </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="108" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ad85191c02e1c467fa51a3343a3d20a4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::operator/=</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>quaternion multiplication </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="110" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1abd3f01b9316e5b2c9ad6cb73a559c03f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::quatNumMul</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q) const</argsstring>
+        <name>quatNumMul</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>quaternion division </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="112" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a7f087636ea676618aba830881aef33c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::quatNumMulEq</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q)</argsstring>
+        <name>quatNumMulEq</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="114" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a27a87f4e538934023f5c97e37b548778" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::quatNumDiv</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q) const</argsstring>
+        <name>quatNumDiv</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="116" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1acf7cacd92c45537d071f8ce6dca6b0aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::quatNumDivEq</definition>
+        <argsstring>(const Quaternion&lt; Type &gt; &amp;q)</argsstring>
+        <name>quatNumDivEq</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="118" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a705289fc7babf391ae48827d164b9afe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::normSquared</definition>
+        <argsstring>() const</argsstring>
+        <name>normSquared</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>utils </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="124" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a20c3cf18c979823c875f5ce6f5d10a0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::Quaternion&lt; Type &gt;::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <briefdescription>
+<para>get the squared norm of the quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="126" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a321e9dbe323b403e51c16e6470d9378b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::normalized</definition>
+        <argsstring>() const</argsstring>
+        <name>normalized</name>
+        <briefdescription>
+<para>get the norm of the quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="128" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a7a4bf99b8380ce8178b2756660f138de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <briefdescription>
+<para>get the normalized quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="130" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a3072b8b02047b177f71c576d88acfa75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::canonicalized</definition>
+        <argsstring>() const</argsstring>
+        <name>canonicalized</name>
+        <briefdescription>
+<para>normalize the quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+<para>get the canonicalized quaternion </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="132" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="132" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ad87fda94a997c66099edc98ed5fff2ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::canonicalize</definition>
+        <argsstring>()</argsstring>
+        <name>canonicalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="141" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a9083ad77176d6dde89b1115d39090780" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::conjugated</definition>
+        <argsstring>() const</argsstring>
+        <name>conjugated</name>
+        <briefdescription>
+<para>canonicalize the quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="143" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a818ac383164b27a3c77af11ecc0bc4d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::conjugate</definition>
+        <argsstring>()</argsstring>
+        <name>conjugate</name>
+        <briefdescription>
+<para>get the conjugated quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="145" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1ab5011ddce1e2b813befbf4bea108a89e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt;Type&gt; translotator::Quaternion&lt; Type &gt;::inversed</definition>
+        <argsstring>() const</argsstring>
+        <name>inversed</name>
+        <briefdescription>
+<para>conjugate the quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="147" column="27" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1Quaternion_1a4375a05ca4e5b3974f258644057c0979" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::Quaternion&lt; Type &gt;::inverse</definition>
+        <argsstring>()</argsstring>
+        <name>inverse</name>
+        <briefdescription>
+<para>get the inversed quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="149" column="21" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="149" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Representing a quaternion. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>floating point type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+A quaternion is a hypercomplex number that extends the complex numbers. It can be represented as a 4-dimensional vector. The quaternion is defined as q = w + xi + yj + zk, where w, x, y, and z are real numbers, and i, j, and k are the fundamental quaternion units. The quaternion has the following properties: i^2 = j^2 = k^2 = ijk = -1. (Hamillton representation) This can be used to represent rotations in 3D space. Also can be used to represent rotations in 3D space. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>translotator::Quaternion&lt; Type &gt;</label>
+        <link refid="classtranslotator_1_1Quaternion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>translotator::Quaternion&lt; Type &gt;</label>
+        <link refid="classtranslotator_1_1Quaternion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/translotator/objects/Quaternion.hpp" line="36" column="5" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="37" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ad87fda94a997c66099edc98ed5fff2ba" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>canonicalize</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a3072b8b02047b177f71c576d88acfa75" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>canonicalized</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2ComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2ComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2DualNumber</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2DualNumberRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2DualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2DualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2Matrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2MatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2Quaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2QuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2SOGroup</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2SOGroupRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2SquareMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2SquareMatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitDualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitDualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2UnitQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2Vector</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>cast2VectorRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>castContainer</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>castDataType</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>col</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>COLS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>colSize</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a818ac383164b27a3c77af11ecc0bc4d9" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>conjugate</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a9083ad77176d6dde89b1115d39090780" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>conjugated</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>copyTo</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" prot="protected" virt="non-virtual"><scope>translotator::Quaternion</scope><name>data_</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>DATATYPE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>eye</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>fill</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>frobeniusNorm</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>frobeniusNormSquared</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>getData</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a1e8f2dec06a95b2630cc1999fd4019ca" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Im</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a3ba561c11f11c125d397b35c28200b3c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Im</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a4375a05ca4e5b3974f258644057c0979" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>inverse</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ab5011ddce1e2b813befbf4bea108a89e" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>inversed</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MATRIX_BASE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>NaN</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a20c3cf18c979823c875f5ce6f5d10a0c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>norm</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a7a4bf99b8380ce8178b2756660f138de" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>normalize</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a321e9dbe323b403e51c16e6470d9378b" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>normalized</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a705289fc7babf391ae48827d164b9afe" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>normSquared</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ab50a56aba566ae8f95244bdd429e41ab" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>OBJECT_TYPE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>ones</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ab2087cbb2373a2273bc0c7fdc142cf2d" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;::"><scope>translotator::Quaternion</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;::"><scope>translotator::Quaternion</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1aba3fe1020cfca1775c9c90a11eb3b2e5" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;::"><scope>translotator::Quaternion</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator+</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator+=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator-=</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a556990069f62dd5598c86429e0da43ec" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;::"><scope>translotator::Quaternion</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ad85191c02e1c467fa51a3343a3d20a4d" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 4, 1, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, Quaternion&lt; TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;::"><scope>translotator::Quaternion</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator=</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a32456f67d54893a7223158de6377e887" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1aeb023fb794b6929e3f672a5f0bf185a5" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>print</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a7022d0351f15d7d03318f3aa9beae0f2" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Quaternion</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ad59d8715414c25d6557231449928cd1a" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Quaternion</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a1d342fd57b4d6d13dfa5e6b4e28f6efc" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Quaternion</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1aeaa337692b923ccb07ef02ab3b19f0ec" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Quaternion</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a27a87f4e538934023f5c97e37b548778" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>quatNumDiv</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1acf7cacd92c45537d071f8ce6dca6b0aa" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>quatNumDivEq</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1abd3f01b9316e5b2c9ad6cb73a559c03f" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>quatNumMul</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a7f087636ea676618aba830881aef33c6" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>quatNumMulEq</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a989abc6c4c8a48e99bf350015799b0f2" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Re</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ae8b89c0e9200a053c3f13643fb571fe3" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>Re</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>row</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>ROWS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>rowSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>swapCols</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>swapRows</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>T</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1ae95376840e5c36a1e9947474e6d84e80" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>toMulMatrix</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a5d9692f952a2742ac82bebd78c043e54" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>toRightMulMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>toScalar</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a326b000833cd521f5e29200d6c055b83" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>w</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a602c9cfe2c8d748949485ab9db49c043" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>w</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a783056bcfdb24ca5407c67313c07af74" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>x</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a8f7ad760b25390156a8c646ea14ee43f" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>x</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1adbf7922706956ec1c40c1c99b1f88088" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>y</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a98ecb685b7b599a1cb0eb5b306fa3151" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>y</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1a6bb6b65e7e495c508a14bb525b70cd2b" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>z</name></member>
+      <member refid="classtranslotator_1_1Quaternion_1aa8ee506030ace03a697f6726308f136e" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>z</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" prot="public" virt="non-virtual"><scope>translotator::Quaternion</scope><name>zeros</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

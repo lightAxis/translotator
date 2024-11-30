@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="version_8hpp" kind="file" language="C++">
+    <compoundname>version.hpp</compoundname>
+    <innernamespace refid="namespaceTRANSLOTATOR">TRANSLOTATOR</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="version_8hpp_1a108e7fb1dae49128b7bdc62b82ec3c3b" prot="public" static="no">
+        <name>TRANSLOTATOR_VERSION</name>
+        <initializer>&quot;0.0.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/version.hpp" line="5" column="9" bodyfile="include/translotator/version.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="version_8hpp_1a3f39724b270a5e617e56063e2db0c886" prot="public" static="no">
+        <name>TRANSLOTATOR_MAJOR_VERSION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/version.hpp" line="7" column="9" bodyfile="include/translotator/version.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="version_8hpp_1a021a83c50aa5b6bb55541fcdaf881850" prot="public" static="no">
+        <name>TRANSLOTATOR_MINOR_VERSION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/version.hpp" line="8" column="9" bodyfile="include/translotator/version.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="version_8hpp_1a2ddcb41b996ea3845603e0cdc7327c0b" prot="public" static="no">
+        <name>TRANSLOTATOR_PATCH_VERSION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/version.hpp" line="9" column="9" bodyfile="include/translotator/version.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="version_8hpp_1abfeab5299fb966f514977a3d506bf4d8" prot="public" static="no">
+        <name>TRANSLOTATOR_TWEAK_VERSION</name>
+        <initializer>&quot;8eda355&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/version.hpp" line="10" column="9" bodyfile="include/translotator/version.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">TRANSLOTATOR</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSLOTATOR_VERSION<sp/>&quot;0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSLOTATOR_MAJOR_VERSION<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSLOTATOR_MINOR_VERSION<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSLOTATOR_PATCH_VERSION<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSLOTATOR_TWEAK_VERSION<sp/>&quot;8eda355&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/version.hpp"/>
+  </compounddef>
+</doxygen>

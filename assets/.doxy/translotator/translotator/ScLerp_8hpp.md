@@ -1,0 +1,92 @@
+
+
+# File ScLerp.hpp
+
+
+
+[**FileList**](files.md) **>** [**include**](dir_d44c64559bbebec7f509842c48db8b23.md) **>** [**translotator**](dir_ffa3503b73a46a1fbf73d754da62ba14.md) **>** [**interpolators**](dir_b0f52d96602c2240130b99aee8b7fd2d.md) **>** [**ScLerp.hpp**](ScLerp_8hpp.md)
+
+[Go to the source code of this file](ScLerp_8hpp_source.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Namespaces
+
+| Type | Name |
+| ---: | :--- |
+| namespace | [**translotator**](namespacetranslotator.md) <br> |
+| namespace | [**interpolators**](namespacetranslotator_1_1interpolators.md) <br> |
+
+
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| class | [**ScLerper**](classtranslotator_1_1interpolators_1_1ScLerper.md) &lt;typename Container&gt;<br>_Screw linear interpolation class._  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+The documentation for this class was generated from the following file `include/translotator/interpolators/ScLerp.hpp`
+

@@ -1,0 +1,2419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1MatrixBase" kind="class" language="C++" prot="public">
+    <compoundname>translotator::MatrixBase</compoundname>
+    <derivedcompoundref refid="classtranslotator_1_1Vector" prot="public" virt="non-virtual">translotator::Vector&lt; N, Type &gt;</derivedcompoundref>
+    <includes refid="MatrixBase_8hpp" local="no">MatrixBase.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>M</declname>
+        <defname>M</defname>
+      </param>
+      <param>
+        <type>typename Type</type>
+        <defval>TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE</defval>
+      </param>
+      <param>
+        <type>typename Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" prot="public" static="no">
+        <type>Type</type>
+        <definition>using translotator::MatrixBase&lt; N, M, Type, Derived &gt;::DATATYPE =  Type</definition>
+        <argsstring></argsstring>
+        <name>DATATYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="46" column="9" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" prot="protected" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type translotator::MatrixBase&lt; N, M, Type, Derived &gt;::data_[N *M]</definition>
+        <argsstring>[N *M]</argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="41" column="14" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static size_t</type>
+        <definition>constexpr static size_t translotator::MatrixBase&lt; N, M, Type, Derived &gt;::ROWS</definition>
+        <argsstring></argsstring>
+        <name>ROWS</name>
+        <initializer>= N</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="44" column="33" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static size_t</type>
+        <definition>constexpr static size_t translotator::MatrixBase&lt; N, M, Type, Derived &gt;::COLS</definition>
+        <argsstring></argsstring>
+        <name>COLS</name>
+        <initializer>= M</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="45" column="33" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static bool</type>
+        <definition>constexpr static bool translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MATRIX_BASE</definition>
+        <argsstring></argsstring>
+        <name>MATRIX_BASE</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="47" column="31" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr static size_t</type>
+        <definition>constexpr static size_t translotator::MatrixBase&lt; N, M, Type, Derived &gt;::rowSize</definition>
+        <argsstring>()</argsstring>
+        <name>rowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="49" column="33" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr static size_t</type>
+        <definition>constexpr static size_t translotator::MatrixBase&lt; N, M, Type, Derived &gt;::colSize</definition>
+        <argsstring>()</argsstring>
+        <name>colSize</name>
+        <briefdescription>
+<para>Returns the number of rows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="51" column="33" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>static Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::eye</definition>
+        <argsstring>()</argsstring>
+        <name>eye</name>
+        <briefdescription>
+<para>Returns an identity matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constant Matrices </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="77" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>static Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::zeros</definition>
+        <argsstring>()</argsstring>
+        <name>zeros</name>
+        <briefdescription>
+<para>Returns a matrix filled with zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="87" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>static Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::ones</definition>
+        <argsstring>()</argsstring>
+        <name>ones</name>
+        <briefdescription>
+<para>Returns a matrix filled with ones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="94" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="94" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>static Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::NaN</definition>
+        <argsstring>()</argsstring>
+        <name>NaN</name>
+        <briefdescription>
+<para>Returns a matrix filled with NaN. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="101" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="101" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MatrixBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>MatrixBase</name>
+        <briefdescription>
+<para>Returns the number of columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructors and destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="56" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MatrixBase</definition>
+        <argsstring>(const MatrixBase &amp;other)=default</argsstring>
+        <name>MatrixBase</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1MatrixBase" kindref="compound">MatrixBase</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="57" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MatrixBase</definition>
+        <argsstring>(const Type data[N *M])</argsstring>
+        <name>MatrixBase</name>
+        <param>
+          <type>const Type</type>
+          <declname>data</declname>
+          <array>[N *M]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="58" column="18" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MatrixBase</definition>
+        <argsstring>(const Type data[N][M])</argsstring>
+        <name>MatrixBase</name>
+        <param>
+          <type>const Type</type>
+          <declname>data</declname>
+          <array>[N][M]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="62" column="18" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::MatrixBase&lt; N, M, Type, Derived &gt;::MatrixBase</definition>
+        <argsstring>(const initializer_list&lt; N *M, Type &gt; &amp;list)</argsstring>
+        <name>MatrixBase</name>
+        <param>
+          <type>const <ref refid="structtranslotator_1_1initializer__list" kindref="compound">initializer_list</ref>&lt; N *M, Type &gt; &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Initializer list constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="68" column="18" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Type &amp;</type>
+        <definition>const Type&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator()</definition>
+        <argsstring>(size_t i, size_t j) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Accesses the element at (i, j) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Accessors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="112" column="27" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator()</definition>
+        <argsstring>(size_t i, size_t j)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Accesses the element at (i, j) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="116" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, 1, Type &gt;</type>
+        <definition>Matrix&lt;N, 1, Type&gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::col</definition>
+        <argsstring>(size_t j) const</argsstring>
+        <name>col</name>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Returns the j-th column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="120" column="23" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="120" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; 1, M, Type &gt;</type>
+        <definition>Matrix&lt;1, M, Type&gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::row</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>row</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Returns the i-th row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="128" column="23" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="128" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>P</declname>
+            <defname>P</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>Q</declname>
+            <defname>Q</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; P, Q, Type &gt;</type>
+        <definition>Matrix&lt;P, Q, Type&gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::block</definition>
+        <argsstring>(size_t i, size_t j) const</argsstring>
+        <name>block</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Returns a block of the matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of rows in the block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of columns in the block </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="145" column="23" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="145" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>i</declname>
+            <defname>i</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>j</declname>
+            <defname>j</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>P</declname>
+            <defname>P</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>Q</declname>
+            <defname>Q</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; P, Q, Type &gt;</type>
+        <definition>Matrix&lt;P, Q, Type&gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::block</definition>
+        <argsstring>() const</argsstring>
+        <name>block</name>
+        <briefdescription>
+<para>Returns a block of the matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting column index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of rows in the block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of columns in the block </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="166" column="23" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="166" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type *</type>
+        <definition>Type* translotator::MatrixBase&lt; N, M, Type, Derived &gt;::getData</definition>
+        <argsstring>() const</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="173" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::copyTo</definition>
+        <argsstring>(Type *data) const</argsstring>
+        <name>copyTo</name>
+        <param>
+          <type>Type *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Returns the raw data pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="175" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator=</definition>
+        <argsstring>(const Derived &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copies the data to the given pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignments Copy assignment </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="181" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setBlock</definition>
+        <argsstring>(size_t i, size_t j, const OtherDerived &amp;block)</argsstring>
+        <name>setBlock</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>Sets the element at (i, j) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the element from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="194" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="194" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setRow</definition>
+        <argsstring>(size_t i, const OtherDerived &amp;row)</argsstring>
+        <name>setRow</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Sets the i-th row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the row from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="215" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="215" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setCol</definition>
+        <argsstring>(size_t j, const OtherDerived &amp;col)</argsstring>
+        <name>setCol</name>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Sets the j-th column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the column from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="232" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="232" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>i</declname>
+            <defname>i</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>j</declname>
+            <defname>j</defname>
+          </param>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setBlock</definition>
+        <argsstring>(const OtherDerived &amp;block)</argsstring>
+        <name>setBlock</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>Sets the i-th row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the row from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is a compile-time version of setRow </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="251" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="251" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>i</declname>
+            <defname>i</defname>
+          </param>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setRow</definition>
+        <argsstring>(const OtherDerived &amp;row)</argsstring>
+        <name>setRow</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Sets the i-th row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the row from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is a compile-time version of setRow </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="266" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="266" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>j</declname>
+            <defname>j</defname>
+          </param>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived &amp;</type>
+        <definition>Derived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::setCol</definition>
+        <argsstring>(const OtherDerived &amp;col)</argsstring>
+        <name>setCol</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Sets the j-th column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to set the column from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is a compile-time version of setCol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="279" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="279" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator/</definition>
+        <argsstring>(Type v) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>Type</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Division by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>operators Scalar </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="289" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="289" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator/=</definition>
+        <argsstring>(Type v)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>Type</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Division by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="297" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="297" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived</type>
+        <definition>Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator+</definition>
+        <argsstring>(const OtherDerived &amp;other) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator Objects</para>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> addition <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="315" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="315" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>Derived</type>
+        <definition>Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator-</definition>
+        <argsstring>(const OtherDerived &amp;other) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> subtraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to subtract </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to subtract </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="333" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="333" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator*</definition>
+        <argsstring>(const OtherDerived &amp;other) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> multiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>OtherDerived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to multiply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> Derived class to multiply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="351" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="351" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator*</definition>
+        <argsstring>(const Type &amp;v) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> multiplication by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Multiplies the matrix by a scalar value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="388" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="388" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator+=</definition>
+        <argsstring>(const OtherDerived &amp;other)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> division by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Divides the matrix by a scalar value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="403" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="403" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator-=</definition>
+        <argsstring>(const OtherDerived &amp;other)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> subtraction by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Subtracts the matrix by a scalar value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="419" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="419" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator*=</definition>
+        <argsstring>(const OtherDerived &amp;other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const OtherDerived &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> multiplication by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Multiplies the matrix by a scalar value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="435" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="435" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived translotator::MatrixBase&lt; N, M, Type, Derived &gt;::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> multiplication by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Multiplies the matrix by a scalar value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="445" column="24" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="445" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto translotator::MatrixBase&lt; N, M, Type, Derived &gt;::T</definition>
+        <argsstring>() const</argsstring>
+        <name>T</name>
+        <briefdescription>
+<para>Transpose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utils </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="460" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="460" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::fill</definition>
+        <argsstring>(const Type &amp;v)</argsstring>
+        <name>fill</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Fills the matrix with a value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="487" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="487" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>Prints the matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="494" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="494" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::swapRows</definition>
+        <argsstring>(size_t i1, size_t i2)</argsstring>
+        <name>swapRows</name>
+        <param>
+          <type>size_t</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+<para>Swaps two rows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="506" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="506" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::MatrixBase&lt; N, M, Type, Derived &gt;::swapCols</definition>
+        <argsstring>(size_t j1, size_t j2)</argsstring>
+        <name>swapCols</name>
+        <param>
+          <type>size_t</type>
+          <declname>j1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j2</declname>
+        </param>
+        <briefdescription>
+<para>Swaps two columns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="516" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="516" bodyend="524"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::MatrixBase&lt; N, M, Type, Derived &gt;::frobeniusNormSquared</definition>
+        <argsstring>() const</argsstring>
+        <name>frobeniusNormSquared</name>
+        <briefdescription>
+<para>Returns the squared Frobenius norm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="526" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="526" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::MatrixBase&lt; N, M, Type, Derived &gt;::frobeniusNorm</definition>
+        <argsstring>() const</argsstring>
+        <name>frobeniusNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="534" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="534" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NewType</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto translotator::MatrixBase&lt; N, M, Type, Derived &gt;::castDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>castDataType</name>
+        <briefdescription>
+<para>Returns the Frobenius norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Type Casting</para>
+<para>Casts the matrix to a different data type <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New data type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is only available for floating point types </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="546" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="546" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 1 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>Type</type>
+        <definition>Type translotator::MatrixBase&lt; N, M, Type, Derived &gt;::toScalar</definition>
+        <argsstring>() const</argsstring>
+        <name>toScalar</name>
+        <briefdescription>
+<para>Casts the matrix to a scalar if it is a 1x1 matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="562" column="21" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="562" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NewContainer</type>
+          </param>
+        </templateparamlist>
+        <type>NewContainer</type>
+        <definition>NewContainer translotator::MatrixBase&lt; N, M, Type, Derived &gt;::castContainer</definition>
+        <argsstring>() const</argsstring>
+        <name>castContainer</name>
+        <briefdescription>
+<para>Casts the matrix to a different container type by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewContainer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New container type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is only available for containers with the same size as the matrix </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="570" column="29" bodyfile="include/translotator/objects/tail.hpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, Type &gt;</type>
+        <definition>Matrix&lt; N, M, Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2Matrix</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2Matrix</name>
+        <briefdescription>
+<para>Casts the object to a different matrix type by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewContainer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New matrix type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;Matrix&lt;N, M, Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="578" column="23" bodyfile="include/translotator/objects/tail.hpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == M_, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, Type &gt;</type>
+        <definition>SquareMatrix&lt; N, Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2SquareMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2SquareMatrix</name>
+        <briefdescription>
+<para>Casts the object to a square matrix by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Square matrix object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for N x N dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;SquareMatrix&lt;N, Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="587" column="29" bodyfile="include/translotator/objects/tail.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt;</type>
+        <definition>Vector&lt; N, Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2Vector</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2Vector</name>
+        <briefdescription>
+<para>Casts the object to a vector by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for M x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;<ref refid="classtranslotator_1_1Vector" kindref="compound">Vector&lt;N, Type&gt;</ref>&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="596" column="23" bodyfile="include/translotator/objects/tail.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; Type &gt;</type>
+        <definition>ComplexNum&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2ComplexNum</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2ComplexNum</name>
+        <briefdescription>
+<para>Casts the object to a complex number by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Complex number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;ComplexNum&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="605" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; Type &gt;</type>
+        <definition>UnitComplexNum&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitComplexNum</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2UnitComplexNum</name>
+        <briefdescription>
+<para>Casts the object to a unit complex number by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit complex number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;UnitComplexNum&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit complex number, the output will be normalized to be a unit complex number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="615" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 4 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>Quaternion&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2Quaternion</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2Quaternion</name>
+        <briefdescription>
+<para>Casts the object to a quaternion by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 4 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;Quaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="624" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 4 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; Type &gt;</type>
+        <definition>UnitQuaternion&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitQuaternion</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2UnitQuaternion</name>
+        <briefdescription>
+<para>Casts the object to a unit quaternion by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 4 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;UnitQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit quaternion, the output will be normalized to be a unit quaternion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="634" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;(N_ == 2 &amp;&amp; M_ == 2) || (N_ == 3 &amp;&amp; M_ == 3), <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SOGroup&lt; N, Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2SOGroup</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2SOGroup</name>
+        <briefdescription>
+<para>Casts the object to a special orthogonal group by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref> object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 2 or 3 x 3 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;<ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup&lt;N, Type&gt;</ref>&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a special orthogonal group, the output will be normalized to be a special orthogonal group </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="644" column="24" bodyfile="include/translotator/objects/tail.hpp" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2DualNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2DualNumber</name>
+        <briefdescription>
+<para>Casts the object to a dual number by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Dual number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;DualNumber&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="653" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 8 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1DualQuaternion" kindref="compound">DualQuaternion</ref>&lt; Type &gt;</type>
+        <definition>DualQuaternion&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2DualQuaternion</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2DualQuaternion</name>
+        <briefdescription>
+<para>Casts the object to a dual quaternion by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Dual quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 8 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;DualQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="662" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 8 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitDualQuaternion" kindref="compound">UnitDualQuaternion</ref>&lt; Type &gt;</type>
+        <definition>UnitDualQuaternion&lt; Type &gt; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitDualQuaternion</definition>
+        <argsstring>() const</argsstring>
+        <name>cast2UnitDualQuaternion</name>
+        <briefdescription>
+<para>Casts the object to a unit dual quaternion by copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit dual quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 8 x 1 dimensions </para>
+</simplesect>
+<simplesect kind="note"><para>This functions is alias of castContainer&lt;UnitDualQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit dual quaternion, the output will be normalized to be a unit dual quaternion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="672" column="35" bodyfile="include/translotator/objects/tail.hpp" bodystart="107" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NewContainer</type>
+          </param>
+        </templateparamlist>
+        <type>NewContainer &amp;</type>
+        <definition>NewContainer&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::castContainerRef</definition>
+        <argsstring>()</argsstring>
+        <name>castContainerRef</name>
+        <briefdescription>
+<para>Casts the object to a different container reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewContainer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New container type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is only available for containers with the same size as the matrix <simplesect kind="note"><para>This function is recommended for temporary objects. Use <ref refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" kindref="member">castContainer()</ref> and alias functions for permanent objects. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="681" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, Type &gt; &amp;</type>
+        <definition>Matrix&lt; N, M, Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2MatrixRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2MatrixRef</name>
+        <briefdescription>
+<para>Casts the object to a matrix reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for N x M dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;Matrix&lt;N, M, Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="689" column="23" bodyfile="include/translotator/objects/tail.hpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;M_ == N_, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, Type &gt; &amp;</type>
+        <definition>SquareMatrix&lt; N, Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2SquareMatrixRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2SquareMatrixRef</name>
+        <briefdescription>
+<para>Casts the object to a square matrix reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Square matrix object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for N x N dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;SquareMatrix&lt;N, Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="698" column="29" bodyfile="include/translotator/objects/tail.hpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt; &amp;</type>
+        <definition>Vector&lt; N, Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2VectorRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2VectorRef</name>
+        <briefdescription>
+<para>Casts the object to a vector reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> object with same dimensions and data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for M x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;<ref refid="classtranslotator_1_1Vector" kindref="compound">Vector&lt;N, Type&gt;</ref>&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="707" column="23" bodyfile="include/translotator/objects/tail.hpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; Type &gt; &amp;</type>
+        <definition>ComplexNum&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2ComplexNumRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2ComplexNumRef</name>
+        <briefdescription>
+<para>Casts the object to a complex number reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Complex number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;ComplexNum&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="716" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; Type &gt; &amp;</type>
+        <definition>UnitComplexNum&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitComplexNumRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2UnitComplexNumRef</name>
+        <briefdescription>
+<para>Casts the object to a unit complex number reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit complex number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;UnitComplexNum&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit complex number, the output &amp; original object will be normalized to be a unit complex number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="726" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="153" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 4 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt; &amp;</type>
+        <definition>Quaternion&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2QuaternionRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2QuaternionRef</name>
+        <briefdescription>
+<para>Casts the object to a quaternion reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 4 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;Quaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="735" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 4 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; Type &gt; &amp;</type>
+        <definition>UnitQuaternion&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitQuaternionRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2UnitQuaternionRef</name>
+        <briefdescription>
+<para>Casts the object to a unit quaternion reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 4 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;UnitQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit quaternion, the output &amp; original object will be normalized to be a unit quaternion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="745" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="167" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;(N_ == 2 &amp;&amp; M_ == 2) || (N_ == 3 &amp;&amp; M_ == 3), <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt; &amp;</type>
+        <definition>SOGroup&lt; N, Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2SOGroupRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2SOGroupRef</name>
+        <briefdescription>
+<para>Casts the object to a special orthogonal group reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref> object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 2 or 3 x 3 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;<ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup&lt;N, Type&gt;</ref>&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a special orthogonal group, the output &amp; original object will be normalized to be a special orthogonal group </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="755" column="24" bodyfile="include/translotator/objects/tail.hpp" bodystart="175" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 2 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+        <definition>DualNumber&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2DualNumberRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2DualNumberRef</name>
+        <briefdescription>
+<para>Casts the object to a dual number reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Dual number object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;DualNumber&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="764" column="27" bodyfile="include/translotator/objects/tail.hpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 8 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1DualQuaternion" kindref="compound">DualQuaternion</ref>&lt; Type &gt; &amp;</type>
+        <definition>DualQuaternion&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2DualQuaternionRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2DualQuaternionRef</name>
+        <briefdescription>
+<para>Casts the object to a dual quaternion reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Dual quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 8 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;DualQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="773" column="31" bodyfile="include/translotator/objects/tail.hpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N_</declname>
+            <defname>N_</defname>
+            <defval>N</defval>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M_</declname>
+            <defname>M_</defname>
+            <defval>M</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;N_ == 8 &amp;&amp; M_ == 1, <ref refid="structtranslotator_1_1integral__constant" kindref="compound">true_type</ref>&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1UnitDualQuaternion" kindref="compound">UnitDualQuaternion</ref>&lt; Type &gt; &amp;</type>
+        <definition>UnitDualQuaternion&lt; Type &gt; &amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::cast2UnitDualQuaternionRef</definition>
+        <argsstring>()</argsstring>
+        <name>cast2UnitDualQuaternionRef</name>
+        <briefdescription>
+<para>Casts the object to a unit dual quaternion reference without copying. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unit dual quaternion object with same data type </para>
+</simplesect>
+<simplesect kind="note"><para>This function is only available for 8 x 1 dimensions. Not recommended for temporary objects. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is alias of castContainerRef&lt;UnitDualQuaternion&lt;Type&gt;&gt;() function </para>
+</simplesect>
+<simplesect kind="note"><para>If the input is not a unit dual quaternion, the output &amp; original object will be normalized to be a unit dual quaternion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="783" column="35" bodyfile="include/translotator/objects/tail.hpp" bodystart="195" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NewDerived</type>
+          </param>
+        </templateparamlist>
+        <type>NewDerived &amp;</type>
+        <definition>NewDerived&amp; translotator::MatrixBase&lt; N, M, Type, Derived &gt;::castContainerRef</definition>
+        <argsstring>()</argsstring>
+        <name>castContainerRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/tail.hpp" line="120" column="34" bodyfile="include/translotator/objects/tail.hpp" bodystart="120" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtranslotator_1_1MatrixBase_1af3ae7b58c3e29500324ed7854eda09a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived operator*</definition>
+        <argsstring>(Type lhs, const Derived &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>Type</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBase.hpp" line="303" column="31" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="303" bodyend="303"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for all matrix objects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of rows </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of columns </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data type of the matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derived class, CRTP </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This class is not meant to be used directly, use other matrix-based object classes instead.</para>
+</simplesect>
+This class provides basic matrix operations and functionalities. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>translotator::Vector&lt; N, Type &gt;</label>
+        <link refid="classtranslotator_1_1Vector"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>translotator::MatrixBase&lt; N, M, Type, Derived &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/translotator/objects/MatrixBase.hpp" line="38" column="5" bodyfile="include/translotator/objects/MatrixBase.hpp" bodystart="39" bodyend="784"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2ComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2ComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2DualNumber</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2DualNumberRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2DualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2DualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2Matrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2MatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2Quaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2QuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2SOGroup</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2SOGroupRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2SquareMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2SquareMatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitDualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitDualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2UnitQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2Vector</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>cast2VectorRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>castContainer</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>castDataType</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>col</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>COLS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>colSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>copyTo</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" prot="protected" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>data_</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>DATATYPE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>eye</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>fill</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>frobeniusNorm</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>frobeniusNormSquared</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>getData</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MATRIX_BASE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>NaN</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>ones</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1af3ae7b58c3e29500324ed7854eda09a5" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator+</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator+=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator-=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>operator=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>print</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>row</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>ROWS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>rowSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>swapCols</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>swapRows</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>T</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>toScalar</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" prot="public" virt="non-virtual"><scope>translotator::MatrixBase</scope><name>zeros</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

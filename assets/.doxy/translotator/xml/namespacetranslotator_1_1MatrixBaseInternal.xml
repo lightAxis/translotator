@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacetranslotator_1_1MatrixBaseInternal" kind="namespace" language="C++">
+    <compoundname>translotator::MatrixBaseInternal</compoundname>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri2a96eb5bfa413dff0cddca3d951d6a71" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri96d299f5dadca2759194ea845be7ed5c" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri1b96ed4aed79df1e494374b57efb0a1d" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Vector_3_01N_00_01Type_01_4_00_01NewType_01_4" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Vector&lt; N, Type &gt;, NewType &gt;</innerclass>
+    <briefdescription>
+<para>Internal namespace for <ref refid="classtranslotator_1_1MatrixBase" kindref="compound">MatrixBase</ref> implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>This namespace is for internal use only. Do not use this namespace directly. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="29" column="1"/>
+  </compounddef>
+</doxygen>

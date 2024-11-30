@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="S1_8hpp" kind="file" language="C++">
+    <compoundname>S1.hpp</compoundname>
+    <includedby refid="LieOperator_8hpp" local="yes">include/translotator/lie/LieOperator.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/translotator/lie/LieOperator.hpp</label>
+        <link refid="LieOperator_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/translotator/translotator.hpp</label>
+        <link refid="translotator_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/translotator/lie/S1.hpp</label>
+        <link refid="S1_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" prot="public">translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</innerclass>
+    <innernamespace refid="namespacetranslotator">translotator</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1lie">translotator::lie</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>The<sp/>MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>Jiseok<sp/>Lee</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Created<sp/>on<sp/>Tue<sp/>Nov<sp/>19<sp/>2024</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>@file<sp/>:<sp/>S1.hpp</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetranslotator_1_1lie" kindref="compound">translotator::lie</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="33" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1lie_1_1LieOperator" kindref="compound">LieOperator</ref>&lt;ObjectType::UNIT_COMPLEX_NUM,<sp/>Type&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(is_float_v&lt;Type&gt;,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>data<sp/>type<sp/>for<sp/>LieOperator.<sp/>Must<sp/>be<sp/>float<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref><sp/>=<sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum&lt;Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref><sp/>=<sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum&lt;Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref><sp/>=<sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector&lt;1, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1aede04c31583a2688a7b3933ac00700bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1aede04c31583a2688a7b3933ac00700bc" kindref="member">Vector2LieAlgebra</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref><sp/>&amp;isomorphicVec)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Type</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0),<sp/>isomorphicVec.<ref refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" kindref="member">toScalar</ref>()};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ae4de0d879b7dee04c5fedfddc73b172b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ae4de0d879b7dee04c5fedfddc73b172b" kindref="member">LieAlgebra2Vector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref><sp/>&amp;lieAlgebra)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>{lieAlgebra.Im()};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a39f1efe8998ea423c4ec771874346272" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a39f1efe8998ea423c4ec771874346272" kindref="member">Exp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref><sp/>&amp;vec)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref>{vec.<ref refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" kindref="member">toScalar</ref>()};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ac5a728b3db2d39353371c0e6af96b42f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ac5a728b3db2d39353371c0e6af96b42f" kindref="member">Log</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref><sp/>&amp;lieGroup)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>{translotator::acos(lieGroup.<ref refid="classtranslotator_1_1ComplexNum_1a21fa256d53d75219185ee92711bbf65f" kindref="member">Re</ref>())};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a5bad2ffc902d38fce11b85df9c08b9ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a5bad2ffc902d38fce11b85df9c08b9ba" kindref="member">exp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref><sp/>&amp;lieAlgebra)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Exp(LieAlgebra2Vector(lieAlgebra));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb12bad9a498eeaec7d73e893f1f09b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref><sp/><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb12bad9a498eeaec7d73e893f1f09b1" kindref="member">log</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref><sp/>&amp;lieGroup)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Vector2LieAlgebra(Log(lieGroup));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>LieOperator_S1<sp/>=<sp/>LieOperator&lt;ObjectType::UNIT_COMPLEX_NUM,<sp/>Type&gt;;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>LieOperator_S1f<sp/>=<sp/>LieOperator_S1&lt;float&gt;;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>LieOperator_S1d<sp/>=<sp/>LieOperator_S1&lt;double&gt;;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>LieOperator_S1ld<sp/>=<sp/>LieOperator_S1&lt;long<sp/>double&gt;;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/lie/S1.hpp"/>
+  </compounddef>
+</doxygen>

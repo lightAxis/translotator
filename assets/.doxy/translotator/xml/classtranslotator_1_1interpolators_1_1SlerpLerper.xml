@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1interpolators_1_1SlerpLerper" kind="class" language="C++" prot="public">
+    <compoundname>translotator::interpolators::SlerpLerper</compoundname>
+    <includes refid="Slerp__Lerp_8hpp" local="no">Slerp_Lerp.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Container</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1b87eca03606a8ab2fdc4fab8de83ef9" prot="private" static="no">
+        <type>typename Container::DATATYPE</type>
+        <definition>using translotator::interpolators::SlerpLerper&lt; Container &gt;::Type =  typename Container::DATATYPE</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="72" column="9" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a8e035adced6ee6d28482c69cb9585865" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerpLerper&lt; Container &gt;::start_</definition>
+        <argsstring></argsstring>
+        <name>start_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="78" column="19" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1ac0f70e5e0e341dc8f05ecaa1feaa61fc" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerpLerper&lt; Container &gt;::end_</definition>
+        <argsstring></argsstring>
+        <name>end_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="79" column="19" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a7e8e3a218d20c4485031621bd4d94c07" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerpLerper&lt; Container &gt;::diff_</definition>
+        <argsstring></argsstring>
+        <name>diff_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="80" column="19" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1aac01cbc484549f68cb74f088d05359bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerpLerper&lt; Container &gt;::SlerpLerper</definition>
+        <argsstring>()=default</argsstring>
+        <name>SlerpLerper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="86" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a78ba6dafbda13365b712c378f555546c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerpLerper&lt; Container &gt;::SlerpLerper</definition>
+        <argsstring>(const Container &amp;start, const Container &amp;end)</argsstring>
+        <name>SlerpLerper</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="87" column="9" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1ae24c19591422dc4e2a49740df518729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::interpolators::SlerpLerper&lt; Container &gt;::~SlerpLerper</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SlerpLerper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="88" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1af79562274dece1e144ce3b5af053ebc5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerpLerper&lt; Container &gt;::operator()</definition>
+        <argsstring>(Type t) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>SlerpLerp operation for <ref refid="classtranslotator_1_1interpolators_1_1SlerpLerper" kindref="compound">SlerpLerper</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="90" column="26" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a866145ad8ab836b09212a3ff94437172" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Container</type>
+        <definition>Container translotator::interpolators::SlerpLerper&lt; Container &gt;::interpolate</definition>
+        <argsstring>(Type t) const</argsstring>
+        <name>interpolate</name>
+        <param>
+          <type>Type</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>SlerpLerp operation for <ref refid="classtranslotator_1_1interpolators_1_1SlerpLerper" kindref="compound">SlerpLerper</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="94" column="26" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a48a2e3fff6a91cfaae63b6ea9ae08259" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerpLerper&lt; Container &gt;::updateDiff</definition>
+        <argsstring>()</argsstring>
+        <name>updateDiff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="99" column="21" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1384665f981a501d8b85353052401115" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Container &amp;</type>
+        <definition>const Container&amp; translotator::interpolators::SlerpLerper&lt; Container &gt;::getStart</definition>
+        <argsstring>() const</argsstring>
+        <name>getStart</name>
+        <briefdescription>
+<para>Update difference between start and end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>getter &amp; setter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="104" column="32" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1acf8e6e57145753c545e887d4afecd714" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Container &amp;</type>
+        <definition>const Container&amp; translotator::interpolators::SlerpLerper&lt; Container &gt;::getEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>getEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="105" column="32" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a46ac170f36fc0b0f1592fb5b9088bc19" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Container &amp;</type>
+        <definition>const Container&amp; translotator::interpolators::SlerpLerper&lt; Container &gt;::getDiff</definition>
+        <argsstring>() const</argsstring>
+        <name>getDiff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="106" column="32" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1aae8142556637d99c41152e3341c51f47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerpLerper&lt; Container &gt;::setStart</definition>
+        <argsstring>(const Container &amp;start)</argsstring>
+        <name>setStart</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="108" column="21" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a6aa94941e504943cdba950d767f06f8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerpLerper&lt; Container &gt;::setEnd</definition>
+        <argsstring>(const Container &amp;end)</argsstring>
+        <name>setEnd</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="109" column="21" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1interpolators_1_1SlerpLerper_1a2cf5dc2b2eef9a7ccf34ed618350f3d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::interpolators::SlerpLerper&lt; Container &gt;::setDiff</definition>
+        <argsstring>(const Container &amp;diff)</argsstring>
+        <name>setDiff</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>diff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="110" column="21" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Slerp for rotation component, lerp for translation component class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> base type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="include/translotator/interpolators/Slerp_Lerp.hpp" line="70" column="5" bodyfile="include/translotator/interpolators/Slerp_Lerp.hpp" bodystart="71" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a7e8e3a218d20c4485031621bd4d94c07" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>diff_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1ac0f70e5e0e341dc8f05ecaa1feaa61fc" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>end_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a46ac170f36fc0b0f1592fb5b9088bc19" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>getDiff</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1acf8e6e57145753c545e887d4afecd714" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>getEnd</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1384665f981a501d8b85353052401115" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>getStart</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a866145ad8ab836b09212a3ff94437172" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>interpolate</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1af79562274dece1e144ce3b5af053ebc5" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a2cf5dc2b2eef9a7ccf34ed618350f3d5" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>setDiff</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a6aa94941e504943cdba950d767f06f8a" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>setEnd</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1aae8142556637d99c41152e3341c51f47" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>setStart</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1aac01cbc484549f68cb74f088d05359bd" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>SlerpLerper</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a78ba6dafbda13365b712c378f555546c" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>SlerpLerper</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a8e035adced6ee6d28482c69cb9585865" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>start_</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1b87eca03606a8ab2fdc4fab8de83ef9" prot="private" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>Type</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a48a2e3fff6a91cfaae63b6ea9ae08259" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>updateDiff</name></member>
+      <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1ae24c19591422dc4e2a49740df518729d" prot="public" virt="non-virtual"><scope>translotator::interpolators::SlerpLerper</scope><name>~SlerpLerper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

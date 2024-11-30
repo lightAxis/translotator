@@ -1,0 +1,2223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacetranslotator" kind="namespace" language="C++">
+    <compoundname>translotator</compoundname>
+    <innerclass refid="classtranslotator_1_1AxisAngle" prot="public">translotator::AxisAngle</innerclass>
+    <innerclass refid="classtranslotator_1_1ComplexNum" prot="public">translotator::ComplexNum</innerclass>
+    <innerclass refid="classtranslotator_1_1DualNumber" prot="public">translotator::DualNumber</innerclass>
+    <innerclass refid="classtranslotator_1_1DualQuaternion" prot="public">translotator::DualQuaternion</innerclass>
+    <innerclass refid="classtranslotator_1_1EulerAngle" prot="public">translotator::EulerAngle</innerclass>
+    <innerclass refid="structtranslotator_1_1initializer__list" prot="public">translotator::initializer_list</innerclass>
+    <innerclass refid="classtranslotator_1_1Matrix" prot="public">translotator::Matrix</innerclass>
+    <innerclass refid="classtranslotator_1_1MatrixBase" prot="public">translotator::MatrixBase</innerclass>
+    <innerclass refid="classtranslotator_1_1SquareMatrix" prot="public">translotator::SquareMatrix</innerclass>
+    <innerclass refid="classtranslotator_1_1Vector" prot="public">translotator::Vector</innerclass>
+    <innerclass refid="classtranslotator_1_1Quaternion" prot="public">translotator::Quaternion</innerclass>
+    <innerclass refid="classtranslotator_1_1UnitComplexNum" prot="public">translotator::UnitComplexNum</innerclass>
+    <innerclass refid="classtranslotator_1_1UnitQuaternion" prot="public">translotator::UnitQuaternion</innerclass>
+    <innerclass refid="classtranslotator_1_1SOGroup" prot="public">translotator::SOGroup</innerclass>
+    <innerclass refid="classtranslotator_1_1SEGroup" prot="public">translotator::SEGroup</innerclass>
+    <innerclass refid="classtranslotator_1_1UnitDualQuaternion" prot="public">translotator::UnitDualQuaternion</innerclass>
+    <innerclass refid="structtranslotator_1_1enable__if" prot="public">translotator::enable_if</innerclass>
+    <innerclass refid="structtranslotator_1_1enable__if_3_01true_00_01T_01_4" prot="public">translotator::enable_if&lt; true, T &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1conditional__if" prot="public">translotator::conditional_if</innerclass>
+    <innerclass refid="structtranslotator_1_1conditional__if_3_01false_00_01T_00_01F_01_4" prot="public">translotator::conditional_if&lt; false, T, F &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1integral__constant" prot="public">translotator::integral_constant</innerclass>
+    <innerclass refid="structtranslotator_1_1is__same" prot="public">translotator::is_same</innerclass>
+    <innerclass refid="structtranslotator_1_1is__same_3_01T_00_01T_01_4" prot="public">translotator::is_same&lt; T, T &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1all__same" prot="public">translotator::all_same</innerclass>
+    <innerclass refid="structtranslotator_1_1all__same_3_01T_01_4" prot="public">translotator::all_same&lt; T &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4" prot="public">translotator::all_same&lt; T, First, Rest... &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1is__float" prot="public">translotator::is_float</innerclass>
+    <innerclass refid="structtranslotator_1_1is__float_3_01float_01_4" prot="public">translotator::is_float&lt; float &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1is__float_3_01double_01_4" prot="public">translotator::is_float&lt; double &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1is__float_3_01long_01double_01_4" prot="public">translotator::is_float&lt; long double &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1is__matrix__base" prot="public">translotator::is_matrix_base</innerclass>
+    <innerclass refid="structtranslotator_1_1is__matrix__base_3_01T_00_01typename_01enable__if_3_01T_1_1MATRIX__BASE_01_4_1_1type_01_4" prot="public">translotator::is_matrix_base&lt; T, typename enable_if&lt; T::MATRIX_BASE &gt;::type &gt;</innerclass>
+    <innernamespace refid="namespacetranslotator_1_1EULER__CONSTEXPR">translotator::EULER_CONSTEXPR</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1interpolators">translotator::interpolators</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1lie">translotator::lie</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1MatrixBaseInternal">translotator::MatrixBaseInternal</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88ab" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ObjectType</name>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba38ef5fe49a654647519ee8c498c49664" prot="public">
+          <name>MATRIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba87752381b583740610f1dfeb07fdad7e" prot="public">
+          <name>VECTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88ababdf19ddd2e7cdab86b06073c47b6d7f4" prot="public">
+          <name>SQUARE_MATRIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba77ac7c0574cea8d26dc368b7858b15c6" prot="public">
+          <name>COMPLEX_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba44d211265e86d6d510e6e3d94557e821" prot="public">
+          <name>QUATERNION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba8785cdfe816e05dce640f4d1723c4293" prot="public">
+          <name>DUAL_NUMBER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba9823d9ec704792a6af2013c4c3ab1672" prot="public">
+          <name>DUAL_QUATERNION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88abaf0c747f3b05c887b07ea91be537d7817" prot="public">
+          <name>UNIT_COMPLEX_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba0e1fc694011db6a9c602925da673d9e5" prot="public">
+          <name>UNIT_QUATERNION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba5d81c471f0748c0aa213b648f9d8202d" prot="public">
+          <name>AXIS_ANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba96f418389e6544cd3a371068dc855a56" prot="public">
+          <name>EULER_ANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba919619a84ac8daf711a38c5dd29cce10" prot="public">
+          <name>SO_GROUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba8e3b9ee9d79070d7ab009876eb54a2b0" prot="public">
+          <name>SE_GROUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba46d5ebfe999549cbba7f3a17911befba" prot="public">
+          <name>UNIT_DUAL_QUATERNION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum class for object types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This enum class is used to identify the type of the object </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="34" column="5" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="35" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>AXIS</name>
+        <enumvalue id="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea02129bb861061d1a052c592e2dc6b383" prot="public">
+          <name>X</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea57cec4137b614c87cb4e24a3d003a3e0" prot="public">
+          <name>Y</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea21c2e59531c8710156d34a3c30ac81d5" prot="public">
+          <name>Z</name>
+          <initializer>= 0x3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum class for axis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This enum class is used to identify the axis </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="56" column="5" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EULER_ORDER</name>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47ae65075d550f9b5bf9992fa1d71a131be" prot="public">
+          <name>XYZ</name>
+          <initializer>= 0x123</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a76e608e99423bcdeb143368913e78f1c" prot="public">
+          <name>XZY</name>
+          <initializer>= 0x132</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a4c15872a8be8098b60ba0892bc42ee6d" prot="public">
+          <name>YXZ</name>
+          <initializer>= 0x213</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47ac7c57bc52d896f142cae9c01bc84b6fe" prot="public">
+          <name>YZX</name>
+          <initializer>= 0x231</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a07bb28478030fc8b86da84000c9860d3" prot="public">
+          <name>ZXY</name>
+          <initializer>= 0x312</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a6811254e01b3550bdb2dc46f204730dc" prot="public">
+          <name>ZYX</name>
+          <initializer>= 0x321</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum class for euler angle order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This enum class is used to identify the euler angle order <simplesect kind="note"><para>The order is represented as 3 digits, where each digit represents the axis </para>
+</simplesect>
+<simplesect kind="note"><para>All intrinsic orders, Tait-Bryan angles </para>
+</simplesect>
+<simplesect kind="note"><para>For example, XYZ order means the rotation is applied in the order of intrinsic X, Y, Z axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="70" column="5" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="71" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="AxisAngle_8hpp_1aed23298328abda817c4d29f095acc848" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1AxisAngle" kindref="compound">AxisAngle</ref>&lt; float &gt;</type>
+        <definition>using translotator::AxisAnglef = typedef AxisAngle&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>AxisAnglef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/AxisAngle.hpp" line="175" column="5" bodyfile="include/translotator/objects/AxisAngle.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="AxisAngle_8hpp_1a944808cdf6e6de1346f7e7ba51ed7734" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1AxisAngle" kindref="compound">AxisAngle</ref>&lt; double &gt;</type>
+        <definition>using translotator::AxisAngled = typedef AxisAngle&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>AxisAngled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/AxisAngle.hpp" line="176" column="5" bodyfile="include/translotator/objects/AxisAngle.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="AxisAngle_8hpp_1ac2b1f7dbf013d76be5e721ff2a71d072" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1AxisAngle" kindref="compound">AxisAngle</ref>&lt; long double &gt;</type>
+        <definition>using translotator::AxisAngleld = typedef AxisAngle&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>AxisAngleld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/AxisAngle.hpp" line="177" column="5" bodyfile="include/translotator/objects/AxisAngle.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ComplexNum_8hpp_1a4cfa6aa68fae47aa784996633c9fd571" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; float &gt;</type>
+        <definition>using translotator::ComplexNumf = typedef ComplexNum&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComplexNumf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/ComplexNum.hpp" line="123" column="5" bodyfile="include/translotator/objects/ComplexNum.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ComplexNum_8hpp_1aa3a4e9cc09405763cf7c84ed4e3cabf5" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; double &gt;</type>
+        <definition>using translotator::ComplexNumd = typedef ComplexNum&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComplexNumd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/ComplexNum.hpp" line="124" column="5" bodyfile="include/translotator/objects/ComplexNum.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ComplexNum_8hpp_1abacae7f085be1d72d7aa12bffc890807" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; long double &gt;</type>
+        <definition>using translotator::ComplexNumld = typedef ComplexNum&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComplexNumld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/ComplexNum.hpp" line="125" column="5" bodyfile="include/translotator/objects/ComplexNum.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualNumber_8hpp_1a3ab8733a275a4262ab294fc05ffe09b5" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; float &gt;</type>
+        <definition>using translotator::DualNumberf = typedef DualNumber&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualNumberf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="121" column="5" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualNumber_8hpp_1ad3c8ff86a3438368cfd2d2fc2bc6e6f0" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; double &gt;</type>
+        <definition>using translotator::DualNumberd = typedef DualNumber&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualNumberd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="122" column="5" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualNumber_8hpp_1a7cc6fe52ba0eb5d7ddb4c20a5dca9a70" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; long double &gt;</type>
+        <definition>using translotator::DualNumberld = typedef DualNumber&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualNumberld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="123" column="5" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualQuaternion_8hpp_1a81202a39eacbda8d676e108f636ad9c2" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualQuaternion" kindref="compound">DualQuaternion</ref>&lt; float &gt;</type>
+        <definition>using translotator::DualQuaternionf = typedef DualQuaternion&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualQuaternionf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualQuaternion.hpp" line="229" column="5" bodyfile="include/translotator/objects/DualQuaternion.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualQuaternion_8hpp_1a7a581cb762048a3b92ebefd059f08c28" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualQuaternion" kindref="compound">DualQuaternion</ref>&lt; double &gt;</type>
+        <definition>using translotator::DualQuaterniond = typedef DualQuaternion&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualQuaterniond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualQuaternion.hpp" line="230" column="5" bodyfile="include/translotator/objects/DualQuaternion.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="DualQuaternion_8hpp_1a1faaf9687941dcf364e700114f46cd36" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1DualQuaternion" kindref="compound">DualQuaternion</ref>&lt; long double &gt;</type>
+        <definition>using translotator::DualQuaternionld = typedef DualQuaternion&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>DualQuaternionld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualQuaternion.hpp" line="231" column="5" bodyfile="include/translotator/objects/DualQuaternion.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a10cde4021a9a66c4f930725e866b1e96" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>AxisOrder</declname>
+            <defname>AxisOrder</defname>
+            <defval>EULER_ORDER::ZYX</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; float, AxisOrder &gt;</type>
+        <definition>using translotator::EulerAnglef = typedef EulerAngle&lt;float, AxisOrder&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAnglef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="207" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a692ee83ed6aef5e1c923c73cb8f9ba4b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>AxisOrder</declname>
+            <defname>AxisOrder</defname>
+            <defval>EULER_ORDER::ZYX</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; double, AxisOrder &gt;</type>
+        <definition>using translotator::EulerAngled = typedef EulerAngle&lt;double, AxisOrder&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="209" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a4f21240a56a1a60325149f2bdb193a28" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>AxisOrder</declname>
+            <defname>AxisOrder</defname>
+            <defval>EULER_ORDER::ZYX</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; long double, AxisOrder &gt;</type>
+        <definition>using translotator::EulerAngleld = typedef EulerAngle&lt;long double, AxisOrder&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="211" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a1e0cd97c0d6b07e1b448bb560f4fa793" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; Type, EULER_ORDER::XYZ &gt;</type>
+        <definition>using translotator::EulerAngleXYZ = typedef EulerAngle&lt;Type, EULER_ORDER::XYZ&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleXYZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="214" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a6ce70cba36ba5cf1f8e9b68d668ded0c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; Type, EULER_ORDER::ZYX &gt;</type>
+        <definition>using translotator::EulerAngleZYX = typedef EulerAngle&lt;Type, EULER_ORDER::ZYX&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleZYX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="216" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a48ad30fe5acfbad0e5e36522a1e9981c" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleXYZ</ref>&lt; float &gt;</type>
+        <definition>using translotator::EulerAngleXYZf = typedef EulerAngleXYZ&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleXYZf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="218" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1ad82a4ee9450b45696cb502f351cfc811" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleXYZ</ref>&lt; double &gt;</type>
+        <definition>using translotator::EulerAngleXYZd = typedef EulerAngleXYZ&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleXYZd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="219" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a324268070619ca837982a2a12779d1d1" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleXYZ</ref>&lt; long double &gt;</type>
+        <definition>using translotator::EulerAngleXYZld = typedef EulerAngleXYZ&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleXYZld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="220" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1a378a746738547f36621d10cefb253c6e" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleZYX</ref>&lt; float &gt;</type>
+        <definition>using translotator::EulerAngleZYXf = typedef EulerAngleZYX&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleZYXf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="221" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1acb93c7fb013abb6e985e756472cda56f" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleZYX</ref>&lt; double &gt;</type>
+        <definition>using translotator::EulerAngleZYXd = typedef EulerAngleZYX&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleZYXd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="222" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="EulerAngle_8hpp_1abc334ce934b1851dcee8bdd65e08cfe6" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngleZYX</ref>&lt; long double &gt;</type>
+        <definition>using translotator::EulerAngleZYXld = typedef EulerAngleZYX&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>EulerAngleZYXld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="223" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Matrix_8hpp_1a167a0c7dda1ddd20f4f9cbd841aab816" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M</declname>
+            <defname>M</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, float &gt;</type>
+        <definition>using translotator::Matrixf = typedef Matrix&lt;N, M, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrixf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Matrix.hpp" line="46" column="5" bodyfile="include/translotator/objects/Matrix.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Matrix_8hpp_1a48763a3132ba1d66ba8223881f98446d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M</declname>
+            <defname>M</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, double &gt;</type>
+        <definition>using translotator::Matrixd = typedef Matrix&lt;N, M, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrixd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Matrix.hpp" line="48" column="5" bodyfile="include/translotator/objects/Matrix.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Matrix_8hpp_1a1b91eed394a78069c896a506c318d54c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>M</declname>
+            <defname>M</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt; N, M, long double &gt;</type>
+        <definition>using translotator::Matrixld = typedef Matrix&lt;N, M, long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrixld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Matrix.hpp" line="50" column="5" bodyfile="include/translotator/objects/Matrix.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Quaternion_8hpp_1a4a90171e38bd218443800580b60ff893" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; float &gt;</type>
+        <definition>using translotator::Quaternionf = typedef Quaternion&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Quaternionf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="152" column="5" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Quaternion_8hpp_1afe9256d27c3c0b6e7818f7356939dc45" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; double &gt;</type>
+        <definition>using translotator::Quaterniond = typedef Quaternion&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Quaterniond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="153" column="5" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Quaternion_8hpp_1ac3f4e0a3ceda665cb4885b8ce7657f42" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; long double &gt;</type>
+        <definition>using translotator::Quaternionld = typedef Quaternion&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Quaternionld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Quaternion.hpp" line="154" column="5" bodyfile="include/translotator/objects/Quaternion.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a66f572f88dd71cd80a97aefd061e9b79" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, float &gt;</type>
+        <definition>using translotator::SEGroupf = typedef SEGroup&lt;N, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SEGroupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="131" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a871cecc82fed6ea6c85a945d76c7a50f" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, double &gt;</type>
+        <definition>using translotator::SEGroupd = typedef SEGroup&lt;N, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SEGroupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="133" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1acd80992117d10c1e2eb7dfd59a9d4495" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, long double &gt;</type>
+        <definition>using translotator::SEGroupld = typedef SEGroup&lt;N, long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SEGroupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="135" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a168fa21c4b84107ce57a859878b497b0" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; 2, Type &gt;</type>
+        <definition>using translotator::SE2Group = typedef SEGroup&lt;2, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE2Group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="138" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1ac9fc4a78596e971ab18e76fb26adbf6b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; 3, Type &gt;</type>
+        <definition>using translotator::SE3Group = typedef SEGroup&lt;3, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE3Group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="140" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a40b025f48ec2488e47d30c2a7752ddb6" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE2Group</ref>&lt; float &gt;</type>
+        <definition>using translotator::SE2Groupf = typedef SE2Group&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE2Groupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="142" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a4752251dc233caa54cc6ba7da8733369" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE2Group</ref>&lt; double &gt;</type>
+        <definition>using translotator::SE2Groupd = typedef SE2Group&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE2Groupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="143" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a8e05775b4adca50c43311a7235992f0c" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE2Group</ref>&lt; long double &gt;</type>
+        <definition>using translotator::SE2Groupld = typedef SE2Group&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE2Groupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="144" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a53e662e48e861dbb200f483156b7f24b" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE3Group</ref>&lt; float &gt;</type>
+        <definition>using translotator::SE3Groupf = typedef SE3Group&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE3Groupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="145" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1a0c4713a5028ea60cd90aa6f57f01080d" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE3Group</ref>&lt; double &gt;</type>
+        <definition>using translotator::SE3Groupd = typedef SE3Group&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE3Groupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="146" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SEGroup_8hpp_1ac9e8559e3b1bf80389a1def0733c7899" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SE3Group</ref>&lt; long double &gt;</type>
+        <definition>using translotator::SE3Groupld = typedef SE3Group&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SE3Groupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="147" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1af9739a2baa5461af9ff1df5f7a211ee2" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, float &gt;</type>
+        <definition>using translotator::SOGroupf = typedef SOGroup&lt;N, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SOGroupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="421" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a50d10b7ba20dd81f714608db17576b5b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, double &gt;</type>
+        <definition>using translotator::SOGroupd = typedef SOGroup&lt;N, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SOGroupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="423" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a56de11c079b33f51eb79b4da18415a9f" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, long double &gt;</type>
+        <definition>using translotator::SOGroupld = typedef SOGroup&lt;N, long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SOGroupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="425" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a16e8e6a4ce9775c977c416f4b69a4bdd" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; 2, Type &gt;</type>
+        <definition>using translotator::SO2Group = typedef SOGroup&lt;2, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO2Group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="428" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a3fa0b03c1173d1a8eff009be5d44c694" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; 3, Type &gt;</type>
+        <definition>using translotator::SO3Group = typedef SOGroup&lt;3, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO3Group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="430" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a4956051dc8f35209955562659fd87c3b" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Group</ref>&lt; float &gt;</type>
+        <definition>using translotator::SO3Groupf = typedef SO3Group&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO3Groupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="432" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1ae2f61a088e8d319216da1e72dbbd2bd1" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Group</ref>&lt; double &gt;</type>
+        <definition>using translotator::SO3Groupd = typedef SO3Group&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO3Groupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="433" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a9c2f61247357306004adece28a2456ae" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Group</ref>&lt; long double &gt;</type>
+        <definition>using translotator::SO3Groupld = typedef SO3Group&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO3Groupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="434" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a53755d8000e59e3e62505a2e481f4f20" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Group</ref>&lt; float &gt;</type>
+        <definition>using translotator::SO2Groupf = typedef SO2Group&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO2Groupf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="436" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1ad341dc0c03de46f520557aec2568d79b" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Group</ref>&lt; double &gt;</type>
+        <definition>using translotator::SO2Groupd = typedef SO2Group&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO2Groupd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="437" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1af9cc52b373a90efd348954bf995431b0" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Group</ref>&lt; long double &gt;</type>
+        <definition>using translotator::SO2Groupld = typedef SO2Group&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SO2Groupld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="438" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a239644d6dbc82334dc8f6adc42bab987" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroupf</ref>&lt; N &gt;</type>
+        <definition>using translotator::RotationMatrixf = typedef SOGroupf&lt;N&gt;</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrixf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="441" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a5b706d500c57a32e0149ec23248a461a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroupd</ref>&lt; N &gt;</type>
+        <definition>using translotator::RotationMatrixd = typedef SOGroupd&lt;N&gt;</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrixd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="443" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a1adf6979917976e6418993a444e0e024" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroupld</ref>&lt; N &gt;</type>
+        <definition>using translotator::RotationMatrixld = typedef SOGroupld&lt;N&gt;</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrixld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="445" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1ae8c09319a71a4e8b8687d5af24019173" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Group</ref>&lt; Type &gt;</type>
+        <definition>using translotator::RotationMatrix2D = typedef SO2Group&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="448" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1ac96f5090091bcecf508ce7a15d831820" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Group</ref>&lt; Type &gt;</type>
+        <definition>using translotator::RotationMatrix3D = typedef SO3Group&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix3D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="450" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a202a5b7112091e3777d09c49e45eeea7" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Groupf</ref></type>
+        <definition>using translotator::RotationMatrix2Df = typedef SO2Groupf</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix2Df</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="452" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a8ffabfc40d751681edf001edc6df501e" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Groupd</ref></type>
+        <definition>using translotator::RotationMatrix2Dd = typedef SO2Groupd</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix2Dd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="453" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a6740f8abe3f820461ec2ca740c3158a3" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO2Groupld</ref></type>
+        <definition>using translotator::RotationMatrix2Dld = typedef SO2Groupld</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix2Dld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="454" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a76af828ef1a1ba597079a7366d6300a7" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Groupf</ref></type>
+        <definition>using translotator::RotationMatrix3Df = typedef SO3Groupf</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix3Df</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="456" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1ab8c1086e02e104029180e17dce3b1608" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Groupd</ref></type>
+        <definition>using translotator::RotationMatrix3Dd = typedef SO3Groupd</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix3Dd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="457" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SOGroup_8hpp_1a566c32498fa974781e00257a9e576a61" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SO3Groupld</ref></type>
+        <definition>using translotator::RotationMatrix3Dld = typedef SO3Groupld</definition>
+        <argsstring></argsstring>
+        <name>RotationMatrix3Dld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SOGroup.hpp" line="458" column="5" bodyfile="include/translotator/objects/SOGroup.hpp" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SquareMatrix_8hpp_1a1f26e448fc32a05b650a83c0dc862a9d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, float &gt;</type>
+        <definition>using translotator::SquareMatrixf = typedef SquareMatrix&lt;N, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>SquareMatrixf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="244" column="5" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SquareMatrix_8hpp_1a361a92fed5fc0faca9a660eeaf3c6fe1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, double &gt;</type>
+        <definition>using translotator::SquareMatrixd = typedef SquareMatrix&lt;N, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SquareMatrixd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="246" column="5" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="SquareMatrix_8hpp_1afc674aaad0c3f39ea41d0f9644628368" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, long double &gt;</type>
+        <definition>using translotator::SquareMatrixld = typedef SquareMatrix&lt;N, long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>SquareMatrixld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="248" column="5" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1af45f3957c3560383bb6a0f5591850a4e" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; float &gt;</type>
+        <definition>using translotator::UnitComplexNumf = typedef UnitComplexNum&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitComplexNumf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="261" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1a5bb87ba9df4b8610cfeed4317b474db8" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; double &gt;</type>
+        <definition>using translotator::UnitComplexNumd = typedef UnitComplexNum&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitComplexNumd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="262" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1a72e690311499c62956178d319d0148cb" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; long double &gt;</type>
+        <definition>using translotator::UnitComplexNumld = typedef UnitComplexNum&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitComplexNumld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="263" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1a5cd9cde46fa27e904074fef74f2c2f88" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNumf</ref></type>
+        <definition>using translotator::S1f = typedef UnitComplexNumf</definition>
+        <argsstring></argsstring>
+        <name>S1f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="265" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1ab3a4891f53d2d817c84840fb86eefa0e" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNumd</ref></type>
+        <definition>using translotator::S1d = typedef UnitComplexNumd</definition>
+        <argsstring></argsstring>
+        <name>S1d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="266" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitComplexNum_8hpp_1a7a6d71f02f98b07953e2f00e313217c9" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNumld</ref></type>
+        <definition>using translotator::S1ld = typedef UnitComplexNumld</definition>
+        <argsstring></argsstring>
+        <name>S1ld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitComplexNum.hpp" line="267" column="5" bodyfile="include/translotator/objects/UnitComplexNum.hpp" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitDualQuaternion_8hpp_1ac18ff5ba8bc3c6434b439595a0e70646" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitDualQuaternion" kindref="compound">UnitDualQuaternion</ref>&lt; float &gt;</type>
+        <definition>using translotator::UnitDualQuaternionf = typedef UnitDualQuaternion&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitDualQuaternionf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitDualQuaternion.hpp" line="296" column="5" bodyfile="include/translotator/objects/UnitDualQuaternion.hpp" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitDualQuaternion_8hpp_1af8c19031bf37a569328ccdb7275f119d" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitDualQuaternion" kindref="compound">UnitDualQuaternion</ref>&lt; double &gt;</type>
+        <definition>using translotator::UnitDualQuaterniond = typedef UnitDualQuaternion&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitDualQuaterniond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitDualQuaternion.hpp" line="297" column="5" bodyfile="include/translotator/objects/UnitDualQuaternion.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitDualQuaternion_8hpp_1a705d6f76b3a92e1dcb77e9af3e107eb6" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitDualQuaternion" kindref="compound">UnitDualQuaternion</ref>&lt; long double &gt;</type>
+        <definition>using translotator::UnitDualQuaternionld = typedef UnitDualQuaternion&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitDualQuaternionld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitDualQuaternion.hpp" line="298" column="5" bodyfile="include/translotator/objects/UnitDualQuaternion.hpp" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1a9cea023abc9a2a0f244db0db73f0332f" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; float &gt;</type>
+        <definition>using translotator::UnitQuaternionf = typedef UnitQuaternion&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitQuaternionf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="347" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1ab7e0af1c5d26c927c6fafaf5b96fad0f" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; double &gt;</type>
+        <definition>using translotator::UnitQuaterniond = typedef UnitQuaternion&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitQuaterniond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="348" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1ab85a36fba508118953d3f6553716167d" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; long double &gt;</type>
+        <definition>using translotator::UnitQuaternionld = typedef UnitQuaternion&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitQuaternionld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="349" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1ad69294f5cda67c8dfc1208886e5a3e48" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternionf</ref></type>
+        <definition>using translotator::S3f = typedef UnitQuaternionf</definition>
+        <argsstring></argsstring>
+        <name>S3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="351" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1a69d1605e891a2455895bca5475226a75" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaterniond</ref></type>
+        <definition>using translotator::S3d = typedef UnitQuaterniond</definition>
+        <argsstring></argsstring>
+        <name>S3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="352" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UnitQuaternion_8hpp_1aaba3df23ec0c1ab1ca4cbb5692ed0ceb" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternionld</ref></type>
+        <definition>using translotator::S3ld = typedef UnitQuaternionld</definition>
+        <argsstring></argsstring>
+        <name>S3ld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/UnitQuaternion.hpp" line="353" column="5" bodyfile="include/translotator/objects/UnitQuaternion.hpp" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Vector_8hpp_1a3534e90820bed40c928ed1c914ca14a2" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, float &gt;</type>
+        <definition>using translotator::Vectorf = typedef Vector&lt;N, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vectorf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Vector.hpp" line="161" column="5" bodyfile="include/translotator/objects/Vector.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Vector_8hpp_1aa5e9e500d7b1e79d754a1311c1d0fa9e" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, double &gt;</type>
+        <definition>using translotator::Vectord = typedef Vector&lt;N, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vectord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Vector.hpp" line="163" column="5" bodyfile="include/translotator/objects/Vector.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Vector_8hpp_1afee032ce3d4133c29218e837c952d79a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, long double &gt;</type>
+        <definition>using translotator::Vectorld = typedef Vector&lt;N, long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vectorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/Vector.hpp" line="165" column="5" bodyfile="include/translotator/objects/Vector.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="micro__type__traits_8hpp_1a787e8423d8c286378697c90b2ae85515" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>B</declname>
+            <defname>B</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+            <defval>void</defval>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structtranslotator_1_1enable__if" kindref="compound">enable_if</ref>&lt; B, T &gt;::type</type>
+        <definition>using translotator::enable_if_t = typedef typename enable_if&lt;B, T&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>enable_if_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="40" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="micro__type__traits_8hpp_1ad6ad20fad8ecb0e8e04539345a7c354d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>B</declname>
+            <defname>B</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structtranslotator_1_1conditional__if" kindref="compound">conditional_if</ref>&lt; B, T, F &gt;::type</type>
+        <definition>using translotator::conditional_if_t = typedef typename conditional_if&lt;B, T, F&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>conditional_if_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="56" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="micro__type__traits_8hpp_1a4b43aba5240fa85b02799050d4c1d62b" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1integral__constant" kindref="compound">integral_constant</ref>&lt; bool, true &gt;</type>
+        <definition>using translotator::true_type = typedef integral_constant&lt;bool, true&gt;</definition>
+        <argsstring></argsstring>
+        <name>true_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="70" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="micro__type__traits_8hpp_1a89b5b925347f54f5a6e27a51d5748c07" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1integral__constant" kindref="compound">integral_constant</ref>&lt; bool, false &gt;</type>
+        <definition>using translotator::false_type = typedef integral_constant&lt;bool, false&gt;</definition>
+        <argsstring></argsstring>
+        <name>false_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="71" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="micro__type__traits_8hpp_1a4a9e7576cb0a6ccb474823826ba41abd" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::is_same_v</definition>
+        <argsstring></argsstring>
+        <name>is_same_v</name>
+        <initializer>= <ref refid="structtranslotator_1_1is__same" kindref="compound">is_same</ref>&lt;T, U&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="85" column="27" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="micro__type__traits_8hpp_1ac0ded4d4f945f828e49fbcc2ac1d5b9e" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::all_same_v</definition>
+        <argsstring></argsstring>
+        <name>all_same_v</name>
+        <initializer>= <ref refid="structtranslotator_1_1all__same" kindref="compound">all_same</ref>&lt;T, Args...&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="103" column="27" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="micro__type__traits_8hpp_1a8064c40ff6762d8542116924c9b695d1" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::is_float_v</definition>
+        <argsstring></argsstring>
+        <name>is_float_v</name>
+        <initializer>= <ref refid="structtranslotator_1_1is__float" kindref="compound">is_float</ref>&lt;T&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="125" column="27" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="micro__type__traits_8hpp_1aa63766cef1a6d6680c09dd41880f1bf6" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::is_matrix_base_v</definition>
+        <argsstring></argsstring>
+        <name>is_matrix_base_v</name>
+        <initializer>= <ref refid="structtranslotator_1_1is__matrix__base" kindref="compound">is_matrix_base</ref>&lt;T&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="140" column="27" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="epsilon_8hpp_1a8fb18b3a15c41343540fa96d2cb990db" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T translotator::exponent_epsilon</definition>
+        <argsstring>()</argsstring>
+        <name>exponent_epsilon</name>
+        <briefdescription>
+<para>epsilon for floating point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/epsilon.hpp" line="35" column="17" bodyfile="include/translotator/utils/epsilon.hpp" bodystart="35" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="epsilon_8hpp_1a57a6fb6d963b24cdc1b4de926c9ee3e1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T translotator::epsilon</definition>
+        <argsstring>()</argsstring>
+        <name>epsilon</name>
+        <briefdescription>
+<para>epsilon for floating point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>floating point type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+epsilon is a small value that is used to compare floating point numbers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/epsilon.hpp" line="86" column="17" bodyfile="include/translotator/utils/epsilon.hpp" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1ad65284938c2c15dac2bf069e5fdbe502" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::sqrt</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>sqrt</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="32" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1ade60ea80af561ec8b28fe47c03f47e1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::sin</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>sin</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="46" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="46" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1aeb43731489aa760da4e23352a8ce833f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::cos</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>cos</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="59" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="59" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a47ed7a26c67a80316c3bffd021bf088c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::tan</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>tan</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="72" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1afa0506f71d445a71062d248da7ead10e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::asin</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>asin</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="85" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="85" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a3aed31ff1e04a56befa3da72e4768bb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::acos</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>acos</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="98" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="98" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a46c92b2ae10aefbebf5640d74f3745ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::atan</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>atan</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="111" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1aec48be4171b94dad3b298181544412fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::atan2</definition>
+        <argsstring>(const T &amp;y, const T &amp;x)</argsstring>
+        <name>atan2</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="124" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="124" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a5f05649f2495254ca708640abba2d775" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::fmin</definition>
+        <argsstring>(const T &amp;x, const T &amp;y)</argsstring>
+        <name>fmin</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="137" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="137" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a1599a706c36584c75a40bd21d93c4817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::fmax</definition>
+        <argsstring>(const T &amp;x, const T &amp;y)</argsstring>
+        <name>fmax</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="150" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1afc33fe6c25da54d0abe3be2d8c4d0792" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::powf</definition>
+        <argsstring>(const T &amp;x, const T &amp;y)</argsstring>
+        <name>powf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="163" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="163" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a05025eacc454da110d6a2b19e32641d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::square</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>square</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="176" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a602d64faab052c2e3f2e68e1b324c4db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::cube</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>cube</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="179" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1ae231ece664af390ece1df32b8509e4b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::abs</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>abs</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="182" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="182" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1ac7d41bff20f61ce732d4dc029e92330e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::exp</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="185" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="185" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a7b9f1126e9708b10867b6aa2673033b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::ceil</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>ceil</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="198" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="198" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a6789d49fe68b1c39f1b9e8d4e4e43231" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::floorf</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>floorf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="211" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="211" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1af960086fcdffb1febef06f7679bd689b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::ceilf</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>ceilf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="224" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="224" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1ad8abc30f7ed8e7c8e2ba279ffa73eccf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::roundf</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>roundf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="237" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="237" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="micro__math_8hpp_1a0fd6bba70494c8ea218de0f630af9fb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T translotator::truncf</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>truncf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_math.hpp" line="250" column="14" bodyfile="include/translotator/utils/micro_math.hpp" bodystart="250" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/interpolators/Lerp.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

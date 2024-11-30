@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</compoundname>
+    <includes refid="S1_8hpp" local="no">S1.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a074a8812721cf5f82bf48af6a16045d8" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::LieGroupType =  UnitComplexNum&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieGroupType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="37" column="9" bodyfile="include/translotator/lie/S1.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb3b89dd2c9ab2fee82d6e5f7f73483d" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">ComplexNum</ref>&lt; Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::LieAlgebraType =  ComplexNum&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieAlgebraType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="38" column="9" bodyfile="include/translotator/lie/S1.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a16103f5b96559be83f0729cac6d8a843" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 1, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::VectorType =  Vector&lt;1, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="39" column="9" bodyfile="include/translotator/lie/S1.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1aede04c31583a2688a7b3933ac00700bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref></type>
+        <definition>static LieAlgebraType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::Vector2LieAlgebra</definition>
+        <argsstring>(const VectorType &amp;isomorphicVec)</argsstring>
+        <name>Vector2LieAlgebra</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref> &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Convert <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> to Lie Algebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [angle] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [2x1] 0+angle*i, pure imaginary number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="46" column="31" bodyfile="include/translotator/lie/S1.hpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ae4de0d879b7dee04c5fedfddc73b172b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref></type>
+        <definition>static VectorType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::LieAlgebra2Vector</definition>
+        <argsstring>(const LieAlgebraType &amp;lieAlgebra)</argsstring>
+        <name>LieAlgebra2Vector</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref> &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Convert Lie Algebra to <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [2x1] 0+angle*i, pure imaginary number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [angle] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="56" column="27" bodyfile="include/translotator/lie/S1.hpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a39f1efe8998ea423c4ec771874346272" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref></type>
+        <definition>static LieGroupType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::Exp</definition>
+        <argsstring>(const VectorType &amp;vec)</argsstring>
+        <name>Exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref> &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [angle] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group S1, Unit Complex Number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="66" column="29" bodyfile="include/translotator/lie/S1.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ac5a728b3db2d39353371c0e6af96b42f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref></type>
+        <definition>static VectorType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::Log</definition>
+        <argsstring>(const LieGroupType &amp;lieGroup)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref> &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group S1, Unit Complex Number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [angle] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="76" column="27" bodyfile="include/translotator/lie/S1.hpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a5bad2ffc902d38fce11b85df9c08b9ba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref></type>
+        <definition>static LieGroupType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::exp</definition>
+        <argsstring>(const LieAlgebraType &amp;lieAlgebra)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref> &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [2x1] 0+angle*i, pure imaginary number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group S1, Unit Complex Number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="86" column="29" bodyfile="include/translotator/lie/S1.hpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb12bad9a498eeaec7d73e893f1f09b1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1ComplexNum" kindref="compound">LieAlgebraType</ref></type>
+        <definition>static LieAlgebraType translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;::log</definition>
+        <argsstring>(const LieGroupType &amp;lieGroup)</argsstring>
+        <name>log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">LieGroupType</ref> &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group S1, Unit Complex Number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [2x1] 0+angle*i, pure imaginary number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="96" column="31" bodyfile="include/translotator/lie/S1.hpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Lie Operator for S1. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+S1 is a unit complex number </para>
+    </detaileddescription>
+    <location file="include/translotator/lie/S1.hpp" line="33" column="5" bodyfile="include/translotator/lie/S1.hpp" bodystart="34" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a39f1efe8998ea423c4ec771874346272" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>Exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a5bad2ffc902d38fce11b85df9c08b9ba" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ae4de0d879b7dee04c5fedfddc73b172b" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>LieAlgebra2Vector</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb3b89dd2c9ab2fee82d6e5f7f73483d" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>LieAlgebraType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a074a8812721cf5f82bf48af6a16045d8" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>LieGroupType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ac5a728b3db2d39353371c0e6af96b42f" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>Log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb12bad9a498eeaec7d73e893f1f09b1" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1aede04c31583a2688a7b3933ac00700bc" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>Vector2LieAlgebra</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a16103f5b96559be83f0729cac6d8a843" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</scope><name>VectorType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

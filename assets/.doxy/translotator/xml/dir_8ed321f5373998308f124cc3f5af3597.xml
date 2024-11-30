@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_8ed321f5373998308f124cc3f5af3597" kind="dir">
+    <compoundname>include/translotator/lie</compoundname>
+    <innerfile refid="LieOperator_8hpp">LieOperator.hpp</innerfile>
+    <innerfile refid="S1_8hpp">S1.hpp</innerfile>
+    <innerfile refid="S3_8hpp">S3.hpp</innerfile>
+    <innerfile refid="SE_8hpp">SE.hpp</innerfile>
+    <innerfile refid="SO_8hpp">SO.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/lie/"/>
+  </compounddef>
+</doxygen>

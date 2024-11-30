@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1DualNumber" kind="class" language="C++" prot="public">
+    <compoundname>translotator::DualNumber</compoundname>
+    <basecompoundref refid="classtranslotator_1_1MatrixBase" prot="public" virt="non-virtual">translotator::MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;</basecompoundref>
+    <includes refid="DualNumber_8hpp" local="no">DualNumber.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1DualNumber_1a4f3bbbd9259439ec034050ee46d6cae9" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static ObjectType</type>
+        <definition>constexpr static ObjectType translotator::DualNumber&lt; Type &gt;::OBJECT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>OBJECT_TYPE</name>
+        <initializer>= ObjectType::DUAL_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="39" column="37" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a807f7c33667347a4b643782fb76976ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::DualNumber&lt; Type &gt;::DualNumber</definition>
+        <argsstring>()</argsstring>
+        <name>DualNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="44" column="9" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1aa54a0528706a9be49dc21f496f5e2fe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::DualNumber&lt; Type &gt;::DualNumber</definition>
+        <argsstring>(const Type &amp;r, const Type &amp;d)</argsstring>
+        <name>DualNumber</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="45" column="9" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a47a427055df8246721667a31fbea3a5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::DualNumber&lt; Type &gt;::Re</definition>
+        <argsstring>() const</argsstring>
+        <name>Re</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accessors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="49" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a0f5b51b724baf27a235950a031db56ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::DualNumber&lt; Type &gt;::Du</definition>
+        <argsstring>() const</argsstring>
+        <name>Du</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="50" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a2df98ff7d2756f29fdaa2898a3ad359e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::DualNumber&lt; Type &gt;::Re</definition>
+        <argsstring>()</argsstring>
+        <name>Re</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="51" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a5ec6f7774005253c4049e35e484067b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::DualNumber&lt; Type &gt;::Du</definition>
+        <argsstring>()</argsstring>
+        <name>Du</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="52" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a0089027ceef029fb18b26b2bd6410581" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::DualNumber&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="53" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a2a005ce57aaf9c4fd3f98bd83afa8c5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::DualNumber&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="54" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1ad026b6ddf15b1a65d555d4b8b387995c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; 2, Type &gt;</type>
+        <definition>SquareMatrix&lt;2, Type&gt; translotator::DualNumber&lt; Type &gt;::toMulMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>toMulMatrix</name>
+        <briefdescription>
+<para>return a 2x2 matrix that represents the multiplication of this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+<para>casts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="59" column="29" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a51e90f80521667ea8daaaecc8e525b90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::operator*</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>return the multiplication of two dual numbers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="73" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a90516e3277e6cba72ab6956ddc0b24c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::operator/</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>return the division of two dual numbers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="78" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a1c3abb780e64009bb30f343be52a00e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::operator*=</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="83" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1abf7ad0c5a9d0be6f117a6ed30cd6e2ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::operator/=</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>multiply this dual number with another dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="85" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a41c34f6434d439f95b0f66b8371443e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::dualNumMul</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other) const</argsstring>
+        <name>dualNumMul</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>divide this dual number with another dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="87" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a6a8bc763e65930ca6497ec3ca09e3385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::dualNumMulEq</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other)</argsstring>
+        <name>dualNumMulEq</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>return the multiplication of two dual numbers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="89" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1af252eac84bf2a51b6d7e1fa6d0590e4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::dualNumDiv</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other) const</argsstring>
+        <name>dualNumDiv</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>multiply this dual number with another dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="91" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1af537f9298ed4e81810ec8a0a071a265b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::dualNumDivEq</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;other)</argsstring>
+        <name>dualNumDivEq</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>return the division of two dual numbers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="93" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1aad0fe325aeab3960afb67ac747dfa4df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::conjugated</definition>
+        <argsstring>() const</argsstring>
+        <name>conjugated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>utils </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="106" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a24d394bd919323c5b75c09c208ebfe21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::conjugate</definition>
+        <argsstring>()</argsstring>
+        <name>conjugate</name>
+        <briefdescription>
+<para>return the conjugate of this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="108" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a2c8c29b03db6827e518ed10e22cf320b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::DualNumber&lt; Type &gt;::normSquared</definition>
+        <argsstring>() const</argsstring>
+        <name>normSquared</name>
+        <briefdescription>
+<para>conjugate this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="110" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1ad3e321eca226d61d03cd7962fe8b01b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::DualNumber&lt; Type &gt;::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <briefdescription>
+<para>return the squared norm of this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="112" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a40cba60667ed4f083ead416177a86b1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::normalized</definition>
+        <argsstring>() const</argsstring>
+        <name>normalized</name>
+        <briefdescription>
+<para>return the norm of this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="114" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a8ec9888ec51459db12859b45fb42731d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::DualNumber&lt; Type &gt;::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <briefdescription>
+<para>return a new <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref> with normalized real part </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="116" column="21" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a961ba0cbd4ca2e8070aeaf13d8cb4c53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::inversed</definition>
+        <argsstring>() const</argsstring>
+        <name>inversed</name>
+        <briefdescription>
+<para>normalize the real part of this dual number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="118" column="27" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtranslotator_1_1DualNumber_1a7b0403db1c543afe0bc1e648ab97ab1b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt;</type>
+        <definition>static DualNumber&lt;Type&gt; translotator::DualNumber&lt; Type &gt;::sqrt</definition>
+        <argsstring>(const DualNumber&lt; Type &gt; &amp;dn)</argsstring>
+        <name>sqrt</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref>&lt; Type &gt; &amp;</type>
+          <declname>dn</declname>
+        </param>
+        <briefdescription>
+<para>divide this dual number with another dual number </para>
+        </briefdescription>
+        <detaileddescription>
+<para>static functions return the square root of a dual number. Re &gt; 0 is required </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/DualNumber.hpp" line="98" column="34" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="98" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a dual number. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classtranslotator_1_1DualNumber" kindref="compound">DualNumber</ref> <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>floating point type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+A dual number is a pair of real numbers, where one is the real part and the other is the dual part. The dual part is a number that squares to zero, i.e., e^2 = 0. It is used to represent infinitesimal quantities. <simplesect kind="note"><para>Data structure : [real, dual], (2 x 1) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+      <node id="1">
+        <label>translotator::DualNumber&lt; Type &gt;</label>
+        <link refid="classtranslotator_1_1DualNumber"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+      <node id="1">
+        <label>translotator::DualNumber&lt; Type &gt;</label>
+        <link refid="classtranslotator_1_1DualNumber"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/translotator/objects/DualNumber.hpp" line="36" column="5" bodyfile="include/translotator/objects/DualNumber.hpp" bodystart="37" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2ComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2ComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2DualNumber</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2DualNumberRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2DualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2DualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2Matrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2MatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2Quaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2QuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2SOGroup</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2SOGroupRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2SquareMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2SquareMatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitDualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitDualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2UnitQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2Vector</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>cast2VectorRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>castContainer</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>castDataType</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>col</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>COLS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>colSize</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a24d394bd919323c5b75c09c208ebfe21" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>conjugate</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1aad0fe325aeab3960afb67ac747dfa4df" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>conjugated</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>copyTo</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" prot="protected" virt="non-virtual"><scope>translotator::DualNumber</scope><name>data_</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>DATATYPE</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a0f5b51b724baf27a235950a031db56ae" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>Du</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a5ec6f7774005253c4049e35e484067b7" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>Du</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a807f7c33667347a4b643782fb76976ca" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>DualNumber</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1aa54a0528706a9be49dc21f496f5e2fe2" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>DualNumber</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1af252eac84bf2a51b6d7e1fa6d0590e4e" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>dualNumDiv</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1af537f9298ed4e81810ec8a0a071a265b" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>dualNumDivEq</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a41c34f6434d439f95b0f66b8371443e7" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>dualNumMul</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a6a8bc763e65930ca6497ec3ca09e3385" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>dualNumMulEq</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>eye</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>fill</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>frobeniusNorm</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>frobeniusNormSquared</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>getData</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a961ba0cbd4ca2e8070aeaf13d8cb4c53" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>inversed</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MATRIX_BASE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>NaN</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1ad3e321eca226d61d03cd7962fe8b01b3" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>norm</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a8ec9888ec51459db12859b45fb42731d" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>normalize</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a40cba60667ed4f083ead416177a86b1a" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>normalized</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a2c8c29b03db6827e518ed10e22cf320b" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>normSquared</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a4f3bbbd9259439ec034050ee46d6cae9" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>OBJECT_TYPE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>ones</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a51e90f80521667ea8daaaecc8e525b90" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;::"><scope>translotator::DualNumber</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;::"><scope>translotator::DualNumber</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a1c3abb780e64009bb30f343be52a00e4" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;::"><scope>translotator::DualNumber</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator+</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator+=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator-=</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a90516e3277e6cba72ab6956ddc0b24c3" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;::"><scope>translotator::DualNumber</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1abf7ad0c5a9d0be6f117a6ed30cd6e2ad" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" prot="public" virt="non-virtual" ambiguityscope="MatrixBase&lt; 2, 1, Type, DualNumber&lt; Type &gt; &gt;::"><scope>translotator::DualNumber</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator=</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a0089027ceef029fb18b26b2bd6410581" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a2a005ce57aaf9c4fd3f98bd83afa8c5c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>print</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a47a427055df8246721667a31fbea3a5d" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>Re</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a2df98ff7d2756f29fdaa2898a3ad359e" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>Re</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>row</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>ROWS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>rowSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1a7b0403db1c543afe0bc1e648ab97ab1b" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>sqrt</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>swapCols</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>swapRows</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>T</name></member>
+      <member refid="classtranslotator_1_1DualNumber_1ad026b6ddf15b1a65d555d4b8b387995c" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>toMulMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>toScalar</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" prot="public" virt="non-virtual"><scope>translotator::DualNumber</scope><name>zeros</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

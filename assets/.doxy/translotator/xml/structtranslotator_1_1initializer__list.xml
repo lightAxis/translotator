@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1initializer__list" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::initializer_list</compoundname>
+    <includes refid="initializer__list_8hpp" local="no">initializer_list.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtranslotator_1_1initializer__list_1af25166a6e4706fcab78983a0c4dd4cb3" prot="public" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type translotator::initializer_list&lt; N, Type &gt;::data[N]</definition>
+        <argsstring>[N]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/initializer_list.hpp" line="37" column="14" bodyfile="include/translotator/objects/initializer_list.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtranslotator_1_1initializer__list_1a1a3f55dfeee54865041ecd7c528a4d89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>translotator::initializer_list&lt; N, Type &gt;::initializer_list</definition>
+        <argsstring>(Args... args)</argsstring>
+        <name>initializer_list</name>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/initializer_list.hpp" line="40" column="9" bodyfile="include/translotator/objects/initializer_list.hpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="structtranslotator_1_1initializer__list" kindref="compound">initializer_list</ref> struct </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of the list</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This struct is used to initialize the list with the same type and size. Usaully used for matrix-based object&apos;s initialization. </para>
+    </detaileddescription>
+    <location file="include/translotator/objects/initializer_list.hpp" line="35" column="5" bodyfile="include/translotator/objects/initializer_list.hpp" bodystart="36" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1initializer__list_1af25166a6e4706fcab78983a0c4dd4cb3" prot="public" virt="non-virtual"><scope>translotator::initializer_list</scope><name>data</name></member>
+      <member refid="structtranslotator_1_1initializer__list_1a1a3f55dfeee54865041ecd7c528a4d89" prot="public" virt="non-virtual"><scope>translotator::initializer_list</scope><name>initializer_list</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

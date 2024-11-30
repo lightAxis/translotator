@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="translotator_8hpp" kind="file" language="C++">
+    <compoundname>translotator.hpp</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="default__type_8hpp" local="yes">utils/default_type.hpp</includes>
+    <includes refid="micro__math_8hpp" local="yes">utils/micro_math.hpp</includes>
+    <includes refid="epsilon_8hpp" local="yes">utils/epsilon.hpp</includes>
+    <includes refid="objectdefs_8hpp" local="yes">objects/objectdefs.hpp</includes>
+    <includes refid="initializer__list_8hpp" local="yes">objects/initializer_list.hpp</includes>
+    <includes refid="MatrixBaseInternal_8hpp" local="yes">objects/MatrixBaseInternal.hpp</includes>
+    <includes refid="MatrixBase_8hpp" local="yes">objects/MatrixBase.hpp</includes>
+    <includes refid="Matrix_8hpp" local="yes">objects/Matrix.hpp</includes>
+    <includes refid="SquareMatrix_8hpp" local="yes">objects/SquareMatrix.hpp</includes>
+    <includes refid="Vector_8hpp" local="yes">objects/Vector.hpp</includes>
+    <includes refid="ComplexNum_8hpp" local="yes">objects/ComplexNum.hpp</includes>
+    <includes refid="Quaternion_8hpp" local="yes">objects/Quaternion.hpp</includes>
+    <includes refid="DualNumber_8hpp" local="yes">objects/DualNumber.hpp</includes>
+    <includes refid="DualQuaternion_8hpp" local="yes">objects/DualQuaternion.hpp</includes>
+    <includes refid="UnitComplexNum_8hpp" local="yes">objects/UnitComplexNum.hpp</includes>
+    <includes refid="UnitQuaternion_8hpp" local="yes">objects/UnitQuaternion.hpp</includes>
+    <includes refid="SOGroup_8hpp" local="yes">objects/SOGroup.hpp</includes>
+    <includes refid="AxisAngle_8hpp" local="yes">objects/AxisAngle.hpp</includes>
+    <includes refid="EulerAngle_8hpp" local="yes">objects/EulerAngle.hpp</includes>
+    <includes refid="SEGroup_8hpp" local="yes">objects/SEGroup.hpp</includes>
+    <includes refid="UnitDualQuaternion_8hpp" local="yes">objects/UnitDualQuaternion.hpp</includes>
+    <includes refid="LieOperator_8hpp" local="yes">lie/LieOperator.hpp</includes>
+    <includes refid="Lerp_8hpp" local="yes">interpolators/Lerp.hpp</includes>
+    <includes refid="Slerp_8hpp" local="yes">interpolators/Slerp.hpp</includes>
+    <includes refid="ScLerp_8hpp" local="yes">interpolators/ScLerp.hpp</includes>
+    <includes refid="Slerp__Lerp_8hpp" local="yes">interpolators/Slerp_Lerp.hpp</includes>
+    <includes refid="tail_8hpp" local="yes">objects/tail.hpp</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>interpolators/ScLerp.hpp</label>
+        <link refid="ScLerp_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>assert.h</label>
+      </node>
+      <node id="29">
+        <label>lie/LieOperator.hpp</label>
+        <link refid="LieOperator_8hpp_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/translotator/translotator.hpp</label>
+        <link refid="translotator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>utils/epsilon.hpp</label>
+        <link refid="epsilon_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>objects/MatrixBaseInternal.hpp</label>
+        <link refid="MatrixBaseInternal_8hpp_source"/>
+      </node>
+      <node id="24">
+        <label>objects/SOGroup.hpp</label>
+        <link refid="SOGroup_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>micro_type_traits.hpp</label>
+        <link refid="micro__type__traits_8hpp_source"/>
+      </node>
+      <node id="32">
+        <label>SO.hpp</label>
+        <link refid="SO_8hpp_source"/>
+      </node>
+      <node id="38">
+        <label>objects/tail.hpp</label>
+        <link refid="tail_8hpp_source"/>
+      </node>
+      <node id="15">
+        <label>objects/Matrix.hpp</label>
+        <link refid="Matrix_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="33">
+        <label>SE.hpp</label>
+        <link refid="SE_8hpp_source"/>
+      </node>
+      <node id="12">
+        <label>objects/initializer_list.hpp</label>
+        <link refid="initializer__list_8hpp_source"/>
+      </node>
+      <node id="30">
+        <label>S1.hpp</label>
+        <link refid="S1_8hpp_source"/>
+      </node>
+      <node id="26">
+        <label>objects/EulerAngle.hpp</label>
+        <link refid="EulerAngle_8hpp_source"/>
+      </node>
+      <node id="18">
+        <label>objects/ComplexNum.hpp</label>
+        <link refid="ComplexNum_8hpp_source"/>
+      </node>
+      <node id="34">
+        <label>interpolators/Lerp.hpp</label>
+        <link refid="Lerp_8hpp_source"/>
+      </node>
+      <node id="35">
+        <label>interpolators/Slerp.hpp</label>
+        <link refid="Slerp_8hpp_source"/>
+      </node>
+      <node id="31">
+        <label>S3.hpp</label>
+        <link refid="S3_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>utils/default_type.hpp</label>
+        <link refid="default__type_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>interpolators/Slerp_Lerp.hpp</label>
+        <link refid="Slerp__Lerp_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>../config.hpp</label>
+        <link refid="config_8hpp_source"/>
+      </node>
+      <node id="22">
+        <label>objects/UnitComplexNum.hpp</label>
+        <link refid="UnitComplexNum_8hpp_source"/>
+      </node>
+      <node id="21">
+        <label>objects/DualQuaternion.hpp</label>
+        <link refid="DualQuaternion_8hpp_source"/>
+      </node>
+      <node id="27">
+        <label>objects/SEGroup.hpp</label>
+        <link refid="SEGroup_8hpp_source"/>
+      </node>
+      <node id="17">
+        <label>objects/Vector.hpp</label>
+        <link refid="Vector_8hpp_source"/>
+      </node>
+      <node id="23">
+        <label>objects/UnitQuaternion.hpp</label>
+        <link refid="UnitQuaternion_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>utils/micro_math.hpp</label>
+        <link refid="micro__math_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>objects/UnitDualQuaternion.hpp</label>
+        <link refid="UnitDualQuaternion_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>objects/SquareMatrix.hpp</label>
+        <link refid="SquareMatrix_8hpp_source"/>
+      </node>
+      <node id="10">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>objects/AxisAngle.hpp</label>
+        <link refid="AxisAngle_8hpp_source"/>
+      </node>
+      <node id="19">
+        <label>objects/Quaternion.hpp</label>
+        <link refid="Quaternion_8hpp_source"/>
+      </node>
+      <node id="20">
+        <label>objects/DualNumber.hpp</label>
+        <link refid="DualNumber_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>objects/objectdefs.hpp</label>
+        <link refid="objectdefs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>objects/MatrixBase.hpp</label>
+        <link refid="MatrixBase_8hpp_source"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>The<sp/>MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>Jiseok<sp/>Lee</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Created<sp/>on<sp/>Tue<sp/>Nov<sp/>19<sp/>2024</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>@file<sp/>:<sp/>translotator.hpp</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/default_type.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/micro_math.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utils/epsilon.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>basic<sp/>object<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/objectdefs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/initializer_list.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>matrix<sp/>based<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/MatrixBaseInternal.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/MatrixBase.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/Matrix.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/SquareMatrix.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/Vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>number<sp/>systems</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/ComplexNum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/Quaternion.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/DualNumber.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/DualQuaternion.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>rotation<sp/>objects,<sp/>SO(2),<sp/>SO(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/UnitComplexNum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/UnitQuaternion.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/SOGroup.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/AxisAngle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/EulerAngle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>homogeneous<sp/>transformation<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/SEGroup.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/UnitDualQuaternion.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>lie<sp/>group<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lie/LieOperator.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>interpolators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interpolators/Lerp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interpolators/Slerp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interpolators/ScLerp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interpolators/Slerp_Lerp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;objects/tail.hpp&quot;</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/translotator.hpp"/>
+  </compounddef>
+</doxygen>

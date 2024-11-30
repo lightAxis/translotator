@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1EulerAngle" kind="class" language="C++" prot="public">
+    <compoundname>translotator::EulerAngle</compoundname>
+    <includes refid="EulerAngle_8hpp" local="no">EulerAngle.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+      <param>
+        <type>EULER_ORDER</type>
+        <declname>AxisOrder</declname>
+        <defname>AxisOrder</defname>
+        <defval>EULER_ORDER::ZYX</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1EulerAngle_1a9b319fde609d361134c44ccdcc309c47" prot="private" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::angles_[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>angles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="41" column="14" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1EulerAngle_1a5bb88090c159f2c377bbe20da394ec2f" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static ObjectType</type>
+        <definition>constexpr static ObjectType translotator::EulerAngle&lt; Type, AxisOrder &gt;::OBJECT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>OBJECT_TYPE</name>
+        <initializer>= ObjectType::EULER_ANGLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="44" column="37" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a8ff604bfd6b64f7cd4b48f1cf3ce5bf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::EulerAngle&lt; Type, AxisOrder &gt;::EulerAngle</definition>
+        <argsstring>()</argsstring>
+        <name>EulerAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="49" column="9" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a0a518e7a0413280b4329d5b95b22edac" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::EulerAngle&lt; Type, AxisOrder &gt;::EulerAngle</definition>
+        <argsstring>(const Type &amp;angle)</argsstring>
+        <name>EulerAngle</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="50" column="18" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a3f352f21084d786b509627e2d6418913" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::EulerAngle&lt; Type, AxisOrder &gt;::EulerAngle</definition>
+        <argsstring>(const Type &amp;x, const Type &amp;y, const Type &amp;z)</argsstring>
+        <name>EulerAngle</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="51" column="9" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1aa6e654bf202dc74ce2481f7577eadfca" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::EulerAngle&lt; Type, AxisOrder &gt;::EulerAngle</definition>
+        <argsstring>(const Vector&lt; 3, Type &gt; &amp;angles)</argsstring>
+        <name>EulerAngle</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt; &amp;</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="52" column="18" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a429dbd680b4b899ef9920b5824337a8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accessor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="58" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a5d8cb99df7dedfe215baeb1d128a3d71" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="59" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a39d9c6c027257aed04732d2567e74fb2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::z</definition>
+        <argsstring>() const</argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="60" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1aaa4d677dd03095ca9803c172c528c848" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="61" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1ac6a71bba57365137bb01f6b97089c659" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="62" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a488999f4bd9e43d9d9d5fe1712843b7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::z</definition>
+        <argsstring>()</argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="63" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a485491bceb169ed25ad3f2cfa772b8a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::operator[]</definition>
+        <argsstring>(size_t idx) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="65" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a265fdfec9af7fd8d8f48391bc09bff59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::operator[]</definition>
+        <argsstring>(size_t idx)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="66" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1ae5ca9332a24e869978e3d71ecfec6aae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::roll</definition>
+        <argsstring>() const</argsstring>
+        <name>roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="68" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1adc1d865ad2c8826a72a447854be12fcf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::pitch</definition>
+        <argsstring>() const</argsstring>
+        <name>pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="69" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a8a409f4b9bc11d0a18ffc3baba58eaa1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::yaw</definition>
+        <argsstring>() const</argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="70" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1afa95a640a56c6a37ea0b9048c388b689" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::roll</definition>
+        <argsstring>()</argsstring>
+        <name>roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="71" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1af2225f9fad6a6bbefc5cf11df55f9690" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::pitch</definition>
+        <argsstring>()</argsstring>
+        <name>pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="72" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a03d730af19884686c74c50d9b03722ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::yaw</definition>
+        <argsstring>()</argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="73" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a7b98b7aca0ca2a650643588a7d5311ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>Type</type>
+        <definition>Type translotator::EulerAngle&lt; Type, AxisOrder &gt;::getAngleInOrder</definition>
+        <argsstring>() const</argsstring>
+        <name>getAngleInOrder</name>
+        <briefdescription>
+<para>get angle in axis order (AXIS1, AXIS2, AXIS3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="80" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1aa62ae63a4a50374f9ba7211eb768cc38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::EulerAngle&lt; Type, AxisOrder &gt;::getAngleInOrder</definition>
+        <argsstring>()</argsstring>
+        <name>getAngleInOrder</name>
+        <briefdescription>
+<para>get angle in axis order (AXIS1, AXIS2, AXIS3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="87" column="21" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1afe33a44341b528f51117e4469081bd7f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr AXIS</type>
+        <definition>constexpr AXIS translotator::EulerAngle&lt; Type, AxisOrder &gt;::getAxisInOrder</definition>
+        <argsstring>() const</argsstring>
+        <name>getAxisInOrder</name>
+        <briefdescription>
+<para>get axis enum in axis order (AXIS1, AXIS2, AXIS3) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="94" column="31" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a1004913aca691aa661befc8acb85d4bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 2, Type &gt;</type>
+        <definition>Vector&lt;2, Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::rotateVec2D</definition>
+        <argsstring>(const Vector&lt; 2, Type &gt; &amp;vec) const</argsstring>
+        <name>rotateVec2D</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 2, Type &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>2D rotation. Using only z angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>utils </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="100" column="23" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1abcca225aabd224c0263583c269f3ee11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt;</type>
+        <definition>Vector&lt;3, Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::rotateVec3D</definition>
+        <argsstring>(const Vector&lt; 3, Type &gt; &amp;vec) const</argsstring>
+        <name>rotateVec3D</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>3D rotation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="104" column="23" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a437ce9a2eadeb3208e6eef775bb9a249" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; Type &gt;</type>
+        <definition>UnitQuaternion&lt;Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toUnitQuaternion</definition>
+        <argsstring>() const</argsstring>
+        <name>toUnitQuaternion</name>
+        <briefdescription>
+<para>convert to unit quaternion </para>
+        </briefdescription>
+        <detaileddescription>
+<para>casts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="138" column="31" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="138" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1ab2708209be31495c80706e6664267c5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitComplexNum" kindref="compound">UnitComplexNum</ref>&lt; Type &gt;</type>
+        <definition>UnitComplexNum&lt;Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toUnitComplexNum</definition>
+        <argsstring>() const</argsstring>
+        <name>toUnitComplexNum</name>
+        <briefdescription>
+<para>convert to unit complex number. Using only z angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="154" column="31" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a9f8c3a7e6cc8e602bad9d77670d35cd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1AxisAngle" kindref="compound">AxisAngle</ref>&lt; Type &gt;</type>
+        <definition>AxisAngle&lt;Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toAxisAngle</definition>
+        <argsstring>() const</argsstring>
+        <name>toAxisAngle</name>
+        <briefdescription>
+<para>convert to axis angle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="158" column="26" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1ad57c0bcf08cd9f15286fd4aad94cf34c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; 3, Type &gt;</type>
+        <definition>SOGroup&lt;3, Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toSO3Group</definition>
+        <argsstring>() const</argsstring>
+        <name>toSO3Group</name>
+        <briefdescription>
+<para>convert to SO3 group </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="162" column="24" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1af42c08104b428697668422053fb13959" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; 2, Type &gt;</type>
+        <definition>SOGroup&lt;2, Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toSO2Group</definition>
+        <argsstring>() const</argsstring>
+        <name>toSO2Group</name>
+        <briefdescription>
+<para>convert to SO2 group. Using only z angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="166" column="24" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a86409453ac7e0342501e8967a1bc3f0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt;</type>
+        <definition>Vector&lt;3, Type&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::toVector</definition>
+        <argsstring>() const</argsstring>
+        <name>toVector</name>
+        <briefdescription>
+<para>convert to vector (x, y, z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="170" column="23" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a5af8f0661dfd48a3e782d91fbe637d85" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NewType</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; NewType, AxisOrder &gt;</type>
+        <definition>EulerAngle&lt;NewType, AxisOrder&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::castDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>castDataType</name>
+        <briefdescription>
+<para>convert to <ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref> with new axis order </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewAxisOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new axis order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="180" column="27" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="180" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a8f2f079fa7fd0c52cb2329f37f000cc3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>NewAxisOrder</declname>
+            <defname>NewAxisOrder</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; Type, NewAxisOrder &gt;</type>
+        <definition>EulerAngle&lt;Type, NewAxisOrder&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::castAxisOrder</definition>
+        <argsstring>() const</argsstring>
+        <name>castAxisOrder</name>
+        <briefdescription>
+<para>convert to <ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref> with new axis order </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NewAxisOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new axis order cast to new axis order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="191" column="27" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="191" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtranslotator_1_1EulerAngle_1a60cb8db1ca48d7cf2e23695dee52f017" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AXIS</type>
+            <declname>Axis</declname>
+            <defname>Axis</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1EulerAngle" kindref="compound">EulerAngle</ref>&lt; Type, AxisOrder &gt;</type>
+        <definition>static EulerAngle&lt;Type, AxisOrder&gt; translotator::EulerAngle&lt; Type, AxisOrder &gt;::axisRotation</definition>
+        <argsstring>(const Type &amp;angle)</argsstring>
+        <name>axisRotation</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>axis rotation with angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para>static functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/EulerAngle.hpp" line="114" column="34" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="114" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents Euler angle 3D rotation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AxisOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Euler angle order</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Euler angle class with 3 angles. The order of angles is determined by AxisOrder. The default order is ZYX. Intrinsic, tait-brayan angles are used. ex, XYZ means that the rotation is first around X axis, then Y axis, and finally Z axis intrinsically. Euler angle is a representation of orientation in 3D space. It is a set of three angles that specify the orientation of a rigid body in 3D space. Angles are typically in the range of [-pi, pi]. The order of angles is important because the rotation matrix is not commutative. </para>
+    </detaileddescription>
+    <location file="include/translotator/objects/EulerAngle.hpp" line="38" column="5" bodyfile="include/translotator/objects/EulerAngle.hpp" bodystart="39" bodyend="204"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1EulerAngle_1a9b319fde609d361134c44ccdcc309c47" prot="private" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>angles_</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a60cb8db1ca48d7cf2e23695dee52f017" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>axisRotation</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a8f2f079fa7fd0c52cb2329f37f000cc3" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>castAxisOrder</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a5af8f0661dfd48a3e782d91fbe637d85" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>castDataType</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a8ff604bfd6b64f7cd4b48f1cf3ce5bf8" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>EulerAngle</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a0a518e7a0413280b4329d5b95b22edac" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>EulerAngle</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a3f352f21084d786b509627e2d6418913" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>EulerAngle</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1aa6e654bf202dc74ce2481f7577eadfca" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>EulerAngle</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a7b98b7aca0ca2a650643588a7d5311ef" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>getAngleInOrder</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1aa62ae63a4a50374f9ba7211eb768cc38" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>getAngleInOrder</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1afe33a44341b528f51117e4469081bd7f" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>getAxisInOrder</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a5bb88090c159f2c377bbe20da394ec2f" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>OBJECT_TYPE</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a485491bceb169ed25ad3f2cfa772b8a8" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a265fdfec9af7fd8d8f48391bc09bff59" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>operator[]</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1adc1d865ad2c8826a72a447854be12fcf" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>pitch</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1af2225f9fad6a6bbefc5cf11df55f9690" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>pitch</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1ae5ca9332a24e869978e3d71ecfec6aae" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>roll</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1afa95a640a56c6a37ea0b9048c388b689" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>roll</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a1004913aca691aa661befc8acb85d4bc" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>rotateVec2D</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1abcca225aabd224c0263583c269f3ee11" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>rotateVec3D</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a9f8c3a7e6cc8e602bad9d77670d35cd7" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toAxisAngle</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1af42c08104b428697668422053fb13959" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toSO2Group</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1ad57c0bcf08cd9f15286fd4aad94cf34c" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toSO3Group</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1ab2708209be31495c80706e6664267c5d" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toUnitComplexNum</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a437ce9a2eadeb3208e6eef775bb9a249" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toUnitQuaternion</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a86409453ac7e0342501e8967a1bc3f0c" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>toVector</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a429dbd680b4b899ef9920b5824337a8d" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>x</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1aaa4d677dd03095ca9803c172c528c848" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>x</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a5d8cb99df7dedfe215baeb1d128a3d71" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>y</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1ac6a71bba57365137bb01f6b97089c659" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>y</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a8a409f4b9bc11d0a18ffc3baba58eaa1" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>yaw</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a03d730af19884686c74c50d9b03722ff" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>yaw</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a39d9c6c027257aed04732d2567e74fb2" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>z</name></member>
+      <member refid="classtranslotator_1_1EulerAngle_1a488999f4bd9e43d9d9d5fe1712843b7b" prot="public" virt="non-virtual"><scope>translotator::EulerAngle</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,985 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="structtranslotator_1_1all__same" kind="struct"><name>translotator::all_same</name>
+  </compound>
+  <compound refid="structtranslotator_1_1all__same_3_01T_01_4" kind="struct"><name>translotator::all_same&lt; T &gt;</name>
+    <member refid="structtranslotator_1_1all__same_3_01T_01_4_1ad8e0c4ec404b89e5d1e68cf1db4fced6" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4" kind="struct"><name>translotator::all_same&lt; T, First, Rest... &gt;</name>
+    <member refid="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4_1a8a354e4553f0cd60b9c6bcfafd7d4ec0" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1AxisAngle" kind="class"><name>translotator::AxisAngle</name>
+    <member refid="classtranslotator_1_1AxisAngle_1a03df5587a7818479ba4582d136a9ffe0" kind="variable"><name>angle_</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ad54f54efda1f43bf95e80baee41183d1" kind="variable"><name>axis_</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1af589eeda44995e4812bdcbb23113deee" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ac8b31f8f34a55c6e30536a67a45d9233" kind="function"><name>AxisAngle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ae36beed70c8d0029073e564f1e1f6c7a" kind="function"><name>AxisAngle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a65089574a0b7d658b3c185ab72d153b0" kind="function"><name>AxisAngle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1aed78afdf7539a5fa0282b620097d6362" kind="function"><name>AxisAngle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1afc4231c9bcaff02e09615a66236574d1" kind="function"><name>angle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ab7d32091c86871f8c7e4c71b9ce475e8" kind="function"><name>angle</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ab238989b5b655234b91ecb2ac19d2bb1" kind="function"><name>axis</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1aeb8275f97f1a067f77118d08fadbf0ed" kind="function"><name>axis</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a5101403ae0d2e96751b034eb9ec3e4d1" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a5eceb6618aee80f01c7cd73ab2b28f13" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1adda966beb0d509ad4101134748b85c32" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ae336735b2f9a0abede291b55635e0d96" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a874d9156ecb90d6839c5be059b7ba79f" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a6925026227e11e5e33940d18d71b9fa5" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1adeddc42339719a6b1e2d8cdce097741a" kind="function"><name>axisNormalize</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a8ddb2826948f7c795544cb9708c33208" kind="function"><name>axisNormalized</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a78658b8cb259e8d3cca64f889ae0ef66" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a9eec4d829f5b453a7d661dc09018d1e2" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a49c0169529a93d22c14b56bfd5592972" kind="function"><name>rotateVector3D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a4ab2d051cbb038a74033672805835aa1" kind="function"><name>rotateVector2D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a44a8d8cc8698e5e1a9b1aab8cc597f6f" kind="function"><name>axisRotation</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a9deb8bc2fc9e01d5e3c634ff37589d46" kind="function"><name>toUnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a570fd1bcee3f8e300d88b829ba3e1001" kind="function"><name>toUnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a5f5c8964f977414092de791c4f9ccea6" kind="function"><name>toRotMatrix3D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a78759c16cb512c35cb43db701e05c36a" kind="function"><name>toRotMatrix2D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a084a4f15222e021bccf2a8a43244824f" kind="function"><name>toAngleVector</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1afd607a3f466f5e16715b4fb275bc5903" kind="function"><name>toEulerAngle2D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a079077fa64aaaeb3d55d3978101cf547" kind="function"><name>toEulerAngle3D</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1ae51a008b77d93f90691dda963b5a6145" kind="function"><name>castDataType</name></member>
+    <member refid="classtranslotator_1_1AxisAngle_1a6130fe7ec8c993d0700103594e0993ad" kind="function"><name>identity</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1ComplexNum" kind="class"><name>translotator::ComplexNum</name>
+    <member refid="classtranslotator_1_1ComplexNum_1addfbf3b1720d81259cb506bb1c842329" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1acf036449557b03a45dc877e9c2dc4f5d" kind="function"><name>ComplexNum</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a9df1ca6b29578e55bb75383d9659cac2" kind="function"><name>ComplexNum</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a21fa256d53d75219185ee92711bbf65f" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1abbf67a66efa837bb6f91acef4dae2f9a" kind="function"><name>Im</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a979b2d071181c7f6e2fbb8682b1d777d" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ae9b454426d9e45c1cfd53c33a38981ca" kind="function"><name>Im</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ac22bd4ea25f953bc736104e100cb8ecb" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a4e2a517b55799bfdbbe0970e0251e3e1" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a325c0c5f382606d0c4caec53511d38c2" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1af0ae8c57a090eabc6bf7335e2a8f038f" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a6e738205d924949f4303b05dccd0b9e2" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a2c9118cf5ed3d976b72db431ec78066e" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a6dd87d708e5bb48f5033c6acd5d48abb" kind="function"><name>complexNumMul</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1aef688cb7822585f986427c004833f59d" kind="function"><name>complexNumMulEq</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ad6458789ddafa50863fead5e3c14b72d" kind="function"><name>complexNumDiv</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ab49d104f426772076fd823ba78198df0" kind="function"><name>complexNumDivEq</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ac1e04624c53d891104aa3a95d3e02f51" kind="function"><name>normSquared</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ac236d2e5aecd599b026a4624ad150315" kind="function"><name>norm</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ac2ce48cf51d8c44037bd86f82782d4c6" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a1687c9d45c9bf3e498fcc77319420215" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a47ed1864612f0594e946e85b9fb21f6f" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ab0c8fa7a224bba11cd7739016bf01c02" kind="function"><name>conjugate</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1a23bed80afa836a0083e26e690b1125fe" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1ac563d589741f2858366bf22c9c3f10d0" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1ComplexNum_1af3ef278c19d297ca18461bf4b4081352" kind="function"><name>toMulMatrix</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1conditional__if" kind="struct"><name>translotator::conditional_if</name>
+    <member refid="structtranslotator_1_1conditional__if_1ad017f0c6c9fc9f2924dbc4a845c68b96" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1conditional__if_3_01false_00_01T_00_01F_01_4" kind="struct"><name>translotator::conditional_if&lt; false, T, F &gt;</name>
+    <member refid="structtranslotator_1_1conditional__if_3_01false_00_01T_00_01F_01_4_1ac684f6c082cee2b1cf5f7d9d05860773" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1DualNumber" kind="class"><name>translotator::DualNumber</name>
+    <member refid="classtranslotator_1_1DualNumber_1a4f3bbbd9259439ec034050ee46d6cae9" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a807f7c33667347a4b643782fb76976ca" kind="function"><name>DualNumber</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1aa54a0528706a9be49dc21f496f5e2fe2" kind="function"><name>DualNumber</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a47a427055df8246721667a31fbea3a5d" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a0f5b51b724baf27a235950a031db56ae" kind="function"><name>Du</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a2df98ff7d2756f29fdaa2898a3ad359e" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a5ec6f7774005253c4049e35e484067b7" kind="function"><name>Du</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a0089027ceef029fb18b26b2bd6410581" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a2a005ce57aaf9c4fd3f98bd83afa8c5c" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1ad026b6ddf15b1a65d555d4b8b387995c" kind="function"><name>toMulMatrix</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a51e90f80521667ea8daaaecc8e525b90" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a90516e3277e6cba72ab6956ddc0b24c3" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a1c3abb780e64009bb30f343be52a00e4" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1abf7ad0c5a9d0be6f117a6ed30cd6e2ad" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a41c34f6434d439f95b0f66b8371443e7" kind="function"><name>dualNumMul</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a6a8bc763e65930ca6497ec3ca09e3385" kind="function"><name>dualNumMulEq</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1af252eac84bf2a51b6d7e1fa6d0590e4e" kind="function"><name>dualNumDiv</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1af537f9298ed4e81810ec8a0a071a265b" kind="function"><name>dualNumDivEq</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1aad0fe325aeab3960afb67ac747dfa4df" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a24d394bd919323c5b75c09c208ebfe21" kind="function"><name>conjugate</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a2c8c29b03db6827e518ed10e22cf320b" kind="function"><name>normSquared</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1ad3e321eca226d61d03cd7962fe8b01b3" kind="function"><name>norm</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a40cba60667ed4f083ead416177a86b1a" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a8ec9888ec51459db12859b45fb42731d" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a961ba0cbd4ca2e8070aeaf13d8cb4c53" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1DualNumber_1a7b0403db1c543afe0bc1e648ab97ab1b" kind="function"><name>sqrt</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1DualQuaternion" kind="class"><name>translotator::DualQuaternion</name>
+    <member refid="classtranslotator_1_1DualQuaternion_1ae310f39acb94d2d7c37a5ab4bdb5063e" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ac010a93ef4ff1fb94c53279a3b68b532" kind="function"><name>DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1abf6d568e96db97596c3f3b588b2db874" kind="function"><name>DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1aec0b6e1aecff3e4e4d62ef31a96e4afd" kind="function"><name>DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a8cd4c89b27a0c1a7917ed13cd8bdf293" kind="function"><name>DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a00b874bd2f74459baf3f7dab907604ed" kind="function"><name>~DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a6c7b736ddb045d25f2354a427214fc65" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ac127ca65a56781c36a15ecfd23160802" kind="function"><name>Du</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a65689eefbce0fad81639947874ad8b7d" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a89c3889c7826f625bad8d56338128488" kind="function"><name>Du</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1aaaeafc9ffd1d04a86260b1212ef051cd" kind="function"><name>rw</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ab5d61ee0286389a142c9a608be79d183" kind="function"><name>rx</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1afaa1fb2e8ac0436ef6e6d500efb6598d" kind="function"><name>ry</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1aefe5b97d915cd44f27c9379967e61cbf" kind="function"><name>rz</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1af915d194d62ce3e36537062d780f6290" kind="function"><name>dw</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ae36f35e4abeb472f0517e9d87f64a3fc" kind="function"><name>dx</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a1c972d4d34608d3e066445b339101b00" kind="function"><name>dy</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a1cffd0717bc56ce53409a920edbf9d09" kind="function"><name>dz</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1abe5c63e9af651866255fbc47fbc8a552" kind="function"><name>rw</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a68a64685c23afb8a5d4c12ac537270a2" kind="function"><name>rx</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1adf40e7cb597d6f8212964cd9b9f918fa" kind="function"><name>ry</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a81c9e5c8703ed931fb3f49b15d309d77" kind="function"><name>rz</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ab3c30eacee33be1f69948f92b0bbea6e" kind="function"><name>dw</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a700a9c21b6e01772144ebcb3c70d5b48" kind="function"><name>dx</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a0721d16ccd4dbe1eebb26cf204a753a6" kind="function"><name>dy</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ab735f15fbc8ed1e4c5644d79d22f29df" kind="function"><name>dz</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a081d3ddcf3100df883b7b41f7bdfebcc" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ac349b26fb5648af6a49d7138ab5f1265" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1adf6436f6800d6a84557f6660a2fb91fc" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a5fe769e75aa29a4baa340e306ba82787" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a862452611ccca2be58cd3a4ade1d9e03" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1ad6bb98d3cb6930cc19a78f84bacbc404" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1abf64340195b70d204200f09949f9bf6b" kind="function"><name>dualQuatMul</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a245ffc1c04f6e23b6631e07af4a0e744" kind="function"><name>dualQuatMulEq</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a6d0402a3266c7187d08a40e5a77db1be" kind="function"><name>dualQuatDiv</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a9d8f6260e191b3898e768592d248b8f3" kind="function"><name>dualQuatDivEq</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1af3297673c5a216e0cdbef925d6614ef9" kind="function"><name>conjugatedPrimary</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a20d78e029bdfd3aba2395d12abe28782" kind="function"><name>conjugatePrimary</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a4fd2c24fd6d37ad86f15726099ed37cc" kind="function"><name>conjugatedDual</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a93b2817d1bf89baad40dd06531d3bc99" kind="function"><name>conjugateDual</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1abb4355fa59ea257c05d8ffa90657d4c9" kind="function"><name>conjugatedFull</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a216894cae1b66da301ef63ba332f9188" kind="function"><name>conjugateFull</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a62b06e64a76a663641372fbda95023ce" kind="function"><name>normDualNum</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a2efe6bc8ee40dd7c203013753c3561f2" kind="function"><name>normDualNumSquared</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a417a8df4f4bba3a2758c8e6efc665bb3" kind="function"><name>normScalar</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a74415ad848fc0c3fd4b52f763ef261e9" kind="function"><name>normScalarSquared</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a85c3d3a0bf9244f1ea7bac06312f0c15" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a9c3921a5b26388022a001899de40436a" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a9621f285053682f4dd9ad4bd4b70aba8" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a6e4456fc5f82455991c75574a06f32aa" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a9f7cb0f045ea06ca3c369b23fbf9d6b6" kind="function"><name>toMulMatrix</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a72b1ffa40d5a1522a47a7523cf07404b" kind="function"><name>toRightMulMatrix</name></member>
+    <member refid="classtranslotator_1_1DualQuaternion_1a4f6d22876218de2cac388eb5c1eed1f4" kind="function"><name>zeros</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1enable__if" kind="struct"><name>translotator::enable_if</name>
+  </compound>
+  <compound refid="structtranslotator_1_1enable__if_3_01true_00_01T_01_4" kind="struct"><name>translotator::enable_if&lt; true, T &gt;</name>
+    <member refid="structtranslotator_1_1enable__if_3_01true_00_01T_01_4_1ab06099bae61d7ec784287dda796bb407" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1EulerAngle" kind="class"><name>translotator::EulerAngle</name>
+    <member refid="classtranslotator_1_1EulerAngle_1a9b319fde609d361134c44ccdcc309c47" kind="variable"><name>angles_</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a5bb88090c159f2c377bbe20da394ec2f" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a8ff604bfd6b64f7cd4b48f1cf3ce5bf8" kind="function"><name>EulerAngle</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a0a518e7a0413280b4329d5b95b22edac" kind="function"><name>EulerAngle</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a3f352f21084d786b509627e2d6418913" kind="function"><name>EulerAngle</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1aa6e654bf202dc74ce2481f7577eadfca" kind="function"><name>EulerAngle</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a429dbd680b4b899ef9920b5824337a8d" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a5d8cb99df7dedfe215baeb1d128a3d71" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a39d9c6c027257aed04732d2567e74fb2" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1aaa4d677dd03095ca9803c172c528c848" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1ac6a71bba57365137bb01f6b97089c659" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a488999f4bd9e43d9d9d5fe1712843b7b" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a485491bceb169ed25ad3f2cfa772b8a8" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a265fdfec9af7fd8d8f48391bc09bff59" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1ae5ca9332a24e869978e3d71ecfec6aae" kind="function"><name>roll</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1adc1d865ad2c8826a72a447854be12fcf" kind="function"><name>pitch</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a8a409f4b9bc11d0a18ffc3baba58eaa1" kind="function"><name>yaw</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1afa95a640a56c6a37ea0b9048c388b689" kind="function"><name>roll</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1af2225f9fad6a6bbefc5cf11df55f9690" kind="function"><name>pitch</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a03d730af19884686c74c50d9b03722ff" kind="function"><name>yaw</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a7b98b7aca0ca2a650643588a7d5311ef" kind="function"><name>getAngleInOrder</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1aa62ae63a4a50374f9ba7211eb768cc38" kind="function"><name>getAngleInOrder</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1afe33a44341b528f51117e4469081bd7f" kind="function"><name>getAxisInOrder</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a1004913aca691aa661befc8acb85d4bc" kind="function"><name>rotateVec2D</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1abcca225aabd224c0263583c269f3ee11" kind="function"><name>rotateVec3D</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a437ce9a2eadeb3208e6eef775bb9a249" kind="function"><name>toUnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1ab2708209be31495c80706e6664267c5d" kind="function"><name>toUnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a9f8c3a7e6cc8e602bad9d77670d35cd7" kind="function"><name>toAxisAngle</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1ad57c0bcf08cd9f15286fd4aad94cf34c" kind="function"><name>toSO3Group</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1af42c08104b428697668422053fb13959" kind="function"><name>toSO2Group</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a86409453ac7e0342501e8967a1bc3f0c" kind="function"><name>toVector</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a5af8f0661dfd48a3e782d91fbe637d85" kind="function"><name>castDataType</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a8f2f079fa7fd0c52cb2329f37f000cc3" kind="function"><name>castAxisOrder</name></member>
+    <member refid="classtranslotator_1_1EulerAngle_1a60cb8db1ca48d7cf2e23695dee52f017" kind="function"><name>axisRotation</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1initializer__list" kind="struct"><name>translotator::initializer_list</name>
+    <member refid="structtranslotator_1_1initializer__list_1af25166a6e4706fcab78983a0c4dd4cb3" kind="variable"><name>data</name></member>
+    <member refid="structtranslotator_1_1initializer__list_1a1a3f55dfeee54865041ecd7c528a4d89" kind="function"><name>initializer_list</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1integral__constant" kind="struct"><name>translotator::integral_constant</name>
+    <member refid="structtranslotator_1_1integral__constant_1a6253407f70fb7e893ffb85becd7ea8fb" kind="typedef"><name>value_type</name></member>
+    <member refid="structtranslotator_1_1integral__constant_1a778c53b2f97fa7a2eb1fb158f8b3203c" kind="typedef"><name>type</name></member>
+    <member refid="structtranslotator_1_1integral__constant_1a7bd61cb2ad930bac6c4d43d0c65bf365" kind="variable"><name>value</name></member>
+    <member refid="structtranslotator_1_1integral__constant_1a13235c6fc1a2421cdc3bf2c55aeda7a5" kind="function"><name>operator value_type</name></member>
+    <member refid="structtranslotator_1_1integral__constant_1a764f513a5f5444ffe6135c2fe900422f" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1is__float" kind="struct"><name>translotator::is_float</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__float_3_01double_01_4" kind="struct"><name>translotator::is_float&lt; double &gt;</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__float_3_01float_01_4" kind="struct"><name>translotator::is_float&lt; float &gt;</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__float_3_01long_01double_01_4" kind="struct"><name>translotator::is_float&lt; long double &gt;</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__matrix__base" kind="struct"><name>translotator::is_matrix_base</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__matrix__base_3_01T_00_01typename_01enable__if_3_01T_1_1MATRIX__BASE_01_4_1_1type_01_4" kind="struct"><name>translotator::is_matrix_base&lt; T, typename enable_if&lt; T::MATRIX_BASE &gt;::type &gt;</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__same" kind="struct"><name>translotator::is_same</name>
+  </compound>
+  <compound refid="structtranslotator_1_1is__same_3_01T_00_01T_01_4" kind="struct"><name>translotator::is_same&lt; T, T &gt;</name>
+  </compound>
+  <compound refid="classtranslotator_1_1interpolators_1_1Lerper" kind="class"><name>translotator::interpolators::Lerper</name>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1aa6198f607a331613cdda8ce4d7ce5061" kind="typedef"><name>ScalarType</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a9e08fcf41d20545276e1953a87afde3b" kind="variable"><name>start_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1af164cc020c24cf21ba3a0a5eb2a0d3fa" kind="variable"><name>end_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1acbb406461f0682accbf806d6f696c1a9" kind="variable"><name>diff_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1acd78f960e92ba4ad1b6fb76982f3c8fd" kind="function"><name>Lerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a46851f8ca2b39ef7176b4e25c816e3ee" kind="function"><name>Lerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a7a094dae75d6c71859c1f55394ee9ef6" kind="function"><name>~Lerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a41b758584cb215502ada3fa973f48ad8" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a85c741785d79726e6d80dcef73167676" kind="function"><name>interpolate</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a4e99ae96dc2cdb57fdebb1e7122f70e7" kind="function"><name>updateDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a3a7df64e592cfa231b9d30124e2329c7" kind="function"><name>getStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a6ed0e0873218eefd7add76d463116739" kind="function"><name>getEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1aa3e73758729f9c30fd17388c55c32808" kind="function"><name>getDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a1cebfb478b521a07261f820a64065374" kind="function"><name>setStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1aa62f250b2a9d202f7ac6e8c3e6b510c5" kind="function"><name>setEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Lerper_1a07b6d1fd876606c0398fcba894efd5df" kind="function"><name>setDiff</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1lie_1_1LieOperator" kind="struct"><name>translotator::lie::LieOperator</name>
+  </compound>
+  <compound refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4" kind="struct"><name>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</name>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ac745309c70bfa7058f685396e1ce0901" kind="typedef"><name>LieGroupType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1adce56720cdfa8761f6d0430a1c4975a3" kind="typedef"><name>LieAlgebraType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ac2ab21e47d44638035048a6c610e07dc" kind="typedef"><name>VectorType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ab3e8bda0a4d637c5fe764929d5bb1058" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a00f7d9a91d405f6d13a2304033ecf85b" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a3836fe916b9978740b8cfcbfce87aca8" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1afec049ff131d0b556e12381687ae0232" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ac332c7de5f2c19ee0b1b7987ba2a4d34" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a689f9d3e43801462c375b6cce1e2ed33" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a48edabcce686b33a7235b451125fe14d" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a0d0492e789b891ebc533735f7435faaf" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a941003f52a21c2dd6ee2ee7a54b76927" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ab1718b90763f84ff2a9f6491e6ea69e1" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1ac7184a9be5d7674b15b26d26c4f25723" kind="function"><name>log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4_1a209b8b99f72edea3fe10b0661de548c0" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" kind="struct"><name>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</name>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad6c707cad38a18fb4207f075b6d0c024" kind="typedef"><name>LieAlgebraType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aae2ef68c05c7407dbaa1ec414e00682d" kind="typedef"><name>LieGroupType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a9ab10454aa47a0997efe8d465575f7d4" kind="typedef"><name>VectorType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a48272a1ad91cd7fa08117c81acc30573" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a5a6854a074513e9d0d67f87bc5b6f43b" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a0129be9ce01668d5dc221133190162b0" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aff8f4e02676e0019d55ff951eafa457f" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a294a5080bf9720782570a694fd3548ee" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a479d587304d5797b1a6a82d4a0a25f38" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a253b80bd045cbc6b62cf8ed48daeea6b" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aca07953c0f1e7283d6a23ad57c9cfd0c" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1acd4e719041f2eb9f21d85fb545d502a5" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad1c525b5a39f18d07230906c6854927f" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a6207061086ab3426dce6bb2d78389318" kind="function"><name>log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a7758c398a69a9b97148279631588d86c" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" kind="struct"><name>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</name>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a074a8812721cf5f82bf48af6a16045d8" kind="typedef"><name>LieGroupType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb3b89dd2c9ab2fee82d6e5f7f73483d" kind="typedef"><name>LieAlgebraType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a16103f5b96559be83f0729cac6d8a843" kind="typedef"><name>VectorType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1aede04c31583a2688a7b3933ac00700bc" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ae4de0d879b7dee04c5fedfddc73b172b" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a39f1efe8998ea423c4ec771874346272" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1ac5a728b3db2d39353371c0e6af96b42f" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1a5bad2ffc902d38fce11b85df9c08b9ba" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4_1afb12bad9a498eeaec7d73e893f1f09b1" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" kind="struct"><name>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</name>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a8cd5430c7ad018777d828337d7e2a130" kind="typedef"><name>LieGroupType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a1daa0fb22afc4c0ff48344924c9c1b20" kind="typedef"><name>LieAlgebraType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1ad8ca1241314c340b1375c2b52359970a" kind="typedef"><name>VectorType</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a53e496283af017a073c90d2d859a3080" kind="function"><name>Vector2LieAlgebra</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a608e85e7e04f0e716a9d977254cc858a" kind="function"><name>LieAlgebra2Vector</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a64972d455cafd0d4de5476fd97f63574" kind="function"><name>Exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a00e096bf27958462a20b207065a24318" kind="function"><name>Log</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a7ec961f6ec16ac4fab7c6d24eb5c34db" kind="function"><name>exp</name></member>
+    <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a31baed1b184776c0295424db8cc69a17" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1Matrix" kind="class"><name>translotator::Matrix</name>
+    <member refid="classtranslotator_1_1Matrix_1abd3ba13807ad2220ee00cd10dc9e387c" kind="variable"><name>OBJECT_TYPE</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1MatrixBase" kind="class"><name>translotator::MatrixBase</name>
+    <member refid="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" kind="typedef"><name>DATATYPE</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" kind="variable"><name>data_</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" kind="variable"><name>ROWS</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" kind="variable"><name>COLS</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" kind="variable"><name>MATRIX_BASE</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" kind="function"><name>rowSize</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" kind="function"><name>colSize</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" kind="function"><name>eye</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" kind="function"><name>zeros</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" kind="function"><name>ones</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" kind="function"><name>NaN</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" kind="function"><name>MatrixBase</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" kind="function"><name>MatrixBase</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" kind="function"><name>MatrixBase</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" kind="function"><name>MatrixBase</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" kind="function"><name>MatrixBase</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" kind="function"><name>col</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" kind="function"><name>row</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" kind="function"><name>block</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" kind="function"><name>block</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" kind="function"><name>getData</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" kind="function"><name>copyTo</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" kind="function"><name>operator=</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" kind="function"><name>setBlock</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" kind="function"><name>setRow</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" kind="function"><name>setCol</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" kind="function"><name>setBlock</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" kind="function"><name>setRow</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" kind="function"><name>setCol</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" kind="function"><name>operator+</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" kind="function"><name>operator+=</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" kind="function"><name>operator-=</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" kind="function"><name>T</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" kind="function"><name>fill</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" kind="function"><name>print</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" kind="function"><name>swapRows</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" kind="function"><name>swapCols</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" kind="function"><name>frobeniusNormSquared</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" kind="function"><name>frobeniusNorm</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" kind="function"><name>castDataType</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" kind="function"><name>toScalar</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" kind="function"><name>castContainer</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" kind="function"><name>cast2Matrix</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" kind="function"><name>cast2SquareMatrix</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" kind="function"><name>cast2Vector</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" kind="function"><name>cast2ComplexNum</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" kind="function"><name>cast2UnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" kind="function"><name>cast2Quaternion</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" kind="function"><name>cast2UnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" kind="function"><name>cast2SOGroup</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" kind="function"><name>cast2DualNumber</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" kind="function"><name>cast2DualQuaternion</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" kind="function"><name>cast2UnitDualQuaternion</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" kind="function"><name>castContainerRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" kind="function"><name>cast2MatrixRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" kind="function"><name>cast2SquareMatrixRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" kind="function"><name>cast2VectorRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" kind="function"><name>cast2ComplexNumRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" kind="function"><name>cast2UnitComplexNumRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" kind="function"><name>cast2QuaternionRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" kind="function"><name>cast2UnitQuaternionRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" kind="function"><name>cast2SOGroupRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" kind="function"><name>cast2DualNumberRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" kind="function"><name>cast2DualQuaternionRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" kind="function"><name>cast2UnitDualQuaternionRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" kind="function"><name>castContainerRef</name></member>
+    <member refid="classtranslotator_1_1MatrixBase_1af3ae7b58c3e29500324ed7854eda09a5" kind="friend"><name>operator*</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" kind="struct"><name>translotator::MatrixBaseInternal::operator_cast_typemapper</name>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4" kind="struct"><name>translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4_1a19fbe63b6224b396695350fdce0dbb66" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Vector_3_01N_00_01Type_01_4_00_01NewType_01_4" kind="struct"><name>translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Vector&lt; N, Type &gt;, NewType &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Vector_3_01N_00_01Type_01_4_00_01NewType_01_4_1ab2a0ce237121931fa46b73842286405b" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kind="struct"><name>translotator::MatrixBaseInternal::operator_mul_typemapper</name>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri1b96ed4aed79df1e494374b57efb0a1d" kind="struct"><name>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri1b96ed4aed79df1e494374b57efb0a1d_1aeebe3d64109ae8b922b00a6a5ddfc95e" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri2a96eb5bfa413dff0cddca3d951d6a71" kind="struct"><name>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri2a96eb5bfa413dff0cddca3d951d6a71_1a52a770991ac3307038dc79e4180cf032" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri96d299f5dadca2759194ea845be7ed5c" kind="struct"><name>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri96d299f5dadca2759194ea845be7ed5c_1a0622a57e644d69f0c09a520b45843ee3" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246" kind="struct"><name>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</name>
+    <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246_1a9b0f65e5b8d2cec110db86cf232685dc" kind="typedef"><name>type</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1Quaternion" kind="class"><name>translotator::Quaternion</name>
+    <member refid="classtranslotator_1_1Quaternion_1ab50a56aba566ae8f95244bdd429e41ab" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a7022d0351f15d7d03318f3aa9beae0f2" kind="function"><name>Quaternion</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ad59d8715414c25d6557231449928cd1a" kind="function"><name>Quaternion</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a1d342fd57b4d6d13dfa5e6b4e28f6efc" kind="function"><name>Quaternion</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1aeaa337692b923ccb07ef02ab3b19f0ec" kind="function"><name>Quaternion</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a326b000833cd521f5e29200d6c055b83" kind="function"><name>w</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a783056bcfdb24ca5407c67313c07af74" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1adbf7922706956ec1c40c1c99b1f88088" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a6bb6b65e7e495c508a14bb525b70cd2b" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a989abc6c4c8a48e99bf350015799b0f2" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a1e8f2dec06a95b2630cc1999fd4019ca" kind="function"><name>Im</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a602c9cfe2c8d748949485ab9db49c043" kind="function"><name>w</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a8f7ad760b25390156a8c646ea14ee43f" kind="function"><name>x</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a98ecb685b7b599a1cb0eb5b306fa3151" kind="function"><name>y</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1aa8ee506030ace03a697f6726308f136e" kind="function"><name>z</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ae8b89c0e9200a053c3f13643fb571fe3" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a3ba561c11f11c125d397b35c28200b3c" kind="function"><name>Im</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a32456f67d54893a7223158de6377e887" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1aeb023fb794b6929e3f672a5f0bf185a5" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ae95376840e5c36a1e9947474e6d84e80" kind="function"><name>toMulMatrix</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a5d9692f952a2742ac82bebd78c043e54" kind="function"><name>toRightMulMatrix</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ab2087cbb2373a2273bc0c7fdc142cf2d" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a556990069f62dd5598c86429e0da43ec" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1aba3fe1020cfca1775c9c90a11eb3b2e5" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ad85191c02e1c467fa51a3343a3d20a4d" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1abd3f01b9316e5b2c9ad6cb73a559c03f" kind="function"><name>quatNumMul</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a7f087636ea676618aba830881aef33c6" kind="function"><name>quatNumMulEq</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a27a87f4e538934023f5c97e37b548778" kind="function"><name>quatNumDiv</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1acf7cacd92c45537d071f8ce6dca6b0aa" kind="function"><name>quatNumDivEq</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a705289fc7babf391ae48827d164b9afe" kind="function"><name>normSquared</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a20c3cf18c979823c875f5ce6f5d10a0c" kind="function"><name>norm</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a321e9dbe323b403e51c16e6470d9378b" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a7a4bf99b8380ce8178b2756660f138de" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a3072b8b02047b177f71c576d88acfa75" kind="function"><name>canonicalized</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ad87fda94a997c66099edc98ed5fff2ba" kind="function"><name>canonicalize</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a9083ad77176d6dde89b1115d39090780" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a818ac383164b27a3c77af11ecc0bc4d9" kind="function"><name>conjugate</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1ab5011ddce1e2b813befbf4bea108a89e" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1Quaternion_1a4375a05ca4e5b3974f258644057c0979" kind="function"><name>inverse</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1interpolators_1_1ScLerper" kind="class"><name>translotator::interpolators::ScLerper</name>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a93d8c6ce513f4a1072d91be7bb10dd9a" kind="typedef"><name>Type</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a4939a35f33621f1548bfca7d902a0fd5" kind="variable"><name>start_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1af413a6d46a64818e1e55ba8c80960740" kind="variable"><name>end_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1aa8d09de5091c974573815707d45ab594" kind="variable"><name>diff_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a019a5708164071098e7b6f96b63e6363" kind="function"><name>ScLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a38da9f0230ab938f446a54c3a74dedcc" kind="function"><name>ScLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a576abe09994f26310de085dfc015f5b9" kind="function"><name>~ScLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a0c351ffa3e1b5dbd29a14c5d432f977e" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1ac3872825f48bd35749b9d479e685a9c7" kind="function"><name>interpolate</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a5757a2376d841ae40aaf71a7881fa283" kind="function"><name>updateDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a27faac6752f25dec2e78f5cf74ecf2ea" kind="function"><name>getStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a617c3738bfa28ad0a067c350f1244d5d" kind="function"><name>getEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1ac3ecb7ed37b2223d50d2500fda77ce15" kind="function"><name>getDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1abbe19718ec05e990bdf373d41f835871" kind="function"><name>setStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1a88b4f29f8a783f6ef7231cc26123faa4" kind="function"><name>setEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1ScLerper_1ad341598c6dac5cefbb5b75b38fedfa2e" kind="function"><name>setDiff</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1SEGroup" kind="class"><name>translotator::SEGroup</name>
+    <member refid="classtranslotator_1_1SEGroup_1a9411259a603523a10f5b28f695994daf" kind="typedef"><name>DATATYPE</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1aa540a4e623384f1130968df88660719a" kind="variable"><name>R_</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a2ba365bebe403c9c52f170b6fa3b0a2f" kind="variable"><name>t_</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a934d6a0bcbb7a02b42ecf311385ddb5e" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a8a0639b265411e13a291c6f71756eab2" kind="function"><name>SEGroup</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a948d7f6a6145135402215b0825ae0630" kind="function"><name>SEGroup</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a01614c77375db55f70178f71a46c6477" kind="function"><name>SEGroup</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a002a34e6a24bdfb9eb87e238928a85c6" kind="function"><name>~SEGroup</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1afdf3246840129403ad5e0c1737f51538" kind="function"><name>rotation</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1aff31245432656b3631371a67d23732cb" kind="function"><name>translation</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a4cdd55da0e1d5f43eace48c7561231d9" kind="function"><name>rotation</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1aece8cadf20e7ebeb53b04db9c2c3bdcf" kind="function"><name>translation</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a35a12c1fbb29daf511dd4b4345afa96c" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a886fa40a4ca1cc84fa383f0ff1714089" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a75e34731df298a79539ac667d0efd07a" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a8ab51bd8f203536840b2f9d536dc2924" kind="function"><name>actOnVector</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a526eee635baf04c02de5aed117b7c4b9" kind="function"><name>print</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a281bcd5dc255d47979e926597e2ba910" kind="function"><name>pow</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a289ecfb82afdd846e93cdd24597b8db5" kind="function"><name>toSquareMatrix</name></member>
+    <member refid="classtranslotator_1_1SEGroup_1a5f3221c8538fb06ec97c9dfbffae087f" kind="function"><name>identity</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1interpolators_1_1Slerper" kind="class"><name>translotator::interpolators::Slerper</name>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a94a5c26ebba712517fcc3495bf48a6e9" kind="typedef"><name>Type</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a06cac45725f32970c5ffa88513cace7d" kind="variable"><name>start_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a22c431884bd766421721a3b8b277d937" kind="variable"><name>end_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1abc9edfdc37ead3954d8221e641824d27" kind="variable"><name>diff_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1adce9fadda285f73a5edeb987203a8547" kind="function"><name>Slerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1abcacb007845bc155a3177c1d45eb070e" kind="function"><name>Slerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1aeb924e7191d591814f7ad92f37f2a61c" kind="function"><name>~Slerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1ad79cd144f00d288fd6bce4762394cc88" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a40ea84c5d40d0f7db9be3c488db9f1c3" kind="function"><name>interpolate</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a8de7f631a74b7fbaee2a3466c3a8f308" kind="function"><name>updateDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a25e5ae7b959334ebaa9ecdd27fb36f20" kind="function"><name>getStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1aa9c4717ef057413b34649593b0449a8e" kind="function"><name>getEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1ab3d285dc201f5be80aa9ee9cd7235a66" kind="function"><name>getDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a6400ff72bb4bfe5d6e468fde7a6c2e3d" kind="function"><name>setStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a2624b3ec25ebbb5198b0f7f6cf108b7b" kind="function"><name>setEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1Slerper_1a8fe7c2718c49656605d67c02c822fcf1" kind="function"><name>setDiff</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1interpolators_1_1SlerperFast" kind="class"><name>translotator::interpolators::SlerperFast</name>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a1039ce49924adbbe45f85dd722c0b052" kind="typedef"><name>Type</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a3a08dbd94b0f8924219e165fb044df94" kind="variable"><name>start_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a88337240b65227f0f1b65d1814d8fe5f" kind="variable"><name>end_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a27eba84ab914b7cc3fe55c9fc06717b3" kind="variable"><name>theta_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0bf53df3eac4bc61e2438d5dd39162aa" kind="variable"><name>shortest_path_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a35ee0a2ab2bb7c1d28a19cb52010825f" kind="function"><name>SlerperFast</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a6dc52a7f8b6b08f3789de598fa257980" kind="function"><name>SlerperFast</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a18a5ceb80fdfd04989c4753098d11370" kind="function"><name>~SlerperFast</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a01a587026f9bfeb5e16485697a1c92bb" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0c46d21736c6d3977f135c4ce6ae6132" kind="function"><name>interpolate</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a5aab3e0356fcd4a4f125247340d362a7" kind="function"><name>getStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1ac3a304ab97375e7c979f9368b4a877c8" kind="function"><name>getEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1acbbffe1c072c898d665cabf54204d921" kind="function"><name>setStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a0e4e8c362014c6c999d11585d5724574" kind="function"><name>setEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerperFast_1a1ea04f642f97420d243bd813f44b2baf" kind="function"><name>update_theta</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1interpolators_1_1SlerpLerper" kind="class"><name>translotator::interpolators::SlerpLerper</name>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1b87eca03606a8ab2fdc4fab8de83ef9" kind="typedef"><name>Type</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a8e035adced6ee6d28482c69cb9585865" kind="variable"><name>start_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1ac0f70e5e0e341dc8f05ecaa1feaa61fc" kind="variable"><name>end_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a7e8e3a218d20c4485031621bd4d94c07" kind="variable"><name>diff_</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1aac01cbc484549f68cb74f088d05359bd" kind="function"><name>SlerpLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a78ba6dafbda13365b712c378f555546c" kind="function"><name>SlerpLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1ae24c19591422dc4e2a49740df518729d" kind="function"><name>~SlerpLerper</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1af79562274dece1e144ce3b5af053ebc5" kind="function"><name>operator()</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a866145ad8ab836b09212a3ff94437172" kind="function"><name>interpolate</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a48a2e3fff6a91cfaae63b6ea9ae08259" kind="function"><name>updateDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a1384665f981a501d8b85353052401115" kind="function"><name>getStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1acf8e6e57145753c545e887d4afecd714" kind="function"><name>getEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a46ac170f36fc0b0f1592fb5b9088bc19" kind="function"><name>getDiff</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1aae8142556637d99c41152e3341c51f47" kind="function"><name>setStart</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a6aa94941e504943cdba950d767f06f8a" kind="function"><name>setEnd</name></member>
+    <member refid="classtranslotator_1_1interpolators_1_1SlerpLerper_1a2cf5dc2b2eef9a7ccf34ed618350f3d5" kind="function"><name>setDiff</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1SOGroup" kind="class"><name>translotator::SOGroup</name>
+    <member refid="classtranslotator_1_1SOGroup_1a31009d697219e2d60293e9aab92bc358" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a42313cf3bf6d69e6c11d0cfc6bbd775f" kind="function"><name>Data_</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a724e13b4f5e508ff5f397568ffb94410" kind="function"><name>Data_</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1aa0d04a335b3bea095f04068e4fb970b0" kind="function"><name>SOGroup</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a7cd3f8191bcf000300572d90fcd5eece" kind="function"><name>SOGroup</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1acb8343c774331327b9c7e5bb4bfb8b62" kind="function"><name>SOGroup</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1ac2c774e2cab00536fc1832a1e8533fb8" kind="function"><name>SOGroup</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a4c094417f349bcb012a36dddc044a2ba" kind="function"><name>SOGroup</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a8b5f5c33bd68187c7e40229beb041d52" kind="function"><name>operator+</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1aba9b3df2b4295bafa4d929d8b647b7b4" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a94f0f16f75404d491258209b39d78fbb" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1ad4c1b838a0d4ffbcc45717eefbc25a99" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a61a23dd8f152eb672149d733760532f9" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a7d4a8ef82d222c81468ad9b459d82c34" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a32e84743cf7879df99b42afae6c64bb6" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a0da64e45cdb70376d3e657c256a4d049" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a8ad0085e9345b1f855ed93231d6e5613" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1adaf23451902987f1d0957bcd1a6ebdf0" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a918af24e8c7a7a19b27fc84f4c5c85a7" kind="function"><name>T</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1af5d9970b910dbf70c29b935cc5f0e54e" kind="function"><name>pow</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a7a7e15aa938f21c1e6f7eac3b9e39b54" kind="function"><name>toUnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a84ebc46021701c5df54d8a94469da536" kind="function"><name>toUnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1ae59dede785be665de9a3c0282b066b7d" kind="function"><name>toAxisAngle</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1ae748ff502affdea74f7b93fed81f54a2" kind="function"><name>toEulerAngle</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1a596554368001b020b4c9971bbb83d390" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1afc072e1aaa4dee4df8522c266199b5a1" kind="function"><name>identity</name></member>
+    <member refid="classtranslotator_1_1SOGroup_1aa40b627f362467b91ebfee53921adb26" kind="function"><name>axisRotation</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1SquareMatrix" kind="class"><name>translotator::SquareMatrix</name>
+    <member refid="classtranslotator_1_1SquareMatrix_1a04e5e8c510d93b162f1b40f3c57f2f89" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1afeaa46ef0ae48da0c634f3b37791864f" kind="function"><name>Data_</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1ab3f1a9d305f25998c75cbd4e5fb83cfc" kind="function"><name>Data_</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1acb9fd9532d568133ed5fa149edd65b00" kind="function"><name>determinant</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1ac95153e093aa21c9d1d214c309d47478" kind="function"><name>trace</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1a12d301cd9c3f5fb40b4a04840e2ad5c1" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1SquareMatrix_1adbf0d5ed72450b4736ada1a53dabb8eb" kind="function"><name>inverse</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1UnitComplexNum" kind="class"><name>translotator::UnitComplexNum</name>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a41fe8c33564e479724e972e1ac579a07" kind="variable"><name>objType</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1af6790bdbe2b4fe38681343ada785fd83" kind="function"><name>UnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a8b5ef129cd33b2458f19705342cf5ff3" kind="function"><name>UnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a9b96cd60d3fd2aa149ba46a588bf9542" kind="function"><name>UnitComplexNum</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a5ac97bcc19971bc5ce7d08679a9dd64a" kind="function"><name>operator+</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a2b5f41b2b69ecd898e0e31bab3820147" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a7214dd8df5c3c867908e646c64826c80" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a1f3aa545f3c2201c4b620f6f94485c7e" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1abe8600544004050058968d69ad562a36" kind="function"><name>complexNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a2e615e602555547d90d0b0f6edf61a72" kind="function"><name>complexNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a96b6772c944caef992c24e03226e97cf" kind="function"><name>complexNumMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a9b13fc1519f0eca4df7c92034f27735d" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1aeefd5fa315728ee32ef8307a59f9f003" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a8ef60221e0fffa8b1510d3135b486922" kind="function"><name>complexNumDiv</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1ab9d0c219efefe5108d61b31f2c87a4ea" kind="function"><name>complexNumDiv</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1aa625db208fada895d48237df0e27475c" kind="function"><name>complexNumDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a5305ecca94d0de44303383e316ccc2f9" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a1f6c199b3363c72a2aa29ae350be1484" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a3a69673ff5187b689eacc33102fd3bb8" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a7f36e661868786d4512e578baff08cdc" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a8e028221c69ecc3daf03cca87e1da2e5" kind="function"><name>rotateVector2D</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1aa636d6892638400ef547bbd3e9a7d41d" kind="function"><name>pow</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a40a938922b63732afa80416a078644c0" kind="function"><name>toRotMatrix2D</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a52cf3b719ffbe38a4b9709041ba72c2e" kind="function"><name>toAxisAngle</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a9052c1cd65890df314d074baaa8597fb" kind="function"><name>toEulerAngle2D</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1ae9be4f3461b78ac1078a97ab25e3e992" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a95b6c75087282ab379655e8b7576e6d2" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1aa0b2478ac5d0e8ff5212cca63abed204" kind="friend"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1ac9185ee5b54f62ae623a0c1e1d9e56d9" kind="friend"><name>complexNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1ab19943b0f0d9c06ed7ade91389f5fd4d" kind="friend"><name>complexNumMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a8ddff98dee5bc36f99eb741169ada52e" kind="friend"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1af25d767c3dc8f2cde9b89e3a64e78508" kind="friend"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1ab1bc08aab06490389250eaf00b75b35a" kind="friend"><name>complexNumDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitComplexNum_1a601c113002a2817a5843c8b2ed799752" kind="function"><name>identity</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1UnitDualQuaternion" kind="class"><name>translotator::UnitDualQuaternion</name>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a17459f6fa3f9f5cc2c2e22f3c9ded1b5" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1aa3a03130a7c1960bfd1872886c678134" kind="function"><name>UnitDualQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a49b290b100cda79b9791d605462e91af" kind="function"><name>UnitDualQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1aef4450183adedee1fb8ffc1e518ef870" kind="function"><name>UnitDualQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a6de6b70fdfc03cd389562cc92c708394" kind="function"><name>UnitDualQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a17e962e5278fc67f2d43671eaafba719" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1aca373ecff53d0c95b4370f6f3ef4b7f8" kind="function"><name>Re</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a983518f88ef191ec942a24c3d9a9fff5" kind="function"><name>operator+</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a99afa40473b678cfe65c926c445eeee4" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ab3e06e590597c5a2f5f00b37f0e45668" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a01181ab989acb853a6ec0d2df2539964" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a1af37b544386fab0135f58f4e818cddf" kind="function"><name>dualQuatMul</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ab4f03a2e00e8544a1917076eaa3e62da" kind="function"><name>dualQuatMul</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ada1a52b09287a9aa9500a1a96bd851ec" kind="function"><name>dualQuatMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ac5112f72a93195aeb91f866aed8e407e" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a9b41b2c750b2e06a23b5e90f8e93c362" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ab994ddea65ff2ff985afc77844682905" kind="function"><name>dualQuatDiv</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a884d88e82b3ee688fdca9035bb257d2c" kind="function"><name>dualQuatDiv</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a33e4551fef8905a92eaf2920cebabf8b" kind="function"><name>dualQuatDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1abb2705d9f2446e544135b00d57eccfeb" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ad771e49977be33b2d415c19baf20950b" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a794d9a1298236d669447c1b16ff6f7ec" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a70198735d1f69bde77e9a2562da8362e" kind="function"><name>conjugate</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a8e58788627e858c153b8dc7d55e39195" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a79303c6705dd2ba0d5f50455c749b15f" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ae10a5230ec0a88e8c60601e2fb3a12f5" kind="function"><name>actOnVector2D</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ab9e06e3448b2b1651c06927390399406" kind="function"><name>actOnVector3D</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a56faba398b7ec9bdbf3712296bb4768f" kind="function"><name>toSE2Group</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1aecf85b7fe39db24b73a122567de76151" kind="function"><name>toSE3Group</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a3ba665f50c2c9c4addaa826a65f034bd" kind="function"><name>toTranslationVec2D</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a5c2170e31f0ca612f1f0b62e88a081a2" kind="function"><name>toTranslationVec3D</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a860ac9e7fcf142542cef8a5a89efdf65" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ac897580e2006dd82cd876b9ed1d2f9d3" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1afd15804994e1175bd4c4ea85389cbe49" kind="friend"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a1dee616953b05285883506d3ea66ad00" kind="friend"><name>dualQuatMul</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1ab23bfdc1a6af0235fb50f183d5ac67a8" kind="friend"><name>dualQuatMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a33ab2446032aaf7fb2ca1734ad56bede" kind="friend"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a6b1f90c87e3d86f34b08dd6b002ff679" kind="friend"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1af012dee597f49cb83fbffe4b6cbb4826" kind="friend"><name>dualQuatDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitDualQuaternion_1a7952fe4aebbc40f3ac0fccc07b4eaa7f" kind="function"><name>identity</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1UnitQuaternion" kind="class"><name>translotator::UnitQuaternion</name>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a2f6acd153da011e1f8b872965f67dfac" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a5bd4c159b45d566d6577cda1a12b70be" kind="function"><name>UnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a0da78d4434ee351568fb18613ee5419a" kind="function"><name>UnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a7e5cabeb489b3908c9a40d447a67bc54" kind="function"><name>UnitQuaternion</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1abcbc19616e8e9fe05b45a489df0deb58" kind="function"><name>operator+</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a774f9fbe03aaf448cde60937ac56ed46" kind="function"><name>operator-</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1aca54a0cad20d7d547fcd25de127f278e" kind="function"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ae28821196e20c9faaddacfd7c387aba1" kind="function"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a1e492a1817c6795c2419068a1492e02c" kind="function"><name>quatNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a7f6f5a66728103d670714f6f5603cf40" kind="function"><name>quatNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6e5fa4bda2a856eb125f5f360b138787" kind="function"><name>quatNumMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ae9b3b7f712be8549ed5c684f2a9ea140" kind="function"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a4da146bec6d5a11dcb5ea9029b379536" kind="function"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6270b6be113f46f66a21eedd16bc932a" kind="function"><name>quatNumDiv</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ad4cf9ee1a7710a4990a60789ad073f95" kind="function"><name>quatNumDiv</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6ce87b7874b902c017fed521e9becae5" kind="function"><name>quatNumDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1af1de15aa700b7b41ac40b64c9e1fab9b" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a5c9b2d69441edd0c885151aa41936fdc" kind="function"><name>conjugated</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a415bab1b049887cc8606da920b49488c" kind="function"><name>inversed</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a85d1e4afe37c3e5d0e8995050e84f0e7" kind="function"><name>inverse</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ac37d8b14765bae775f0a42fa7c4e9f95" kind="function"><name>rotateVector3D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1abeb4021155639ef7ceea9ffdf8f543e2" kind="function"><name>rotateVector2D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a459b7b422adc2ea1b438005839dfbe60" kind="function"><name>canonicalized</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a704b2c0caa6a8ed8b80bfd6e1aff872f" kind="function"><name>canonicalize</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6f31465bf729fa24ee218f899bcc4b63" kind="function"><name>pow</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1aa6126bffcd7fb2835d975dac8ddafb23" kind="function"><name>toRotMatrix2D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ae680e84039ce77df64c4084cfa719d88" kind="function"><name>toRotMatrix3D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a9d5a80b401f55abefe4533cb96fe5eb7" kind="function"><name>toAxisAngle</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a765a8706b1acdc36085cb597e6e31c7e" kind="function"><name>toEulerAngle2D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6c9e0a6ffb6dd2b151ecf9704c591cda" kind="function"><name>toEulerAngle3D</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a0e7a53514e8738cb2ec1de0d6420c182" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1aa9290b0a8c9ad519aebc629269cab2cf" kind="friend"><name>operator*</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1afb13c8424eba3fa013b52b66d5f07222" kind="friend"><name>operator*=</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a6eb74a1e80fc88760d40d3915d2b38a3" kind="friend"><name>quatNumMul</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1aaf9abd7325322a162ede75bcd06f0706" kind="friend"><name>quatNumMulEq</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1aff7c9cf2d04ee9b7c691f860b76bc9d9" kind="friend"><name>operator/</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a1b78951425334bf12978d95eedfcbc9b" kind="friend"><name>operator/=</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1ae9921d39a4191e02d56fad439abc1127" kind="friend"><name>quatNumDivEq</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a0a7ebc5f96b74eea2838405d8103d037" kind="function"><name>identity</name></member>
+    <member refid="classtranslotator_1_1UnitQuaternion_1a1988497479e8e4759a34acd889ac6a09" kind="function"><name>axisRotation</name></member>
+  </compound>
+  <compound refid="classtranslotator_1_1Vector" kind="class"><name>translotator::Vector</name>
+    <member refid="classtranslotator_1_1Vector_1a274fc8287a10b7303aeeb3b6df3ab346" kind="variable"><name>OBJECT_TYPE</name></member>
+    <member refid="classtranslotator_1_1Vector_1af5f5593107af20f9b7f2093e1bd19721" kind="function"><name>norm</name></member>
+    <member refid="classtranslotator_1_1Vector_1ae7d1065dcb72add710a3e46abe246c66" kind="function"><name>normSquared</name></member>
+    <member refid="classtranslotator_1_1Vector_1abcde5bd5c8c1dd790e54368bd36b42a1" kind="function"><name>normalized</name></member>
+    <member refid="classtranslotator_1_1Vector_1ab65d538d244752da80dd377ebaf0aad6" kind="function"><name>normalize</name></member>
+    <member refid="classtranslotator_1_1Vector_1a288d62b5705403c537cb81b73729cc59" kind="function"><name>dot</name></member>
+    <member refid="classtranslotator_1_1Vector_1ad4d229067b342d9e83699f9f4352a058" kind="function"><name>cross</name></member>
+    <member refid="classtranslotator_1_1Vector_1af52e69b60523d599bfe3f78a8040df65" kind="function"><name>toCrossMatrix</name></member>
+    <member refid="classtranslotator_1_1Vector_1a2ae32b22acc3ad48530fcbceb2a93715" kind="function"><name>toDiagMatrix</name></member>
+    <member refid="classtranslotator_1_1Vector_1a4adadcce3b938781849046f933992495" kind="function"><name>operator[]</name></member>
+    <member refid="classtranslotator_1_1Vector_1a923c3804849d08b2b300580b5c45f84e" kind="function"><name>operator[]</name></member>
+  </compound>
+  <compound refid="namespacetranslotator" kind="namespace"><name>translotator</name>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88ab" kind="enum"><name>ObjectType</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba38ef5fe49a654647519ee8c498c49664" kind="enumvalue"><name>MATRIX</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88ababdf19ddd2e7cdab86b06073c47b6d7f4" kind="enumvalue"><name>SQUARE_MATRIX</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba77ac7c0574cea8d26dc368b7858b15c6" kind="enumvalue"><name>COMPLEX_NUM</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba44d211265e86d6d510e6e3d94557e821" kind="enumvalue"><name>QUATERNION</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba8785cdfe816e05dce640f4d1723c4293" kind="enumvalue"><name>DUAL_NUMBER</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba9823d9ec704792a6af2013c4c3ab1672" kind="enumvalue"><name>DUAL_QUATERNION</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88abaf0c747f3b05c887b07ea91be537d7817" kind="enumvalue"><name>UNIT_COMPLEX_NUM</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba0e1fc694011db6a9c602925da673d9e5" kind="enumvalue"><name>UNIT_QUATERNION</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba5d81c471f0748c0aa213b648f9d8202d" kind="enumvalue"><name>AXIS_ANGLE</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba96f418389e6544cd3a371068dc855a56" kind="enumvalue"><name>EULER_ANGLE</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba919619a84ac8daf711a38c5dd29cce10" kind="enumvalue"><name>SO_GROUP</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba8e3b9ee9d79070d7ab009876eb54a2b0" kind="enumvalue"><name>SE_GROUP</name></member>
+    <member refid="objectdefs_8hpp_1a7d52b80ea7661a2bc8fcad6a625f88aba46d5ebfe999549cbba7f3a17911befba" kind="enumvalue"><name>UNIT_DUAL_QUATERNION</name></member>
+    <member refid="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21e" kind="enum"><name>AXIS</name></member>
+    <member refid="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea02129bb861061d1a052c592e2dc6b383" kind="enumvalue"><name>X</name></member>
+    <member refid="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea57cec4137b614c87cb4e24a3d003a3e0" kind="enumvalue"><name>Y</name></member>
+    <member refid="objectdefs_8hpp_1af7d3fb6108d48552c616f4390ba7c21ea21c2e59531c8710156d34a3c30ac81d5" kind="enumvalue"><name>Z</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47" kind="enum"><name>EULER_ORDER</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47ae65075d550f9b5bf9992fa1d71a131be" kind="enumvalue"><name>XYZ</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a76e608e99423bcdeb143368913e78f1c" kind="enumvalue"><name>XZY</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a4c15872a8be8098b60ba0892bc42ee6d" kind="enumvalue"><name>YXZ</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47ac7c57bc52d896f142cae9c01bc84b6fe" kind="enumvalue"><name>YZX</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a07bb28478030fc8b86da84000c9860d3" kind="enumvalue"><name>ZXY</name></member>
+    <member refid="objectdefs_8hpp_1a0fcd4f9b7923ba8bc9b2d6db04b82d47a6811254e01b3550bdb2dc46f204730dc" kind="enumvalue"><name>ZYX</name></member>
+    <member refid="AxisAngle_8hpp_1aed23298328abda817c4d29f095acc848" kind="typedef"><name>AxisAnglef</name></member>
+    <member refid="AxisAngle_8hpp_1a944808cdf6e6de1346f7e7ba51ed7734" kind="typedef"><name>AxisAngled</name></member>
+    <member refid="AxisAngle_8hpp_1ac2b1f7dbf013d76be5e721ff2a71d072" kind="typedef"><name>AxisAngleld</name></member>
+    <member refid="ComplexNum_8hpp_1a4cfa6aa68fae47aa784996633c9fd571" kind="typedef"><name>ComplexNumf</name></member>
+    <member refid="ComplexNum_8hpp_1aa3a4e9cc09405763cf7c84ed4e3cabf5" kind="typedef"><name>ComplexNumd</name></member>
+    <member refid="ComplexNum_8hpp_1abacae7f085be1d72d7aa12bffc890807" kind="typedef"><name>ComplexNumld</name></member>
+    <member refid="DualNumber_8hpp_1a3ab8733a275a4262ab294fc05ffe09b5" kind="typedef"><name>DualNumberf</name></member>
+    <member refid="DualNumber_8hpp_1ad3c8ff86a3438368cfd2d2fc2bc6e6f0" kind="typedef"><name>DualNumberd</name></member>
+    <member refid="DualNumber_8hpp_1a7cc6fe52ba0eb5d7ddb4c20a5dca9a70" kind="typedef"><name>DualNumberld</name></member>
+    <member refid="DualQuaternion_8hpp_1a81202a39eacbda8d676e108f636ad9c2" kind="typedef"><name>DualQuaternionf</name></member>
+    <member refid="DualQuaternion_8hpp_1a7a581cb762048a3b92ebefd059f08c28" kind="typedef"><name>DualQuaterniond</name></member>
+    <member refid="DualQuaternion_8hpp_1a1faaf9687941dcf364e700114f46cd36" kind="typedef"><name>DualQuaternionld</name></member>
+    <member refid="EulerAngle_8hpp_1a10cde4021a9a66c4f930725e866b1e96" kind="typedef"><name>EulerAnglef</name></member>
+    <member refid="EulerAngle_8hpp_1a692ee83ed6aef5e1c923c73cb8f9ba4b" kind="typedef"><name>EulerAngled</name></member>
+    <member refid="EulerAngle_8hpp_1a4f21240a56a1a60325149f2bdb193a28" kind="typedef"><name>EulerAngleld</name></member>
+    <member refid="EulerAngle_8hpp_1a1e0cd97c0d6b07e1b448bb560f4fa793" kind="typedef"><name>EulerAngleXYZ</name></member>
+    <member refid="EulerAngle_8hpp_1a6ce70cba36ba5cf1f8e9b68d668ded0c" kind="typedef"><name>EulerAngleZYX</name></member>
+    <member refid="EulerAngle_8hpp_1a48ad30fe5acfbad0e5e36522a1e9981c" kind="typedef"><name>EulerAngleXYZf</name></member>
+    <member refid="EulerAngle_8hpp_1ad82a4ee9450b45696cb502f351cfc811" kind="typedef"><name>EulerAngleXYZd</name></member>
+    <member refid="EulerAngle_8hpp_1a324268070619ca837982a2a12779d1d1" kind="typedef"><name>EulerAngleXYZld</name></member>
+    <member refid="EulerAngle_8hpp_1a378a746738547f36621d10cefb253c6e" kind="typedef"><name>EulerAngleZYXf</name></member>
+    <member refid="EulerAngle_8hpp_1acb93c7fb013abb6e985e756472cda56f" kind="typedef"><name>EulerAngleZYXd</name></member>
+    <member refid="EulerAngle_8hpp_1abc334ce934b1851dcee8bdd65e08cfe6" kind="typedef"><name>EulerAngleZYXld</name></member>
+    <member refid="Matrix_8hpp_1a167a0c7dda1ddd20f4f9cbd841aab816" kind="typedef"><name>Matrixf</name></member>
+    <member refid="Matrix_8hpp_1a48763a3132ba1d66ba8223881f98446d" kind="typedef"><name>Matrixd</name></member>
+    <member refid="Matrix_8hpp_1a1b91eed394a78069c896a506c318d54c" kind="typedef"><name>Matrixld</name></member>
+    <member refid="Quaternion_8hpp_1a4a90171e38bd218443800580b60ff893" kind="typedef"><name>Quaternionf</name></member>
+    <member refid="Quaternion_8hpp_1afe9256d27c3c0b6e7818f7356939dc45" kind="typedef"><name>Quaterniond</name></member>
+    <member refid="Quaternion_8hpp_1ac3f4e0a3ceda665cb4885b8ce7657f42" kind="typedef"><name>Quaternionld</name></member>
+    <member refid="SEGroup_8hpp_1a66f572f88dd71cd80a97aefd061e9b79" kind="typedef"><name>SEGroupf</name></member>
+    <member refid="SEGroup_8hpp_1a871cecc82fed6ea6c85a945d76c7a50f" kind="typedef"><name>SEGroupd</name></member>
+    <member refid="SEGroup_8hpp_1acd80992117d10c1e2eb7dfd59a9d4495" kind="typedef"><name>SEGroupld</name></member>
+    <member refid="SEGroup_8hpp_1a168fa21c4b84107ce57a859878b497b0" kind="typedef"><name>SE2Group</name></member>
+    <member refid="SEGroup_8hpp_1ac9fc4a78596e971ab18e76fb26adbf6b" kind="typedef"><name>SE3Group</name></member>
+    <member refid="SEGroup_8hpp_1a40b025f48ec2488e47d30c2a7752ddb6" kind="typedef"><name>SE2Groupf</name></member>
+    <member refid="SEGroup_8hpp_1a4752251dc233caa54cc6ba7da8733369" kind="typedef"><name>SE2Groupd</name></member>
+    <member refid="SEGroup_8hpp_1a8e05775b4adca50c43311a7235992f0c" kind="typedef"><name>SE2Groupld</name></member>
+    <member refid="SEGroup_8hpp_1a53e662e48e861dbb200f483156b7f24b" kind="typedef"><name>SE3Groupf</name></member>
+    <member refid="SEGroup_8hpp_1a0c4713a5028ea60cd90aa6f57f01080d" kind="typedef"><name>SE3Groupd</name></member>
+    <member refid="SEGroup_8hpp_1ac9e8559e3b1bf80389a1def0733c7899" kind="typedef"><name>SE3Groupld</name></member>
+    <member refid="SOGroup_8hpp_1af9739a2baa5461af9ff1df5f7a211ee2" kind="typedef"><name>SOGroupf</name></member>
+    <member refid="SOGroup_8hpp_1a50d10b7ba20dd81f714608db17576b5b" kind="typedef"><name>SOGroupd</name></member>
+    <member refid="SOGroup_8hpp_1a56de11c079b33f51eb79b4da18415a9f" kind="typedef"><name>SOGroupld</name></member>
+    <member refid="SOGroup_8hpp_1a16e8e6a4ce9775c977c416f4b69a4bdd" kind="typedef"><name>SO2Group</name></member>
+    <member refid="SOGroup_8hpp_1a3fa0b03c1173d1a8eff009be5d44c694" kind="typedef"><name>SO3Group</name></member>
+    <member refid="SOGroup_8hpp_1a4956051dc8f35209955562659fd87c3b" kind="typedef"><name>SO3Groupf</name></member>
+    <member refid="SOGroup_8hpp_1ae2f61a088e8d319216da1e72dbbd2bd1" kind="typedef"><name>SO3Groupd</name></member>
+    <member refid="SOGroup_8hpp_1a9c2f61247357306004adece28a2456ae" kind="typedef"><name>SO3Groupld</name></member>
+    <member refid="SOGroup_8hpp_1a53755d8000e59e3e62505a2e481f4f20" kind="typedef"><name>SO2Groupf</name></member>
+    <member refid="SOGroup_8hpp_1ad341dc0c03de46f520557aec2568d79b" kind="typedef"><name>SO2Groupd</name></member>
+    <member refid="SOGroup_8hpp_1af9cc52b373a90efd348954bf995431b0" kind="typedef"><name>SO2Groupld</name></member>
+    <member refid="SOGroup_8hpp_1a239644d6dbc82334dc8f6adc42bab987" kind="typedef"><name>RotationMatrixf</name></member>
+    <member refid="SOGroup_8hpp_1a5b706d500c57a32e0149ec23248a461a" kind="typedef"><name>RotationMatrixd</name></member>
+    <member refid="SOGroup_8hpp_1a1adf6979917976e6418993a444e0e024" kind="typedef"><name>RotationMatrixld</name></member>
+    <member refid="SOGroup_8hpp_1ae8c09319a71a4e8b8687d5af24019173" kind="typedef"><name>RotationMatrix2D</name></member>
+    <member refid="SOGroup_8hpp_1ac96f5090091bcecf508ce7a15d831820" kind="typedef"><name>RotationMatrix3D</name></member>
+    <member refid="SOGroup_8hpp_1a202a5b7112091e3777d09c49e45eeea7" kind="typedef"><name>RotationMatrix2Df</name></member>
+    <member refid="SOGroup_8hpp_1a8ffabfc40d751681edf001edc6df501e" kind="typedef"><name>RotationMatrix2Dd</name></member>
+    <member refid="SOGroup_8hpp_1a6740f8abe3f820461ec2ca740c3158a3" kind="typedef"><name>RotationMatrix2Dld</name></member>
+    <member refid="SOGroup_8hpp_1a76af828ef1a1ba597079a7366d6300a7" kind="typedef"><name>RotationMatrix3Df</name></member>
+    <member refid="SOGroup_8hpp_1ab8c1086e02e104029180e17dce3b1608" kind="typedef"><name>RotationMatrix3Dd</name></member>
+    <member refid="SOGroup_8hpp_1a566c32498fa974781e00257a9e576a61" kind="typedef"><name>RotationMatrix3Dld</name></member>
+    <member refid="SquareMatrix_8hpp_1a1f26e448fc32a05b650a83c0dc862a9d" kind="typedef"><name>SquareMatrixf</name></member>
+    <member refid="SquareMatrix_8hpp_1a361a92fed5fc0faca9a660eeaf3c6fe1" kind="typedef"><name>SquareMatrixd</name></member>
+    <member refid="SquareMatrix_8hpp_1afc674aaad0c3f39ea41d0f9644628368" kind="typedef"><name>SquareMatrixld</name></member>
+    <member refid="UnitComplexNum_8hpp_1af45f3957c3560383bb6a0f5591850a4e" kind="typedef"><name>UnitComplexNumf</name></member>
+    <member refid="UnitComplexNum_8hpp_1a5bb87ba9df4b8610cfeed4317b474db8" kind="typedef"><name>UnitComplexNumd</name></member>
+    <member refid="UnitComplexNum_8hpp_1a72e690311499c62956178d319d0148cb" kind="typedef"><name>UnitComplexNumld</name></member>
+    <member refid="UnitComplexNum_8hpp_1a5cd9cde46fa27e904074fef74f2c2f88" kind="typedef"><name>S1f</name></member>
+    <member refid="UnitComplexNum_8hpp_1ab3a4891f53d2d817c84840fb86eefa0e" kind="typedef"><name>S1d</name></member>
+    <member refid="UnitComplexNum_8hpp_1a7a6d71f02f98b07953e2f00e313217c9" kind="typedef"><name>S1ld</name></member>
+    <member refid="UnitDualQuaternion_8hpp_1ac18ff5ba8bc3c6434b439595a0e70646" kind="typedef"><name>UnitDualQuaternionf</name></member>
+    <member refid="UnitDualQuaternion_8hpp_1af8c19031bf37a569328ccdb7275f119d" kind="typedef"><name>UnitDualQuaterniond</name></member>
+    <member refid="UnitDualQuaternion_8hpp_1a705d6f76b3a92e1dcb77e9af3e107eb6" kind="typedef"><name>UnitDualQuaternionld</name></member>
+    <member refid="UnitQuaternion_8hpp_1a9cea023abc9a2a0f244db0db73f0332f" kind="typedef"><name>UnitQuaternionf</name></member>
+    <member refid="UnitQuaternion_8hpp_1ab7e0af1c5d26c927c6fafaf5b96fad0f" kind="typedef"><name>UnitQuaterniond</name></member>
+    <member refid="UnitQuaternion_8hpp_1ab85a36fba508118953d3f6553716167d" kind="typedef"><name>UnitQuaternionld</name></member>
+    <member refid="UnitQuaternion_8hpp_1ad69294f5cda67c8dfc1208886e5a3e48" kind="typedef"><name>S3f</name></member>
+    <member refid="UnitQuaternion_8hpp_1a69d1605e891a2455895bca5475226a75" kind="typedef"><name>S3d</name></member>
+    <member refid="UnitQuaternion_8hpp_1aaba3df23ec0c1ab1ca4cbb5692ed0ceb" kind="typedef"><name>S3ld</name></member>
+    <member refid="Vector_8hpp_1a3534e90820bed40c928ed1c914ca14a2" kind="typedef"><name>Vectorf</name></member>
+    <member refid="Vector_8hpp_1aa5e9e500d7b1e79d754a1311c1d0fa9e" kind="typedef"><name>Vectord</name></member>
+    <member refid="Vector_8hpp_1afee032ce3d4133c29218e837c952d79a" kind="typedef"><name>Vectorld</name></member>
+    <member refid="micro__type__traits_8hpp_1a787e8423d8c286378697c90b2ae85515" kind="typedef"><name>enable_if_t</name></member>
+    <member refid="micro__type__traits_8hpp_1ad6ad20fad8ecb0e8e04539345a7c354d" kind="typedef"><name>conditional_if_t</name></member>
+    <member refid="micro__type__traits_8hpp_1a4b43aba5240fa85b02799050d4c1d62b" kind="typedef"><name>true_type</name></member>
+    <member refid="micro__type__traits_8hpp_1a89b5b925347f54f5a6e27a51d5748c07" kind="typedef"><name>false_type</name></member>
+    <member refid="micro__type__traits_8hpp_1a4a9e7576cb0a6ccb474823826ba41abd" kind="variable"><name>is_same_v</name></member>
+    <member refid="micro__type__traits_8hpp_1ac0ded4d4f945f828e49fbcc2ac1d5b9e" kind="variable"><name>all_same_v</name></member>
+    <member refid="micro__type__traits_8hpp_1a8064c40ff6762d8542116924c9b695d1" kind="variable"><name>is_float_v</name></member>
+    <member refid="micro__type__traits_8hpp_1aa63766cef1a6d6680c09dd41880f1bf6" kind="variable"><name>is_matrix_base_v</name></member>
+    <member refid="epsilon_8hpp_1a8fb18b3a15c41343540fa96d2cb990db" kind="function"><name>exponent_epsilon</name></member>
+    <member refid="epsilon_8hpp_1a57a6fb6d963b24cdc1b4de926c9ee3e1" kind="function"><name>epsilon</name></member>
+    <member refid="micro__math_8hpp_1ad65284938c2c15dac2bf069e5fdbe502" kind="function"><name>sqrt</name></member>
+    <member refid="micro__math_8hpp_1ade60ea80af561ec8b28fe47c03f47e1d" kind="function"><name>sin</name></member>
+    <member refid="micro__math_8hpp_1aeb43731489aa760da4e23352a8ce833f" kind="function"><name>cos</name></member>
+    <member refid="micro__math_8hpp_1a47ed7a26c67a80316c3bffd021bf088c" kind="function"><name>tan</name></member>
+    <member refid="micro__math_8hpp_1afa0506f71d445a71062d248da7ead10e" kind="function"><name>asin</name></member>
+    <member refid="micro__math_8hpp_1a3aed31ff1e04a56befa3da72e4768bb4" kind="function"><name>acos</name></member>
+    <member refid="micro__math_8hpp_1a46c92b2ae10aefbebf5640d74f3745ea" kind="function"><name>atan</name></member>
+    <member refid="micro__math_8hpp_1aec48be4171b94dad3b298181544412fc" kind="function"><name>atan2</name></member>
+    <member refid="micro__math_8hpp_1a5f05649f2495254ca708640abba2d775" kind="function"><name>fmin</name></member>
+    <member refid="micro__math_8hpp_1a1599a706c36584c75a40bd21d93c4817" kind="function"><name>fmax</name></member>
+    <member refid="micro__math_8hpp_1afc33fe6c25da54d0abe3be2d8c4d0792" kind="function"><name>powf</name></member>
+    <member refid="micro__math_8hpp_1a05025eacc454da110d6a2b19e32641d5" kind="function"><name>square</name></member>
+    <member refid="micro__math_8hpp_1a602d64faab052c2e3f2e68e1b324c4db" kind="function"><name>cube</name></member>
+    <member refid="micro__math_8hpp_1ae231ece664af390ece1df32b8509e4b8" kind="function"><name>abs</name></member>
+    <member refid="micro__math_8hpp_1ac7d41bff20f61ce732d4dc029e92330e" kind="function"><name>exp</name></member>
+    <member refid="micro__math_8hpp_1a7b9f1126e9708b10867b6aa2673033b0" kind="function"><name>ceil</name></member>
+    <member refid="micro__math_8hpp_1a6789d49fe68b1c39f1b9e8d4e4e43231" kind="function"><name>floorf</name></member>
+    <member refid="micro__math_8hpp_1af960086fcdffb1febef06f7679bd689b" kind="function"><name>ceilf</name></member>
+    <member refid="micro__math_8hpp_1ad8abc30f7ed8e7c8e2ba279ffa73eccf" kind="function"><name>roundf</name></member>
+    <member refid="micro__math_8hpp_1a0fd6bba70494c8ea218de0f630af9fb2" kind="function"><name>truncf</name></member>
+  </compound>
+  <compound refid="namespaceTRANSLOTATOR" kind="namespace"><name>TRANSLOTATOR</name>
+  </compound>
+  <compound refid="namespacetranslotator_1_1EULER__CONSTEXPR" kind="namespace"><name>translotator::EULER_CONSTEXPR</name>
+    <member refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a9aad8350552ae5f4fb691294848d0e4f" kind="function"><name>AXIS_AT</name></member>
+    <member refid="namespacetranslotator_1_1EULER__CONSTEXPR_1a5d7afee94dfcee805c58963393631c8f" kind="function"><name>AXIS_TO_IDX</name></member>
+    <member refid="namespacetranslotator_1_1EULER__CONSTEXPR_1ae457bf7275f1f5b47b250918979a08d9" kind="function"><name>AXIS_IDX_AT</name></member>
+  </compound>
+  <compound refid="namespacetranslotator_1_1interpolators" kind="namespace"><name>translotator::interpolators</name>
+    <member refid="Lerp_8hpp_1a1d88b9e4816c3df6fc5fcf21393f81d1" kind="function"><name>LerpDiff</name></member>
+    <member refid="Lerp_8hpp_1abe5c4fe41f77cd66901392d3f9351a31" kind="function"><name>Lerping</name></member>
+    <member refid="ScLerp_8hpp_1a070782a6ffaf28147adc8c3df359d9a6" kind="function"><name>ScLerpDiff</name></member>
+    <member refid="ScLerp_8hpp_1ad1676f1ac9fff9e2f9a49900e466d646" kind="function"><name>ScLerping</name></member>
+    <member refid="Slerp_8hpp_1ae2290d61349f2928720788269838fd7b" kind="function"><name>SlerpDiff</name></member>
+    <member refid="Slerp_8hpp_1a31c210bf74980b7837780f728085c134" kind="function"><name>Slerping</name></member>
+    <member refid="Slerp__Lerp_8hpp_1a20d0847d4ee85bb8be7f9948ad06a9c7" kind="function"><name>SlerpLerpDiff</name></member>
+    <member refid="Slerp__Lerp_8hpp_1a1c3ee23a9eee609c9c228bac5beef76f" kind="function"><name>SlerpLerping</name></member>
+  </compound>
+  <compound refid="namespacetranslotator_1_1lie" kind="namespace"><name>translotator::lie</name>
+    <member refid="namespacetranslotator_1_1lie_1a09a13c35010aa2769a1b9db0b3ba3f3d" kind="typedef"><name>LieOperator_S1</name></member>
+    <member refid="namespacetranslotator_1_1lie_1ae54a5d1db94ba345380d139c045edc57" kind="typedef"><name>LieOperator_S1f</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a21fc8f961ec421fbe543f4748960be9c" kind="typedef"><name>LieOperator_S1d</name></member>
+    <member refid="namespacetranslotator_1_1lie_1accf46ec6aa421dc49196894294fb212c" kind="typedef"><name>LieOperator_S1ld</name></member>
+    <member refid="namespacetranslotator_1_1lie_1acb140b116bd6fdec0a68a2d08266040f" kind="typedef"><name>LieOperator_S3</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a5129452e19c90f1f5aac8bfae5739d6b" kind="typedef"><name>LieOperator_S3f</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a96b64141dd083d7e68023b66ea5bcf93" kind="typedef"><name>LieOperator_S3d</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a9b8562b3c969c21e1773ff3513e0b9a5" kind="typedef"><name>LieOperator_S3ld</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a0d11cd6269e064a197208eb071fd4d0c" kind="typedef"><name>LieOperator_SE</name></member>
+    <member refid="namespacetranslotator_1_1lie_1ab1cad9a5fa2260fd703220de9c83d537" kind="typedef"><name>LieOperator_SEf</name></member>
+    <member refid="namespacetranslotator_1_1lie_1af87b8ad5a33442f6acfe9da4b7b56c61" kind="typedef"><name>LieOperator_SEd</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a047ff13384492426e28bb4ee2089b94f" kind="typedef"><name>LieOperator_SEld</name></member>
+    <member refid="namespacetranslotator_1_1lie_1ac8ed79b48e29dd4c308d48eac5a55da1" kind="typedef"><name>LieOperator_SO</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a5bef9cc8a90eb6d71b6cc420654a2d4e" kind="typedef"><name>LieOperator_SOf</name></member>
+    <member refid="namespacetranslotator_1_1lie_1a2ccd41aab90eb30791066eea44a15f55" kind="typedef"><name>LieOperator_SOd</name></member>
+    <member refid="namespacetranslotator_1_1lie_1aaa4d3164fe86765e12307f8394d5a834" kind="typedef"><name>LieOperator_SOld</name></member>
+  </compound>
+  <compound refid="namespacetranslotator_1_1MatrixBaseInternal" kind="namespace"><name>translotator::MatrixBaseInternal</name>
+  </compound>
+  <compound refid="config_8hpp" kind="file"><name>config.hpp</name>
+    <member refid="config_8hpp_1a1d9f57a42c1add21e59f68107e7e707f" kind="define"><name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32</name></member>
+    <member refid="config_8hpp_1a00071fe1ae596fdb16f007b3ee04357c" kind="define"><name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_32_EPSILON</name></member>
+    <member refid="config_8hpp_1aa12a552f907a3783c064efedc59415d0" kind="define"><name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_64_EPSILON</name></member>
+    <member refid="config_8hpp_1a5098aa0d4e5912fd59d02d3b49b21146" kind="define"><name>CONFIG_TRANSLOTATOR_DEFAULT_FLOATING_POINT_PRECISION_128_EPSILON</name></member>
+  </compound>
+  <compound refid="Lerp_8hpp" kind="file"><name>Lerp.hpp</name>
+  </compound>
+  <compound refid="ScLerp_8hpp" kind="file"><name>ScLerp.hpp</name>
+  </compound>
+  <compound refid="Slerp_8hpp" kind="file"><name>Slerp.hpp</name>
+  </compound>
+  <compound refid="Slerp__Lerp_8hpp" kind="file"><name>Slerp_Lerp.hpp</name>
+  </compound>
+  <compound refid="LieOperator_8hpp" kind="file"><name>LieOperator.hpp</name>
+  </compound>
+  <compound refid="S1_8hpp" kind="file"><name>S1.hpp</name>
+  </compound>
+  <compound refid="S3_8hpp" kind="file"><name>S3.hpp</name>
+  </compound>
+  <compound refid="SE_8hpp" kind="file"><name>SE.hpp</name>
+  </compound>
+  <compound refid="SO_8hpp" kind="file"><name>SO.hpp</name>
+  </compound>
+  <compound refid="AxisAngle_8hpp" kind="file"><name>AxisAngle.hpp</name>
+  </compound>
+  <compound refid="ComplexNum_8hpp" kind="file"><name>ComplexNum.hpp</name>
+  </compound>
+  <compound refid="DualNumber_8hpp" kind="file"><name>DualNumber.hpp</name>
+  </compound>
+  <compound refid="DualQuaternion_8hpp" kind="file"><name>DualQuaternion.hpp</name>
+  </compound>
+  <compound refid="EulerAngle_8hpp" kind="file"><name>EulerAngle.hpp</name>
+  </compound>
+  <compound refid="initializer__list_8hpp" kind="file"><name>initializer_list.hpp</name>
+  </compound>
+  <compound refid="Matrix_8hpp" kind="file"><name>Matrix.hpp</name>
+  </compound>
+  <compound refid="MatrixBase_8hpp" kind="file"><name>MatrixBase.hpp</name>
+  </compound>
+  <compound refid="MatrixBaseInternal_8hpp" kind="file"><name>MatrixBaseInternal.hpp</name>
+  </compound>
+  <compound refid="objectdefs_8hpp" kind="file"><name>objectdefs.hpp</name>
+  </compound>
+  <compound refid="Quaternion_8hpp" kind="file"><name>Quaternion.hpp</name>
+  </compound>
+  <compound refid="SEGroup_8hpp" kind="file"><name>SEGroup.hpp</name>
+  </compound>
+  <compound refid="SOGroup_8hpp" kind="file"><name>SOGroup.hpp</name>
+  </compound>
+  <compound refid="SquareMatrix_8hpp" kind="file"><name>SquareMatrix.hpp</name>
+  </compound>
+  <compound refid="tail_8hpp" kind="file"><name>tail.hpp</name>
+  </compound>
+  <compound refid="UnitComplexNum_8hpp" kind="file"><name>UnitComplexNum.hpp</name>
+  </compound>
+  <compound refid="UnitDualQuaternion_8hpp" kind="file"><name>UnitDualQuaternion.hpp</name>
+  </compound>
+  <compound refid="UnitQuaternion_8hpp" kind="file"><name>UnitQuaternion.hpp</name>
+  </compound>
+  <compound refid="Vector_8hpp" kind="file"><name>Vector.hpp</name>
+  </compound>
+  <compound refid="translotator_8hpp" kind="file"><name>translotator.hpp</name>
+  </compound>
+  <compound refid="default__type_8hpp" kind="file"><name>default_type.hpp</name>
+    <member refid="default__type_8hpp_1a8b370637e7ae778b237002708dff7273" kind="define"><name>TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE</name></member>
+  </compound>
+  <compound refid="epsilon_8hpp" kind="file"><name>epsilon.hpp</name>
+  </compound>
+  <compound refid="micro__math_8hpp" kind="file"><name>micro_math.hpp</name>
+  </compound>
+  <compound refid="micro__type__traits_8hpp" kind="file"><name>micro_type_traits.hpp</name>
+  </compound>
+  <compound refid="version_8hpp" kind="file"><name>version.hpp</name>
+    <member refid="version_8hpp_1a108e7fb1dae49128b7bdc62b82ec3c3b" kind="define"><name>TRANSLOTATOR_VERSION</name></member>
+    <member refid="version_8hpp_1a3f39724b270a5e617e56063e2db0c886" kind="define"><name>TRANSLOTATOR_MAJOR_VERSION</name></member>
+    <member refid="version_8hpp_1a021a83c50aa5b6bb55541fcdaf881850" kind="define"><name>TRANSLOTATOR_MINOR_VERSION</name></member>
+    <member refid="version_8hpp_1a2ddcb41b996ea3845603e0cdc7327c0b" kind="define"><name>TRANSLOTATOR_PATCH_VERSION</name></member>
+    <member refid="version_8hpp_1abfeab5299fb966f514977a3d506bf4d8" kind="define"><name>TRANSLOTATOR_TWEAK_VERSION</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_b0f52d96602c2240130b99aee8b7fd2d" kind="dir"><name>include/translotator/interpolators</name>
+  </compound>
+  <compound refid="dir_8ed321f5373998308f124cc3f5af3597" kind="dir"><name>include/translotator/lie</name>
+  </compound>
+  <compound refid="dir_d5306d4012edd8106bd4452d9b4e4e98" kind="dir"><name>include/translotator/objects</name>
+  </compound>
+  <compound refid="dir_ffa3503b73a46a1fbf73d754da62ba14" kind="dir"><name>include/translotator</name>
+  </compound>
+  <compound refid="dir_19a7ecde96094a236c7c8e28b6698d62" kind="dir"><name>include/translotator/utils</name>
+  </compound>
+</doxygenindex>

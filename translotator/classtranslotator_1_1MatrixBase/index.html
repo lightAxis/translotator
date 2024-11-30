@@ -1,0 +1,2613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Class translotator::MatrixBase - translotator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-translotatormatrixbase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="translotator" class="md-header__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            translotator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class translotator::MatrixBase
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Main
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../links/" class="md-tabs__link">
+          
+  
+  Specifications(MkDoxy)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="translotator" class="md-nav__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    translotator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    translotator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_based_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix based Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix & Vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Number Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Groups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../so_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SO Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Representation Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Representation Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../euler_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Euler Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../axis_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axis Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Homogeneous Transformation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Homogeneous Transformation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../se_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SE Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Specifications(MkDoxy)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications(MkDoxy)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Namespaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Namespaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protected Attributes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="class-translotatormatrixbase">Class translotator::MatrixBase<a class="headerlink" href="#class-translotatormatrixbase" title="Permanent link">&para;</a></h1>
+<p><strong>template &lt;size_t N, size_t M, typename Type, typename Derived&gt;</strong></p>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacetranslotator/"><strong>translotator</strong></a> <strong>&gt;</strong> <a href="./"><strong>MatrixBase</strong></a></p>
+<p><em>Base class for all matrix objects.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;MatrixBase.hpp&gt;</code></li>
+</ul>
+<p>Inherited by the following classes: <a href="../classtranslotator_1_1Vector/">translotator::Vector</a></p>
+<h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">typedef Type</td>
+<td style="text-align: left;"><a href="#typedef-datatype"><strong>DATATYPE</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-attributes">Public Static Attributes<a class="headerlink" href="#public-static-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">constexpr static size_t</td>
+<td style="text-align: left;"><a href="#variable-cols"><strong>COLS</strong></a>   = = M<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr static bool</td>
+<td style="text-align: left;"><a href="#variable-matrix_base"><strong>MATRIX_BASE</strong></a>   = = true<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr static size_t</td>
+<td style="text-align: left;"><a href="#variable-rows"><strong>ROWS</strong></a>   = = N<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-matrixbase-15"><strong>MatrixBase</strong></a> () = default<br><em>Returns the number of columns.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-matrixbase-25"><strong>MatrixBase</strong></a> (const <a href="./"><strong>MatrixBase</strong></a> &amp; other) = default<br></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-matrixbase-35"><strong>MatrixBase</strong></a> (const Type data) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-matrixbase-45"><strong>MatrixBase</strong></a> (const Type data) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-matrixbase-55"><strong>MatrixBase</strong></a> (const <a href="../structtranslotator_1_1initializer__list/"><strong>initializer_list</strong></a>&lt; N *M, Type &gt; &amp; list) <br><em>Initializer list constructor.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">auto</td>
+<td style="text-align: left;"><a href="#function-t"><strong>T</strong></a> () const<br><em>Transpose.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; P, Q, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-block-12"><strong>block</strong></a> (size_t i, size_t j) const<br><em>Returns a block of the matrix.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; P, Q, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-block-22"><strong>block</strong></a> () const<br><em>Returns a block of the matrix.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2complexnum"><strong>cast2ComplexNum</strong></a> () const<br><em>Casts the object to a complex number by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2complexnumref"><strong>cast2ComplexNumRef</strong></a> () <br><em>Casts the object to a complex number reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2dualnumber"><strong>cast2DualNumber</strong></a> () const<br><em>Casts the object to a dual number by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2dualnumberref"><strong>cast2DualNumberRef</strong></a> () <br><em>Casts the object to a dual number reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2dualquaternion"><strong>cast2DualQuaternion</strong></a> () const<br><em>Casts the object to a dual quaternion by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2dualquaternionref"><strong>cast2DualQuaternionRef</strong></a> () <br><em>Casts the object to a dual quaternion reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, M, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2matrix"><strong>cast2Matrix</strong></a> () const<br><em>Casts the object to a different matrix type by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, M, Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2matrixref"><strong>cast2MatrixRef</strong></a> () <br><em>Casts the object to a matrix reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2quaternion"><strong>cast2Quaternion</strong></a> () const<br><em>Casts the object to a quaternion by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2quaternionref"><strong>cast2QuaternionRef</strong></a> () <br><em>Casts the object to a quaternion reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; N, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2sogroup"><strong>cast2SOGroup</strong></a> () const<br><em>Casts the object to a special orthogonal group by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; N, Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2sogroupref"><strong>cast2SOGroupRef</strong></a> () <br><em>Casts the object to a special orthogonal group reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a>&lt; N, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2squarematrix"><strong>cast2SquareMatrix</strong></a> () const<br><em>Casts the object to a square matrix by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a>&lt; N, Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2squarematrixref"><strong>cast2SquareMatrixRef</strong></a> () <br><em>Casts the object to a square matrix reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2unitcomplexnum"><strong>cast2UnitComplexNum</strong></a> () const<br><em>Casts the object to a unit complex number by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2unitcomplexnumref"><strong>cast2UnitComplexNumRef</strong></a> () <br><em>Casts the object to a unit complex number reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2unitdualquaternion"><strong>cast2UnitDualQuaternion</strong></a> () const<br><em>Casts the object to a unit dual quaternion by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2unitdualquaternionref"><strong>cast2UnitDualQuaternionRef</strong></a> () <br><em>Casts the object to a unit dual quaternion reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2unitquaternion"><strong>cast2UnitQuaternion</strong></a> () const<br><em>Casts the object to a unit quaternion by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a>&lt; Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2unitquaternionref"><strong>cast2UnitQuaternionRef</strong></a> () <br><em>Casts the object to a unit quaternion reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a>&lt; N, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-cast2vector"><strong>cast2Vector</strong></a> () const<br><em>Casts the object to a vector by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a>&lt; N, Type &gt; &amp;</td>
+<td style="text-align: left;"><a href="#function-cast2vectorref"><strong>cast2VectorRef</strong></a> () <br><em>Casts the object to a vector reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">NewContainer</td>
+<td style="text-align: left;"><a href="#function-castcontainer"><strong>castContainer</strong></a> () const<br><em>Casts the matrix to a different container type by copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">NewContainer &amp;</td>
+<td style="text-align: left;"><a href="#function-castcontainerref-12"><strong>castContainerRef</strong></a> () <br><em>Casts the object to a different container reference without copying.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">NewDerived &amp;</td>
+<td style="text-align: left;"><a href="#function-castcontainerref-22"><strong>castContainerRef</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">auto</td>
+<td style="text-align: left;"><a href="#function-castdatatype"><strong>castDataType</strong></a> () const<br><em>Returns the Frobenius norm.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, 1, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-col"><strong>col</strong></a> (size_t j) const<br><em>Returns the j-th column.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-copyto"><strong>copyTo</strong></a> (Type * data) const<br><em>Returns the raw data pointer.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-fill"><strong>fill</strong></a> (const Type &amp; v) <br><em>Fills the matrix with a value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Type</td>
+<td style="text-align: left;"><a href="#function-frobeniusnorm"><strong>frobeniusNorm</strong></a> () const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">Type</td>
+<td style="text-align: left;"><a href="#function-frobeniusnormsquared"><strong>frobeniusNormSquared</strong></a> () const<br><em>Returns the squared Frobenius norm.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Type *</td>
+<td style="text-align: left;"><a href="#function-getdata"><strong>getData</strong></a> () const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">const Type &amp;</td>
+<td style="text-align: left;"><a href="#function-operator()-12"><strong>operator()</strong></a> (size_t i, size_t j) const<br><em>Accesses the element at (i, j)</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Type &amp;</td>
+<td style="text-align: left;"><a href="#function-operator()-22"><strong>operator()</strong></a> (size_t i, size_t j) <br><em>Accesses the element at (i, j)</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">auto</td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator*</strong></a> (const OtherDerived &amp; other) const<br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator*</strong></a> (const Type &amp; v) const<br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-operator_2"><strong>operator*=</strong></a> (const OtherDerived &amp; other) <br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-operator_3"><strong>operator+</strong></a> (const OtherDerived &amp; other) const<br><em>Multiplication by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-operator_4"><strong>operator+=</strong></a> (const OtherDerived &amp; other) <br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>division by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-operator_5"><strong>operator-</strong></a> (const OtherDerived &amp; other) const<br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>subtraction.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-operator_6"><strong>operator-</strong></a> () const<br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-operator_7"><strong>operator-=</strong></a> (const OtherDerived &amp; other) <br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>subtraction by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-operator_8"><strong>operator/</strong></a> (Type v) const<br><em>Division by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-operator_9"><strong>operator/=</strong></a> (Type v) <br><em>Division by scalar.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-operator_10"><strong>operator=</strong></a> (const Derived &amp; other) <br><em>Copies the data to the given pointer.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-print"><strong>print</strong></a> () const<br><em>Prints the matrix.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; 1, M, Type &gt;</td>
+<td style="text-align: left;"><a href="#function-row"><strong>row</strong></a> (size_t i) const<br><em>Returns the i-th row.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setblock-12"><strong>setBlock</strong></a> (size_t i, size_t j, const OtherDerived &amp; block) <br><em>Sets the element at (i, j)</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setblock-22"><strong>setBlock</strong></a> (const OtherDerived &amp; block) <br><em>Sets the i-th row.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setcol-12"><strong>setCol</strong></a> (size_t j, const OtherDerived &amp; col) <br><em>Sets the j-th column.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setcol-22"><strong>setCol</strong></a> (const OtherDerived &amp; col) <br><em>Sets the j-th column.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setrow-12"><strong>setRow</strong></a> (size_t i, const OtherDerived &amp; row) <br><em>Sets the i-th row.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived &amp;</td>
+<td style="text-align: left;"><a href="#function-setrow-22"><strong>setRow</strong></a> (const OtherDerived &amp; row) <br><em>Sets the i-th row.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-swapcols"><strong>swapCols</strong></a> (size_t j1, size_t j2) <br><em>Swaps two columns.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-swaprows"><strong>swapRows</strong></a> (size_t i1, size_t i2) <br><em>Swaps two rows.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Type</td>
+<td style="text-align: left;"><a href="#function-toscalar"><strong>toScalar</strong></a> () const<br><em>Casts the matrix to a scalar if it is a 1x1 matrix.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions">Public Static Functions<a class="headerlink" href="#public-static-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-nan"><strong>NaN</strong></a> () <br><em>Returns a matrix filled with NaN.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr static size_t</td>
+<td style="text-align: left;"><a href="#function-colsize"><strong>colSize</strong></a> () <br><em>Returns the number of rows.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-eye"><strong>eye</strong></a> () <br><em>Returns an identity matrix.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-ones"><strong>ones</strong></a> () <br><em>Returns a matrix filled with ones.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr static size_t</td>
+<td style="text-align: left;"><a href="#function-rowsize"><strong>rowSize</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">Derived</td>
+<td style="text-align: left;"><a href="#function-zeros"><strong>zeros</strong></a> () <br><em>Returns a matrix filled with zeros.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-attributes">Protected Attributes<a class="headerlink" href="#protected-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Type</td>
+<td style="text-align: left;"><a href="#variable-data_"><strong>data_</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h1 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h1>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>N</code> Number of rows </li>
+<li><code>M</code> Number of columns </li>
+<li><code>Type</code> Data type of the matrix </li>
+<li><code>Derived</code> Derived class, CRTP </li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>This class is not meant to be used directly, use other matrix-based object classes instead.</p>
+<p>This class provides basic matrix operations and functionalities. </p>
+<h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="typedef-datatype">typedef DATATYPE<a class="headerlink" href="#typedef-datatype" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">DATATYPE</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">Type</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+<h2 id="public-static-attributes-documentation">Public Static Attributes Documentation<a class="headerlink" href="#public-static-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-cols">variable COLS<a class="headerlink" href="#variable-cols" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">COLS</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-matrix_base">variable MATRIX_BASE<a class="headerlink" href="#variable-matrix_base" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">MATRIX_BASE</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-rows">variable ROWS<a class="headerlink" href="#variable-rows" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">ROWS</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-matrixbase-15">function MatrixBase [1/5]<a class="headerlink" href="#function-matrixbase-15" title="Permanent link">&para;</a></h3>
+<p><em>Returns the number of columns.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">MatrixBase</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+</code></pre></div></p>
+<p>Constructors and destructor </p>
+<hr>
+
+<h3 id="function-matrixbase-25">function MatrixBase [2/5]<a class="headerlink" href="#function-matrixbase-25" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">explicit</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">MatrixBase</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">MatrixBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-matrixbase-35">function MatrixBase [3/5]<a class="headerlink" href="#function-matrixbase-35" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">MatrixBase</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">data</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-matrixbase-45">function MatrixBase [4/5]<a class="headerlink" href="#function-matrixbase-45" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">MatrixBase</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">data</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-matrixbase-55">function MatrixBase [5/5]<a class="headerlink" href="#function-matrixbase-55" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">MatrixBase</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">initializer_list</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">*</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">list</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-t">function T<a class="headerlink" href="#function-t" title="Permanent link">&para;</a></h3>
+<p><em>Transpose.</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">T</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p>Utils </p>
+<hr>
+
+<h3 id="function-block-12">function block [1/2]<a class="headerlink" href="#function-block-12" title="Permanent link">&para;</a></h3>
+<p><em>Returns a block of the matrix.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">Q</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">block</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>P</code> Number of rows in the block </li>
+<li><code>Q</code> Number of columns in the block </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> Starting row index </li>
+<li><code>j</code> Starting column index </li>
+</ul>
+<hr>
+
+<h3 id="function-block-22">function block [2/2]<a class="headerlink" href="#function-block-22" title="Permanent link">&para;</a></h3>
+<p><em>Returns a block of the matrix.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">Q</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">block</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>i</code> Starting row index </li>
+<li><code>j</code> Starting column index </li>
+<li><code>P</code> Number of rows in the block </li>
+<li><code>Q</code> Number of columns in the block </li>
+</ul>
+<hr>
+
+<h3 id="function-cast2complexnum">function cast2ComplexNum<a class="headerlink" href="#function-cast2complexnum" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a complex number by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">ComplexNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2ComplexNum</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Complex number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;ComplexNum&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2complexnumref">function cast2ComplexNumRef<a class="headerlink" href="#function-cast2complexnumref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a complex number reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">ComplexNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2ComplexNumRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Complex number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;ComplexNum&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2dualnumber">function cast2DualNumber<a class="headerlink" href="#function-cast2dualnumber" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a dual number by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">DualNumber</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2DualNumber</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Dual number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;DualNumber&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2dualnumberref">function cast2DualNumberRef<a class="headerlink" href="#function-cast2dualnumberref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a dual number reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">DualNumber</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2DualNumberRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Dual number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;DualNumber&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2dualquaternion">function cast2DualQuaternion<a class="headerlink" href="#function-cast2dualquaternion" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a dual quaternion by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">DualQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2DualQuaternion</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Dual quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 8 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;DualQuaternion&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2dualquaternionref">function cast2DualQuaternionRef<a class="headerlink" href="#function-cast2dualquaternionref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a dual quaternion reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">DualQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2DualQuaternionRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Dual quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 8 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;DualQuaternion&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2matrix">function cast2Matrix<a class="headerlink" href="#function-cast2matrix" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a different matrix type by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2Matrix</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>NewContainer</code> New matrix type </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;Matrix&lt;N, M, Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2matrixref">function cast2MatrixRef<a class="headerlink" href="#function-cast2matrixref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a matrix reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2MatrixRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for N x M dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;Matrix&lt;N, M, Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2quaternion">function cast2Quaternion<a class="headerlink" href="#function-cast2quaternion" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a quaternion by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Quaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2Quaternion</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a> object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 4 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;Quaternion&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2quaternionref">function cast2QuaternionRef<a class="headerlink" href="#function-cast2quaternionref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a quaternion reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Quaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2QuaternionRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a> object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 4 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;Quaternion&lt;Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2sogroup">function cast2SOGroup<a class="headerlink" href="#function-cast2sogroup" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a special orthogonal group by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">SOGroup</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2SOGroup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a> object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 2 or 3 x 3 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;<a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup&lt;N, Type&gt;</strong></a>&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a special orthogonal group, the output will be normalized to be a special orthogonal group </p>
+<hr>
+
+<h3 id="function-cast2sogroupref">function cast2SOGroupRef<a class="headerlink" href="#function-cast2sogroupref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a special orthogonal group reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">SOGroup</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2SOGroupRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a> object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 2 or 3 x 3 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;<a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup&lt;N, Type&gt;</strong></a>&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a special orthogonal group, the output &amp; original object will be normalized to be a special orthogonal group </p>
+<hr>
+
+<h3 id="function-cast2squarematrix">function cast2SquareMatrix<a class="headerlink" href="#function-cast2squarematrix" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a square matrix by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2SquareMatrix</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Square matrix object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for N x N dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;SquareMatrix&lt;N, Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2squarematrixref">function cast2SquareMatrixRef<a class="headerlink" href="#function-cast2squarematrixref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a square matrix reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2SquareMatrixRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Square matrix object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for N x N dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;SquareMatrix&lt;N, Type&gt;&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2unitcomplexnum">function cast2UnitComplexNum<a class="headerlink" href="#function-cast2unitcomplexnum" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit complex number by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitComplexNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitComplexNum</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit complex number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;UnitComplexNum&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit complex number, the output will be normalized to be a unit complex number </p>
+<hr>
+
+<h3 id="function-cast2unitcomplexnumref">function cast2UnitComplexNumRef<a class="headerlink" href="#function-cast2unitcomplexnumref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit complex number reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitComplexNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitComplexNumRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit complex number object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 2 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;UnitComplexNum&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit complex number, the output &amp; original object will be normalized to be a unit complex number </p>
+<hr>
+
+<h3 id="function-cast2unitdualquaternion">function cast2UnitDualQuaternion<a class="headerlink" href="#function-cast2unitdualquaternion" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit dual quaternion by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitDualQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitDualQuaternion</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit dual quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 8 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;UnitDualQuaternion&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit dual quaternion, the output will be normalized to be a unit dual quaternion </p>
+<hr>
+
+<h3 id="function-cast2unitdualquaternionref">function cast2UnitDualQuaternionRef<a class="headerlink" href="#function-cast2unitdualquaternionref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit dual quaternion reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitDualQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitDualQuaternionRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit dual quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 8 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;UnitDualQuaternion&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit dual quaternion, the output &amp; original object will be normalized to be a unit dual quaternion </p>
+<hr>
+
+<h3 id="function-cast2unitquaternion">function cast2UnitQuaternion<a class="headerlink" href="#function-cast2unitquaternion" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit quaternion by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitQuaternion</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 4 x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;UnitQuaternion&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit quaternion, the output will be normalized to be a unit quaternion </p>
+<hr>
+
+<h3 id="function-cast2unitquaternionref">function cast2UnitQuaternionRef<a class="headerlink" href="#function-cast2unitquaternionref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a unit quaternion reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2UnitQuaternionRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p>Unit quaternion object with same data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for 4 x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;UnitQuaternion&lt;Type&gt;&gt;() function </p>
+<p><strong>Note:</strong></p>
+<p>If the input is not a unit quaternion, the output &amp; original object will be normalized to be a unit quaternion </p>
+<hr>
+
+<h3 id="function-cast2vector">function cast2Vector<a class="headerlink" href="#function-cast2vector" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a vector by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2Vector</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a> object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for M x 1 dimensions </p>
+<p><strong>Note:</strong></p>
+<p>This functions is alias of castContainer&lt;<a href="../classtranslotator_1_1Vector/"><strong>Vector&lt;N, Type&gt;</strong></a>&gt;() function </p>
+<hr>
+
+<h3 id="function-cast2vectorref">function cast2VectorRef<a class="headerlink" href="#function-cast2vectorref" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a vector reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">cast2VectorRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a> object with same dimensions and data type </p>
+<p><strong>Note:</strong></p>
+<p>This function is only available for M x 1 dimensions. Not recommended for temporary objects. </p>
+<p><strong>Note:</strong></p>
+<p>This function is alias of castContainerRef&lt;<a href="../classtranslotator_1_1Vector/"><strong>Vector&lt;N, Type&gt;</strong></a>&gt;() function </p>
+<hr>
+
+<h3 id="function-castcontainer">function castContainer<a class="headerlink" href="#function-castcontainer" title="Permanent link">&para;</a></h3>
+<p><em>Casts the matrix to a different container type by copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">NewContainer</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">NewContainer</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">castContainer</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>NewContainer</code> New container type</li>
+</ul>
+<p>This function is only available for containers with the same size as the matrix </p>
+<hr>
+
+<h3 id="function-castcontainerref-12">function castContainerRef [1/2]<a class="headerlink" href="#function-castcontainerref-12" title="Permanent link">&para;</a></h3>
+<p><em>Casts the object to a different container reference without copying.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">NewContainer</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">NewContainer</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">castContainerRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>NewContainer</code> New container type</li>
+</ul>
+<p>This function is only available for containers with the same size as the matrix </p>
+<p><strong>Note:</strong></p>
+<p>This function is recommended for temporary objects. Use <a href="./#function-castcontainer"><strong>castContainer()</strong></a> and alias functions for permanent objects. </p>
+<hr>
+
+<h3 id="function-castcontainerref-22">function castContainerRef [2/2]<a class="headerlink" href="#function-castcontainerref-22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">NewDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">NewDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">castContainerRef</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-castdatatype">function castDataType<a class="headerlink" href="#function-castdatatype" title="Permanent link">&para;</a></h3>
+<p><em>Returns the Frobenius norm.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">castDataType</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p>Type Casting</p>
+<p>Casts the matrix to a different data type </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>NewType</code> New data type</li>
+</ul>
+<p>This function is only available for floating point types </p>
+<hr>
+
+<h3 id="function-col">function col<a class="headerlink" href="#function-col" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">col</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-copyto">function copyTo<a class="headerlink" href="#function-copyto" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">copyTo</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">data</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-fill">function fill<a class="headerlink" href="#function-fill" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">fill</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-frobeniusnorm">function frobeniusNorm<a class="headerlink" href="#function-frobeniusnorm" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">frobeniusNorm</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-frobeniusnormsquared">function frobeniusNormSquared<a class="headerlink" href="#function-frobeniusnormsquared" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">frobeniusNormSquared</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-getdata">function getData<a class="headerlink" href="#function-getdata" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">getData</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-operator-12">function operator() [1/2]<a class="headerlink" href="#function-operator-12" title="Permanent link">&para;</a></h3>
+<p><em>Accesses the element at (i, j)</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="p">()</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p>Accessors </p>
+<hr>
+
+<h3 id="function-operator-22">function operator() [2/2]<a class="headerlink" href="#function-operator-22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="p">()</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-operator">function operator*<a class="headerlink" href="#function-operator" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication.</em>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">*</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to multiply </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to multiply </li>
+</ul>
+<hr>
+
+<h3 id="function-operator_1">function operator*<a class="headerlink" href="#function-operator_1" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">*</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> Scalar value</li>
+</ul>
+<p>Multiplies the matrix by a scalar value </p>
+<hr>
+
+<h3 id="function-operator_2">function operator*=<a class="headerlink" href="#function-operator_2" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">*=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> Scalar value</li>
+</ul>
+<p>Multiplies the matrix by a scalar value </p>
+<hr>
+
+<h3 id="function-operator_3">function operator+<a class="headerlink" href="#function-operator_3" title="Permanent link">&para;</a></h3>
+<p><em>Multiplication by scalar.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">+</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p>Operator Objects</p>
+<p><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> addition </p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to add </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to add </li>
+</ul>
+<hr>
+
+<h3 id="function-operator_4">function operator+=<a class="headerlink" href="#function-operator_4" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>division by scalar.</em>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">+=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> Scalar value</li>
+</ul>
+<p>Divides the matrix by a scalar value </p>
+<hr>
+
+<h3 id="function-operator-">function operator-<a class="headerlink" href="#function-operator-" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>subtraction.</em>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">-</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to subtract </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to subtract </li>
+</ul>
+<hr>
+
+<h3 id="function-operator-_1">function operator-<a class="headerlink" href="#function-operator-_1" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>multiplication by scalar.</em>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">-</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> Scalar value</li>
+</ul>
+<p>Multiplies the matrix by a scalar value </p>
+<hr>
+
+<h3 id="function-operator-_2">function operator-=<a class="headerlink" href="#function-operator-_2" title="Permanent link">&para;</a></h3>
+<p><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>subtraction by scalar.</em>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">-=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>v</code> Scalar value</li>
+</ul>
+<p>Subtracts the matrix by a scalar value </p>
+<hr>
+
+<h3 id="function-operator_5">function operator/<a class="headerlink" href="#function-operator_5" title="Permanent link">&para;</a></h3>
+<p><em>Division by scalar.</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">/</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div></p>
+<p>operators Scalar </p>
+<hr>
+
+<h3 id="function-operator_6">function operator/=<a class="headerlink" href="#function-operator_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">/=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-operator_7">function operator=<a class="headerlink" href="#function-operator_7" title="Permanent link">&para;</a></h3>
+<p><em>Copies the data to the given pointer.</em> 
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p>Assignments Copy assignment </p>
+<hr>
+
+<h3 id="function-print">function print<a class="headerlink" href="#function-print" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">print</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-row">function row<a class="headerlink" href="#function-row" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">row</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span>
+<span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-setblock-12">function setBlock [1/2]<a class="headerlink" href="#function-setblock-12" title="Permanent link">&para;</a></h3>
+<p><em>Sets the element at (i, j)</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setBlock</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">block</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> Row index </li>
+<li><code>j</code> Column index </li>
+</ul>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the element from </li>
+</ul>
+<hr>
+
+<h3 id="function-setblock-22">function setBlock [2/2]<a class="headerlink" href="#function-setblock-22" title="Permanent link">&para;</a></h3>
+<p><em>Sets the i-th row.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setBlock</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">block</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>i</code> Row index </li>
+<li><code>j</code> Column index </li>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the row from</li>
+</ul>
+<p>This function is a compile-time version of setRow </p>
+<hr>
+
+<h3 id="function-setcol-12">function setCol [1/2]<a class="headerlink" href="#function-setcol-12" title="Permanent link">&para;</a></h3>
+<p><em>Sets the j-th column.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setCol</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">col</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>j</code> Column index </li>
+</ul>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the column from </li>
+</ul>
+<hr>
+
+<h3 id="function-setcol-22">function setCol [2/2]<a class="headerlink" href="#function-setcol-22" title="Permanent link">&para;</a></h3>
+<p><em>Sets the j-th column.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setCol</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">col</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>j</code> Column index </li>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the column from</li>
+</ul>
+<p>This function is a compile-time version of setCol </p>
+<hr>
+
+<h3 id="function-setrow-12">function setRow [1/2]<a class="headerlink" href="#function-setrow-12" title="Permanent link">&para;</a></h3>
+<p><em>Sets the i-th row.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setRow</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">row</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>i</code> Row index </li>
+</ul>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the row from </li>
+</ul>
+<hr>
+
+<h3 id="function-setrow-22">function setRow [2/2]<a class="headerlink" href="#function-setrow-22" title="Permanent link">&para;</a></h3>
+<p><em>Sets the i-th row.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">setRow</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">OtherDerived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">row</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>i</code> Row index </li>
+<li><code>OtherDerived</code> <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> Derived class to set the row from</li>
+</ul>
+<p>This function is a compile-time version of setRow </p>
+<hr>
+
+<h3 id="function-swapcols">function swapCols<a class="headerlink" href="#function-swapcols" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">swapCols</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j1</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">j2</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-swaprows">function swapRows<a class="headerlink" href="#function-swaprows" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">swapRows</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i1</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i2</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-toscalar">function toScalar<a class="headerlink" href="#function-toscalar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">N_</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">M_</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">toScalar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+<hr>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-nan">function NaN<a class="headerlink" href="#function-nan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">NaN</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-colsize">function colSize<a class="headerlink" href="#function-colsize" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">colSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-eye">function eye<a class="headerlink" href="#function-eye" title="Permanent link">&para;</a></h3>
+<p><em>Returns an identity matrix.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">eye</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p>Constant Matrices </p>
+<hr>
+
+<h3 id="function-ones">function ones<a class="headerlink" href="#function-ones" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">ones</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-rowsize">function rowSize<a class="headerlink" href="#function-rowsize" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">rowSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-zeros">function zeros<a class="headerlink" href="#function-zeros" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="n">zeros</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+<h2 id="protected-attributes-documentation">Protected Attributes Documentation<a class="headerlink" href="#protected-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-data_">variable data_<a class="headerlink" href="#variable-data_" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Type</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">data_</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">*</span><span class="n">M</span><span class="p">];</span>
+</code></pre></div>
+<hr>
+<h2 id="friends-documentation">Friends Documentation<a class="headerlink" href="#friends-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="friend-operator">friend operator*<a class="headerlink" href="#friend-operator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">::</span><span class="k">operator</span><span class="o">*</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>include/translotator/objects/MatrixBase.hpp</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/always-no-cache.js"></script>
+      
+    
+  </body>
+</html>

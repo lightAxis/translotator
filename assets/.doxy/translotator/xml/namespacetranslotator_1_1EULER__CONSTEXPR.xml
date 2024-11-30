@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacetranslotator_1_1EULER__CONSTEXPR" kind="namespace" language="C++">
+    <compoundname>translotator::EULER_CONSTEXPR</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetranslotator_1_1EULER__CONSTEXPR_1a9aad8350552ae5f4fb691294848d0e4f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>Order</declname>
+            <defname>Order</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr AXIS</type>
+        <definition>constexpr AXIS translotator::EULER_CONSTEXPR::AXIS_AT</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>AXIS_AT</name>
+        <briefdescription>
+<para>Get the axis at Nth index in the euler order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nth index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Euler order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Axis at Nth index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="92" column="24" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetranslotator_1_1EULER__CONSTEXPR_1a5d7afee94dfcee805c58963393631c8f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AXIS</type>
+            <declname>Axis</declname>
+            <defname>Axis</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t translotator::EULER_CONSTEXPR::AXIS_TO_IDX</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>AXIS_TO_IDX</name>
+        <briefdescription>
+<para>Get the index of the axis in the euler order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Euler order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="105" column="26" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetranslotator_1_1EULER__CONSTEXPR_1ae457bf7275f1f5b47b250918979a08d9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>EULER_ORDER</type>
+            <declname>Order</declname>
+            <defname>Order</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t translotator::EULER_CONSTEXPR::AXIS_IDX_AT</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>AXIS_IDX_AT</name>
+        <briefdescription>
+<para>Get the index of the axis at Nth index in the euler order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nth index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Euler order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/objectdefs.hpp" line="114" column="26" bodyfile="include/translotator/objects/objectdefs.hpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace for Euler Order constexpr functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/objects/objectdefs.hpp" line="83" column="5"/>
+  </compounddef>
+</doxygen>

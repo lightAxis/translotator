@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::all_same&lt; T, First, Rest... &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename First</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>Rest</declname>
+        <defname>Rest</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4_1a8a354e4553f0cd60b9c6bcfafd7d4ec0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool translotator::all_same&lt; T, First, Rest... &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= is_same_v&lt;T, First&gt; &amp;&amp; <ref refid="structtranslotator_1_1all__same" kindref="compound">all_same</ref>&lt;T, Rest...&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="98" column="31" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/utils/micro_type_traits.hpp" line="96" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="97" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4_1a8a354e4553f0cd60b9c6bcfafd7d4ec0" prot="public" virt="non-virtual"><scope>translotator::all_same&lt; T, First, Rest... &gt;</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

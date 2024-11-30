@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_ffa3503b73a46a1fbf73d754da62ba14" kind="dir">
+    <compoundname>include/translotator</compoundname>
+    <innerdir refid="dir_b0f52d96602c2240130b99aee8b7fd2d">include/translotator/interpolators</innerdir>
+    <innerdir refid="dir_8ed321f5373998308f124cc3f5af3597">include/translotator/lie</innerdir>
+    <innerdir refid="dir_d5306d4012edd8106bd4452d9b4e4e98">include/translotator/objects</innerdir>
+    <innerdir refid="dir_19a7ecde96094a236c7c8e28b6698d62">include/translotator/utils</innerdir>
+    <innerfile refid="config_8hpp">config.hpp</innerfile>
+    <innerfile refid="translotator_8hpp">translotator.hpp</innerfile>
+    <innerfile refid="version_8hpp">version.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/"/>
+  </compounddef>
+</doxygen>

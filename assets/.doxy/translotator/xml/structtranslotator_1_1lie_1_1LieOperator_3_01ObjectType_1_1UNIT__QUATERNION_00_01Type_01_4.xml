@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</compoundname>
+    <includes refid="S3_8hpp" local="no">S3.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a8cd5430c7ad018777d828337d7e2a130" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">UnitQuaternion</ref>&lt; Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::LieGroupType =  UnitQuaternion&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieGroupType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="36" column="9" bodyfile="include/translotator/lie/S3.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a1daa0fb22afc4c0ff48344924c9c1b20" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref>&lt; Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::LieAlgebraType =  Quaternion&lt;Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieAlgebraType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="37" column="9" bodyfile="include/translotator/lie/S3.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1ad8ca1241314c340b1375c2b52359970a" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; 3, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::VectorType =  Vector&lt;3, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="38" column="9" bodyfile="include/translotator/lie/S3.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a53e496283af017a073c90d2d859a3080" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">LieAlgebraType</ref></type>
+        <definition>static LieAlgebraType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::Vector2LieAlgebra</definition>
+        <argsstring>(const VectorType &amp;isomorphicVec)</argsstring>
+        <name>Vector2LieAlgebra</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref> &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Convert <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> to Lie Algebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="45" column="31" bodyfile="include/translotator/lie/S3.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a608e85e7e04f0e716a9d977254cc858a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref></type>
+        <definition>static VectorType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::LieAlgebra2Vector</definition>
+        <argsstring>(const LieAlgebraType &amp;lieAlgebra)</argsstring>
+        <name>LieAlgebra2Vector</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">LieAlgebraType</ref> &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Convert Lie Algebra to <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="55" column="27" bodyfile="include/translotator/lie/S3.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a64972d455cafd0d4de5476fd97f63574" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">LieGroupType</ref></type>
+        <definition>static LieGroupType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::Exp</definition>
+        <argsstring>(const VectorType &amp;isomorphicVec)</argsstring>
+        <name>Exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref> &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group [4x1] Unit <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="65" column="29" bodyfile="include/translotator/lie/S3.hpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a00e096bf27958462a20b207065a24318" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref></type>
+        <definition>static VectorType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::Log</definition>
+        <argsstring>(const LieGroupType &amp;lieGroup)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">LieGroupType</ref> &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group [4x1] Unit <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="75" column="27" bodyfile="include/translotator/lie/S3.hpp" bodystart="75" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a7ec961f6ec16ac4fab7c6d24eb5c34db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">LieGroupType</ref></type>
+        <definition>static LieGroupType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::exp</definition>
+        <argsstring>(const LieAlgebraType &amp;lieAlgebra)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Quaternion" kindref="compound">LieAlgebraType</ref> &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group [4x1] Unit <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="98" column="29" bodyfile="include/translotator/lie/S3.hpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a31baed1b184776c0295424db8cc69a17" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Quaternion" kindref="compound">LieAlgebraType</ref></type>
+        <definition>static LieAlgebraType translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;::log</definition>
+        <argsstring>(const LieGroupType &amp;lieGroup)</argsstring>
+        <name>log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1UnitQuaternion" kindref="compound">LieGroupType</ref> &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group [4x1] Unit <ref refid="classtranslotator_1_1Quaternion" kindref="compound">Quaternion</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [4x1] 0+x*i+y*j+z*k, pure imaginary number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="108" column="31" bodyfile="include/translotator/lie/S3.hpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Lie Operator for S3. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+S3 is a unit quaternion </para>
+    </detaileddescription>
+    <location file="include/translotator/lie/S3.hpp" line="33" column="5" bodyfile="include/translotator/lie/S3.hpp" bodystart="34" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a64972d455cafd0d4de5476fd97f63574" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>Exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a7ec961f6ec16ac4fab7c6d24eb5c34db" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a608e85e7e04f0e716a9d977254cc858a" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>LieAlgebra2Vector</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a1daa0fb22afc4c0ff48344924c9c1b20" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>LieAlgebraType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a8cd5430c7ad018777d828337d7e2a130" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>LieGroupType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a00e096bf27958462a20b207065a24318" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>Log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a31baed1b184776c0295424db8cc69a17" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1a53e496283af017a073c90d2d859a3080" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>Vector2LieAlgebra</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4_1ad8ca1241314c340b1375c2b52359970a" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</scope><name>VectorType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

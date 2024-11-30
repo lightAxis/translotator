@@ -1,0 +1,3860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Namespace translotator - translotator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#namespace-translotator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="translotator" class="md-header__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            translotator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Namespace translotator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Main
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../links/" class="md-tabs__link">
+          
+  
+  Specifications(MkDoxy)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="translotator" class="md-nav__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    translotator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    translotator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_based_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix based Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix & Vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Number Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Groups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../so_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SO Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Representation Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Representation Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../euler_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Euler Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../axis_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axis Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Homogeneous Transformation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Homogeneous Transformation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../se_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SE Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Specifications(MkDoxy)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications(MkDoxy)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Namespaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Namespaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum AXIS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-axisangled" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef AxisAngled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-axisanglef" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef AxisAnglef
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-axisangleld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef AxisAngleld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-complexnumd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef ComplexNumd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-complexnumf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef ComplexNumf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-complexnumld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef ComplexNumld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualnumberd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualNumberd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualnumberf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualNumberf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualnumberld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualNumberld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualquaterniond" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualQuaterniond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualquaternionf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualQuaternionf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-dualquaternionld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DualQuaternionld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-euler_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum EULER_ORDER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglexyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleXYZ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglexyzd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleXYZd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglexyzf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleXYZf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglexyzld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleXYZld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglezyx" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleZYX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglezyxd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleZYXd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglezyxf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleZYXf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglezyxld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleZYXld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-eulerangled" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-euleranglef" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAnglef
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-eulerangleld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef EulerAngleld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-matrixd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Matrixd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-matrixf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Matrixf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-matrixld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Matrixld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-objecttype" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum ObjectType
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-quaterniond" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Quaterniond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-quaternionf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Quaternionf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-quaternionld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Quaternionld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix2D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix2dd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix2Dd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix2df" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix2Df
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix2dld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix2Dld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix3dd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix3Dd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix3df" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix3Df
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrix3dld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrix3Dld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrixd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrixd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrixf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrixf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rotationmatrixld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RotationMatrixld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S1d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s1f" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S1f
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s1ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S1ld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S3d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s3f" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S3f
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-s3ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef S3ld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se2group" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE2Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se2groupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE2Groupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se2groupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE2Groupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se2groupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE2Groupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se3group" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE3Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se3groupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE3Groupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se3groupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE3Groupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-se3groupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SE3Groupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-segroupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SEGroupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-segroupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SEGroupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-segroupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SEGroupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so2group" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO2Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so2groupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO2Groupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so2groupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO2Groupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so2groupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO2Groupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so3group" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO3Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so3groupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO3Groupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so3groupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO3Groupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-so3groupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SO3Groupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-sogroupd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SOGroupd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-sogroupf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SOGroupf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-sogroupld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SOGroupld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-squarematrixd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SquareMatrixd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-squarematrixf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SquareMatrixf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-squarematrixld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef SquareMatrixld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitcomplexnumd" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitComplexNumd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitcomplexnumf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitComplexNumf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitcomplexnumld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitComplexNumld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitdualquaterniond" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitDualQuaterniond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitdualquaternionf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitDualQuaternionf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitdualquaternionld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitDualQuaternionld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitquaterniond" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitQuaterniond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitquaternionf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitQuaternionf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-unitquaternionld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef UnitQuaternionld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-vectord" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Vectord
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-vectorf" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Vectorf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-vectorld" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Vectorld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-conditional_if_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef conditional_if_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-enable_if_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef enable_if_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-false_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef false_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-true_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef true_type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Attributes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-all_same_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable all_same_v
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_float_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable is_float_v
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_matrix_base_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable is_matrix_base_v
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_same_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable is_same_v
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-abs" class="md-nav__link">
+    <span class="md-ellipsis">
+      function abs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-acos" class="md-nav__link">
+    <span class="md-ellipsis">
+      function acos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-asin" class="md-nav__link">
+    <span class="md-ellipsis">
+      function asin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-atan" class="md-nav__link">
+    <span class="md-ellipsis">
+      function atan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-atan2" class="md-nav__link">
+    <span class="md-ellipsis">
+      function atan2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ceil" class="md-nav__link">
+    <span class="md-ellipsis">
+      function ceil
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ceilf" class="md-nav__link">
+    <span class="md-ellipsis">
+      function ceilf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-cos" class="md-nav__link">
+    <span class="md-ellipsis">
+      function cos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-cube" class="md-nav__link">
+    <span class="md-ellipsis">
+      function cube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      function epsilon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      function exp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-exponent_epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      function exponent_epsilon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-floorf" class="md-nav__link">
+    <span class="md-ellipsis">
+      function floorf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-fmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      function fmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-fmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      function fmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-powf" class="md-nav__link">
+    <span class="md-ellipsis">
+      function powf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-roundf" class="md-nav__link">
+    <span class="md-ellipsis">
+      function roundf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sin" class="md-nav__link">
+    <span class="md-ellipsis">
+      function sin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sqrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      function sqrt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-square" class="md-nav__link">
+    <span class="md-ellipsis">
+      function square
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-tan" class="md-nav__link">
+    <span class="md-ellipsis">
+      function tan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-truncf" class="md-nav__link">
+    <span class="md-ellipsis">
+      function truncf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="namespace-translotator">Namespace translotator<a class="headerlink" href="#namespace-translotator" title="Permanent link">&para;</a></h1>
+<p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="./"><strong>translotator</strong></a></p>
+<h2 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacetranslotator_1_1EULER__CONSTEXPR/"><strong>EULER_CONSTEXPR</strong></a> <br><em>Namespace for Euler Order constexpr functions.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacetranslotator_1_1MatrixBaseInternal/"><strong>MatrixBaseInternal</strong></a> <br><em>Internal namespace for</em> <a href="../classtranslotator_1_1MatrixBase/"><em><strong>MatrixBase</strong></em></a> <em>implementation.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacetranslotator_1_1interpolators/"><strong>interpolators</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacetranslotator_1_1lie/"><strong>lie</strong></a> <br><em>Namespace for Lie Group and Algebra Operations.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1AxisAngle/"><strong>AxisAngle</strong></a> &lt;typename Type&gt;<br><em>Represents a rotation in 3D space by an angle around an axis.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a> &lt;typename Type&gt;<br><em>Represents a complex number with real and imaginary parts.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a> &lt;typename Type&gt;<br><em>Represents a dual number.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a> &lt;typename Type&gt;<br><em>Represents a dual quaternion.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a> &lt;typename Type, AxisOrder&gt;<br><em>Represents Euler angle 3D rotation.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a> &lt;N, M, typename Type&gt;<br><a href="../classtranslotator_1_1Matrix/"><em><strong>Matrix</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1MatrixBase/"><strong>MatrixBase</strong></a> &lt;N, M, typename Type, typename Derived&gt;<br><em>Base class for all matrix objects.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a> &lt;typename Type&gt;<br><em>Representing a quaternion.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a> &lt;N, typename Type&gt;<br><em>Special Euclidean Group.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a> &lt;N, typename Type&gt;<br><em>Special Orthogonal Group.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a> &lt;N, typename Type&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a> &lt;typename Type&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a> &lt;typename Type&gt;<br><em>Represents a unit dual quaternion.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a> &lt;typename Type&gt;<br><a href="../classtranslotator_1_1UnitQuaternion/"><em><strong>UnitQuaternion</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a> &lt;N, typename Type&gt;<br><a href="../classtranslotator_1_1Vector/"><em><strong>Vector</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1all__same/"><strong>all_same</strong></a> &lt;typename T, Args&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1all__same_3_01T_01_4/"><strong>all_same&lt; T &gt;</strong></a> &lt;typename T&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1all__same_3_01T_00_01First_00_01Rest_8_8_8_01_4/"><strong>all_same&lt; T, First, Rest... &gt;</strong></a> &lt;typename T, typename First, Rest&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1conditional__if/"><strong>conditional_if</strong></a> &lt;B, typename T, typename F&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1conditional__if_3_01false_00_01T_00_01F_01_4/"><strong>conditional_if&lt; false, T, F &gt;</strong></a> &lt;typename T, typename F&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1enable__if/"><strong>enable_if</strong></a> &lt;B, typename T&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1enable__if_3_01true_00_01T_01_4/"><strong>enable_if&lt; true, T &gt;</strong></a> &lt;typename T&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1initializer__list/"><strong>initializer_list</strong></a> &lt;N, typename Type&gt;<br><a href="../structtranslotator_1_1initializer__list/"><em><strong>initializer_list</strong></em></a> <em>struct</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1integral__constant/"><strong>integral_constant</strong></a> &lt;typename T, v&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__float/"><strong>is_float</strong></a> &lt;typename T&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__float_3_01double_01_4/"><strong>is_float&lt; double &gt;</strong></a> &lt;&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__float_3_01float_01_4/"><strong>is_float&lt; float &gt;</strong></a> &lt;&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__float_3_01long_01double_01_4/"><strong>is_float&lt; long double &gt;</strong></a> &lt;&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__matrix__base/"><strong>is_matrix_base</strong></a> &lt;typename T, typename&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__matrix__base_3_01T_00_01typename_01enable__if_3_01T_1_1MATRIX__BASE_01_4_1_1type_01_4/"><strong>is_matrix_base&lt; T, typename enable_if&lt; T::MATRIX_BASE &gt;::type &gt;</strong></a> &lt;typename T&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__same/"><strong>is_same</strong></a> &lt;typename T, typename U&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structtranslotator_1_1is__same_3_01T_00_01T_01_4/"><strong>is_same&lt; T, T &gt;</strong></a> &lt;typename T&gt;<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-axis"><strong>AXIS</strong></a>  <br><em>Enum class for axis.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1AxisAngle/"><strong>AxisAngle</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-axisangled"><strong>AxisAngled</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1AxisAngle/"><strong>AxisAngle</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-axisanglef"><strong>AxisAnglef</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1AxisAngle/"><strong>AxisAngle</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-axisangleld"><strong>AxisAngleld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-complexnumd"><strong>ComplexNumd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-complexnumf"><strong>ComplexNumf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1ComplexNum/"><strong>ComplexNum</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-complexnumld"><strong>ComplexNumld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualnumberd"><strong>DualNumberd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualnumberf"><strong>DualNumberf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualNumber/"><strong>DualNumber</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualnumberld"><strong>DualNumberld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualquaterniond"><strong>DualQuaterniond</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualquaternionf"><strong>DualQuaternionf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1DualQuaternion/"><strong>DualQuaternion</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-dualquaternionld"><strong>DualQuaternionld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-euler_order"><strong>EULER_ORDER</strong></a>  <br><em>Enum class for euler angle order.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a>&lt; Type, EULER_ORDER::XYZ &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglexyz"><strong>EulerAngleXYZ</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleXYZ</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglexyzd"><strong>EulerAngleXYZd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleXYZ</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglexyzf"><strong>EulerAngleXYZf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleXYZ</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglexyzld"><strong>EulerAngleXYZld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a>&lt; Type, EULER_ORDER::ZYX &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglezyx"><strong>EulerAngleZYX</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleZYX</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglezyxd"><strong>EulerAngleZYXd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleZYX</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglezyxf"><strong>EulerAngleZYXf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngleZYX</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglezyxld"><strong>EulerAngleZYXld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a>&lt; double, AxisOrder &gt;</td>
+<td style="text-align: left;"><a href="#typedef-eulerangled"><strong>EulerAngled</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a>&lt; float, AxisOrder &gt;</td>
+<td style="text-align: left;"><a href="#typedef-euleranglef"><strong>EulerAnglef</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1EulerAngle/"><strong>EulerAngle</strong></a>&lt; long double, AxisOrder &gt;</td>
+<td style="text-align: left;"><a href="#typedef-eulerangleld"><strong>EulerAngleld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, M, double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-matrixd"><strong>Matrixd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, M, float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-matrixf"><strong>Matrixf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Matrix/"><strong>Matrix</strong></a>&lt; N, M, long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-matrixld"><strong>Matrixld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-objecttype"><strong>ObjectType</strong></a>  <br><em>Enum class for object types.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-quaterniond"><strong>Quaterniond</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-quaternionf"><strong>Quaternionf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Quaternion/"><strong>Quaternion</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-quaternionld"><strong>Quaternionld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Group</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix2d"><strong>RotationMatrix2D</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Groupd</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix2dd"><strong>RotationMatrix2Dd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Groupf</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix2df"><strong>RotationMatrix2Df</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Groupld</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix2dld"><strong>RotationMatrix2Dld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Group</strong></a>&lt; Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix3d"><strong>RotationMatrix3D</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Groupd</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix3dd"><strong>RotationMatrix3Dd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Groupf</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix3df"><strong>RotationMatrix3Df</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Groupld</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrix3dld"><strong>RotationMatrix3Dld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroupd</strong></a>&lt; N &gt;</td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrixd"><strong>RotationMatrixd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroupf</strong></a>&lt; N &gt;</td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrixf"><strong>RotationMatrixf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroupld</strong></a>&lt; N &gt;</td>
+<td style="text-align: left;"><a href="#typedef-rotationmatrixld"><strong>RotationMatrixld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNumd</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s1d"><strong>S1d</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNumf</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s1f"><strong>S1f</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNumld</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s1ld"><strong>S1ld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaterniond</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s3d"><strong>S3d</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternionf</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s3f"><strong>S3f</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternionld</strong></a></td>
+<td style="text-align: left;"><a href="#typedef-s3ld"><strong>S3ld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a>&lt; 2, Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se2group"><strong>SE2Group</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE2Group</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se2groupd"><strong>SE2Groupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE2Group</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se2groupf"><strong>SE2Groupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE2Group</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se2groupld"><strong>SE2Groupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a>&lt; 3, Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se3group"><strong>SE3Group</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE3Group</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se3groupd"><strong>SE3Groupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE3Group</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se3groupf"><strong>SE3Groupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SE3Group</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-se3groupld"><strong>SE3Groupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a>&lt; N, double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-segroupd"><strong>SEGroupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a>&lt; N, float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-segroupf"><strong>SEGroupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SEGroup/"><strong>SEGroup</strong></a>&lt; N, long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-segroupld"><strong>SEGroupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; 2, Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so2group"><strong>SO2Group</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Group</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so2groupd"><strong>SO2Groupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Group</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so2groupf"><strong>SO2Groupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO2Group</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so2groupld"><strong>SO2Groupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; 3, Type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so3group"><strong>SO3Group</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Group</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so3groupd"><strong>SO3Groupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Group</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so3groupf"><strong>SO3Groupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SO3Group</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-so3groupld"><strong>SO3Groupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; N, double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-sogroupd"><strong>SOGroupd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; N, float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-sogroupf"><strong>SOGroupf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SOGroup/"><strong>SOGroup</strong></a>&lt; N, long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-sogroupld"><strong>SOGroupld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a>&lt; N, double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-squarematrixd"><strong>SquareMatrixd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a>&lt; N, float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-squarematrixf"><strong>SquareMatrixf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1SquareMatrix/"><strong>SquareMatrix</strong></a>&lt; N, long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-squarematrixld"><strong>SquareMatrixld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitcomplexnumd"><strong>UnitComplexNumd</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitcomplexnumf"><strong>UnitComplexNumf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitComplexNum/"><strong>UnitComplexNum</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitcomplexnumld"><strong>UnitComplexNumld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitdualquaterniond"><strong>UnitDualQuaterniond</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitdualquaternionf"><strong>UnitDualQuaternionf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>UnitDualQuaternion</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitdualquaternionld"><strong>UnitDualQuaternionld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a>&lt; double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitquaterniond"><strong>UnitQuaterniond</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a>&lt; float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitquaternionf"><strong>UnitQuaternionf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1UnitQuaternion/"><strong>UnitQuaternion</strong></a>&lt; long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-unitquaternionld"><strong>UnitQuaternionld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a>&lt; N, double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-vectord"><strong>Vectord</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a>&lt; N, float &gt;</td>
+<td style="text-align: left;"><a href="#typedef-vectorf"><strong>Vectorf</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../classtranslotator_1_1Vector/"><strong>Vector</strong></a>&lt; N, long double &gt;</td>
+<td style="text-align: left;"><a href="#typedef-vectorld"><strong>Vectorld</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="../structtranslotator_1_1conditional__if/"><strong>conditional_if</strong></a>&lt; B, T, F &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-conditional_if_t"><strong>conditional_if_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="../structtranslotator_1_1enable__if/"><strong>enable_if</strong></a>&lt; B, T &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-enable_if_t"><strong>enable_if_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structtranslotator_1_1integral__constant/"><strong>integral_constant</strong></a>&lt; bool, false &gt;</td>
+<td style="text-align: left;"><a href="#typedef-false_type"><strong>false_type</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structtranslotator_1_1integral__constant/"><strong>integral_constant</strong></a>&lt; bool, true &gt;</td>
+<td style="text-align: left;"><a href="#typedef-true_type"><strong>true_type</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-all_same_v"><strong>all_same_v</strong></a>   = = <a href="../structtranslotator_1_1all__same/"><strong>all_same</strong></a>&lt;T, Args...&gt;::value<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_float_v"><strong>is_float_v</strong></a>   = = <a href="../structtranslotator_1_1is__float/"><strong>is_float</strong></a>&lt;T&gt;::value<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_matrix_base_v"><strong>is_matrix_base_v</strong></a>   = = <a href="../structtranslotator_1_1is__matrix__base/"><strong>is_matrix_base</strong></a>&lt;T&gt;::value<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_same_v"><strong>is_same_v</strong></a>   = = <a href="../structtranslotator_1_1is__same/"><strong>is_same</strong></a>&lt;T, U&gt;::value<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-abs"><strong>abs</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-acos"><strong>acos</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-asin"><strong>asin</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-atan"><strong>atan</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-atan2"><strong>atan2</strong></a> (const T &amp; y, const T &amp; x) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-ceil"><strong>ceil</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-ceilf"><strong>ceilf</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-cos"><strong>cos</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-cube"><strong>cube</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr T</td>
+<td style="text-align: left;"><a href="#function-epsilon"><strong>epsilon</strong></a> () <br><em>epsilon for floating point</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-exp"><strong>exp</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr T</td>
+<td style="text-align: left;"><a href="#function-exponent_epsilon"><strong>exponent_epsilon</strong></a> () <br><em>epsilon for floating point</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-floorf"><strong>floorf</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-fmax"><strong>fmax</strong></a> (const T &amp; x, const T &amp; y) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-fmin"><strong>fmin</strong></a> (const T &amp; x, const T &amp; y) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-powf"><strong>powf</strong></a> (const T &amp; x, const T &amp; y) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-roundf"><strong>roundf</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-sin"><strong>sin</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-sqrt"><strong>sqrt</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-square"><strong>square</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-tan"><strong>tan</strong></a> (const T &amp; v) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">T</td>
+<td style="text-align: left;"><a href="#function-truncf"><strong>truncf</strong></a> (const T &amp; v) <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="enum-axis">enum AXIS<a class="headerlink" href="#enum-axis" title="Permanent link">&para;</a></h3>
+<p><em>Enum class for axis.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="nc">translotator</span><span class="o">::</span><span class="n">AXIS</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x3</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>This enum class is used to identify the axis </p>
+<hr>
+
+<h3 id="typedef-axisangled">typedef AxisAngled<a class="headerlink" href="#typedef-axisangled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">AxisAngled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">AxisAngle</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-axisanglef">typedef AxisAnglef<a class="headerlink" href="#typedef-axisanglef" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">AxisAnglef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">AxisAngle</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-axisangleld">typedef AxisAngleld<a class="headerlink" href="#typedef-axisangleld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">AxisAngleld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">AxisAngle</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-complexnumd">typedef ComplexNumd<a class="headerlink" href="#typedef-complexnumd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">ComplexNumd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">ComplexNum</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-complexnumf">typedef ComplexNumf<a class="headerlink" href="#typedef-complexnumf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">ComplexNumf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">ComplexNum</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-complexnumld">typedef ComplexNumld<a class="headerlink" href="#typedef-complexnumld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">ComplexNumld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">ComplexNum</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualnumberd">typedef DualNumberd<a class="headerlink" href="#typedef-dualnumberd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualNumberd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualNumber</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualnumberf">typedef DualNumberf<a class="headerlink" href="#typedef-dualnumberf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualNumberf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualNumber</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualnumberld">typedef DualNumberld<a class="headerlink" href="#typedef-dualnumberld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualNumberld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualNumber</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualquaterniond">typedef DualQuaterniond<a class="headerlink" href="#typedef-dualquaterniond" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualQuaterniond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualQuaternion</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualquaternionf">typedef DualQuaternionf<a class="headerlink" href="#typedef-dualquaternionf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualQuaternionf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-dualquaternionld">typedef DualQuaternionld<a class="headerlink" href="#typedef-dualquaternionld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">DualQuaternionld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">DualQuaternion</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="enum-euler_order">enum EULER_ORDER<a class="headerlink" href="#enum-euler_order" title="Permanent link">&para;</a></h3>
+<p><em>Enum class for euler angle order.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="nc">translotator</span><span class="o">::</span><span class="n">EULER_ORDER</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">XYZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x123</span><span class="p">,</span>
+<span class="w">    </span><span class="n">XZY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x132</span><span class="p">,</span>
+<span class="w">    </span><span class="n">YXZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x213</span><span class="p">,</span>
+<span class="w">    </span><span class="n">YZX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x231</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ZXY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x312</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ZYX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x321</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>This enum class is used to identify the euler angle order </p>
+<p><strong>Note:</strong></p>
+<p>The order is represented as 3 digits, where each digit represents the axis </p>
+<p><strong>Note:</strong></p>
+<p>All intrinsic orders, Tait-Bryan angles </p>
+<p><strong>Note:</strong></p>
+<p>For example, XYZ order means the rotation is applied in the order of intrinsic X, Y, Z axis </p>
+<hr>
+
+<h3 id="typedef-euleranglexyz">typedef EulerAngleXYZ<a class="headerlink" href="#typedef-euleranglexyz" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleXYZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngle</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">EULER_ORDER</span><span class="o">::</span><span class="n">XYZ</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglexyzd">typedef EulerAngleXYZd<a class="headerlink" href="#typedef-euleranglexyzd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleXYZd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleXYZ</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglexyzf">typedef EulerAngleXYZf<a class="headerlink" href="#typedef-euleranglexyzf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleXYZf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleXYZ</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglexyzld">typedef EulerAngleXYZld<a class="headerlink" href="#typedef-euleranglexyzld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleXYZld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleXYZ</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglezyx">typedef EulerAngleZYX<a class="headerlink" href="#typedef-euleranglezyx" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleZYX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngle</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">EULER_ORDER</span><span class="o">::</span><span class="n">ZYX</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglezyxd">typedef EulerAngleZYXd<a class="headerlink" href="#typedef-euleranglezyxd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleZYXd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleZYX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglezyxf">typedef EulerAngleZYXf<a class="headerlink" href="#typedef-euleranglezyxf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleZYXf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleZYX</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglezyxld">typedef EulerAngleZYXld<a class="headerlink" href="#typedef-euleranglezyxld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleZYXld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngleZYX</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-eulerangled">typedef EulerAngled<a class="headerlink" href="#typedef-eulerangled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngle</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">AxisOrder</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-euleranglef">typedef EulerAnglef<a class="headerlink" href="#typedef-euleranglef" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAnglef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngle</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="n">AxisOrder</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-eulerangleld">typedef EulerAngleld<a class="headerlink" href="#typedef-eulerangleld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">EulerAngleld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">EulerAngle</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">AxisOrder</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-matrixd">typedef Matrixd<a class="headerlink" href="#typedef-matrixd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Matrixd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-matrixf">typedef Matrixf<a class="headerlink" href="#typedef-matrixf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Matrixf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-matrixld">typedef Matrixld<a class="headerlink" href="#typedef-matrixld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Matrixld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="enum-objecttype">enum ObjectType<a class="headerlink" href="#enum-objecttype" title="Permanent link">&para;</a></h3>
+<p><em>Enum class for object types.</em> 
+<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="nc">translotator</span><span class="o">::</span><span class="n">ObjectType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">MATRIX</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VECTOR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SQUARE_MATRIX</span><span class="p">,</span>
+<span class="w">    </span><span class="n">COMPLEX_NUM</span><span class="p">,</span>
+<span class="w">    </span><span class="n">QUATERNION</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DUAL_NUMBER</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DUAL_QUATERNION</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UNIT_COMPLEX_NUM</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UNIT_QUATERNION</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AXIS_ANGLE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EULER_ANGLE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SO_GROUP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SE_GROUP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UNIT_DUAL_QUATERNION</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>This enum class is used to identify the type of the object </p>
+<hr>
+
+<h3 id="typedef-quaterniond">typedef Quaterniond<a class="headerlink" href="#typedef-quaterniond" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Quaterniond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-quaternionf">typedef Quaternionf<a class="headerlink" href="#typedef-quaternionf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Quaternionf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-quaternionld">typedef Quaternionld<a class="headerlink" href="#typedef-quaternionld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Quaternionld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix2d">typedef RotationMatrix2D<a class="headerlink" href="#typedef-rotationmatrix2d" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Group</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix2dd">typedef RotationMatrix2Dd<a class="headerlink" href="#typedef-rotationmatrix2dd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix2Dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Groupd</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix2df">typedef RotationMatrix2Df<a class="headerlink" href="#typedef-rotationmatrix2df" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix2Df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Groupf</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix2dld">typedef RotationMatrix2Dld<a class="headerlink" href="#typedef-rotationmatrix2dld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix2Dld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Groupld</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix3d">typedef RotationMatrix3D<a class="headerlink" href="#typedef-rotationmatrix3d" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix3D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Group</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix3dd">typedef RotationMatrix3Dd<a class="headerlink" href="#typedef-rotationmatrix3dd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix3Dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Groupd</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix3df">typedef RotationMatrix3Df<a class="headerlink" href="#typedef-rotationmatrix3df" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix3Df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Groupf</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrix3dld">typedef RotationMatrix3Dld<a class="headerlink" href="#typedef-rotationmatrix3dld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrix3Dld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Groupld</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrixd">typedef RotationMatrixd<a class="headerlink" href="#typedef-rotationmatrixd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrixd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroupd</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrixf">typedef RotationMatrixf<a class="headerlink" href="#typedef-rotationmatrixf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrixf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroupf</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-rotationmatrixld">typedef RotationMatrixld<a class="headerlink" href="#typedef-rotationmatrixld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">RotationMatrixld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroupld</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s1d">typedef S1d<a class="headerlink" href="#typedef-s1d" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S1d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNumd</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s1f">typedef S1f<a class="headerlink" href="#typedef-s1f" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S1f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNumf</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s1ld">typedef S1ld<a class="headerlink" href="#typedef-s1ld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S1ld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNumld</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s3d">typedef S3d<a class="headerlink" href="#typedef-s3d" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaterniond</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s3f">typedef S3f<a class="headerlink" href="#typedef-s3f" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaternionf</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-s3ld">typedef S3ld<a class="headerlink" href="#typedef-s3ld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">S3ld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaternionld</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se2group">typedef SE2Group<a class="headerlink" href="#typedef-se2group" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE2Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SEGroup</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se2groupd">typedef SE2Groupd<a class="headerlink" href="#typedef-se2groupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE2Groupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE2Group</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se2groupf">typedef SE2Groupf<a class="headerlink" href="#typedef-se2groupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE2Groupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE2Group</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se2groupld">typedef SE2Groupld<a class="headerlink" href="#typedef-se2groupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE2Groupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE2Group</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se3group">typedef SE3Group<a class="headerlink" href="#typedef-se3group" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE3Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SEGroup</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se3groupd">typedef SE3Groupd<a class="headerlink" href="#typedef-se3groupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE3Groupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE3Group</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se3groupf">typedef SE3Groupf<a class="headerlink" href="#typedef-se3groupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE3Groupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE3Group</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-se3groupld">typedef SE3Groupld<a class="headerlink" href="#typedef-se3groupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SE3Groupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SE3Group</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-segroupd">typedef SEGroupd<a class="headerlink" href="#typedef-segroupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SEGroupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SEGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-segroupf">typedef SEGroupf<a class="headerlink" href="#typedef-segroupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SEGroupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SEGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-segroupld">typedef SEGroupld<a class="headerlink" href="#typedef-segroupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SEGroupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SEGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so2group">typedef SO2Group<a class="headerlink" href="#typedef-so2group" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO2Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroup</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so2groupd">typedef SO2Groupd<a class="headerlink" href="#typedef-so2groupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO2Groupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Group</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so2groupf">typedef SO2Groupf<a class="headerlink" href="#typedef-so2groupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO2Groupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Group</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so2groupld">typedef SO2Groupld<a class="headerlink" href="#typedef-so2groupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO2Groupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO2Group</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so3group">typedef SO3Group<a class="headerlink" href="#typedef-so3group" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO3Group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroup</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so3groupd">typedef SO3Groupd<a class="headerlink" href="#typedef-so3groupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO3Groupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Group</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so3groupf">typedef SO3Groupf<a class="headerlink" href="#typedef-so3groupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO3Groupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Group</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-so3groupld">typedef SO3Groupld<a class="headerlink" href="#typedef-so3groupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SO3Groupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SO3Group</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-sogroupd">typedef SOGroupd<a class="headerlink" href="#typedef-sogroupd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SOGroupd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-sogroupf">typedef SOGroupf<a class="headerlink" href="#typedef-sogroupf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SOGroupf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-sogroupld">typedef SOGroupld<a class="headerlink" href="#typedef-sogroupld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SOGroupld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SOGroup</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-squarematrixd">typedef SquareMatrixd<a class="headerlink" href="#typedef-squarematrixd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SquareMatrixd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-squarematrixf">typedef SquareMatrixf<a class="headerlink" href="#typedef-squarematrixf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SquareMatrixf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-squarematrixld">typedef SquareMatrixld<a class="headerlink" href="#typedef-squarematrixld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">SquareMatrixld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">SquareMatrix</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitcomplexnumd">typedef UnitComplexNumd<a class="headerlink" href="#typedef-unitcomplexnumd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitComplexNumd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNum</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitcomplexnumf">typedef UnitComplexNumf<a class="headerlink" href="#typedef-unitcomplexnumf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitComplexNumf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNum</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitcomplexnumld">typedef UnitComplexNumld<a class="headerlink" href="#typedef-unitcomplexnumld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitComplexNumld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitComplexNum</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitdualquaterniond">typedef UnitDualQuaterniond<a class="headerlink" href="#typedef-unitdualquaterniond" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitDualQuaterniond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitDualQuaternion</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitdualquaternionf">typedef UnitDualQuaternionf<a class="headerlink" href="#typedef-unitdualquaternionf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitDualQuaternionf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitDualQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitdualquaternionld">typedef UnitDualQuaternionld<a class="headerlink" href="#typedef-unitdualquaternionld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitDualQuaternionld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitDualQuaternion</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitquaterniond">typedef UnitQuaterniond<a class="headerlink" href="#typedef-unitquaterniond" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitQuaterniond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitquaternionf">typedef UnitQuaternionf<a class="headerlink" href="#typedef-unitquaternionf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitQuaternionf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-unitquaternionld">typedef UnitQuaternionld<a class="headerlink" href="#typedef-unitquaternionld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">UnitQuaternionld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">UnitQuaternion</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-vectord">typedef Vectord<a class="headerlink" href="#typedef-vectord" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Vectord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-vectorf">typedef Vectorf<a class="headerlink" href="#typedef-vectorf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Vectorf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-vectorld">typedef Vectorld<a class="headerlink" href="#typedef-vectorld" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">Vectorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-conditional_if_t">typedef conditional_if_t<a class="headerlink" href="#typedef-conditional_if_t" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">conditional_if_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">conditional_if</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-enable_if_t">typedef enable_if_t<a class="headerlink" href="#typedef-enable_if_t" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">enable_if_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">enable_if</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-false_type">typedef false_type<a class="headerlink" href="#typedef-false_type" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">false_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="typedef-true_type">typedef true_type<a class="headerlink" href="#typedef-true_type" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">true_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-all_same_v">variable all_same_v<a class="headerlink" href="#variable-all_same_v" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">all_same_v</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-is_float_v">variable is_float_v<a class="headerlink" href="#variable-is_float_v" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">is_float_v</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-is_matrix_base_v">variable is_matrix_base_v<a class="headerlink" href="#variable-is_matrix_base_v" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">is_matrix_base_v</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-is_same_v">variable is_same_v<a class="headerlink" href="#variable-is_same_v" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">is_same_v</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-abs">function abs<a class="headerlink" href="#function-abs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">abs</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-acos">function acos<a class="headerlink" href="#function-acos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">acos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-asin">function asin<a class="headerlink" href="#function-asin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">asin</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-atan">function atan<a class="headerlink" href="#function-atan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">atan</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-atan2">function atan2<a class="headerlink" href="#function-atan2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">atan2</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-ceil">function ceil<a class="headerlink" href="#function-ceil" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">ceil</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-ceilf">function ceilf<a class="headerlink" href="#function-ceilf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">ceilf</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-cos">function cos<a class="headerlink" href="#function-cos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">cos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-cube">function cube<a class="headerlink" href="#function-cube" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">cube</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-epsilon">function epsilon<a class="headerlink" href="#function-epsilon" title="Permanent link">&para;</a></h3>
+<p><em>epsilon for floating point</em> 
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">epsilon</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> floating point type</li>
+</ul>
+<p>epsilon is a small value that is used to compare floating point numbers. </p>
+<hr>
+
+<h3 id="function-exp">function exp<a class="headerlink" href="#function-exp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">exp</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-exponent_epsilon">function exponent_epsilon<a class="headerlink" href="#function-exponent_epsilon" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">exponent_epsilon</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-floorf">function floorf<a class="headerlink" href="#function-floorf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">floorf</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-fmax">function fmax<a class="headerlink" href="#function-fmax" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">fmax</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-fmin">function fmin<a class="headerlink" href="#function-fmin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">fmin</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-powf">function powf<a class="headerlink" href="#function-powf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">powf</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-roundf">function roundf<a class="headerlink" href="#function-roundf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">roundf</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-sin">function sin<a class="headerlink" href="#function-sin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">sin</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-sqrt">function sqrt<a class="headerlink" href="#function-sqrt" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">sqrt</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-square">function square<a class="headerlink" href="#function-square" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">square</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-tan">function tan<a class="headerlink" href="#function-tan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">tan</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<h3 id="function-truncf">function truncf<a class="headerlink" href="#function-truncf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">translotator</span><span class="o">::</span><span class="n">truncf</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>include/translotator/interpolators/Lerp.hpp</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/always-no-cache.js"></script>
+      
+    
+  </body>
+</html>

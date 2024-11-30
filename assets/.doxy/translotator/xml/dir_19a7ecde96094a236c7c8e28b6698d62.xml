@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_19a7ecde96094a236c7c8e28b6698d62" kind="dir">
+    <compoundname>include/translotator/utils</compoundname>
+    <innerfile refid="default__type_8hpp">default_type.hpp</innerfile>
+    <innerfile refid="epsilon_8hpp">epsilon.hpp</innerfile>
+    <innerfile refid="micro__math_8hpp">micro_math.hpp</innerfile>
+    <innerfile refid="micro__type__traits_8hpp">micro_type_traits.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/utils/"/>
+  </compounddef>
+</doxygen>

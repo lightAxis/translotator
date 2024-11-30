@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="MatrixBaseInternal_8hpp" kind="file" language="C++">
+    <compoundname>MatrixBaseInternal.hpp</compoundname>
+    <includedby refid="translotator_8hpp" local="yes">include/translotator/translotator.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/translotator/translotator.hpp</label>
+        <link refid="translotator_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>include/translotator/objects/MatrixBaseInternal.hpp</label>
+        <link refid="MatrixBaseInternal_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri2a96eb5bfa413dff0cddca3d951d6a71" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri96d299f5dadca2759194ea845be7ed5c" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri1b96ed4aed79df1e494374b57efb0a1d" prot="public">translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS !=1 &amp;&amp;OtherDerived::COLS==1, void &gt; &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Matrix&lt; N, M, Type &gt;, NewType &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Vector_3_01N_00_01Type_01_4_00_01NewType_01_4" prot="public">translotator::MatrixBaseInternal::operator_cast_typemapper&lt; Vector&lt; N, Type &gt;, NewType &gt;</innerclass>
+    <innernamespace refid="namespacetranslotator">translotator</innernamespace>
+    <innernamespace refid="namespacetranslotator_1_1MatrixBaseInternal">translotator::MatrixBaseInternal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>The<sp/>MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>Jiseok<sp/>Lee</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Created<sp/>on<sp/>Tue<sp/>Nov<sp/>19<sp/>2024</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>@file<sp/>:<sp/>MatrixBaseInternal.hpp</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="namespacetranslotator_1_1MatrixBaseInternal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetranslotator_1_1MatrixBaseInternal" kindref="compound">translotator::MatrixBaseInternal</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OtherDerived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="32" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kindref="compound">operator_mul_typemapper</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OtherDerived&gt;</highlight></codeline>
+<codeline lineno="37" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri2a96eb5bfa413dff0cddca3d951d6a71" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kindref="compound">operator_mul_typemapper</ref>&lt;Derived,<sp/>OtherDerived,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_if_t&lt;Derived::ROWS<sp/>!=<sp/>OtherDerived::COLS<sp/>&amp;&amp;<sp/>OtherDerived::COLS<sp/>!=<sp/>1,<sp/>void&gt;&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Matrix" kindref="compound">type</ref><sp/>=<sp/><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix&lt;Derived::ROWS, OtherDerived::COLS, typename Derived::DATATYPE&gt;</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OtherDerived&gt;</highlight></codeline>
+<codeline lineno="44" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kindref="compound">operator_mul_typemapper</ref>&lt;Derived,<sp/>OtherDerived,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_if_t&lt;Derived::ROWS<sp/>==<sp/>OtherDerived::COLS<sp/>&amp;&amp;<sp/>OtherDerived::COLS<sp/>!=<sp/>1,<sp/>void&gt;&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">type</ref><sp/>=<sp/><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix&lt;Derived::ROWS, typename Derived::DATATYPE&gt;</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OtherDerived&gt;</highlight></codeline>
+<codeline lineno="51" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri96d299f5dadca2759194ea845be7ed5c" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kindref="compound">operator_mul_typemapper</ref>&lt;Derived,<sp/>OtherDerived,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_if_t&lt;Derived::ROWS<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>OtherDerived::COLS<sp/>==<sp/>1,<sp/>void&gt;&gt;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>type<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived::DATATYPE;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OtherDerived&gt;</highlight></codeline>
+<codeline lineno="58" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri1b96ed4aed79df1e494374b57efb0a1d" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper" kindref="compound">operator_mul_typemapper</ref>&lt;Derived,<sp/>OtherDerived,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enable_if_t&lt;Derived::ROWS<sp/>!=<sp/>1<sp/>&amp;&amp;<sp/>OtherDerived::COLS<sp/>==<sp/>1,<sp/>void&gt;&gt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">type</ref><sp/>=<sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector&lt;Derived::ROWS, typename Derived::DATATYPE&gt;</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>template<sp/>&lt;typename<sp/>Derived,<sp/>typename<sp/>OtherDerived&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>struct<sp/>operator_mul_typemapper<sp/>&lt;<sp/>Derived,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>OtherDerived,<sp/>enable_if_t<sp/>&lt;<sp/>Derived::ROWS<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>OtherDerived::COL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>template<sp/>&lt;size_t<sp/>N,<sp/>typename<sp/>Type&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>struct<sp/>operator_mul_typemapper&lt;SquareMatrix&lt;N,<sp/>Type&gt;,<sp/>SquareMatrix&lt;N,<sp/>Type&gt;&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>using<sp/>type<sp/>=<sp/>SquareMatrix&lt;N,<sp/>Type&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>NewType&gt;</highlight></codeline>
+<codeline lineno="75" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" kindref="compound">operator_cast_typemapper</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>NewType,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>M,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="80" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Matrix_3_01N_00_01M_00_01Type_01_4_00_01NewType_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" kindref="compound">operator_cast_typemapper</ref>&lt;<ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref>&lt;N,<sp/>M,<sp/>Type&gt;,<sp/>NewType&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Matrix" kindref="compound">type</ref><sp/>=<sp/><ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix&lt;N, M, NewType&gt;</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>NewType,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="86" refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper_3_01Vector_3_01N_00_01Type_01_4_00_01NewType_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" kindref="compound">operator_cast_typemapper</ref>&lt;<ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt;N,<sp/>Type&gt;,<sp/>NewType&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">type</ref><sp/>=<sp/><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector&lt;N, NewType&gt;</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/translotator/objects/MatrixBaseInternal.hpp"/>
+  </compounddef>
+</doxygen>

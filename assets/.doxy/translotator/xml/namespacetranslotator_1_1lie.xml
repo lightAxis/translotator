@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacetranslotator_1_1lie" kind="namespace" language="C++">
+    <compoundname>translotator::lie</compoundname>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator" prot="public">translotator::lie::LieOperator</innerclass>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" prot="public">translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" prot="public">translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4" prot="public">translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</innerclass>
+    <innerclass refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" prot="public">translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a09a13c35010aa2769a1b9db0b3ba3f3d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator" kindref="compound">LieOperator</ref>&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator_S1 = typedef LieOperator&lt;ObjectType::UNIT_COMPLEX_NUM, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="103" column="5" bodyfile="include/translotator/lie/S1.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1ae54a5d1db94ba345380d139c045edc57" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" kindref="compound">LieOperator_S1</ref>&lt; float &gt;</type>
+        <definition>using translotator::lie::LieOperator_S1f = typedef LieOperator_S1&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S1f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="104" column="5" bodyfile="include/translotator/lie/S1.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a21fc8f961ec421fbe543f4748960be9c" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" kindref="compound">LieOperator_S1</ref>&lt; double &gt;</type>
+        <definition>using translotator::lie::LieOperator_S1d = typedef LieOperator_S1&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S1d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="105" column="5" bodyfile="include/translotator/lie/S1.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1accf46ec6aa421dc49196894294fb212c" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4" kindref="compound">LieOperator_S1</ref>&lt; long double &gt;</type>
+        <definition>using translotator::lie::LieOperator_S1ld = typedef LieOperator_S1&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S1ld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S1.hpp" line="106" column="5" bodyfile="include/translotator/lie/S1.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1acb140b116bd6fdec0a68a2d08266040f" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator" kindref="compound">LieOperator</ref>&lt; ObjectType::UNIT_QUATERNION, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator_S3 = typedef LieOperator&lt;ObjectType::UNIT_QUATERNION, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="115" column="5" bodyfile="include/translotator/lie/S3.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a5129452e19c90f1f5aac8bfae5739d6b" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" kindref="compound">LieOperator_S3</ref>&lt; float &gt;</type>
+        <definition>using translotator::lie::LieOperator_S3f = typedef LieOperator_S3&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="116" column="5" bodyfile="include/translotator/lie/S3.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a96b64141dd083d7e68023b66ea5bcf93" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" kindref="compound">LieOperator_S3</ref>&lt; double &gt;</type>
+        <definition>using translotator::lie::LieOperator_S3d = typedef LieOperator_S3&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="117" column="5" bodyfile="include/translotator/lie/S3.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a9b8562b3c969c21e1773ff3513e0b9a5" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4" kindref="compound">LieOperator_S3</ref>&lt; long double &gt;</type>
+        <definition>using translotator::lie::LieOperator_S3ld = typedef LieOperator_S3&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_S3ld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/S3.hpp" line="118" column="5" bodyfile="include/translotator/lie/S3.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a0d11cd6269e064a197208eb071fd4d0c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator" kindref="compound">LieOperator</ref>&lt; ObjectType::SE_GROUP, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator_SE = typedef LieOperator&lt;ObjectType::SE_GROUP, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SE.hpp" line="229" column="5" bodyfile="include/translotator/lie/SE.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1ab1cad9a5fa2260fd703220de9c83d537" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SE</ref>&lt; float &gt;</type>
+        <definition>using translotator::lie::LieOperator_SEf = typedef LieOperator_SE&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SEf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SE.hpp" line="230" column="5" bodyfile="include/translotator/lie/SE.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1af87b8ad5a33442f6acfe9da4b7b56c61" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SE</ref>&lt; double &gt;</type>
+        <definition>using translotator::lie::LieOperator_SEd = typedef LieOperator_SE&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SEd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SE.hpp" line="231" column="5" bodyfile="include/translotator/lie/SE.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a047ff13384492426e28bb4ee2089b94f" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SE</ref>&lt; long double &gt;</type>
+        <definition>using translotator::lie::LieOperator_SEld = typedef LieOperator_SE&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SEld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SE.hpp" line="232" column="5" bodyfile="include/translotator/lie/SE.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1ac8ed79b48e29dd4c308d48eac5a55da1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator" kindref="compound">LieOperator</ref>&lt; ObjectType::SO_GROUP, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator_SO = typedef LieOperator&lt;ObjectType::SO_GROUP, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="184" column="5" bodyfile="include/translotator/lie/SO.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a5bef9cc8a90eb6d71b6cc420654a2d4e" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SO</ref>&lt; float &gt;</type>
+        <definition>using translotator::lie::LieOperator_SOf = typedef LieOperator_SO&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SOf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="185" column="5" bodyfile="include/translotator/lie/SO.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1a2ccd41aab90eb30791066eea44a15f55" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SO</ref>&lt; double &gt;</type>
+        <definition>using translotator::lie::LieOperator_SOd = typedef LieOperator_SO&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SOd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="186" column="5" bodyfile="include/translotator/lie/SO.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetranslotator_1_1lie_1aaa4d3164fe86765e12307f8394d5a834" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" kindref="compound">LieOperator_SO</ref>&lt; long double &gt;</type>
+        <definition>using translotator::lie::LieOperator_SOld = typedef LieOperator_SO&lt;long double&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieOperator_SOld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="187" column="5" bodyfile="include/translotator/lie/SO.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace for Lie Group and Algebra Operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/lie/LieOperator.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

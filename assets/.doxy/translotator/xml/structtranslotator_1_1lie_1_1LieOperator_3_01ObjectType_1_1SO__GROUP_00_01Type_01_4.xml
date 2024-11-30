@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</compoundname>
+    <includes refid="SO_8hpp" local="no">SO.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad6c707cad38a18fb4207f075b6d0c024" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::LieAlgebraType =  SquareMatrix&lt;N, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieAlgebraType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="37" column="9" bodyfile="include/translotator/lie/SO.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aae2ef68c05c7407dbaa1ec414e00682d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::LieGroupType =  SOGroup&lt;N, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>LieGroupType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="39" column="9" bodyfile="include/translotator/lie/SO.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a9ab10454aa47a0997efe8d465575f7d4" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N==2 ? 1 :3, Type &gt;</type>
+        <definition>using translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::VectorType =  Vector&lt;N == 2 ? 1 : 3, Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="41" column="9" bodyfile="include/translotator/lie/SO.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a48272a1ad91cd7fa08117c81acc30573" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 2 &gt;</type>
+        <definition>static LieAlgebraType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Vector2LieAlgebra</definition>
+        <argsstring>(const VectorType&lt; 2 &gt; &amp;isomorphicVec)</argsstring>
+        <name>Vector2LieAlgebra</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Convert <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> to Lie Algebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [theta] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [2x2] [0 -theta; theta 0] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="48" column="31" bodyfile="include/translotator/lie/SO.hpp" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a5a6854a074513e9d0d67f87bc5b6f43b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 3 &gt;</type>
+        <definition>static LieAlgebraType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Vector2LieAlgebra</definition>
+        <argsstring>(const VectorType&lt; 3 &gt; &amp;isomorphicVec)</argsstring>
+        <name>Vector2LieAlgebra</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Convert <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> to Lie Algebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [3x3] [0 -z y; z 0 -x; -y x 0] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="60" column="31" bodyfile="include/translotator/lie/SO.hpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a0129be9ce01668d5dc221133190162b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 2 &gt;</type>
+        <definition>static VectorType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::LieAlgebra2Vector</definition>
+        <argsstring>(const LieAlgebraType&lt; 2 &gt; &amp;lieAlgebra)</argsstring>
+        <name>LieAlgebra2Vector</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Convert Lie Algebra to <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [2x2] [0 -theta; theta 0] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [theta] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="70" column="27" bodyfile="include/translotator/lie/SO.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aff8f4e02676e0019d55ff951eafa457f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 3 &gt;</type>
+        <definition>static VectorType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::LieAlgebra2Vector</definition>
+        <argsstring>(const LieAlgebraType&lt; 3 &gt; &amp;lieAlgebra)</argsstring>
+        <name>LieAlgebra2Vector</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Convert Lie Algebra to <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [3x3] [0 -z y; z 0 -x; -y x 0] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="80" column="27" bodyfile="include/translotator/lie/SO.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a294a5080bf9720782570a694fd3548ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 2 &gt;</type>
+        <definition>static LieGroupType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Exp</definition>
+        <argsstring>(const VectorType&lt; 2 &gt; &amp;isomorphicVec)</argsstring>
+        <name>Exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [theta] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group SO(2) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="90" column="29" bodyfile="include/translotator/lie/SO.hpp" bodystart="90" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a479d587304d5797b1a6a82d4a0a25f38" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 3 &gt;</type>
+        <definition>static LieGroupType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Exp</definition>
+        <argsstring>(const VectorType&lt; 3 &gt; &amp;isomorphicVec)</argsstring>
+        <name>Exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>isomorphicVec</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isomorphicVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group SO(3) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="107" column="29" bodyfile="include/translotator/lie/SO.hpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a253b80bd045cbc6b62cf8ed48daeea6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 2 &gt;</type>
+        <definition>static VectorType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Log</definition>
+        <argsstring>(const LieGroupType&lt; 2 &gt; &amp;lieGroup)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group SO(2) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [1x1], [theta] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="117" column="27" bodyfile="include/translotator/lie/SO.hpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aca07953c0f1e7283d6a23ad57c9cfd0c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">VectorType</ref>&lt; 3 &gt;</type>
+        <definition>static VectorType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::Log</definition>
+        <argsstring>(const LieGroupType&lt; 3 &gt; &amp;lieGroup)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group SO(3) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref> [3x1], [x, y, z] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="127" column="27" bodyfile="include/translotator/lie/SO.hpp" bodystart="127" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1acd4e719041f2eb9f21d85fb545d502a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 2 &gt;</type>
+        <definition>static LieGroupType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::exp</definition>
+        <argsstring>(const LieAlgebraType&lt; 2 &gt; &amp;lieAlgebra)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [2x2] [0 -theta; theta 0] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group SO(2) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="147" column="29" bodyfile="include/translotator/lie/SO.hpp" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad1c525b5a39f18d07230906c6854927f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 3 &gt;</type>
+        <definition>static LieGroupType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::exp</definition>
+        <argsstring>(const LieAlgebraType&lt; 3 &gt; &amp;lieAlgebra)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>lieAlgebra</declname>
+        </param>
+        <briefdescription>
+<para>Exponential map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieAlgebra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Algebra [3x3] [0 -z y; z 0 -x; -y x 0] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Group SO(3) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="157" column="29" bodyfile="include/translotator/lie/SO.hpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a6207061086ab3426dce6bb2d78389318" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 2 &gt;</type>
+        <definition>static LieAlgebraType&lt;2&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::log</definition>
+        <argsstring>(const LieGroupType&lt; 2 &gt; &amp;lieGroup)</argsstring>
+        <name>log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 2 &gt; &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group SO(2) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [2x2] [0 -theta; theta 0] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="167" column="31" bodyfile="include/translotator/lie/SO.hpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a7758c398a69a9b97148279631588d86c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">LieAlgebraType</ref>&lt; 3 &gt;</type>
+        <definition>static LieAlgebraType&lt;3&gt; translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;::log</definition>
+        <argsstring>(const LieGroupType&lt; 3 &gt; &amp;lieGroup)</argsstring>
+        <name>log</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SOGroup" kindref="compound">LieGroupType</ref>&lt; 3 &gt; &amp;</type>
+          <declname>lieGroup</declname>
+        </param>
+        <briefdescription>
+<para>Logarithm map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lieGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lie Group SO(3) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lie Algebra [3x3] [0 -z y; z 0 -x; -y x 0] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/lie/SO.hpp" line="177" column="31" bodyfile="include/translotator/lie/SO.hpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Special Orthogonal Group. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimension </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+SO is a Special Orthogonal Group </para>
+    </detaileddescription>
+    <location file="include/translotator/lie/SO.hpp" line="34" column="5" bodyfile="include/translotator/lie/SO.hpp" bodystart="35" bodyend="181"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a294a5080bf9720782570a694fd3548ee" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a479d587304d5797b1a6a82d4a0a25f38" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1acd4e719041f2eb9f21d85fb545d502a5" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad1c525b5a39f18d07230906c6854927f" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>exp</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a0129be9ce01668d5dc221133190162b0" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>LieAlgebra2Vector</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aff8f4e02676e0019d55ff951eafa457f" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>LieAlgebra2Vector</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1ad6c707cad38a18fb4207f075b6d0c024" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>LieAlgebraType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aae2ef68c05c7407dbaa1ec414e00682d" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>LieGroupType</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a253b80bd045cbc6b62cf8ed48daeea6b" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1aca07953c0f1e7283d6a23ad57c9cfd0c" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a6207061086ab3426dce6bb2d78389318" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a7758c398a69a9b97148279631588d86c" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>log</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a48272a1ad91cd7fa08117c81acc30573" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Vector2LieAlgebra</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a5a6854a074513e9d0d67f87bc5b6f43b" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>Vector2LieAlgebra</name></member>
+      <member refid="structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4_1a9ab10454aa47a0997efe8d465575f7d4" prot="public" virt="non-virtual"><scope>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</scope><name>VectorType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

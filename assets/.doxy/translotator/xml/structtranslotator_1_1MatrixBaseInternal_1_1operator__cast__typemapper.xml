@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1MatrixBaseInternal_1_1operator__cast__typemapper" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::MatrixBaseInternal::operator_cast_typemapper</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Derived</type>
+      </param>
+      <param>
+        <type>typename NewType</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="75" column="5" bodyfile="include/translotator/objects/MatrixBaseInternal.hpp" bodystart="76" bodyend="77"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

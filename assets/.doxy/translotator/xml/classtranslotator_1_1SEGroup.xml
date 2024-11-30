@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1SEGroup" kind="class" language="C++" prot="public">
+    <compoundname>translotator::SEGroup</compoundname>
+    <includes refid="SEGroup_8hpp" local="no">SEGroup.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtranslotator_1_1SEGroup_1a9411259a603523a10f5b28f695994daf" prot="public" static="no">
+        <type>Type</type>
+        <definition>using translotator::SEGroup&lt; N, Type &gt;::DATATYPE =  Type</definition>
+        <argsstring></argsstring>
+        <name>DATATYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="46" column="9" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1SEGroup_1aa540a4e623384f1130968df88660719a" prot="private" static="no" mutable="no">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SOGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::R_</definition>
+        <argsstring></argsstring>
+        <name>R_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="41" column="17" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtranslotator_1_1SEGroup_1a2ba365bebe403c9c52f170b6fa3b0a2f" prot="private" static="no" mutable="no">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt;</type>
+        <definition>Vector&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::t_</definition>
+        <argsstring></argsstring>
+        <name>t_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="42" column="16" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1SEGroup_1a934d6a0bcbb7a02b42ecf311385ddb5e" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static ObjectType</type>
+        <definition>constexpr static ObjectType translotator::SEGroup&lt; N, Type &gt;::OBJECT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>OBJECT_TYPE</name>
+        <initializer>= ObjectType::SE_GROUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="45" column="37" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a8a0639b265411e13a291c6f71756eab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::SEGroup&lt; N, Type &gt;::SEGroup</definition>
+        <argsstring>()=default</argsstring>
+        <name>SEGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="52" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a948d7f6a6145135402215b0825ae0630" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::SEGroup&lt; N, Type &gt;::SEGroup</definition>
+        <argsstring>(const SOGroup&lt; N, Type &gt; &amp;rotation, const Vector&lt; N, Type &gt; &amp;translation)</argsstring>
+        <name>SEGroup</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt; &amp;</type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt; &amp;</type>
+          <declname>translation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="53" column="9" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a01614c77375db55f70178f71a46c6477" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>translotator::SEGroup&lt; N, Type &gt;::SEGroup</definition>
+        <argsstring>(const SquareMatrix&lt; N+1, Type &gt; &amp;matrix)</argsstring>
+        <name>SEGroup</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N+1, Type &gt; &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="54" column="9" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a002a34e6a24bdfb9eb87e238928a85c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>translotator::SEGroup&lt; N, Type &gt;::~SEGroup</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SEGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="57" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1afdf3246840129403ad5e0c1737f51538" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SOGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::rotation</definition>
+        <argsstring>() const</argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accessors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="63" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1aff31245432656b3631371a67d23732cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt;</type>
+        <definition>Vector&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::translation</definition>
+        <argsstring>() const</argsstring>
+        <name>translation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="64" column="23" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a4cdd55da0e1d5f43eace48c7561231d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref>&lt; N, Type &gt; &amp;</type>
+        <definition>SOGroup&lt;N, Type&gt;&amp; translotator::SEGroup&lt; N, Type &gt;::rotation</definition>
+        <argsstring>()</argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="65" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1aece8cadf20e7ebeb53b04db9c2c3bdcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt; &amp;</type>
+        <definition>Vector&lt;N, Type&gt;&amp; translotator::SEGroup&lt; N, Type &gt;::translation</definition>
+        <argsstring>()</argsstring>
+        <name>translation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="66" column="23" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a35a12c1fbb29daf511dd4b4345afa96c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SEGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::operator*</definition>
+        <argsstring>(const SEGroup&lt; N, Type &gt; &amp;other) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref> * <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>operator </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="72" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a886fa40a4ca1cc84fa383f0ff1714089" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SEGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::operator/</definition>
+        <argsstring>(const SEGroup&lt; N, Type &gt; &amp;other) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref> / <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="77" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a75e34731df298a79539ac667d0efd07a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SEGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::inversed</definition>
+        <argsstring>() const</argsstring>
+        <name>inversed</name>
+        <briefdescription>
+<para>inverse </para>
+        </briefdescription>
+        <detaileddescription>
+<para>utils </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="87" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a8ab51bd8f203536840b2f9d536dc2924" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt;</type>
+        <definition>Vector&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::actOnVector</definition>
+        <argsstring>(const Vector&lt; N, Type &gt; &amp;vec) const</argsstring>
+        <name>actOnVector</name>
+        <param>
+          <type>const <ref refid="classtranslotator_1_1Vector" kindref="compound">Vector</ref>&lt; N, Type &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>act on vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="92" column="23" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a526eee635baf04c02de5aed117b7c4b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::SEGroup&lt; N, Type &gt;::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>print </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="96" column="21" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a281bcd5dc255d47979e926597e2ba910" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt;</type>
+        <definition>SEGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::pow</definition>
+        <argsstring>(const Type &amp;t) const</argsstring>
+        <name>pow</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>power </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="101" column="24" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a289ecfb82afdd846e93cdd24597b8db5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N+1, Type &gt;</type>
+        <definition>SquareMatrix&lt;N + 1, Type&gt; translotator::SEGroup&lt; N, Type &gt;::toSquareMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>toSquareMatrix</name>
+        <briefdescription>
+<para>to square matrix </para>
+        </briefdescription>
+        <detaileddescription>
+<para>casting </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="120" column="29" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="120" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtranslotator_1_1SEGroup_1a5f3221c8538fb06ec97c9dfbffae087f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref>&lt; N, Type &gt;</type>
+        <definition>static SEGroup&lt;N, Type&gt; translotator::SEGroup&lt; N, Type &gt;::identity</definition>
+        <argsstring>()</argsstring>
+        <name>identity</name>
+        <briefdescription>
+<para>identity </para>
+        </briefdescription>
+        <detaileddescription>
+<para>static functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SEGroup.hpp" line="111" column="31" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Special Euclidean Group. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dimension </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Special Euclidean Group is a group of rigid body transformation in N dimension. It is a combination of rotation and translation. Subgroup of <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref> is <ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref> and Translation. Also <ref refid="classtranslotator_1_1SEGroup" kindref="compound">SEGroup</ref> is a Lie Group, which means it has a group structure and a smooth manifold structure. Exponential and Logarithm map can be defined. <simplesect kind="note"><para>Not a <ref refid="classtranslotator_1_1Matrix" kindref="compound">Matrix</ref> based implementation. Just a composition of <ref refid="classtranslotator_1_1SOGroup" kindref="compound">SOGroup</ref> and Translation each. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/translotator/objects/SEGroup.hpp" line="37" column="5" bodyfile="include/translotator/objects/SEGroup.hpp" bodystart="38" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1SEGroup_1a8ab51bd8f203536840b2f9d536dc2924" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>actOnVector</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a9411259a603523a10f5b28f695994daf" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>DATATYPE</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a5f3221c8538fb06ec97c9dfbffae087f" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>identity</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a75e34731df298a79539ac667d0efd07a" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>inversed</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a934d6a0bcbb7a02b42ecf311385ddb5e" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>OBJECT_TYPE</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a35a12c1fbb29daf511dd4b4345afa96c" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a886fa40a4ca1cc84fa383f0ff1714089" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a281bcd5dc255d47979e926597e2ba910" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>pow</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a526eee635baf04c02de5aed117b7c4b9" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>print</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1aa540a4e623384f1130968df88660719a" prot="private" virt="non-virtual"><scope>translotator::SEGroup</scope><name>R_</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1afdf3246840129403ad5e0c1737f51538" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>rotation</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a4cdd55da0e1d5f43eace48c7561231d9" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>rotation</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a8a0639b265411e13a291c6f71756eab2" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>SEGroup</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a948d7f6a6145135402215b0825ae0630" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>SEGroup</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a01614c77375db55f70178f71a46c6477" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>SEGroup</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a2ba365bebe403c9c52f170b6fa3b0a2f" prot="private" virt="non-virtual"><scope>translotator::SEGroup</scope><name>t_</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a289ecfb82afdd846e93cdd24597b8db5" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>toSquareMatrix</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1aff31245432656b3631371a67d23732cb" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>translation</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1aece8cadf20e7ebeb53b04db9c2c3bdcf" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>translation</name></member>
+      <member refid="classtranslotator_1_1SEGroup_1a002a34e6a24bdfb9eb87e238928a85c6" prot="public" virt="non-virtual"><scope>translotator::SEGroup</scope><name>~SEGroup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

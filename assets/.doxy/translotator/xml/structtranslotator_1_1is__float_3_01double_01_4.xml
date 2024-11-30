@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1is__float_3_01double_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::is_float&lt; double &gt;</compoundname>
+    <basecompoundref refid="structtranslotator_1_1integral__constant" prot="public" virt="non-virtual">translotator::integral_constant&lt; bool, true &gt;</basecompoundref>
+    <templateparamlist>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>true_type</label>
+        <link refid="structtranslotator_1_1integral__constant"/>
+      </node>
+      <node id="1">
+        <label>translotator::is_float&lt; double &gt;</label>
+        <link refid="structtranslotator_1_1is__float_3_01double_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>true_type</label>
+        <link refid="structtranslotator_1_1integral__constant"/>
+      </node>
+      <node id="1">
+        <label>translotator::is_float&lt; double &gt;</label>
+        <link refid="structtranslotator_1_1is__float_3_01double_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/translotator/utils/micro_type_traits.hpp" line="115" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="116" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1integral__constant_1a13235c6fc1a2421cdc3bf2c55aeda7a5" prot="public" virt="non-virtual"><scope>translotator::is_float&lt; double &gt;</scope><name>operator value_type</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a764f513a5f5444ffe6135c2fe900422f" prot="public" virt="non-virtual"><scope>translotator::is_float&lt; double &gt;</scope><name>operator()</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a778c53b2f97fa7a2eb1fb158f8b3203c" prot="public" virt="non-virtual"><scope>translotator::is_float&lt; double &gt;</scope><name>type</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a7bd61cb2ad930bac6c4d43d0c65bf365" prot="public" virt="non-virtual"><scope>translotator::is_float&lt; double &gt;</scope><name>value</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a6253407f70fb7e893ffb85becd7ea8fb" prot="public" virt="non-virtual"><scope>translotator::is_float&lt; double &gt;</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

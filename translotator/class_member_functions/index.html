@@ -1,0 +1,2125 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../class_members/">
+      
+      
+        <link rel="next" href="../class_member_variables/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Class Member Functions - translotator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-member-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="translotator" class="md-header__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            translotator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class Member Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Main
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../links/" class="md-tabs__link">
+          
+  
+  Specifications(MkDoxy)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="translotator" class="md-nav__button md-logo" aria-label="translotator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    translotator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    translotator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_based_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix based Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matrix_vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix & Vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Number Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Groups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_complex_number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Complex Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unit_quaternion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Quaternion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../so_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SO Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rotation Representation Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Rotation Representation Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../euler_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Euler Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../axis_angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axis Angle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Homogeneous Transformation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Homogeneous Transformation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../se_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SE Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Specifications(MkDoxy)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications(MkDoxy)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      a
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      c
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      d
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    <span class="md-ellipsis">
+      e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      f
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    <span class="md-ellipsis">
+      g
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      i
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l" class="md-nav__link">
+    <span class="md-ellipsis">
+      l
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      m
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      n
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    <span class="md-ellipsis">
+      o
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      p
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      q
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      r
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    <span class="md-ellipsis">
+      s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      t
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      u
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    <span class="md-ellipsis">
+      v
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#w" class="md-nav__link">
+    <span class="md-ellipsis">
+      w
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      x
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y" class="md-nav__link">
+    <span class="md-ellipsis">
+      y
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      z
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ~
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Namespaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Namespaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      a
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      c
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      d
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    <span class="md-ellipsis">
+      e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      f
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    <span class="md-ellipsis">
+      g
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      i
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l" class="md-nav__link">
+    <span class="md-ellipsis">
+      l
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      m
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      n
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    <span class="md-ellipsis">
+      o
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      p
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      q
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      r
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    <span class="md-ellipsis">
+      s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      t
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      u
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    <span class="md-ellipsis">
+      v
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#w" class="md-nav__link">
+    <span class="md-ellipsis">
+      w
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      x
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y" class="md-nav__link">
+    <span class="md-ellipsis">
+      y
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      z
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ~
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="class-member-functions">Class Member Functions<a class="headerlink" href="#class-member-functions" title="Permanent link">&para;</a></h1>
+<h2 id="a">a<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>AxisAngle</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>angle</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>axis</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>axisNormalize</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>axisNormalized</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>axisRotation</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>actOnVector</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>actOnVector2D</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>actOnVector3D</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+</ul>
+<h2 id="b">b<a class="headerlink" href="#b" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>block</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+</ul>
+<h2 id="c">c<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>castDataType</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>ComplexNum</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>)</li>
+<li><strong>complexNumDiv</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>)</li>
+<li><strong>complexNumDivEq</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>)</li>
+<li><strong>complexNumMul</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>)</li>
+<li><strong>complexNumMulEq</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>)</li>
+<li><strong>conjugate</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>conjugated</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>conjugateDual</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>conjugateFull</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>conjugatePrimary</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>conjugatedDual</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>conjugatedFull</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>conjugatedPrimary</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>castAxisOrder</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>cast2ComplexNum</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2ComplexNumRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2DualNumber</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2DualNumberRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2DualQuaternion</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2DualQuaternionRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2Matrix</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2MatrixRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2Quaternion</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2QuaternionRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2SOGroup</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2SOGroupRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2SquareMatrix</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2SquareMatrixRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitComplexNum</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitComplexNumRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitDualQuaternion</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitDualQuaternionRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitQuaternion</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2UnitQuaternionRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2Vector</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>cast2VectorRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>castContainer</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>castContainerRef</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>col</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>colSize</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>copyTo</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>canonicalize</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>canonicalized</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>cross</strong> (<a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+</ul>
+<h2 id="d">d<a class="headerlink" href="#d" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Du</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>DualNumber</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>dualNumDiv</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>dualNumDivEq</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>dualNumMul</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>dualNumMulEq</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>DualQuaternion</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>dualQuatDiv</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>dualQuatDivEq</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>dualQuatMul</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>dualQuatMulEq</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>dw</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>dx</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>dy</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>dz</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>Data_</strong> (<a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1SquareMatrix/"><strong>translotator::SquareMatrix</strong></a>)</li>
+<li><strong>determinant</strong> (<a href="../classtranslotator_1_1SquareMatrix/"><strong>translotator::SquareMatrix</strong></a>)</li>
+<li><strong>dot</strong> (<a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+</ul>
+<h2 id="e">e<a class="headerlink" href="#e" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>EulerAngle</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>eye</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>Exp</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+<li><strong>exp</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+</ul>
+<h2 id="f">f<a class="headerlink" href="#f" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>fill</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>frobeniusNorm</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>frobeniusNormSquared</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+</ul>
+<h2 id="g">g<a class="headerlink" href="#g" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>getAngleInOrder</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>getAxisInOrder</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>getData</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>getDiff</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>)</li>
+<li><strong>getEnd</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+<li><strong>getStart</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+</ul>
+<h2 id="i">i<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>identity</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>inverse</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1SquareMatrix/"><strong>translotator::SquareMatrix</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>inversed</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1SquareMatrix/"><strong>translotator::SquareMatrix</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>Im</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>initializer_list</strong> (<a href="../structtranslotator_1_1initializer__list/"><strong>translotator::initializer_list</strong></a>)</li>
+<li><strong>interpolate</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+</ul>
+<h2 id="l">l<a class="headerlink" href="#l" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Lerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>)</li>
+<li><strong>LieAlgebra2Vector</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+<li><strong>Log</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+<li><strong>log</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+</ul>
+<h2 id="m">m<a class="headerlink" href="#m" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MatrixBase</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+</ul>
+<h2 id="n">n<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>norm</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>normSquared</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>normalize</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>normalized</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>, <a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>normDualNum</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>normDualNumSquared</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>normScalar</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>normScalarSquared</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>NaN</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+</ul>
+<h2 id="o">o<a class="headerlink" href="#o" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>operator*</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator*=</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator/</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator/=</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator[]</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>ones</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>operator()</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../structtranslotator_1_1integral__constant/"><strong>translotator::integral_constant</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+<li><strong>operator+</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator+=</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>operator-</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>operator-=</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>operator=</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>operator value_type</strong> (<a href="../structtranslotator_1_1integral__constant/"><strong>translotator::integral_constant</strong></a>)</li>
+</ul>
+<h2 id="p">p<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>pitch</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>print</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>pow</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+</ul>
+<h2 id="q">q<a class="headerlink" href="#q" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Quaternion</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>quatNumDiv</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>quatNumDivEq</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>quatNumMul</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>quatNumMulEq</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+</ul>
+<h2 id="r">r<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>rotateVector2D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>rotateVector3D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>Re</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>, <a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>rw</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>rx</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>ry</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>rz</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>roll</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>rotateVec2D</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>rotateVec3D</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>row</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>rowSize</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>rotation</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+</ul>
+<h2 id="s">s<a class="headerlink" href="#s" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>sqrt</strong> (<a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>)</li>
+<li><strong>setBlock</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>setCol</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>setRow</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>swapCols</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>swapRows</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>SEGroup</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>SOGroup</strong> (<a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>)</li>
+<li><strong>setDiff</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>)</li>
+<li><strong>setEnd</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+<li><strong>setStart</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+<li><strong>ScLerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>)</li>
+<li><strong>SlerpLerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>)</li>
+<li><strong>Slerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>)</li>
+<li><strong>SlerperFast</strong> (<a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+</ul>
+<h2 id="t">t<a class="headerlink" href="#t" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>toAngleVector</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>)</li>
+<li><strong>toEulerAngle2D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>toEulerAngle3D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>toRotMatrix2D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>toRotMatrix3D</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>toUnitComplexNum</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>)</li>
+<li><strong>toUnitQuaternion</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>)</li>
+<li><strong>toMulMatrix</strong> (<a href="../classtranslotator_1_1ComplexNum/"><strong>translotator::ComplexNum</strong></a>, <a href="../classtranslotator_1_1DualNumber/"><strong>translotator::DualNumber</strong></a>, <a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>toRightMulMatrix</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>toAxisAngle</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>, <a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>, <a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>toSO2Group</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>toSO3Group</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>toVector</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+<li><strong>T</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>, <a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>)</li>
+<li><strong>toScalar</strong> (<a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+<li><strong>toSquareMatrix</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>translation</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>toEulerAngle</strong> (<a href="../classtranslotator_1_1SOGroup/"><strong>translotator::SOGroup</strong></a>)</li>
+<li><strong>trace</strong> (<a href="../classtranslotator_1_1SquareMatrix/"><strong>translotator::SquareMatrix</strong></a>)</li>
+<li><strong>toSE2Group</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>toSE3Group</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>toTranslationVec2D</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>toTranslationVec3D</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>toCrossMatrix</strong> (<a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+<li><strong>toDiagMatrix</strong> (<a href="../classtranslotator_1_1Vector/"><strong>translotator::Vector</strong></a>)</li>
+</ul>
+<h2 id="u">u<a class="headerlink" href="#u" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>UnitComplexNum</strong> (<a href="../classtranslotator_1_1UnitComplexNum/"><strong>translotator::UnitComplexNum</strong></a>)</li>
+<li><strong>UnitDualQuaternion</strong> (<a href="../classtranslotator_1_1UnitDualQuaternion/"><strong>translotator::UnitDualQuaternion</strong></a>)</li>
+<li><strong>UnitQuaternion</strong> (<a href="../classtranslotator_1_1UnitQuaternion/"><strong>translotator::UnitQuaternion</strong></a>)</li>
+<li><strong>updateDiff</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>, <a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>)</li>
+<li><strong>update_theta</strong> (<a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+</ul>
+<h2 id="v">v<a class="headerlink" href="#v" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Vector2LieAlgebra</strong> (<a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SE__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SE_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1SO__GROUP_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::SO_GROUP, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__COMPLEX__NUM_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_COMPLEX_NUM, Type &gt;</strong></a>, <a href="../structtranslotator_1_1lie_1_1LieOperator_3_01ObjectType_1_1UNIT__QUATERNION_00_01Type_01_4/"><strong>translotator::lie::LieOperator&lt; ObjectType::UNIT_QUATERNION, Type &gt;</strong></a>)</li>
+</ul>
+<h2 id="w">w<a class="headerlink" href="#w" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>w</strong> (<a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+</ul>
+<h2 id="x">x<a class="headerlink" href="#x" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>x</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+</ul>
+<h2 id="y">y<a class="headerlink" href="#y" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>y</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>yaw</strong> (<a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>)</li>
+</ul>
+<h2 id="z">z<a class="headerlink" href="#z" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>z</strong> (<a href="../classtranslotator_1_1AxisAngle/"><strong>translotator::AxisAngle</strong></a>, <a href="../classtranslotator_1_1EulerAngle/"><strong>translotator::EulerAngle</strong></a>, <a href="../classtranslotator_1_1Quaternion/"><strong>translotator::Quaternion</strong></a>)</li>
+<li><strong>zeros</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>, <a href="../classtranslotator_1_1MatrixBase/"><strong>translotator::MatrixBase</strong></a>)</li>
+</ul>
+<h2 id="_1">~<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>~DualQuaternion</strong> (<a href="../classtranslotator_1_1DualQuaternion/"><strong>translotator::DualQuaternion</strong></a>)</li>
+<li><strong>~SEGroup</strong> (<a href="../classtranslotator_1_1SEGroup/"><strong>translotator::SEGroup</strong></a>)</li>
+<li><strong>~Lerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1Lerper/"><strong>translotator::interpolators::Lerper</strong></a>)</li>
+<li><strong>~ScLerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1ScLerper/"><strong>translotator::interpolators::ScLerper</strong></a>)</li>
+<li><strong>~SlerpLerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1SlerpLerper/"><strong>translotator::interpolators::SlerpLerper</strong></a>)</li>
+<li><strong>~Slerper</strong> (<a href="../classtranslotator_1_1interpolators_1_1Slerper/"><strong>translotator::interpolators::Slerper</strong></a>)</li>
+<li><strong>~SlerperFast</strong> (<a href="../classtranslotator_1_1interpolators_1_1SlerperFast/"><strong>translotator::interpolators::SlerperFast</strong></a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/always-no-cache.js"></script>
+      
+    
+  </body>
+</html>

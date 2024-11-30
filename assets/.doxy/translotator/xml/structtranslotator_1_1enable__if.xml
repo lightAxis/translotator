@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1enable__if" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::enable_if</compoundname>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>B</declname>
+        <defname>B</defname>
+      </param>
+      <param>
+        <type>typename T</type>
+        <defval>void</defval>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/utils/micro_type_traits.hpp" line="29" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="30" bodyend="31"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

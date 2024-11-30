@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1integral__constant" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::integral_constant</compoundname>
+    <derivedcompoundref refid="structtranslotator_1_1is__float" prot="public" virt="non-virtual">translotator::is_float&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__float_3_01double_01_4" prot="public" virt="non-virtual">translotator::is_float&lt; double &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__float_3_01float_01_4" prot="public" virt="non-virtual">translotator::is_float&lt; float &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__float_3_01long_01double_01_4" prot="public" virt="non-virtual">translotator::is_float&lt; long double &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__matrix__base" prot="public" virt="non-virtual">translotator::is_matrix_base&lt; T, typename &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__matrix__base_3_01T_00_01typename_01enable__if_3_01T_1_1MATRIX__BASE_01_4_1_1type_01_4" prot="public" virt="non-virtual">translotator::is_matrix_base&lt; T, typename enable_if&lt; T::MATRIX_BASE &gt;::type &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__same" prot="public" virt="non-virtual">translotator::is_same&lt; T, U &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structtranslotator_1_1is__same_3_01T_00_01T_01_4" prot="public" virt="non-virtual">translotator::is_same&lt; T, T &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>T</type>
+        <declname>v</declname>
+        <defname>v</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1integral__constant_1a6253407f70fb7e893ffb85becd7ea8fb" prot="public" static="no">
+        <type>T</type>
+        <definition>using translotator::integral_constant&lt; T, v &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="63" column="9" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtranslotator_1_1integral__constant_1a778c53b2f97fa7a2eb1fb158f8b3203c" prot="public" static="no">
+        <type><ref refid="structtranslotator_1_1integral__constant" kindref="compound">integral_constant</ref></type>
+        <definition>using translotator::integral_constant&lt; T, v &gt;::type =  integral_constant</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="64" column="9" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structtranslotator_1_1integral__constant_1a7bd61cb2ad930bac6c4d43d0c65bf365" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr T</type>
+        <definition>constexpr T translotator::integral_constant&lt; T, v &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= v</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="62" column="28" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtranslotator_1_1integral__constant_1a13235c6fc1a2421cdc3bf2c55aeda7a5" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr translotator::integral_constant&lt; T, v &gt;::operator value_type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="65" column="19" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="structtranslotator_1_1integral__constant_1a764f513a5f5444ffe6135c2fe900422f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr value_type</type>
+        <definition>constexpr value_type translotator::integral_constant&lt; T, v &gt;::operator()</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/utils/micro_type_traits.hpp" line="66" column="30" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>translotator::is_matrix_base&lt; T, typename &gt;</label>
+        <link refid="structtranslotator_1_1is__matrix__base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>translotator::is_float&lt; long double &gt;</label>
+        <link refid="structtranslotator_1_1is__float_3_01long_01double_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>translotator::is_float&lt; float &gt;</label>
+        <link refid="structtranslotator_1_1is__float_3_01float_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>translotator::is_same&lt; T, U &gt;</label>
+        <link refid="structtranslotator_1_1is__same"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>translotator::is_float&lt; double &gt;</label>
+        <link refid="structtranslotator_1_1is__float_3_01double_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>translotator::is_matrix_base&lt; T, typename enable_if&lt; T::MATRIX_BASE &gt;::type &gt;</label>
+        <link refid="structtranslotator_1_1is__matrix__base_3_01T_00_01typename_01enable__if_3_01T_1_1MATRIX__BASE_01_4_1_1type_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>translotator::is_float&lt; T &gt;</label>
+        <link refid="structtranslotator_1_1is__float"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>translotator::is_same&lt; T, T &gt;</label>
+        <link refid="structtranslotator_1_1is__same_3_01T_00_01T_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>translotator::integral_constant&lt; T, v &gt;</label>
+        <link refid="structtranslotator_1_1integral__constant"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/translotator/utils/micro_type_traits.hpp" line="60" column="5" bodyfile="include/translotator/utils/micro_type_traits.hpp" bodystart="61" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1integral__constant_1a13235c6fc1a2421cdc3bf2c55aeda7a5" prot="public" virt="non-virtual"><scope>translotator::integral_constant</scope><name>operator value_type</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a764f513a5f5444ffe6135c2fe900422f" prot="public" virt="non-virtual"><scope>translotator::integral_constant</scope><name>operator()</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a778c53b2f97fa7a2eb1fb158f8b3203c" prot="public" virt="non-virtual"><scope>translotator::integral_constant</scope><name>type</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a7bd61cb2ad930bac6c4d43d0c65bf365" prot="public" virt="non-virtual"><scope>translotator::integral_constant</scope><name>value</name></member>
+      <member refid="structtranslotator_1_1integral__constant_1a6253407f70fb7e893ffb85becd7ea8fb" prot="public" virt="non-virtual"><scope>translotator::integral_constant</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

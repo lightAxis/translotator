@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1lie_1_1LieOperator" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::lie::LieOperator</compoundname>
+    <includes refid="LieOperator_8hpp" local="no">LieOperator.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>ObjectType</type>
+        <declname>oType</declname>
+        <defname>oType</defname>
+      </param>
+      <param>
+        <type>typename dataType</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Lie Operator for Lie Group and Lie Algebra. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>oType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="include/translotator/lie/LieOperator.hpp" line="33" column="5" bodyfile="include/translotator/lie/LieOperator.hpp" bodystart="34" bodyend="42"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

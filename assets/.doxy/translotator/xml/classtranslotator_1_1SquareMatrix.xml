@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classtranslotator_1_1SquareMatrix" kind="class" language="C++" prot="public">
+    <compoundname>translotator::SquareMatrix</compoundname>
+    <basecompoundref refid="classtranslotator_1_1MatrixBase" prot="public" virt="non-virtual">translotator::MatrixBase&lt; N, N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, SquareMatrix&lt; N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</basecompoundref>
+    <derivedcompoundref refid="classtranslotator_1_1SOGroup" prot="public" virt="non-virtual">translotator::SOGroup&lt; N, Type &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>typename Type</type>
+        <defval>TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtranslotator_1_1SquareMatrix_1a04e5e8c510d93b162f1b40f3c57f2f89" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static ObjectType</type>
+        <definition>constexpr static ObjectType translotator::SquareMatrix&lt; N, Type &gt;::OBJECT_TYPE</definition>
+        <argsstring></argsstring>
+        <name>OBJECT_TYPE</name>
+        <initializer>= ObjectType::SQUARE_MATRIX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="36" column="37" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1afeaa46ef0ae48da0c634f3b37791864f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type &amp;</type>
+        <definition>Type&amp; translotator::SquareMatrix&lt; N, Type &gt;::Data_</definition>
+        <argsstring>(size_t i, size_t j)</argsstring>
+        <name>Data_</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="32" column="21" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1ab3f1a9d305f25998c75cbd4e5fb83cfc" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::SquareMatrix&lt; N, Type &gt;::Data_</definition>
+        <argsstring>(size_t i, size_t j) const</argsstring>
+        <name>Data_</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="33" column="21" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1acb9fd9532d568133ed5fa149edd65b00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::SquareMatrix&lt; N, Type &gt;::determinant</definition>
+        <argsstring>() const</argsstring>
+        <name>determinant</name>
+        <briefdescription>
+<para>determinant of a square matrix. Only 2x2, 3x3 matrices are supported </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="39" column="21" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="39" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1ac95153e093aa21c9d1d214c309d47478" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type translotator::SquareMatrix&lt; N, Type &gt;::trace</definition>
+        <argsstring>() const</argsstring>
+        <name>trace</name>
+        <briefdescription>
+<para>trace of a square matrix </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="56" column="21" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1a12d301cd9c3f5fb40b4a04840e2ad5c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; N, Type &gt;</type>
+        <definition>SquareMatrix&lt;N, Type&gt; translotator::SquareMatrix&lt; N, Type &gt;::inversed</definition>
+        <argsstring>(bool &amp;result) const</argsstring>
+        <name>inversed</name>
+        <param>
+          <type>bool &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>1x1 ~ 3x3 closed form solution 4x4 ~ LU factorization with partial pivotting from PX4-Matrix Library </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="69" column="22" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="69" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classtranslotator_1_1SquareMatrix_1adbf0d5ed72450b4736ada1a53dabb8eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void translotator::SquareMatrix&lt; N, Type &gt;::inverse</definition>
+        <argsstring>()</argsstring>
+        <name>inverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/SquareMatrix.hpp" line="240" column="21" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="240" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>translotator::SOGroup&lt; N, Type &gt;</label>
+        <link refid="classtranslotator_1_1SOGroup"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; N, N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, SquareMatrix&lt; N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+      <node id="1">
+        <label>translotator::SquareMatrix&lt; N, Type &gt;</label>
+        <link refid="classtranslotator_1_1SquareMatrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>translotator::MatrixBase&lt; N, N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE, SquareMatrix&lt; N, TRANSLOTATOR_DEFAULT_FLOATING_POINT_TYPE &gt; &gt;</label>
+        <link refid="classtranslotator_1_1MatrixBase"/>
+      </node>
+      <node id="1">
+        <label>translotator::SquareMatrix&lt; N, Type &gt;</label>
+        <link refid="classtranslotator_1_1SquareMatrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/translotator/objects/SquareMatrix.hpp" line="29" column="5" bodyfile="include/translotator/objects/SquareMatrix.hpp" bodystart="30" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classtranslotator_1_1MatrixBase_1a47fdb58bc41fa4fe1df99f8db9c8d825" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad383e1f78f6abd1c368945fa8b883bd0" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>block</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a240eaa7e3260d8154b98f843091d0dd7" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2ComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6ba81df86ee7444fd12085d45d220db1" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2ComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3b83a32e4e36acbf692f8d37652a592e" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2DualNumber</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a541c9f958dad45d5a0c58baf581aecb8" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2DualNumberRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab8fa863f2a015eb6ec81225c29a38169" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2DualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9e98013f1aaae87b9ddfc02989831cb7" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2DualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab2a12c8955040481906bc6921fcd3e49" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2Matrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac68b42d61fc1b37e775201939a2b974e" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2MatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5d6fc1d9f28cbddfcc3d84d2a1399546" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2Quaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a4337e1ab1f890f353ab7500e7a0b5d13" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2QuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a347f048dea85dfcb511b251bcc67a02f" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2SOGroup</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6c7b5cfbc31827a08626276f426b0c29" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2SOGroupRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a98881e399ea44c14116b8b3540cf9b59" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2SquareMatrix</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac71dc8fc81132db5fd1d371b04abb6d0" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2SquareMatrixRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad3e6217331f7bee4dea61c1e5f3cb999" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitComplexNum</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5e58dda08116d760edd0f5e2b96c41f0" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitComplexNumRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a02ea9383482a196e452f8af815c295d9" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitDualQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9cca30ec8afe0187659012b5c714fb19" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitDualQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2add8819f4e5dfcab056fec8c9756056" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitQuaternion</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aee2aae9874fdcfa4dca7a3a26d7a77ab" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2UnitQuaternionRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb91e4a5737ace925a23c3f5e11e2532" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2Vector</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1afd185e6539db2e40864f309133a51a79" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>cast2VectorRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acb925de5e627dc714aa27933730514e8" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>castContainer</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a060adc62a324b4377f863eba096ceb51" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac496fcf985c129b48da7b286c01a6863" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>castContainerRef</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2cfeceed7f99058bf765180b19050523" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>castDataType</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab218ec09e5280731940c55d86e3655ea" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>col</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab6f1acc802eca0c13f5b1f0d7d8ad834" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>COLS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad0253ec3dcedd1f905f887b7c256213c" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>colSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a8a9385eb28706226a8bbaaa8b51923b5" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>copyTo</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1afeaa46ef0ae48da0c634f3b37791864f" prot="private" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>Data_</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1ab3f1a9d305f25998c75cbd4e5fb83cfc" prot="private" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>Data_</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1fea766824100dbd2fa5a216a61afc46" prot="protected" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>data_</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a442deedb4154e8e74af4ba780b9674b1" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>DATATYPE</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1acb9fd9532d568133ed5fa149edd65b00" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>determinant</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a37eede5be5d720709f5f65ab5c7efb4a" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>eye</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a10472e837144233d66926ab55e3b4e92" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>fill</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a7fece031c63a9ce6edaa58b403770165" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>frobeniusNorm</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a646b7fb5c13368f5a854ee24b9766e1e" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>frobeniusNormSquared</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a1dcb53f092bc48e65fac4dbc50be6033" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>getData</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1adbf0d5ed72450b4736ada1a53dabb8eb" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>inverse</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1a12d301cd9c3f5fb40b4a04840e2ad5c1" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>inversed</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5c4b77c1ca1f9c1c56c2b54e156b3465" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MATRIX_BASE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a251a9858487619a26be982aff3e6becf" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a92188d067565d2d2d15a1b351691b5ec" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a5ab5684eb668e67fa7b56e3a1ace6d92" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a2eb3cfe7fef246df96d6c6839312c5c7" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a01618e01c38cef87bfd460beac794cfd" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>MatrixBase</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9780b7e145b7f6c84665643689a8991f" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>NaN</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1a04e5e8c510d93b162f1b40f3c57f2f89" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>OBJECT_TYPE</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac3378d6df255caf33fe89e787a48a11b" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>ones</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9725e6c9ace3b3b45f56bc88599250ad" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa9c22193db8c13d3a9847b4f709054bd" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator()</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac1845354b3f57b857574469cfb9449c7" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a188d55faa3c3d76adf785fa6ad09a998" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator*</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a9fc66df0442accce22aaf51c2bb1ac85" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator*=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a79d0ad4e0873356325df2fcd103e5952" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator+</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a690755b7f6c6a688f70b890e7b0b899c" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator+=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aec8347c0cb478c90c363f404f85f6597" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a65a69ae6c21bd6b0fa864270b007802a" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator-</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a6a7643257fcf32adaff8c6034a3b4c03" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator-=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1acca07931ca0268f437b3d2e8b7b303c5" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator/</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3f896eec178e879273a17f8fc5a817cf" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator/=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3d259a0af89939865e167551b25d186d" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>operator=</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a767091c7e23c4dba39ea1275261ea1b3" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>print</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ae61f384241d4b12f54d816a97d090e7d" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>row</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1adc3ebb353990f9178c8c2b0ec20f4f07" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>ROWS</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a24a5add5ff0fe1c1d465997c421e2088" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>rowSize</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ab18c063f78f4d45797cb585e7bf2e32b" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a0df51ed7e80a011b5accfcd4b15e25c1" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setBlock</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a28a999eff129fd34e6655bd69803db0c" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6345caf6cd8951656f04a34aae2874c" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setCol</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ac22efb20214caa3f162197d8a683a7bc" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a3c04f7dc6c48308fc8805b609fc67bd3" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>setRow</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aeb991a10367bf7972b6b7e84a2a9a850" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>swapCols</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a750f1fefac69a66d47f053f202e95102" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>swapRows</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1ad8a85814b9fc44098fa04a5e825c11b8" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>T</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1a52ed10a72a7cae25898f2bcdf68380fb" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>toScalar</name></member>
+      <member refid="classtranslotator_1_1SquareMatrix_1ac95153e093aa21c9d1d214c309d47478" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>trace</name></member>
+      <member refid="classtranslotator_1_1MatrixBase_1aa6df03c2dfc985ea79ebb0d9b0787cae" prot="public" virt="non-virtual"><scope>translotator::SquareMatrix</scope><name>zeros</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

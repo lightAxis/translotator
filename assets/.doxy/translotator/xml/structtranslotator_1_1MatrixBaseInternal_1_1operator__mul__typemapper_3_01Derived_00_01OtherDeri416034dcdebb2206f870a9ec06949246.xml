@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246" kind="struct" language="C++" prot="public">
+    <compoundname>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Derived</type>
+      </param>
+      <param>
+        <type>typename OtherDerived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246_1a9b0f65e5b8d2cec110db86cf232685dc" prot="public" static="no">
+        <type><ref refid="classtranslotator_1_1SquareMatrix" kindref="compound">SquareMatrix</ref>&lt; Derived::ROWS, typename Derived::DATATYPE &gt;</type>
+        <definition>using translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;::type =  SquareMatrix&lt;Derived::ROWS, typename Derived::DATATYPE&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="47" column="9" bodyfile="include/translotator/objects/MatrixBaseInternal.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/translotator/objects/MatrixBaseInternal.hpp" line="44" column="5" bodyfile="include/translotator/objects/MatrixBaseInternal.hpp" bodystart="46" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structtranslotator_1_1MatrixBaseInternal_1_1operator__mul__typemapper_3_01Derived_00_01OtherDeri416034dcdebb2206f870a9ec06949246_1a9b0f65e5b8d2cec110db86cf232685dc" prot="public" virt="non-virtual"><scope>translotator::MatrixBaseInternal::operator_mul_typemapper&lt; Derived, OtherDerived, enable_if_t&lt; Derived::ROWS==OtherDerived::COLS &amp;&amp;OtherDerived::COLS !=1, void &gt; &gt;</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
