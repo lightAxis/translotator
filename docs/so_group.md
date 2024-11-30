@@ -1,6 +1,6 @@
 # SO(2) & SO(3) Group
 
-The SO(2) group is a group of 2D rotations in the plane. The SO(3) group is a group of 3D rotations in space. The SO(2) group is a subgroup of the SO(3) group. The SO(2) group is a group of unit complex numbers. The SO(3) group is a group of unit quaternions.
+The SO(2) group is a group of 2D rotations in the plane and SO(3) group is a group of 3D rotations in space.
 
 ## Group Properties
 
